@@ -1,0 +1,8 @@
+{"ts": "2025-10-24T07:55:57.014378Z", "event": "reconcile.start", "correlation_id": "run-20251024T075557-19384", "bank_json": "D:\\PlayWright Extractor\\Downloads\\json_output\\Process Bank Transactions 20251024.json", "company_json": "D:\\PlayWright Extractor\\Downloads\\json_output\\Reconciliation Statements 20251024.json", "enable_ai": false, "run_log": "logs\\runs\\run-20251024T075557-19384.log"}
+{"ts": "2025-10-24T07:55:57.110739Z", "event": "reconcile.data_loaded", "correlation_id": "run-20251024T075557-19384"}
+{"ts": "2025-10-24T07:56:32.221342Z", "event": "reconcile.completed", "correlation_id": "run-20251024T075557-19384", "results": 122}
+{"ts": "2025-10-24T07:56:32.812906Z", "event": "reconcile.exported", "correlation_id": "run-20251024T075557-19384", "out_path": "matching_results\\MATCHLIST_MBB02_20251024_155632.xlsx"}
+{"ts": "2025-10-24T07:59:49.920564Z", "event": "reconcile.start", "correlation_id": "run-20251024T075949-14196", "bank_json": "D:\\PlayWright Extractor\\Downloads\\json_output\\Process Bank Transactions 20251024.json", "company_json": "D:\\PlayWright Extractor\\Downloads\\json_output\\Reconciliation Statements 20251024.json", "enable_ai": false, "run_log": "logs\\runs\\run-20251024T075949-14196.log"}
+{"ts": "2025-10-24T07:59:49.964905Z", "event": "reconcile.data_loaded", "correlation_id": "run-20251024T075949-14196"}
+{"ts": "2025-10-24T08:00:20.769980Z", "event": "reconcile.completed", "correlation_id": "run-20251024T075949-14196", "results": 122}
+{"ts": "2025-10-24T08:00:21.049617Z", "event": "reconcile.exported", "correlation_id": "run-20251024T075949-14196", "out_path": "matching_results\\MATCHLIST_MBB02_20251024_160020.xlsx"}

@@ -2,10 +2,23 @@ import pandas as pd
 from playwright.sync_api import Playwright, sync_playwright, expect
 import functions
 import requests
+from dotenv import load_dotenv
+import os
+from email_reply import reply_to_trigger_email, reply_with_attachment
+
+# Load the .env file
+load_dotenv()
 
 def save_failed_entries(failed_entries, webhook_url=None):
     # Define the exact column order
-    columns = config.failed_entry_columns
+    columns = [
+        "Bank Statement Date", "Bank Transaction ID", "Bank Reference Number", "Bank Description",
+        "Bank Receipt", "Bank Disbursement",
+        "CSGP Transaction Date", "CSGP Reference", "CSGP Module", "CSGP Description",
+        "CSGP Receipt", "CSGP Disbursement",
+        "Amount Difference", "Date Difference", "Reason", "Confidence", "Match Type",
+        "Bank_UID", "CSGP_UID"
+    ]
 
     if failed_entries:
         df = pd.DataFrame(failed_entries)
@@ -124,20 +137,41 @@ def filter_table(page, frame, header_text, textbox_selector, value):
 def click_matches(page, frame, csgp_ref, click_all=False, webhook_url=None):
     """
     Clicks checkbox(es) for a given CSGPRef.
-    If click_all is True, clicks all checkboxes found (like clickMatches).
-    If click_all is False, clicks only the first one (like clickGroupMatches).
+    If click_all is True, clicks all checkboxes found.
+    If click_all is False, clicks only the first one.
     Returns True if at least one checkbox was clicked, False otherwise.
     """
-    textbox = page.frame_locator("iframe[name='main']").locator(
-        "#ctl00_phG_PXSplitContainer_tab2_t0_PXGrid1_at_tlb_fb_text"
-    )
-    functions.highlight_and_click(page, textbox)
-    textbox.fill(str(csgp_ref))
-    page.wait_for_timeout(2000)
 
-    # Try Type A table
+    # Re-select main frame before waiting
+    frame = page.frame(name="main")
+    textbox = frame.locator("#ctl00_phG_PXSplitContainer_tab2_t0_PXGrid1_at_tlb_fb_text")
+    textbox.scroll_into_view_if_needed()
+
+    try:
+        # --- Ensure the textbox exists and is visible ---
+        textbox.wait_for(state="visible", timeout=10000)
+    except:
+        functions.log_message(webhook_url, f"⚠️ Textbox not visible, re-focusing frame for {csgp_ref}")
+        # Try refocusing iframe and reselecting textbox
+        page.frame_locator("iframe[name='main']").locator("body").click()
+        page.wait_for_timeout(1000)
+        textbox = page.frame_locator("iframe[name='main']").locator(
+            "#ctl00_phG_PXSplitContainer_tab2_t0_PXGrid1_at_tlb_fb_text"
+        )
+        textbox.wait_for(state="visible", timeout=10000)
+
+    # --- Safely click and fill textbox ---
+    try:
+        textbox.scroll_into_view_if_needed()
+        textbox.click(force=True)
+        textbox.fill(str(csgp_ref))
+        page.wait_for_timeout(2000)
+    except Exception as e:
+        functions.log_message(webhook_url, f"❌ Failed to fill textbox for {csgp_ref}: {e}")
+        return False
+
+    # --- Proceed with table detection as before ---
     table_a = frame.locator("#ctl00_phG_PXSplitContainer_tab2_t1_gridDetailMatches4_dataT0")
-    # Try Type B table
     table_b = frame.locator("#ctl00_phG_PXSplitContainer_tab2_t0_PXGrid1_dataT0")
 
     detail_table = None
@@ -177,7 +211,7 @@ def click_matches(page, frame, csgp_ref, click_all=False, webhook_url=None):
         return False
 
     # --- Target the second column ---
-    target_row = data_rows.nth(0)  
+    target_row = data_rows.nth(0)
     second_col = target_row.locator("td").nth(1)
 
     if second_col.count() == 0:
@@ -192,7 +226,7 @@ def click_matches(page, frame, csgp_ref, click_all=False, webhook_url=None):
 
 def searchMainTable(page, frame, row_data, failed_entries, webhook_url=None):
     filter_table(page, frame, "Ext. Ref. Nbr.", "#ctl00_phG_PXSplitContainer_grid1_fd_txt", row_data["Bank Reference Number"])
-    filter_table(page, frame, "Receipt", "#ctl00_phG_PXSplitContainer_grid1_fd_num1", row_data["Bank Receipt"])
+    # filter_table(page, frame, "Receipt", "#ctl00_phG_PXSplitContainer_grid1_fd_num1", row_data["Bank Receipt"])
 
     table = frame.locator("#ctl00_phG_PXSplitContainer_grid1_dataT0")
     rows = table.locator("tbody tr")
@@ -212,6 +246,7 @@ def searchMainTable(page, frame, row_data, failed_entries, webhook_url=None):
             value = first_col.inner_text()
         except:
             value = "<empty>"
+        page.wait_for_timeout(3000)
         functions.log_message(webhook_url, f"  Processing FIRST row, first_col={value}")
         click_matches(page, frame, row_data["CSGP Reference"])
         return  # Done after first row
@@ -610,11 +645,11 @@ def process_sheet(sheet_name, df, page, accountName, failed_entries, webhook_url
 
 def run_match_process(
     playwright: Playwright,
-    website_url,
-    username,
-    password,
-    accountName,
     matchresultpath,
+    website_url=os.getenv("WEBSITE_URL"),
+    username=os.getenv("WEBSITE_USERNAME"),
+    password=os.getenv("PASSWORD"),
+    accountName=os.getenv("accountName"),
     pingback_url=None,
     payload=None,
     webhook_url=None
@@ -630,9 +665,10 @@ def run_match_process(
         accountName_link = frame.get_by_role("link", name=accountName).last
         functions.highlight_and_click(page, accountName_link)
         page.wait_for_timeout(5000)
-        # dfs = pd.read_excel(matchresultpath, sheet_name=["1to1 Matches", "Group Match", "Possible Match"])
-        dfs = pd.read_excel("dummydata.xlsx", sheet_name=["1to1 Matches", "Group Match"])
+        dfs = pd.read_excel(matchresultpath, sheet_name=["1to1 Matches", "Group Match", "Possible Match"])
+        # dfs = pd.read_excel("dummydata.xlsx", sheet_name=["1to1 Matches", "Group Match"])
         for sheet_name, df in dfs.items():
+            print("Columns in downloaded Excel:", df.columns.tolist())
             functions.log_message(webhook_url, f"\n--- Processing {sheet_name} ---")
             process_sheet(sheet_name, df, page, accountName, failed_entries, webhook_url)
         save_failed_entries(webhook_url=webhook_url, failed_entries=failed_entries)
@@ -643,8 +679,15 @@ def run_match_process(
         browser.close()
         save_failed_entries(webhook_url=webhook_url, failed_entries=failed_entries)
         functions.send_pingback(pingback_url, requests, "completed", payload)
+        output_file = "failed_entries.xlsx"
+
+        reply_with_attachment(
+            reply_text="✅ Match Statement process completed successfully. Please find the attached file.",
+            attachment_path=output_file
+        )
     except Exception as e:
         functions.send_pingback(pingback_url, requests, "failed", payload, error=str(e))
+        reply_to_trigger_email("Match Statement failed.")
         raise
 
 if __name__ == "__main__":

@@ -16,29 +16,38 @@ def get_access_token():
     print("And enter this code:", flow["user_code"])
     print("Waiting for you to complete sign-in...")
 
-    result = app.acquire_token_by_device_flow(flow)  # Blocks until done or times out
-
-    # Handle errors gracefully
+    result = app.acquire_token_by_device_flow(flow)
     if "access_token" in result:
         print("✅ Authentication successful!")
         return result["access_token"]
     else:
         print("❌ Authentication failed:")
-        print(result.get("error"))
         print(result.get("error_description"))
-        print(result.get("correlation_id"))  # Useful for debugging with Microsoft support
         raise SystemExit("Exiting... please try again.")
 
-def read_emails(token):
+def get_latest_email(token):
     headers = {"Authorization": f"Bearer {token}"}
-    endpoint = "https://graph.microsoft.com/v1.0/me/messages?$top=5"
+    endpoint = "https://graph.microsoft.com/v1.0/me/messages?$top=1"
     response = requests.get(endpoint, headers=headers)
+
     if response.status_code == 200:
-        for msg in response.json().get("value", []):
-            print(f"📧 {msg['subject']} from {msg['from']['emailAddress']['address']}")
+        msg = response.json().get("value", [])[0]
+        subject = msg["subject"]
+        sender = msg["from"]["emailAddress"]["address"]
+        message_id = msg["id"]
+
+        print(f"📧 {subject} from {sender}")
+        print(f"   ID: {message_id}")
+
+        # Save message ID for later use
+        with open("trigger_email_id.txt", "w") as f:
+            f.write(message_id)
+
+        return message_id
     else:
         print("❌ Error:", response.text)
+        return None
 
 if __name__ == "__main__":
     token = get_access_token()
-    read_emails(token)
+    get_latest_email(token)

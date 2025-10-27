@@ -4,6 +4,11 @@ import functions
 import config
 import pandas as pd
 import datetime
+from dotenv import load_dotenv
+import os
+
+# Load the .env file
+load_dotenv()
 
 def detect_date_format(series):
     """Try to infer whether the file uses dayfirst or monthfirst."""

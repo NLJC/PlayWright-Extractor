@@ -1,10 +1,17 @@
 import re
 from playwright.sync_api import Playwright, sync_playwright, expect
+import RaasPlus
 import functions
 from datetime import datetime
 from dateutil.relativedelta import relativedelta
 import requests
 import pandas as pd
+from dotenv import load_dotenv
+import os
+from email_reply import reply_to_trigger_email
+
+# Load the .env file
+load_dotenv()
             
 def type_and_select(frame, cashAccount: str, locator: str):
     # Fill in the textbox
@@ -19,11 +26,11 @@ def type_and_select(frame, cashAccount: str, locator: str):
 
 def run_extract_reconcile(
     playwright: Playwright,
-    website_url,
-    username,
-    password,
-    accountName,
     save_path,
+    website_url=os.getenv("WEBSITE_URL"),
+    username=os.getenv("WEBSITE_USERNAME"),
+    password=os.getenv("PASSWORD"),
+    accountName=os.getenv("accountName"),
     pingback_url=None,
     payload=None,
     webhook_url=None
@@ -62,16 +69,32 @@ def run_extract_reconcile(
             frame.locator("text=Export to Excel").click()
         download = download_info.value
         functions.log_message(webhook_url, "✅ Download started:", download.suggested_filename)
-        full_save_path = save_path + download.suggested_filename
+        full_save_path = os.getenv("SAVE_DIRECTORY") + download.suggested_filename
         download.save_as(full_save_path)
         context.close()
         browser.close()
         functions.send_pingback(pingback_url, requests, "completed", payload)
+        reply_to_trigger_email("✅ Extract Reconciliation Statement completed successfully.")
         # Use safe_read_excel instead of pd.read_excel
         df = functions.safe_read_excel(full_save_path)
+
+        RaasPlus.run_RaasPlus(
+            playwright,
+            save_path,
+            full_save_path,
+            website_url=website_url,
+            username=username,
+            password=password,
+            accountName=accountName,
+            pingback_url=pingback_url,
+            payload=payload,
+            webhook_url=webhook_url
+        )
+
         return df.to_dict(orient="records")
     except Exception as e:
         functions.send_pingback(pingback_url, requests, "failed", payload, str(e))
+        reply_to_trigger_email("Extract Reconciliation Statement failed successfully.")
         raise
 
 if __name__ == "__main__":
