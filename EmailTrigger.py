@@ -1,14 +1,21 @@
 import re
 import msal
 import requests
-from playwright.sync_api import sync_playwright
+import subprocess
+import threading
+import queue
 import os
-from CAMatchExtract import CAMatchExtract  # 👈 import your function
+import base64
+from playwright.sync_api import sync_playwright
+
+# ============================================================
+# ✅ EMAIL AUTH
+# ============================================================
 
 CLIENT_ID = "231e7253-117c-4ae1-ad1f-f93d82c6e36c"
 TENANT_ID = "eb83ccb1-6ce0-40b1-941c-c7b1e857a690"
 AUTHORITY = f"https://login.microsoftonline.com/{TENANT_ID}"
-SCOPES = ["Mail.Read"]
+SCOPES = ["Mail.ReadWrite", "Mail.Send"]
 
 def get_access_token():
     app = msal.PublicClientApplication(CLIENT_ID, authority=AUTHORITY)
@@ -16,44 +23,138 @@ def get_access_token():
     if "user_code" not in flow:
         raise Exception("Failed to create device flow")
 
-    print("Please go to:", flow["verification_uri"])
-    print("And enter this code:", flow["user_code"])
-    print("Waiting for you to complete sign-in...")
+    print("🔐 Go to:", flow["verification_uri"])
+    print("🪪 Enter code:", flow["user_code"])
+    print("Waiting for login...")
 
     result = app.acquire_token_by_device_flow(flow)
     if "access_token" in result:
-        print("✅ Authentication successful!")
         return result["access_token"]
     else:
-        print("❌ Authentication failed:", result.get("error_description"))
-        raise SystemExit("Exiting... please try again.")
+        raise Exception("Authentication failed.")
+
+# ============================================================
+# ✅ STATUS EMAILS (Reply to same thread)
+# ============================================================
+
+def send_email_reply(token, message, attachment=None):
+    try:
+        with open("trigger_email_id.txt", "r") as f:
+            message_id = f.read().strip()
+    except:
+        print("⚠️ No trigger_email_id.txt")
+        return
+
+    headers = {
+        "Authorization": f"Bearer {token}",
+        "Content-Type": "application/json"
+    }
+
+    # --------------------------------------------------------
+    # If no attachment → simple reply
+    # --------------------------------------------------------
+    if not attachment:
+        url = f"https://graph.microsoft.com/v1.0/me/messages/{message_id}/reply"
+        body = { "comment": message }
+        requests.post(url, headers=headers, json=body)
+        return
+
+    # --------------------------------------------------------
+    # With attachment → create draft
+    # --------------------------------------------------------
+    url = f"https://graph.microsoft.com/v1.0/me/messages/{message_id}/createReply"
+    draft = requests.post(url, headers=headers, json={"comment": message}).json()
+    draft_id = draft["id"]
+
+    # attach file
+    filename = os.path.basename(attachment)
+    with open(attachment, "rb") as f:
+        file_b64 = base64.b64encode(f.read()).decode("utf-8")
+
+    attach_data = {
+        "@odata.type": "#microsoft.graph.fileAttachment",
+        "name": filename,
+        "contentBytes": file_b64,
+    }
+
+    attach_url = f"https://graph.microsoft.com/v1.0/me/messages/{draft_id}/attachments"
+    requests.post(attach_url, headers=headers, json=attach_data)
+
+    # send it
+    send_url = f"https://graph.microsoft.com/v1.0/me/messages/{draft_id}/send"
+    requests.post(send_url, headers=headers)
+
+# ============================================================
+# ✅ QUEUE + WORKER
+# ============================================================
+
+task_queue = queue.Queue()
+is_running = False
+
+def worker():
+    global is_running
+    is_running = True
+
+    while not task_queue.empty():
+        task = task_queue.get()
+        params = task["params"]
+
+        token = get_access_token()
+
+        # status: started
+        send_email_reply(token, f"🚀 Job started for {params['account']} on {params['date']}")
+
+        try:
+            subprocess.run(
+                [
+                    "python", "CAMatchExtract.py",
+                    params["account"], params["date"], str(params["amount"])
+                ],
+                check=True
+            )
+            # status: finished
+            send_email_reply(token, f"✅ Job finished successfully for {params['account']}")
+
+            # If CAMatchExtract outputs a file, attach it here:
+            # send_email_reply(token, "✅ Here is your reconciliation file", attachment="path")
+
+        except Exception as e:
+            send_email_reply(token, f"❌ Job FAILED\n{str(e)}")
+
+        task_queue.task_done()
+
+    is_running = False
+
+def add_task(params):
+    task_queue.put({"params": params})
+
+    token = get_access_token()
+    send_email_reply(token, f"📥 Job queued for {params['account']} ({params['date']})")
+
+    global is_running
+    if not is_running:
+        threading.Thread(target=worker, daemon=True).start()
+
+# ============================================================
+# ✅ EMAIL TRIGGER
+# ============================================================
 
 def get_latest_email(token):
     headers = {"Authorization": f"Bearer {token}"}
     endpoint = "https://graph.microsoft.com/v1.0/me/messages?$top=1"
     response = requests.get(endpoint, headers=headers)
 
-    if response.status_code != 200:
-        print("❌ Error fetching email:", response.text)
-        return None
-
-    msg = response.json().get("value", [])[0]
+    msg = response.json()["value"][0]
     subject = msg["subject"]
-    sender = msg["from"]["emailAddress"]["address"]
     message_id = msg["id"]
-    body_content = msg.get("body", {}).get("content", "")
-    body_text = re.sub("<[^<]+?>", "", body_content).strip()
+    body_content = msg["body"]["content"]
+    body_text = re.sub("<[^<]+?>","", body_content).strip()
 
-    print(f"\n📧 Received: {subject}")
-    print(f"From: {sender}")
-    print(f"Body: {body_text}\n")
-
-    # --- 💾 Save trigger email ID for the reply system ---
+    # save email ID
     with open("trigger_email_id.txt", "w") as f:
         f.write(message_id)
-    print(f"📝 Saved trigger email ID: {message_id}")
 
-    return subject, body_text, message_id
+    return subject, body_text
 
 def parse_bank_recon_email(subject, body):
     match = re.match(r"BANK RECON\s*-\s*([A-Za-z0-9]+)\s*-\s*(\d{2}/\d{2}/\d{4})", subject)
@@ -62,44 +163,25 @@ def parse_bank_recon_email(subject, body):
 
     account = match.group(1)
     date = match.group(2)
-
-    try:
-        amount = float(body.strip().replace(",", ""))
-    except ValueError:
-        print("⚠️ Invalid amount in email body.")
-        return None
+    amount = float(body.replace(",", "").strip())
 
     return {"account": account, "date": date, "amount": amount}
 
-def run_program(account, date, amount):
-    """Runs your CAMatchExtract function correctly using Playwright."""
-    print(f"🚀 Starting CAMatchExtract for {account} ({date}), amount {amount}")
-
-    with sync_playwright() as playwright:
-        CAMatchExtract(
-            playwright=playwright,
-            accountName=account,
-            date=date,
-            amount=amount,
-            website_url=os.getenv("WEBSITE_URL"),
-            username=os.getenv("WEBSITE_USERNAME"),
-            password=os.getenv("PASSWORD"),
-            pingback_url=None,
-            payload=None,
-            webhook_url=None,
-        )
-
-    print("✅ CAMatchExtract finished successfully!")
+# ============================================================
+# ✅ ENTRY POINT
+# ============================================================
 
 if __name__ == "__main__":
     token = get_access_token()
-    subject, body, message_id = get_latest_email(token)
+    subject, body = get_latest_email(token)
 
     if "BANK RECON" in subject.upper():
         info = parse_bank_recon_email(subject, body)
+
         if info:
-            run_program(info["account"], info["date"], info["amount"])
+            add_task(info)
         else:
-            print("⚠️ Could not parse BANK RECON email format.")
+            send_email_reply(token, "⚠️ Invalid BANK RECON format.")
+
     else:
-        print("📭 No BANK RECON command detected in latest email.")
+        print("📭 No BANK RECON command")

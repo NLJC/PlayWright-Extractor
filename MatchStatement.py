@@ -169,6 +169,10 @@ def click_matches(page, frame, csgp_ref, click_all=False, webhook_url=None):
     except Exception as e:
         functions.log_message(webhook_url, f"❌ Failed to fill textbox for {csgp_ref}: {e}")
         return False
+    
+    search_button = frame.locator("#ctl00_phG_PXSplitContainer_tab2_t0_PXGrid1_at_tlb_fb > div.buttonsCont > div > div")
+    search_button.hover()
+    functions.highlight_and_click(page, search_button)
 
     # --- Proceed with table detection as before ---
     table_a = frame.locator("#ctl00_phG_PXSplitContainer_tab2_t1_gridDetailMatches4_dataT0")
@@ -368,6 +372,10 @@ def groupMatchLogic(page, frame, row_data, bank_ref, csgp_refs, failed_entries, 
             # textbox.clear()
         except:
             functions.log_message(webhook_url, f"  ⚠️ Could not access textbox for {ref}")
+
+        search_button = frame.locator("#ctl00_phG_PXSplitContainer_tab2_t0_PXGrid1_at_tlb_fb > div.buttonsCont > div > div")
+        search_button.hover()
+        functions.highlight_and_click(page, search_button)
 
         # Try Type A table
         table_a = frame.locator("#ctl00_phG_PXSplitContainer_tab2_t1_gridDetailMatches4_dataT0")
