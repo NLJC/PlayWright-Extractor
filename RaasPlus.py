@@ -18,7 +18,7 @@ import convert_with_xlwings
 def run_RaasPlus(
     playwright: Playwright,
     save_path,
-    full_save_path,
+    reconciliation_save_path,
     website_url=os.getenv("WEBSITE_URL"),
     username=os.getenv("WEBSITE_USERNAME"),
     password=os.getenv("PASSWORD"),
@@ -48,18 +48,28 @@ def run_RaasPlus(
     # bank_json = base / "all_algorithms_bank.json"
     # company_json = base / "all_algorithms_company.json"
 
-    bank_json = Path("D:\PlayWright Extractor\Downloads\json_output\Process Bank Transactions 20251024.json")
-    company_json = Path("D:\PlayWright Extractor\Downloads\json_output\Reconciliation Statements 20251024.json")
+    # bank_json = Path(os.path.join(r"D:\PlayWright Extractor\Downloads\json_output", f"{save_path}.json"))
+    # print(bank_json)
+    # company_json = Path(os.path.join(r"D:\PlayWright Extractor\Downloads\json_output", f"{reconciliation_save_path}.json"))
+    # print(company_json)
 
-    bank_output_path = "Bank Transactions from xlwings.json"
-    company_output_path = "CompanyStatement from xlwings.json"
+    bank_json, company_json = convert_with_xlwings.convert_two_excels_to_json(
+        company_statement=reconciliation_save_path,
+        bank_statement=save_path,
+        output_dir=os.path.join(r"Downloads\json_output")
+    ).split(",")
+    print(bank_json)
+    print(company_json)
+
+    verify_bank_json = Path(bank_json)
+    verify_company_json = Path(company_json)
     
     # bank_json = Path(convert_with_xlwings.convert_excel_to_json(
     #     excel_path=save_path,
     #     output_dir=bank_output_path
     # ))
     # company_json = Path(convert_with_xlwings.convert_excel_to_json(
-    #     excel_path=full_save_path,
+    #     excel_path=reconciliation_save_path,
     #     output_dir=company_output_path
     # ))
 
@@ -71,9 +81,9 @@ def run_RaasPlus(
     enable_ai = False  # True
     enable_group_matching = False  # Set False to disable group matching
 
-    if not bank_json.exists():
+    if not verify_bank_json.exists():
         raise FileNotFoundError(f"Bank JSON not found: {bank_json}")
-    if not company_json.exists():
+    if not verify_company_json.exists():
         raise FileNotFoundError(f"Company JSON not found: {company_json}")
 
     # Run reconciliation and print the resulting Excel path
@@ -133,4 +143,15 @@ def run_RaasPlus(
 #     )
 
 if __name__ == "__main__":
-    run_RaasPlus()
+    with sync_playwright() as playwright:
+        run_RaasPlus(
+                playwright = playwright,
+                save_path="Downloads\Process Bank Transactions 20251029.xlsx",
+                reconciliation_save_path="Downloads\Reconciliation Statements 20251029.xlsx",
+                website_url=os.getenv("WEBSITE_URL"),
+                username=os.getenv("WEBSITE_USERNAME"),
+                password=os.getenv("PASSWORD"),
+                pingback_url=None,
+                payload=None,
+                webhook_url=None
+            )

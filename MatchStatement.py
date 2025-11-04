@@ -242,14 +242,18 @@ def searchMainTable(page, frame, row_data, failed_entries, webhook_url=None):
     if row_count > 0:
         row = rows.nth(0)
         first_col = row.locator("td").nth(0)
-        try:
-            value = first_col.inner_text()
-        except:
-            value = "<empty>"
-        page.wait_for_timeout(3000)
-        functions.log_message(webhook_url, f"  Processing FIRST row, first_col={value}")
-        click_matches(page, frame, row_data["CSGP Reference"])
-        return  # Done after first row
+
+        # --- Check if warning div exists ---
+        warning_icon = first_col.locator("div")
+
+        if warning_icon.count() > 0:
+            functions.log_message(webhook_url, f"⚠️ First column has warning div → skipping this entry")
+            failed_entries.append(row_data)
+            return
+        else:
+            functions.log_message(webhook_url, "✅ First column empty → proceeding with click_matches")
+            click_matches(page, frame, row_data["CSGP Reference"])
+            return
 
     # If no rows found
     functions.log_message(webhook_url, "⚠️ No valid rows found → marking as failed")
@@ -676,6 +680,75 @@ def run_match_process(
         for sheet_name, df in dfs.items():
             functions.log_message(webhook_url, f"\n--- Processing {sheet_name} ---")
             process_sheet(sheet_name, df, page, accountName, failed_entries, webhook_url)
+
+        # go back to reconciliation statements
+        functions.navigatePage(page, "Reconciliation Statements")
+        frame = functions.wait_for_iframe(page)
+        accountName_link = frame.get_by_role("link", name=accountName).last
+        functions.highlight_and_click(page, accountName_link)
+        page.wait_for_timeout(5000)
+
+        textbox = frame.locator("#ctl00_phF_form_t0_edReconNbr_text")
+
+        # Wait for the textbox to be visible (important if it loads dynamically)
+        textbox.wait_for(state="visible", timeout=5000)
+
+        # Get the value inside
+        reference_number = textbox.input_value()
+
+        functions.log_message(webhook_url, f"📋 Reference Number detected: {reference_number}")
+
+        # click reconcile processed
+        frame.locator("#ctl00_phG_tab_t0_grid1_at_tlb_ul > li:nth-child(14)").click()
+        frame.locator("#ctl00_phG_tab_t0_grid1_at_tlb_menuhi_item_0").nth(0).click()
+        page.wait_for_timeout(15000) 
+
+        # click unmatched statement
+        frame.locator("#ctl00_phG_tab_tab1").click()
+        # click calculate unmatched statement
+        frame.locator("#ctl00_phG_tab_t1_grid2_at_tlb_ul > li:nth-child(3) > div > div").click()
+        page.wait_for_timeout(20000)
+
+        #  click save
+        save_button = frame.locator("#ctl00_phDS_ds_ToolBar_Save > div > qp-hyper-icon > div > div > div")
+
+        # Check enabled state
+        if save_button.is_enabled():
+            functions.log_message(webhook_url, "💾 Save button is active → clicking it.")
+            save_button.click()
+        else:
+            functions.log_message(webhook_url, "⚠️ Save button is disabled → skipping click.")
+
+        # navigate to reconciliation statement
+        functions.navigatePage(page, "Reconciliation Statement")
+        frame = functions.wait_for_iframe(page)
+        accountName_link = frame.get_by_role("link", name=accountName).last
+        functions.highlight_and_click(page, accountName_link)
+        page.wait_for_timeout(5000)
+
+        # enter cash account
+        accountTextbox = frame.locator("#viewer_par_tab_t0_pForm_edCashAccount_text")
+        accountTextbox.click()
+        accountTextbox.fill(accountName)
+
+        # enter ref number(on hold)
+        refTextbox = frame.locator("#viewer_par_tab_t0_pForm_edReconNbr_text")
+        refTextbox.click()
+        refTextbox.fill(reference_number)
+
+        # click run report
+        run_report_button = frame.locator("#tlbReport_ul > li:nth-child(13) > div")
+        run_report_button.click()
+        page.wait_for_timeout(20000)
+
+        # save report
+        export_button = frame.locator("div.toolsBtn[data-cmd='Export']")
+        export_button.click()
+        page.wait_for_timeout(1000)  # small wait to allow dropdown to render
+
+        pdf_option = frame.get_by_text("PDF", exact=True)
+        pdf_option.click()
+        
         browser.close()
         save_failed_entries(webhook_url=webhook_url, failed_entries=failed_entries)
         functions.send_pingback(pingback_url, requests, "completed", payload)
@@ -696,11 +769,11 @@ if __name__ == "__main__":
     with sync_playwright() as playwright:
         run_match_process(
             playwright,
-            config.website_url,
-            config.username,
-            config.password,
-            config.accountName,
-            config.matchresultpath,
+            website_url=os.getenv("WEBSITE_URL"),
+            username=os.getenv("WEBSITE_USERNAME"),
+            password=os.getenv("PASSWORD"),
+            accountName=os.getenv("accountName"),
+            matchresultpath="matching_results\MATCHLIST_MBB02_20251024_160020.xlsx",
             pingback_url=None,
             payload=None,
             webhook_url=None

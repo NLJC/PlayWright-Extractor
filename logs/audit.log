@@ -6,3 +6,41 @@
 {"ts": "2025-10-24T07:59:49.964905Z", "event": "reconcile.data_loaded", "correlation_id": "run-20251024T075949-14196"}
 {"ts": "2025-10-24T08:00:20.769980Z", "event": "reconcile.completed", "correlation_id": "run-20251024T075949-14196", "results": 122}
 {"ts": "2025-10-24T08:00:21.049617Z", "event": "reconcile.exported", "correlation_id": "run-20251024T075949-14196", "out_path": "matching_results\\MATCHLIST_MBB02_20251024_160020.xlsx"}
+{"ts": "2025-10-27T04:13:59.204741Z", "event": "reconcile.start", "correlation_id": "run-20251027T041359-14140", "bank_json": "D:\\PlayWright Extractor\\Downloads\\json_output\\Process Bank Transactions 20251024.json", "company_json": "D:\\PlayWright Extractor\\Downloads\\json_output\\Reconciliation Statements 20251024.json", "enable_ai": false, "run_log": "logs\\runs\\run-20251027T041359-14140.log"}
+{"ts": "2025-10-27T04:13:59.281371Z", "event": "reconcile.data_loaded", "correlation_id": "run-20251027T041359-14140"}
+{"ts": "2025-10-27T04:14:34.508896Z", "event": "reconcile.completed", "correlation_id": "run-20251027T041359-14140", "results": 122}
+{"ts": "2025-10-27T04:14:35.046345Z", "event": "reconcile.exported", "correlation_id": "run-20251027T041359-14140", "out_path": "matching_results\\MATCHLIST_MBB02_20251027_121434.xlsx"}
+{"ts": "2025-10-28T06:20:01.932177Z", "event": "reconcile.start", "correlation_id": "run-20251028T062001-23424", "bank_json": "D:\\PlayWright Extractor\\Downloads\\json_output\\Process Bank Transactions 20251024.json", "company_json": "D:\\PlayWright Extractor\\Downloads\\json_output\\Reconciliation Statements 20251024.json", "enable_ai": false, "run_log": "logs\\runs\\run-20251028T062001-23424.log"}
+{"ts": "2025-10-28T06:20:02.120088Z", "event": "reconcile.data_loaded", "correlation_id": "run-20251028T062001-23424"}
+{"ts": "2025-10-28T06:20:36.907314Z", "event": "reconcile.completed", "correlation_id": "run-20251028T062001-23424", "results": 122}
+{"ts": "2025-10-28T06:20:37.443723Z", "event": "reconcile.exported", "correlation_id": "run-20251028T062001-23424", "out_path": "matching_results\\MATCHLIST_MBB02_20251028_142036.xlsx"}
+{"ts": "2025-10-28T06:42:35.338185Z", "event": "reconcile.start", "correlation_id": "run-20251028T064235-24136", "bank_json": "D:\\PlayWright Extractor\\Downloads\\json_output\\Process Bank Transactions 20251024.json", "company_json": "D:\\PlayWright Extractor\\Downloads\\json_output\\Reconciliation Statements 20251024.json", "enable_ai": false, "run_log": "logs\\runs\\run-20251028T064235-24136.log"}
+{"ts": "2025-10-28T06:42:35.380580Z", "event": "reconcile.data_loaded", "correlation_id": "run-20251028T064235-24136"}
+{"ts": "2025-10-28T06:43:07.146216Z", "event": "reconcile.completed", "correlation_id": "run-20251028T064235-24136", "results": 122}
+{"ts": "2025-10-28T06:43:07.300527Z", "event": "reconcile.exported", "correlation_id": "run-20251028T064235-24136", "out_path": "matching_results\\MATCHLIST_MBB02_20251028_144307.xlsx"}
+{"ts": "2025-10-29T04:06:22.200459Z", "event": "reconcile.start", "correlation_id": "run-20251029T040622-16264", "bank_json": "Downloads\\json_output\\Reconciliation Statements 20251029.json", "company_json": "Downloads\\json_output\\Process Bank Transactions 20251029.json", "enable_ai": false, "run_log": "logs\\runs\\run-20251029T040622-16264.log"}
+{"ts": "2025-10-29T04:06:22.403369Z", "event": "reconcile.data_loaded", "correlation_id": "run-20251029T040622-16264"}
+{"ts": "2025-10-29T04:06:22.546097Z", "event": "reconcile.error", "correlation_id": "run-20251029T040622-16264", "stage": "reconcile", "error": "'Tran. Desc'"}
+{"ts": "2025-10-29T04:19:03.919924Z", "event": "reconcile.start", "correlation_id": "run-20251029T041903-10648", "bank_json": "Downloads\\json_output\\Process Bank Transactions 20251029.json", "company_json": "Downloads\\json_output\\Reconciliation Statements 20251029.json", "enable_ai": false, "run_log": "logs\\runs\\run-20251029T041903-10648.log"}
+{"ts": "2025-10-29T04:19:04.009946Z", "event": "reconcile.data_loaded", "correlation_id": "run-20251029T041903-10648"}
+{"ts": "2025-10-29T04:19:37.640240Z", "event": "reconcile.completed", "correlation_id": "run-20251029T041903-10648", "results": 104}
+{"ts": "2025-10-29T04:19:38.220119Z", "event": "reconcile.exported", "correlation_id": "run-20251029T041903-10648", "out_path": "matching_results\\MATCHLIST_MBB02_20251029_121937.xlsx"}
+{"ts": "2025-10-29T08:55:36.054844Z", "event": "reconcile.start", "correlation_id": "run-20251029T085536-7628", "bank_json": "Downloads\\json_output\\Reconciliation Statements 20251029.json", "company_json": "Downloads\\json_output\\Process Bank Transactions 20251029.json", "enable_ai": false, "run_log": "logs\\runs\\run-20251029T085536-7628.log"}
+{"ts": "2025-10-29T08:55:36.106001Z", "event": "reconcile.data_loaded", "correlation_id": "run-20251029T085536-7628"}
+{"ts": "2025-10-29T08:55:36.211893Z", "event": "reconcile.error", "correlation_id": "run-20251029T085536-7628", "stage": "reconcile", "error": "'Tran. Desc'"}
+{"ts": "2025-10-30T08:39:54.912033Z", "event": "reconcile.start", "correlation_id": "run-20251030T083954-23272", "bank_json": "Downloads\\json_output\\Process Bank Transactions 20251030.json", "company_json": "Downloads\\json_output\\Reconciliation Statements 20251030.json", "enable_ai": false, "run_log": "logs\\runs\\run-20251030T083954-23272.log"}
+{"ts": "2025-10-30T08:39:55.096973Z", "event": "reconcile.data_loaded", "correlation_id": "run-20251030T083954-23272"}
+{"ts": "2025-10-30T08:40:30.069355Z", "event": "reconcile.completed", "correlation_id": "run-20251030T083954-23272", "results": 104}
+{"ts": "2025-10-30T08:40:30.596569Z", "event": "reconcile.exported", "correlation_id": "run-20251030T083954-23272", "out_path": "matching_results\\MATCHLIST_MBB02_20251030_164030.xlsx"}
+{"ts": "2025-11-03T04:45:57.395470Z", "event": "reconcile.start", "correlation_id": "run-20251103T044557-18064", "bank_json": "Downloads\\json_output\\Process Bank Transactions 20251103.json", "company_json": "Downloads\\json_output\\Reconciliation Statements 20251103.json", "enable_ai": false, "run_log": "logs\\runs\\run-20251103T044557-18064.log"}
+{"ts": "2025-11-03T04:45:57.505841Z", "event": "reconcile.data_loaded", "correlation_id": "run-20251103T044557-18064"}
+{"ts": "2025-11-03T04:46:59.634636Z", "event": "reconcile.completed", "correlation_id": "run-20251103T044557-18064", "results": 104}
+{"ts": "2025-11-03T04:47:00.162056Z", "event": "reconcile.exported", "correlation_id": "run-20251103T044557-18064", "out_path": "matching_results\\MATCHLIST_MBB02_20251103_124659.xlsx"}
+{"ts": "2025-11-03T07:56:44.410226Z", "event": "reconcile.start", "correlation_id": "run-20251103T075644-12200", "bank_json": "Downloads\\json_output\\Process Bank Transactions 20251103.json", "company_json": "Downloads\\json_output\\Reconciliation Statements 20251103.json", "enable_ai": false, "run_log": "logs\\runs\\run-20251103T075644-12200.log"}
+{"ts": "2025-11-03T07:56:44.491609Z", "event": "reconcile.data_loaded", "correlation_id": "run-20251103T075644-12200"}
+{"ts": "2025-11-03T07:57:41.878590Z", "event": "reconcile.completed", "correlation_id": "run-20251103T075644-12200", "results": 104}
+{"ts": "2025-11-03T07:57:42.071211Z", "event": "reconcile.exported", "correlation_id": "run-20251103T075644-12200", "out_path": "matching_results\\MATCHLIST_MBB02_20251103_155741.xlsx"}
+{"ts": "2025-11-03T08:42:33.379108Z", "event": "reconcile.start", "correlation_id": "run-20251103T084233-25016", "bank_json": "Downloads\\json_output\\Process Bank Transactions 20251103.json", "company_json": "Downloads\\json_output\\Reconciliation Statements 20251103.json", "enable_ai": false, "run_log": "logs\\runs\\run-20251103T084233-25016.log"}
+{"ts": "2025-11-03T08:42:33.500103Z", "event": "reconcile.data_loaded", "correlation_id": "run-20251103T084233-25016"}
+{"ts": "2025-11-03T08:44:16.982479Z", "event": "reconcile.completed", "correlation_id": "run-20251103T084233-25016", "results": 104}
+{"ts": "2025-11-03T08:44:17.685830Z", "event": "reconcile.exported", "correlation_id": "run-20251103T084233-25016", "out_path": "matching_results\\MATCHLIST_MBB02_20251103_164416.xlsx"}

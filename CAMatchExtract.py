@@ -1,4 +1,6 @@
+from datetime import datetime
 import re
+from matplotlib.dates import relativedelta
 from playwright.sync_api import Playwright, sync_playwright, expect
 import functions
 from ExcelFilter import process_bank_transactions
@@ -78,10 +80,12 @@ def handle_detail_table(page, frame, webhook_url=None):
 
 def CAMatchExtract(
     playwright: Playwright,
+    accountName: str,
+    date: str,
+    amount: float,
     website_url=os.getenv("WEBSITE_URL"),
     username=os.getenv("WEBSITE_USERNAME"),
     password=os.getenv("PASSWORD"),
-    accountName=os.getenv("accountName"),
     pingback_url=None,
     payload=None,
     webhook_url=None
@@ -110,7 +114,7 @@ def CAMatchExtract(
         accountName_link = frame.get_by_role("link", name=accountName).last
         functions.highlight_and_click(page, accountName_link)
         frame = functions.wait_for_iframe(page)
-        page.wait_for_timeout(5000)  # wait 5 seconds
+        page.wait_for_timeout(10000)  # wait 5 seconds
         automatch_button = page.locator('iframe[name="main"]').content_frame.locator(
             "#ctl00_phDS_ds_ToolBar_AutoMatch"
         ).get_by_text("Auto-Match")
@@ -229,7 +233,7 @@ def CAMatchExtract(
         # process_button = page.locator("iframe[name=\"main\"]").content_frame.locator("#ctl00_phDS_ds_ToolBar_ProcessMatched").get_by_text("Process")
         # functions.highlight_and_click(page, process_button)
         # page.wait_for_timeout(5000)  # wait 5 seconds
-        back_button = page.locator("iframe[name=\"main\"]").content_frame.locator("#ctl00_phDS_ds_ToolBar_CancelCloseToList div").nth(3)
+        back_button = page.locator("iframe[name=\"main\"]").content_frame.locator("#ctl00_phDS_ds_ToolBar_CancelCloseToList div").nth(0)
         functions.highlight_and_click(page, back_button)
         page.wait_for_timeout(3000)  # wait 3 seconds
         accountName_link = frame.get_by_role("link", name=accountName).last
@@ -287,11 +291,13 @@ def CAMatchExtract(
         
         ExtractReconcileStatement.run_extract_reconcile(
             playwright=playwright,
+            accountName=accountName,
+            date=date,
+            amount=amount,
             save_path=save_path,
             website_url=website_url,
             username=username,
             password=password,
-            accountName=accountName,
             pingback_url=pingback_url,
             payload=payload,
             webhook_url=webhook_url
@@ -305,10 +311,15 @@ def CAMatchExtract(
 
 if __name__ == "__main__":
     import config
+    today = datetime.today()
+    one_month_ago = today - relativedelta(months=1)
+    formatted_date = one_month_ago.strftime("%d/%m/%Y")
     with sync_playwright() as playwright:
         CAMatchExtract(
         playwright=playwright, 
         accountName=os.getenv("accountName"), 
+        date=formatted_date,
+        amount=100.00,
         website_url=os.getenv("WEBSITE_URL"),
         username=os.getenv("WEBSITE_USERNAME"),
         password=os.getenv("PASSWORD"),
