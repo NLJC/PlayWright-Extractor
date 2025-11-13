@@ -7,7 +7,7 @@ import queue
 import os
 import base64
 from playwright.sync_api import sync_playwright
-
+import functions
 from FundTransfer import run_internal_transfer   # ✅ NEW
 
 # ============================================================
@@ -18,6 +18,8 @@ CLIENT_ID = "231e7253-117c-4ae1-ad1f-f93d82c6e36c"
 TENANT_ID = "eb83ccb1-6ce0-40b1-941c-c7b1e857a690"
 AUTHORITY = f"https://login.microsoftonline.com/{TENANT_ID}"
 SCOPES = ["Mail.ReadWrite", "Mail.Send"]
+WEBHOOK_URL = None
+logger = functions.setup_logger(name="EmailTrigger", log_file="emailtrigger.log", webhook_url=WEBHOOK_URL)
 
 def get_access_token():
     app = msal.PublicClientApplication(CLIENT_ID, authority=AUTHORITY)
