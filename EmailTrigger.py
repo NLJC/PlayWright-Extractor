@@ -8,6 +8,8 @@ import os
 import base64
 from playwright.sync_api import sync_playwright
 
+from FundTransfer import run_internal_transfer   # ✅ NEW
+
 # ============================================================
 # ✅ EMAIL AUTH
 # ============================================================
@@ -34,7 +36,7 @@ def get_access_token():
         raise Exception("Authentication failed.")
 
 # ============================================================
-# ✅ STATUS EMAILS (Reply to same thread)
+# ✅ STATUS EMAILS
 # ============================================================
 
 def send_email_reply(token, message, attachment=None):
@@ -51,22 +53,21 @@ def send_email_reply(token, message, attachment=None):
     }
 
     # --------------------------------------------------------
-    # If no attachment → simple reply
+    # ✅ Simple reply
     # --------------------------------------------------------
     if not attachment:
         url = f"https://graph.microsoft.com/v1.0/me/messages/{message_id}/reply"
-        body = { "comment": message }
+        body = {"comment": message}
         requests.post(url, headers=headers, json=body)
         return
 
     # --------------------------------------------------------
-    # With attachment → create draft
+    # ✅ Reply WITH attachment
     # --------------------------------------------------------
     url = f"https://graph.microsoft.com/v1.0/me/messages/{message_id}/createReply"
     draft = requests.post(url, headers=headers, json={"comment": message}).json()
     draft_id = draft["id"]
 
-    # attach file
     filename = os.path.basename(attachment)
     with open(attachment, "rb") as f:
         file_b64 = base64.b64encode(f.read()).decode("utf-8")
@@ -80,9 +81,26 @@ def send_email_reply(token, message, attachment=None):
     attach_url = f"https://graph.microsoft.com/v1.0/me/messages/{draft_id}/attachments"
     requests.post(attach_url, headers=headers, json=attach_data)
 
-    # send it
     send_url = f"https://graph.microsoft.com/v1.0/me/messages/{draft_id}/send"
     requests.post(send_url, headers=headers)
+
+# ============================================================
+# ✅ ATTACHMENT HANDLING
+# ============================================================
+
+def save_attachment(att):
+    """Save a Graph email attachment to /downloads folder."""
+    os.makedirs("downloads", exist_ok=True)
+
+    name = att["name"]
+    data = base64.b64decode(att["contentBytes"])
+    path = os.path.join("downloads", name)
+
+    with open(path, "wb") as f:
+        f.write(data)
+
+    print(f"✅ Saved attachment: {path}")
+    return path
 
 # ============================================================
 # ✅ QUEUE + WORKER
@@ -101,7 +119,6 @@ def worker():
 
         token = get_access_token()
 
-        # status: started
         send_email_reply(token, f"🚀 Job started for {params['account']} on {params['date']}")
 
         try:
@@ -112,14 +129,10 @@ def worker():
                 ],
                 check=True
             )
-            # status: finished
-            send_email_reply(token, f"✅ Job finished successfully for {params['account']}")
-
-            # If CAMatchExtract outputs a file, attach it here:
-            # send_email_reply(token, "✅ Here is your reconciliation file", attachment="path")
+            send_email_reply(token, f"✅ Job finished for {params['account']}")
 
         except Exception as e:
-            send_email_reply(token, f"❌ Job FAILED\n{str(e)}")
+            send_email_reply(token, f"❌ CAMatchExtract FAILED\n{str(e)}")
 
         task_queue.task_done()
 
@@ -136,12 +149,13 @@ def add_task(params):
         threading.Thread(target=worker, daemon=True).start()
 
 # ============================================================
-# ✅ EMAIL TRIGGER
+# ✅ EMAIL FETCH
 # ============================================================
 
 def get_latest_email(token):
     headers = {"Authorization": f"Bearer {token}"}
-    endpoint = "https://graph.microsoft.com/v1.0/me/messages?$top=1"
+    # ✅ Expand attachments
+    endpoint = "https://graph.microsoft.com/v1.0/me/messages?$top=1&$expand=attachments"
     response = requests.get(endpoint, headers=headers)
 
     msg = response.json()["value"][0]
@@ -149,12 +163,16 @@ def get_latest_email(token):
     message_id = msg["id"]
     body_content = msg["body"]["content"]
     body_text = re.sub("<[^<]+?>","", body_content).strip()
+    attachments = msg.get("attachments", [])
 
-    # save email ID
     with open("trigger_email_id.txt", "w") as f:
         f.write(message_id)
 
-    return subject, body_text
+    return subject, body_text, attachments
+
+# ============================================================
+# ✅ PARSE BANK RECON
+# ============================================================
 
 def parse_bank_recon_email(subject, body):
     match = re.match(r"BANK RECON\s*-\s*([A-Za-z0-9]+)\s*-\s*(\d{2}/\d{2}/\d{4})", subject)
@@ -173,8 +191,24 @@ def parse_bank_recon_email(subject, body):
 
 if __name__ == "__main__":
     token = get_access_token()
-    subject, body = get_latest_email(token)
+    subject, body, attachments = get_latest_email(token)
 
+    # --------------------------------------------------------
+    # ✅ Step 1: If email has attachment → run internal transfer
+    # --------------------------------------------------------
+    if attachments:
+        print(f"📎 {len(attachments)} attachment(s) detected.")
+        file_path = save_attachment(attachments[0])    # first attachment only
+
+        try:
+            run_internal_transfer(file=file_path)
+            send_email_reply(token, "✅ Internal Transfer Completed")
+        except Exception as e:
+            send_email_reply(token, f"❌ Internal Transfer Failed\n{str(e)}")
+
+    # --------------------------------------------------------
+    # ✅ Step 2: BANK RECON processing
+    # --------------------------------------------------------
     if "BANK RECON" in subject.upper():
         info = parse_bank_recon_email(subject, body)
 
@@ -182,6 +216,5 @@ if __name__ == "__main__":
             add_task(info)
         else:
             send_email_reply(token, "⚠️ Invalid BANK RECON format.")
-
     else:
         print("📭 No BANK RECON command")

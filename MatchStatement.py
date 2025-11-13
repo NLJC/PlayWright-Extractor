@@ -145,30 +145,45 @@ def click_matches(page, frame, csgp_ref, click_all=False, webhook_url=None):
     # Re-select main frame before waiting
     frame = page.frame(name="main")
     textbox = frame.locator("#ctl00_phG_PXSplitContainer_tab2_t0_PXGrid1_at_tlb_fb_text")
-    textbox.scroll_into_view_if_needed()
+    # textbox.scroll_into_view_if_needed()
 
+            # --- Try waiting for the textbox normally ---
     try:
-        # --- Ensure the textbox exists and is visible ---
         textbox.wait_for(state="visible", timeout=10000)
-    except:
-        functions.log_message(webhook_url, f"⚠️ Textbox not visible, re-focusing frame for {csgp_ref}")
-        # Try refocusing iframe and reselecting textbox
-        page.frame_locator("iframe[name='main']").locator("body").click()
-        page.wait_for_timeout(1000)
-        textbox = page.frame_locator("iframe[name='main']").locator(
-            "#ctl00_phG_PXSplitContainer_tab2_t0_PXGrid1_at_tlb_fb_text"
+
+    except Exception as e1:
+        functions.log_message(webhook_url,
+            f"⚠️ Textbox not visible on first attempt for {csgp_ref}: {e1}"
         )
-        textbox.wait_for(state="visible", timeout=10000)
 
-    # --- Safely click and fill textbox ---
+        # Try refocusing iframe and retrying
+        try:
+            page.frame_locator("iframe[name='main']").locator("body").click()
+            page.wait_for_timeout(800)
+
+            textbox = page.frame_locator("iframe[name='main']").locator(
+                "#ctl00_phG_PXSplitContainer_tab2_t0_PXGrid1_at_tlb_fb_text"
+            )
+
+            textbox.wait_for(state="visible", timeout=10000)
+
+        except Exception as e2:
+            functions.log_message(webhook_url,
+                f"❌ Textbox still not visible after retry for {csgp_ref}: {e2}. Skipping row."
+            )
+            return False   # ✅ FAIL SAFELY & CONTINUE NEXT ENTRY
+
+        # --- Safely click and fill textbox ---
     try:
-        textbox.scroll_into_view_if_needed()
         textbox.click(force=True)
         textbox.fill(str(csgp_ref))
-        page.wait_for_timeout(2000)
+        page.wait_for_timeout(1500)
+
     except Exception as e:
-        functions.log_message(webhook_url, f"❌ Failed to fill textbox for {csgp_ref}: {e}")
-        return False
+        functions.log_message(webhook_url,
+            f"❌ Failed to fill textbox for {csgp_ref}: {e}. Skipping row."
+        )
+        return False   # ✅ FAIL SAFELY & CONTINUE NEXT ENTRY
     
     search_button = frame.locator("#ctl00_phG_PXSplitContainer_tab2_t0_PXGrid1_at_tlb_fb > div.buttonsCont > div > div")
     search_button.hover()
@@ -577,6 +592,33 @@ def possibleMatchLogic(page, frame, row_data, bank_refs, csgp_ref, accountName, 
     functions.click_account_name(page, frame, accountName)
     page.wait_for_timeout(20000)
 
+def clean_ref(ref):
+    try:
+        return str(int(float(ref)))
+    except:
+        return ref.strip()
+    
+def activate_unmatched_tab(page):
+    frame = page.frame(name="main")
+
+    # Try scroll tab bar into view (optional)
+    try:
+        frame.locator("#ctl00_phG_tab").scroll_into_view_if_needed()
+        page.wait_for_timeout(200)
+    except:
+        pass
+
+    # ✅ FINAL: click using JS (bypasses visibility rules)
+    try:
+        page.evaluate("""
+            const el = document.querySelector('#ctl00_phG_tab_tab1');
+            if (el) el.click();
+        """)
+        return True
+    except Exception as e:
+        print(f"❌ JS click failed: {e}")
+        return False
+
 def process_sheet(sheet_name, df, page, accountName, failed_entries, webhook_url=None):
     frame = functions.wait_for_iframe(page)
     """
@@ -625,7 +667,7 @@ def process_sheet(sheet_name, df, page, accountName, failed_entries, webhook_url
 
             # Split CSGP refs (loop through all)
             csgp_ref_raw = str(row.get("CSGP Reference", "")).strip()
-            csgp_refs = [ref.strip() for ref in csgp_ref_raw.split(",") if ref.strip()] if csgp_ref_raw else []
+            csgp_refs = [clean_ref(ref) for ref in csgp_ref_raw.split(",") if ref.strip()]
 
             functions.log_message(webhook_url, f"[Group] Row {index+1}: BankRef={bank_ref}, CSGPRefs={csgp_refs}")
 
@@ -703,20 +745,60 @@ def run_match_process(
 
         # Get the value inside
         reference_number = textbox.input_value()
+        page.keyboard.press("Escape")  # close any open dropdowns
 
         functions.log_message(webhook_url, f"📋 Reference Number detected: {reference_number}")
 
         # click reconcile processed
-        frame.locator("#ctl00_phG_tab_t0_grid1_at_tlb_ul > li:nth-child(14)").click()
+        # click reconcile processed button
+        frame.locator("#ctl00_phG_tab_t0_grid1_at_tlb_ul > li:nth-child(14) > div > div").click()
+        page.wait_for_timeout(3000)
         frame.locator("#ctl00_phG_tab_t0_grid1_at_tlb_menuhi_item_0").nth(0).click()
-        page.wait_for_timeout(15000) 
+        # frame.locator("text=Reconcile Processed").nth(1).click()
+        page.wait_for_timeout(15000)
+
+        frame = page.frame(name="main")  # refresh iframe reference
+        page.wait_for_timeout(500)       # small delay for stability
+
+        tab_unmatched = frame.locator("#ctl00_phG_tab_tab1")
+
+        if not activate_unmatched_tab(page):
+            raise Exception("Failed to activate Unmatched Statement tab")
+
+
+        try:
+            if not activate_unmatched_tab(page):
+                raise Exception("Failed to activate Unmatched Statement tab")
+
+        except:
+            # Try clicking parent tab strip
+            frame.locator("#ctl00_phG_tab_t0").click(force=True)
+            page.wait_for_timeout(500)
+
+            # Try again
+            tab_unmatched.click(force=True)
 
         # click unmatched statement
-        frame.locator("#ctl00_phG_tab_tab1").click()
+        # Always re-get frame
+        frame = page.frame(name="main")
+
+        # Clear overlays
+        try:
+            frame.locator("div[blocking-mask], .ui-blockui, .popupPanel").wait_for(state="hidden", timeout=15000)
+        except:
+            pass
+
+        tab = frame.locator("#ctl00_phG_tab_tab1")
+
+        # Ensure tab is displayed
+        frame.wait_for_selector("#ctl00_phG_tab_tab1", timeout=10000)
+
+        # Click with force
+        tab.click(button="left", force=True)
+
         # click calculate unmatched statement
         frame.locator("#ctl00_phG_tab_t1_grid2_at_tlb_ul > li:nth-child(3) > div > div").click()
         page.wait_for_timeout(20000)
-
         #  click save
         save_button = frame.locator("#ctl00_phDS_ds_ToolBar_Save > div > qp-hyper-icon > div > div > div")
 

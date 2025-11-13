@@ -78,6 +78,51 @@ def handle_detail_table(page, frame, webhook_url=None):
 
             break  # stop scanning after first valid row
 
+def wait_for_confirmation(page, frame):
+    try:
+        # --- Step 0: Wait up to 5s for the popup to appear ---
+        print("⏳ Waiting for confirmation popup...")
+        popup_visible = frame.locator("span.qp-lr-message").wait_for(state="visible", timeout=5000)
+    except Exception:
+        print("⚠️ No confirmation popup appeared within 5s — skipping confirmation wait.")
+        return  # Exit early if popup never appeared
+
+    try:
+        # Define the main message element
+        status_msg = frame.locator("span.qp-lr-message")
+
+        # --- Step 1: Check for "Nothing in progress" first ---
+        try:
+            expect(status_msg).to_have_text("Nothing in progress", timeout=10000)
+            print("⚠️  Status shows 'Nothing in progress' — Auto-Match may not have started.")
+            functions.highlight(page, status_msg)
+        except Exception:
+            # If "Nothing in progress" not found, proceed as usual
+            pass
+
+        # --- Step 2: Wait for execution if it happens ---
+        try:
+            abort_message = frame.get_by_text("Executing. Press to abort")
+            functions.highlight(page, abort_message)
+            abort_message.wait_for(state="detached", timeout=180000)
+            print("⏳ Auto-Match process finished executing.")
+        except Exception:
+            print("⚠️  No 'Executing' message appeared — continuing anyway.")
+
+        # --- Step 3: Wait for the final success message ---
+        try:
+            success_msg = frame.locator("span.qp-lr-message")
+            expect(success_msg).to_have_text("The operation has completed.", timeout=180000)
+            functions.highlight(page, success_msg)
+            print("✅ Operation completed successfully!")
+        except Exception:
+            print("⚠️ No 'Operation completed' message found — continuing anyway.")
+
+    except Exception as e:
+        print(f"⚠️ Error while waiting for confirmation: {e}")
+        # Just skip instead of raising exception
+        return
+
 def CAMatchExtract(
     playwright: Playwright,
     accountName: str,
@@ -123,32 +168,7 @@ def CAMatchExtract(
         frame = functions.wait_for_iframe(page)
         page.wait_for_timeout(2000)  # wait 2 seconds for iframe content to update
 
-        # Define the main message element
-        status_msg = frame.locator("span.qp-lr-message")
-
-        # --- Step 1: Check for "Nothing in progress" first ---
-        try:
-            expect(status_msg).to_have_text("Nothing in progress", timeout=2000)
-            print("⚠️  Status shows 'Nothing in progress' — Auto-Match may not have started.")
-            functions.highlight(page, status_msg)
-        except Exception:
-            # If "Nothing in progress" not found, proceed as usual
-            pass
-
-        # --- Step 2: Wait for execution if it happens ---
-        try:
-            abort_message = frame.get_by_text("Executing. Press to abort")
-            functions.highlight(page, abort_message)
-            abort_message.wait_for(state="detached", timeout=180000)
-            print("⏳ Auto-Match process finished executing.")
-        except Exception:
-            print("⚠️  No 'Executing' message appeared — continuing anyway.")
-
-        # --- Step 3: Wait for the final success message ---
-        success_msg = frame.locator("span.qp-lr-message")
-        expect(success_msg).to_have_text("The operation has completed.", timeout=180000)
-        functions.highlight(page, success_msg)
-        print("✅ Operation completed successfully!")
+        wait_for_confirmation(page, frame)
 
         process_button = page.locator("iframe[name=\"main\"]").content_frame.locator("#ctl00_phDS_ds_ToolBar_ProcessMatched").get_by_text("Process")
         functions.highlight_and_click(page, process_button)
@@ -167,72 +187,72 @@ def CAMatchExtract(
 
         # ---------------------
         # # --- Main table handling with pagination ---
-        # has_next = True
-        # while has_next:
-        #     # Wait for the grid container (not rows individually)
-        #     frame.wait_for_selector("#ctl00_phG_PXSplitContainer_grid1_dataT0", state="attached", timeout=20000)
+        has_next = True
+        while has_next:
+            # Wait for the grid container (not rows individually)
+            frame.wait_for_selector("#ctl00_phG_PXSplitContainer_grid1_dataT0", state="attached", timeout=20000)
 
-        #     # Grab all rows immediately
-        #     table = frame.locator("#ctl00_phG_PXSplitContainer_grid1_dataT0")
-        #     rows = table.locator("tbody tr")
-        #     row_count = rows.count()
-        #     functions.log_message(webhook_url, f"Found {row_count} rows (including phantom)")
+            # Grab all rows immediately
+            table = frame.locator("#ctl00_phG_PXSplitContainer_grid1_dataT0")
+            rows = table.locator("tbody tr")
+            row_count = rows.count()
+            functions.log_message(webhook_url, f"Found {row_count} rows (including phantom)")
 
-        #     # Convert locator to actual list of selectors 
-        #     row_elements = rows.element_handles()
+            # Convert locator to actual list of selectors 
+            row_elements = rows.element_handles()
 
-        #     # Process all rows except the last phantom one
-        #     for i, row in enumerate(row_elements[:-1]):
-        #         cols = row.query_selector_all("td")
-        #         if not cols or len(cols) < 5:
-        #             functions.log_message(webhook_url, f"Row {i} skipped (not enough columns)")
-        #             continue
+            # Process all rows except the last phantom one
+            for i, row in enumerate(row_elements[:-1]):
+                cols = row.query_selector_all("td")
+                if not cols or len(cols) < 5:
+                    functions.log_message(webhook_url, f"Row {i} skipped (not enough columns)")
+                    continue
 
-        #         # Extract Ext. Ref. Nbr. (5th column)
-        #         ext_ref = cols[4].inner_text().strip()
-        #         if not ext_ref or ext_ref == "Ext. Ref. Nbr.":
-        #             functions.log_message(webhook_url, f"Row {i} skipped (header/empty)")
-        #             continue
+                # Extract Ext. Ref. Nbr. (5th column)
+                ext_ref = cols[4].inner_text().strip()
+                if not ext_ref or ext_ref == "Ext. Ref. Nbr.":
+                    functions.log_message(webhook_url, f"Row {i} skipped (header/empty)")
+                    continue
 
-        #         functions.log_message(webhook_url, f"Row {i} Ext. Ref. Nbr.: {ext_ref}")
+                functions.log_message(webhook_url, f"Row {i} Ext. Ref. Nbr.: {ext_ref}")
 
-        #         # First column check for icons
-        #         first_col = cols[0]
-        #         icon_count = len(first_col.query_selector_all("div"))
+                # First column check for icons
+                first_col = cols[0]
+                icon_count = len(first_col.query_selector_all("div"))
 
-        #         if icon_count == 0:
-        #             # Unmatched row → click Ext. Ref. Nbr.
-        #             functions.log_message(webhook_url, f"Row {i} unmatched → clicking Ext. Ref. Nbr.")
-        #             try:
-        #                 functions.highlight_and_click(page, cols[4])
-        #             except:
-        #                 try:
-        #                     frame.evaluate("(el) => el.click()", cols[4])
-        #                 except:
-        #                     cols[4].press("Enter")
-        #             page.wait_for_timeout(2000)
-        #             handle_detail_table(page, frame, webhook_url)
-        #         else:
-        #             functions.log_message(webhook_url, f"Row {i} matched → skipping")
+                if icon_count == 0:
+                    # Unmatched row → click Ext. Ref. Nbr.
+                    functions.log_message(webhook_url, f"Row {i} unmatched → clicking Ext. Ref. Nbr.")
+                    try:
+                        functions.highlight_and_click(page, cols[4])
+                    except:
+                        try:
+                            frame.evaluate("(el) => el.click()", cols[4])
+                        except:
+                            cols[4].press("Enter")
+                    page.wait_for_timeout(2000)
+                    handle_detail_table(page, frame, webhook_url)
+                else:
+                    functions.log_message(webhook_url, f"Row {i} matched → skipping")
 
-        #     # --- Pagination handling ---
-        #     enabled_next = frame.locator(
-        #         "li:nth-child(4) > .toolsBtn > .toolBtnNormal .main-icon-img.main-PageNext"
-        #     )
-        #     if enabled_next.count() > 0:
-        #         functions.log_message(webhook_url, "Next button is enabled → going to next page")
-        #         functions.highlight_and_click(page, enabled_next)
-        #         page.wait_for_timeout(2000)
-        #         has_next = True
-        #     else:
-        #         functions.log_message(webhook_url, "Next button is disabled → stopping")
-        #         has_next = False
+            # --- Pagination handling ---
+            enabled_next = frame.locator(
+                "li:nth-child(4) > .toolsBtn > .toolBtnNormal .main-icon-img.main-PageNext"
+            )
+            if enabled_next.count() > 0:
+                functions.log_message(webhook_url, "Next button is enabled → going to next page")
+                functions.highlight_and_click(page, enabled_next)
+                page.wait_for_timeout(2000)
+                has_next = True
+            else:
+                functions.log_message(webhook_url, "Next button is disabled → stopping")
+                has_next = False
 
         # ---------------------
         # After processing all pages    
-        # process_button = page.locator("iframe[name=\"main\"]").content_frame.locator("#ctl00_phDS_ds_ToolBar_ProcessMatched").get_by_text("Process")
-        # functions.highlight_and_click(page, process_button)
-        # page.wait_for_timeout(5000)  # wait 5 seconds
+        process_button = page.locator("iframe[name=\"main\"]").content_frame.locator("#ctl00_phDS_ds_ToolBar_ProcessMatched").get_by_text("Process")
+        functions.highlight_and_click(page, process_button)
+        page.wait_for_timeout(5000)  # wait 5 seconds
         back_button = page.locator("iframe[name=\"main\"]").content_frame.locator("#ctl00_phDS_ds_ToolBar_CancelCloseToList div").nth(0)
         functions.highlight_and_click(page, back_button)
         page.wait_for_timeout(3000)  # wait 3 seconds

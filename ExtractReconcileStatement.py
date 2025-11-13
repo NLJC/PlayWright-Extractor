@@ -24,6 +24,86 @@ def type_and_select(frame, cashAccount: str, locator: str):
     # Click the first matching option from the dropdown
     frame.locator(f"text=/{pattern}/").first.click()
 
+def get_reconciled_header(frame):
+    headers = frame.locator("td.GridHeader.GridRow")
+
+    for i in range(headers.count()):
+        h = headers.nth(i)
+        txt = h.inner_text().strip()
+
+        # ✅ Must contain the label
+        if "Reconciled" in txt:
+
+            # ❌ Skip the phantom/hidden HS header
+            id_attr = h.get_attribute("id") or ""
+            if "_colHS_" in id_attr:
+                continue
+
+            # ✅ Only accept real colH header
+            if "_colH_" in id_attr:
+                return h
+
+    return None
+
+def force_click(locator):
+    # Try normal click first
+    try:
+        locator.click(timeout=2000)
+        return True
+    except:
+        pass
+
+    # JS click as backup
+    try:
+        locator.evaluate("el => el.click()")
+        return True
+    except:
+        pass
+
+    # Full event-dispatch click
+    try:
+        locator.evaluate("""
+            el => {
+                const evt1 = new MouseEvent('mousedown', {bubbles: true});
+                const evt2 = new MouseEvent('mouseup', {bubbles: true});
+                const evt3 = new MouseEvent('click', {bubbles: true});
+                el.dispatchEvent(evt1);
+                el.dispatchEvent(evt2);
+                el.dispatchEvent(evt3);
+            }
+        """)
+        return True
+    except:
+        pass
+
+    return False
+
+def hover_and_click(page, locator):
+    try:
+        locator.wait_for(state="visible", timeout=8000)
+    except:
+        print("❌ Header not visible")
+        return False
+
+    try:
+        print("🔍 Hovering Reconciled header...")
+        locator.hover()
+        page.wait_for_timeout(300)
+
+        print("✅ Hover successful, attempting click...")
+        locator.click(timeout=5000)
+        return True
+
+    except Exception:
+        print("⚠️ Normal click failed, trying JS click...")
+
+        try:
+            locator.evaluate("el => el.click()")
+            return True
+        except Exception:
+            print("❌ JS click also failed")
+            return False
+
 def run_extract_reconcile(
     playwright: Playwright,
     accountName: str,
@@ -60,19 +140,60 @@ def run_extract_reconcile(
         date_box = frame.get_by_label("Load Documents Up To:")
         date_box.click()
         date_box.type(date, delay=100)
+        page.keyboard.press("Enter")
         statement_balance_box = frame.get_by_label("Statement Balance:")
         statement_balance_box.click()
         statement_balance_box.fill(str(amount))
+        page.keyboard.press("Enter")
         # click reconcile processed button
-        frame.locator("#ctl00_phG_tab_t0_grid1_at_tlb_ul > li:nth-child(14)").click()
-        frame.locator("#ctl00_phG_tab_t0_grid1_at_tlb_menuhi_item_0").nth(0).click()
+        frame.locator("#ctl00_phG_tab_t0_grid1_at_tlb_ul > li:nth-child(14) > div > div").click()
+        page.wait_for_timeout(3000)
+        # frame.locator("#ctl00_phG_tab_t0_grid1_at_tlb_menuhi_item_0").nth(0).click()
+        frame.locator("text=Reconcile Processed").nth(1).click()
         page.wait_for_timeout(15000)
 
         # set reconciled to false
-        header = frame.locator("#ctl00_phG_tab_t0_grid1_headerT tr td:nth-child(2)")
-        header.wait_for(state="visible", timeout=15000)
-        header.click()
-        frame.get_by_text("False").click()
+        # --- Locate real Reconciled header ---
+        headers = frame.locator("td.GridHeader.GridRow", has_text="Reconciled")
+        count = headers.count()
+
+        print(f"🔎 Found {count} possible Reconciled headers")
+
+        header = None
+
+        for i in range(count):
+            h = headers.nth(i)
+            if h.is_visible():
+                header = h
+                print(f"✅ Using visible header #{i}")
+                break
+
+        if header is None:
+            raise Exception("❌ Could not locate a visible Reconciled header!")
+
+        # --- Force real click through overlay ---
+        print("✅ Forcing JS click with full mouse events...")
+
+        header.evaluate("""
+        (el) => {
+            ['mouseover','mousedown','mouseup','click'].forEach(ev => {
+                el.dispatchEvent(new MouseEvent(ev, { bubbles: true, cancelable: true }));
+            });
+        }
+        """)
+
+        page.wait_for_timeout(1500)
+
+        # --- Now click "False" from popup ---
+        false_button = frame.get_by_text("False", exact=True)
+
+        try:
+            false_button.first.wait_for(timeout=5000)
+            false_button.first.click()
+            print("✅ Filtered by False")
+        except:
+            raise Exception("❌ Filter popup did not appear after clicking Reconciled header")
+        
         frame.get_by_role("button", name="OK").click()
         page.wait_for_timeout(5000)
         # set cleared to false as well
