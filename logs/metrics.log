@@ -124,3 +124,8 @@
 {"type": "timing", "name": "reconcile.core", "value": 88894.78549989872, "tags": {"cid": "run-20251107T091006-22004"}, "ts": "2025-11-07T09:11:35.995752Z"}
 {"type": "gauge", "name": "reconcile.results_count", "value": 104.0, "tags": {"cid": "run-20251107T091006-22004"}, "ts": "2025-11-07T09:11:35.996765Z"}
 {"type": "timing", "name": "reconcile.export", "value": 562.81300005503, "tags": {"cid": "run-20251107T091006-22004"}, "ts": "2025-11-07T09:11:36.551946Z"}
+{"type": "counter", "name": "reconcile.start", "value": 1, "tags": {"bank_name": "MBB02"}, "ts": "2025-11-13T04:27:21.689987Z"}
+{"type": "timing", "name": "reconcile.load_data", "value": 77.1798999994644, "tags": {"cid": "run-20251113T042721-19376"}, "ts": "2025-11-13T04:27:21.768099Z"}
+{"type": "timing", "name": "reconcile.core", "value": 34011.946299993724, "tags": {"cid": "run-20251113T042721-19376"}, "ts": "2025-11-13T04:27:55.779881Z"}
+{"type": "gauge", "name": "reconcile.results_count", "value": 104.0, "tags": {"cid": "run-20251113T042721-19376"}, "ts": "2025-11-13T04:27:55.779881Z"}
+{"type": "timing", "name": "reconcile.export", "value": 584.9871000027633, "tags": {"cid": "run-20251113T042721-19376"}, "ts": "2025-11-13T04:27:56.351397Z"}
