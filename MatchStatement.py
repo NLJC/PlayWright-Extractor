@@ -44,7 +44,6 @@ def is_table_empty(rows):
     return True
 
 def false_filter_table(page, frame, header_text, textbox_selector, value):
-    # unused function now, was used to fake filtering table for showing in video
     """
     Robust filter handler for ASPX grid tables.
     Clicks header, waits for textbox, retries twice if still hidden.
@@ -315,11 +314,10 @@ def enableMultipleMatching(page, frame, webhook_url=None):
 
     functions.log_message(webhook_url, "⚠️ No Multiple Matching checkbox found")
     
-def checkOneToManyMatchExists(page, frame, csgp_ref, webhook_url=None):
+def checkGroupMatchExists(page, frame, csgp_ref, webhook_url=None):
     """
     Dry run: return True if the CSGPRef exists and has a checkbox row.
     """
-    # redundant function now
     textbox = page.frame_locator("iframe[name='main']").locator(
         "#ctl00_phG_PXSplitContainer_tab2_t0_PXGrid1_at_tlb_fb_text"
     )
@@ -356,7 +354,7 @@ def checkOneToManyMatchExists(page, frame, csgp_ref, webhook_url=None):
     real_rows = detail_table.locator("tr:has(td input[type=checkbox])")
     return real_rows.count() > 0
 
-def oneToManyLogic(page, frame, row_data, bank_ref, csgp_refs, failed_entries, webhook_url=None):
+def groupMatchLogic(page, frame, row_data, bank_ref, csgp_refs, failed_entries, webhook_url=None):
     functions.log_message(webhook_url, f"[Group] Searching main table for BankRef={bank_ref}")
 
     # --- Step 1: Filter by BankRef (same as searchMainTable) ---
@@ -430,7 +428,7 @@ def oneToManyLogic(page, frame, row_data, bank_ref, csgp_refs, failed_entries, w
 
     functions.log_message(webhook_url, f"[Group] ✅ Finished group match for BankRef={bank_ref}")
 
-def checkManyToOneMatchExists(page, frame, ref, verified_refs, row_data, failed_entries, webhook_url=None):
+def checkPossibleMatchExists(page, frame, ref, verified_refs, row_data, failed_entries, webhook_url=None):
     false_filter_table(page, frame, "Ext. Ref. Nbr.", "#ctl00_phG_PXSplitContainer_grid1_fd_txt", ref)
 
     # Wait for rows
@@ -473,7 +471,7 @@ def checkCSGPMatchExists(page, frame, csgp_ref, row_data, failed_entries, webhoo
         functions.log_message(webhook_url, f"[Possible] ✅ Verified CSGPRef={csgp_ref} exists")
         return True
 
-def clickManyToOneMatches(page, frame, ref):
+def clickPossibleMatches(page, frame, ref):
     false_filter_table(page, frame, "Ext. Ref. Nbr.", "#ctl00_phG_PXSplitContainer_grid1_fd_txt", ref)
 
     # Select by clicking selector column
@@ -482,7 +480,7 @@ def clickManyToOneMatches(page, frame, ref):
     selector_col = row.locator("td").nth(3)  # 0-based index; 3 = 4th column
     return selector_col
 
-def manyToOneMatchLogic(page, frame, row_data, bank_refs, csgp_ref, accountName, failed_entries, webhook_url=None):
+def possibleMatchLogic(page, frame, row_data, bank_refs, csgp_ref, accountName, failed_entries, webhook_url=None):
     functions.log_message(webhook_url, f"[Possible] Starting with BankRefs={bank_refs}, CSGPRef={csgp_ref}")
 
     verified_refs = []
@@ -491,7 +489,7 @@ def manyToOneMatchLogic(page, frame, row_data, bank_refs, csgp_ref, accountName,
     for ref in bank_refs:
         functions.log_message(webhook_url, f"[Possible] Verifying BankRef={ref}")
 
-        checkManyToOneMatchExists(page, frame, ref, verified_refs, row_data, failed_entries, webhook_url)
+        checkPossibleMatchExists(page, frame, ref, verified_refs, row_data, failed_entries, webhook_url)
 
     # If not all verified → fail
     if len(verified_refs) != len(bank_refs):
@@ -536,7 +534,7 @@ def manyToOneMatchLogic(page, frame, row_data, bank_refs, csgp_ref, accountName,
     for ref in verified_refs:
         functions.log_message(webhook_url, f"[Possible] Selecting BankRef={ref}")
 
-        checkbox_col = clickManyToOneMatches(page, frame, ref)
+        checkbox_col = clickPossibleMatches(page, frame, ref)
         if checkbox_col.count() > 0:
             functions.log_message(webhook_url, f"[Possible] ✅ Clicking selector column for BankRef={ref}")
             functions.highlight_and_click(page, checkbox_col)
@@ -673,7 +671,7 @@ def process_sheet(sheet_name, df, page, accountName, failed_entries, webhook_url
 
             functions.log_message(webhook_url, f"[Group] Row {index+1}: BankRef={bank_ref}, CSGPRefs={csgp_refs}")
 
-            oneToManyLogic(page, frame, row, bank_ref, csgp_refs, failed_entries, webhook_url)
+            groupMatchLogic(page, frame, row, bank_ref, csgp_refs, failed_entries, webhook_url)
 
         elif sheet_name == "Possible Match":
             functions.log_message(webhook_url, f"[Possible] Row {index+1}: BankRef={bank_reference_number}, CSGPRef={csgp_ref}")
@@ -690,7 +688,7 @@ def process_sheet(sheet_name, df, page, accountName, failed_entries, webhook_url
             
             functions.log_message(webhook_url, f"[Possible] Parsed BankRefs={bank_refs}, Main CSGPRef={main_csgp_ref}")
 
-            manyToOneMatchLogic(page, frame, row, bank_refs, main_csgp_ref, accountName, failed_entries, webhook_url)
+            possibleMatchLogic(page, frame, row, bank_refs, main_csgp_ref, accountName, failed_entries, webhook_url)
         
     if sheet_name == "1to1 Matches" or sheet_name == "Group Match":
         # After processing all rows in 1to1 or Group Match, click Process
@@ -699,7 +697,7 @@ def process_sheet(sheet_name, df, page, accountName, failed_entries, webhook_url
         process_button = page.locator("iframe[name=\"main\"]").content_frame.locator("#ctl00_phDS_ds_ToolBar_ProcessMatched").get_by_text("Process")
         functions.highlight(page, process_button)
 
-def run_matching_process(
+def run_match_process(
     playwright: Playwright,
     matchresultpath,
     website_url=os.getenv("WEBSITE_URL"),
@@ -859,7 +857,7 @@ if __name__ == "__main__":
     # Default to config.py for direct execution
     import config
     with sync_playwright() as playwright:
-        run_matching_process(
+        run_match_process(
             playwright,
             website_url=os.getenv("WEBSITE_URL"),
             username=os.getenv("WEBSITE_USERNAME"),

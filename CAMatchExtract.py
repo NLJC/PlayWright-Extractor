@@ -123,7 +123,7 @@ def wait_for_confirmation(page, frame):
         # Just skip instead of raising exception
         return
 
-def process_bank_transactions(
+def CAMatchExtract(
     playwright: Playwright,
     accountName: str,
     date: str,
@@ -309,7 +309,7 @@ def process_bank_transactions(
 
         records = df.to_dict(orient="records")
         
-        ExtractReconcileStatement.extract_reconciliation_statements(
+        ExtractReconcileStatement.run_extract_reconcile(
             playwright=playwright,
             accountName=accountName,
             date=date,
@@ -335,7 +335,7 @@ if __name__ == "__main__":
     one_month_ago = today - relativedelta(months=1)
     formatted_date = one_month_ago.strftime("%d/%m/%Y")
     with sync_playwright() as playwright:
-        process_bank_transactions(
+        CAMatchExtract(
         playwright=playwright, 
         accountName=os.getenv("accountName"), 
         date=formatted_date,

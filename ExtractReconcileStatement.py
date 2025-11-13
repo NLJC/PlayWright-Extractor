@@ -104,7 +104,7 @@ def hover_and_click(page, locator):
             print("❌ JS click also failed")
             return False
 
-def extract_reconciliation_statements(
+def run_extract_reconcile(
     playwright: Playwright,
     accountName: str,
     date: str,
@@ -255,7 +255,7 @@ def extract_reconciliation_statements(
 if __name__ == "__main__":
     import config
     with sync_playwright() as playwright:
-        extract_reconciliation_statements(
+        run_extract_reconcile(
             playwright=playwright,
             accountName=config.accountName,
             date="31/08/2024",

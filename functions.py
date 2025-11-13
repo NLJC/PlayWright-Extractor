@@ -3,9 +3,6 @@ import config
 from playwright.sync_api import Playwright, sync_playwright, expect
 import pandas as pd
 import polars as pl
-import logging
-import os
-import requests
 
 def login(page, website_url, username, password):
     page.goto(website_url)
@@ -26,67 +23,6 @@ def navigatePage(page, buttonName):
     page.wait_for_timeout(1000)  # wait 1 second
     button.click()
     page.wait_for_timeout(5000)  # wait 5 seconds
-
-class WebhookHandler(logging.Handler):
-    """Custom log handler to send messages to a webhook URL."""
-    def __init__(self, webhook_url):
-        super().__init__()
-        self.webhook_url = webhook_url
-
-    def emit(self, record):
-        try:
-            log_entry = self.format(record)
-            payload = {"message": log_entry}
-            requests.post(self.webhook_url, json=payload, timeout=5)
-        except Exception as e:
-            print(f"[Webhook Error] {e}: {record.getMessage()}")
-        
-def setup_logger(name="main_logger", log_file="automation.log", webhook_url=None, level=logging.INFO):
-    """Set up logger with console, file, and optional webhook output."""
-    os.makedirs("logs", exist_ok=True)
-    log_path = os.path.join("logs", log_file)
-
-    logger = logging.getLogger(name)
-    logger.setLevel(level)
-
-    # avoid duplicate handlers
-    if not logger.handlers:
-        formatter = logging.Formatter(
-            fmt="%(asctime)s [%(levelname)s] %(name)s: %(message)s",
-            datefmt="%Y-%m-%d %H:%M:%S"
-        )
-
-        # Console handler
-        ch = logging.StreamHandler()
-        ch.setFormatter(formatter)
-        logger.addHandler(ch)
-
-        # File handler
-        fh = logging.FileHandler(log_path, mode="a", encoding="utf-8")
-        fh.setFormatter(formatter)
-        logger.addHandler(fh)
-
-        # Optional webhook handler
-        if webhook_url:
-            wh = WebhookHandler(webhook_url)
-            wh.setFormatter(formatter)
-            logger.addHandler(wh)
-
-    return logger
-
-def log_message(logger, message, level="info", extra=None):
-    if extra:
-        message = f"{message} | Extra: {extra}"
-
-    # Log locally
-    if level == "info":
-        logger.info(message)
-    elif level == "warning":
-        logger.warning(message)
-    elif level == "error":
-        logger.error(message)
-    else:
-        logger.debug(message)
 
 def log_message(webhook_url, message, extra=None):
     print(message)

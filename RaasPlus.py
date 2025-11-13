@@ -106,7 +106,7 @@ def run_RaasPlus(
 
     reply_to_trigger_email("RAAS+ completed successfully.")
 
-    MatchStatement.run_matching_process(
+    MatchStatement.run_match_process(
         playwright,
         matchresultpath=excel_path,
         website_url=website_url,
