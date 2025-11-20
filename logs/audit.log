@@ -104,3 +104,19 @@
 {"ts": "2025-11-13T04:27:21.768099Z", "event": "reconcile.data_loaded", "correlation_id": "run-20251113T042721-19376"}
 {"ts": "2025-11-13T04:27:55.779881Z", "event": "reconcile.completed", "correlation_id": "run-20251113T042721-19376", "results": 104}
 {"ts": "2025-11-13T04:27:56.351397Z", "event": "reconcile.exported", "correlation_id": "run-20251113T042721-19376", "out_path": "matching_results\\MATCHLIST_MBB02_20251113_122755.xlsx"}
+{"ts": "2025-11-20T02:49:17.634536Z", "event": "reconcile.start", "correlation_id": "run-20251120T024917-18040", "bank_json": "Downloads\\json_output\\Process Bank Transactions 20251120.json", "company_json": "Downloads\\json_output\\Reconciliation Statements 20251120.json", "enable_ai": false, "run_log": "logs\\runs\\run-20251120T024917-18040.log"}
+{"ts": "2025-11-20T02:49:17.814766Z", "event": "reconcile.data_loaded", "correlation_id": "run-20251120T024917-18040"}
+{"ts": "2025-11-20T02:50:39.821087Z", "event": "reconcile.completed", "correlation_id": "run-20251120T024917-18040", "results": 103}
+{"ts": "2025-11-20T02:50:39.957519Z", "event": "reconcile.error", "correlation_id": "run-20251120T024917-18040", "stage": "export", "error": "No module named 'xlsxwriter'"}
+{"ts": "2025-11-20T03:18:38.216202Z", "event": "reconcile.start", "correlation_id": "run-20251120T031838-4156", "bank_json": "Downloads\\json_output\\Process Bank Transactions 20251120.json", "company_json": "Downloads\\json_output\\Reconciliation Statements 20251120.json", "enable_ai": false, "run_log": "logs\\runs\\run-20251120T031838-4156.log"}
+{"ts": "2025-11-20T03:18:38.362164Z", "event": "reconcile.data_loaded", "correlation_id": "run-20251120T031838-4156"}
+{"ts": "2025-11-20T03:19:58.501604Z", "event": "reconcile.completed", "correlation_id": "run-20251120T031838-4156", "results": 103}
+{"ts": "2025-11-20T03:19:58.954786Z", "event": "reconcile.exported", "correlation_id": "run-20251120T031838-4156", "out_path": "matching_results\\MATCHLIST_MBB02_20251120_111958.xlsx"}
+{"ts": "2025-11-20T04:09:25.495497Z", "event": "reconcile.start", "correlation_id": "run-20251120T040925-23076", "bank_json": "Downloads\\json_output\\Process Bank Transactions 20251120.json", "company_json": "Downloads\\json_output\\Reconciliation Statements 20251120.json", "enable_ai": false, "run_log": "logs\\runs\\run-20251120T040925-23076.log"}
+{"ts": "2025-11-20T04:09:25.665480Z", "event": "reconcile.data_loaded", "correlation_id": "run-20251120T040925-23076"}
+{"ts": "2025-11-20T04:10:43.755608Z", "event": "reconcile.completed", "correlation_id": "run-20251120T040925-23076", "results": 103}
+{"ts": "2025-11-20T04:10:44.186692Z", "event": "reconcile.exported", "correlation_id": "run-20251120T040925-23076", "out_path": "matching_results\\MATCHLIST_MBB02_20251120_121043.xlsx"}
+{"ts": "2025-11-20T04:55:02.891853Z", "event": "reconcile.start", "correlation_id": "run-20251120T045502-20604", "bank_json": "Downloads\\json_output\\Process Bank Transactions 20251120.json", "company_json": "Downloads\\json_output\\Reconciliation Statements 20251120.json", "enable_ai": false, "run_log": "logs\\runs\\run-20251120T045502-20604.log"}
+{"ts": "2025-11-20T04:55:03.101952Z", "event": "reconcile.data_loaded", "correlation_id": "run-20251120T045502-20604"}
+{"ts": "2025-11-20T04:56:20.263530Z", "event": "reconcile.completed", "correlation_id": "run-20251120T045502-20604", "results": 103}
+{"ts": "2025-11-20T04:56:20.650206Z", "event": "reconcile.exported", "correlation_id": "run-20251120T045502-20604", "out_path": "matching_results\\MATCHLIST_MBB02_20251120_125620.xlsx"}

@@ -1,0 +1,1188 @@
+2025-11-19 15:59:33,631 - INFO - ======================================================================
+2025-11-19 15:59:33,632 - INFO - PLAYWRIGHT AUTOMATION RUNNER
+2025-11-19 15:59:33,632 - INFO - ======================================================================
+2025-11-19 15:59:33,632 - INFO - Account: CIM02
+2025-11-19 15:59:33,633 - INFO - Date: 19/10/2025
+2025-11-19 15:59:33,633 - INFO - Amount: 100.0
+2025-11-19 15:59:33,633 - INFO - Headless Mode: False
+2025-11-19 15:59:33,634 - INFO - ======================================================================
+2025-11-19 15:59:33,696 - INFO - 
+======================================================================
+2025-11-19 15:59:33,697 - INFO - STEP 1: CA MATCH PROCESS
+2025-11-19 15:59:33,697 - INFO - ======================================================================
+2025-11-19 15:59:34,596 - INFO - Starting CA Match process...
+2025-11-19 16:10:59,718 - ERROR - 
+======================================================================
+2025-11-19 16:10:59,727 - ERROR - ======================================================================
+2025-11-19 16:10:59,736 - ERROR - ======================================================================
+2025-11-19 16:35:33,186 - INFO - ======================================================================
+2025-11-19 16:35:33,186 - INFO - PLAYWRIGHT AUTOMATION RUNNER
+2025-11-19 16:35:33,186 - INFO - ======================================================================
+2025-11-19 16:35:33,186 - INFO - Account: CIM02
+2025-11-19 16:35:33,187 - INFO - Date: 19/10/2025
+2025-11-19 16:35:33,187 - INFO - Amount: 100.0
+2025-11-19 16:35:33,187 - INFO - Headless Mode: False
+2025-11-19 16:35:33,188 - INFO - ======================================================================
+2025-11-19 16:35:33,188 - INFO - 
+🚀 Starting complete automation workflow...
+
+2025-11-19 16:35:33,188 - INFO - 
+======================================================================
+2025-11-19 16:35:33,188 - INFO - STEP 1: CA MATCH PROCESS
+2025-11-19 16:35:33,188 - INFO - ======================================================================
+2025-11-19 16:35:33,971 - INFO - Starting CA Match process...
+2025-11-19 16:47:01,407 - WARNING - Could not determine dtype for column 1, falling back to string
+2025-11-19 16:47:01,407 - WARNING - Could not determine dtype for column 6, falling back to string
+2025-11-19 16:47:01,408 - WARNING - Could not determine dtype for column 8, falling back to string
+2025-11-19 16:47:01,408 - WARNING - Could not determine dtype for column 9, falling back to string
+2025-11-19 16:47:01,408 - WARNING - Could not determine dtype for column 11, falling back to string
+2025-11-19 16:47:01,409 - WARNING - Could not determine dtype for column 13, falling back to string
+2025-11-19 16:47:01,409 - WARNING - Could not determine dtype for column 14, falling back to string
+2025-11-19 16:47:01,409 - WARNING - Could not determine dtype for column 17, falling back to string
+2025-11-19 16:47:01,410 - WARNING - Could not determine dtype for column 18, falling back to string
+2025-11-19 16:47:01,410 - WARNING - Could not determine dtype for column 20, falling back to string
+2025-11-19 16:49:11,267 - ERROR - ❌ CA Match failed: Timeout 30000ms exceeded while waiting for event "download"
+=========================== logs ===========================
+waiting for event "download"
+============================================================
+Traceback (most recent call last):
+  File "c:\Users\Lenovo\OneDrive - Cognitive Consulting Sdn Bhd (1)\Desktop\SegmentationCompressionWork\PlayWright-Extractor\run_playwright.py", line 133, in run_ca_match
+    records = process_bank_transactions(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Lenovo\OneDrive - Cognitive Consulting Sdn Bhd (1)\Desktop\SegmentationCompressionWork\PlayWright-Extractor\CA_Match_Process_Optimized.py", line 643, in process_bank_transactions
+    return processor.run()
+           ^^^^^^^^^^^^^^^
+  File "c:\Users\Lenovo\OneDrive - Cognitive Consulting Sdn Bhd (1)\Desktop\SegmentationCompressionWork\PlayWright-Extractor\CA_Match_Process_Optimized.py", line 560, in run
+    ExtractReconcileStatement.extract_reconciliation_statements(
+  File "c:\Users\Lenovo\OneDrive - Cognitive Consulting Sdn Bhd (1)\Desktop\SegmentationCompressionWork\PlayWright-Extractor\ExtractReconcileStatement.py", line 215, in extract_reconciliation_statements
+    with page.expect_download() as download_info:
+  File "C:\Users\Lenovo\OneDrive - Cognitive Consulting Sdn Bhd (1)\Desktop\SegmentationCompressionWork\PlayWright-Extractor\.venv_clean\Lib\site-packages\playwright\_impl\_sync_base.py", line 85, in __exit__
+    self._event.value
+  File "C:\Users\Lenovo\OneDrive - Cognitive Consulting Sdn Bhd (1)\Desktop\SegmentationCompressionWork\PlayWright-Extractor\.venv_clean\Lib\site-packages\playwright\_impl\_sync_base.py", line 59, in value
+    raise exception
+playwright._impl._errors.TimeoutError: Timeout 30000ms exceeded while waiting for event "download"
+=========================== logs ===========================
+waiting for event "download"
+============================================================
+2025-11-19 16:49:11,271 - ERROR - 
+======================================================================
+2025-11-19 16:49:11,271 - ERROR - ❌ AUTOMATION WORKFLOW FAILED
+2025-11-19 16:49:11,271 - ERROR - ======================================================================
+2025-11-19 16:49:11,271 - ERROR - Error: Timeout 30000ms exceeded while waiting for event "download"
+=========================== logs ===========================
+waiting for event "download"
+============================================================
+2025-11-19 16:49:11,272 - ERROR - ======================================================================
+2025-11-19 18:22:39,759 - INFO - ======================================================================
+2025-11-19 18:22:39,759 - INFO - PLAYWRIGHT AUTOMATION RUNNER
+2025-11-19 18:22:39,760 - INFO - ======================================================================
+2025-11-19 18:22:39,760 - INFO - Account: CIM02
+2025-11-19 18:22:39,760 - INFO - Date: 19/10/2025
+2025-11-19 18:22:39,761 - INFO - Amount: 100.0
+2025-11-19 18:22:39,761 - INFO - Headless Mode: False
+2025-11-19 18:22:39,761 - INFO - ======================================================================
+2025-11-19 18:22:39,761 - INFO - 
+🚀 Starting complete automation workflow...
+
+2025-11-19 18:22:39,762 - INFO - 
+======================================================================
+2025-11-19 18:22:39,762 - INFO - STEP 1: CA MATCH PROCESS
+2025-11-19 18:22:39,762 - INFO - ======================================================================
+2025-11-19 18:22:40,559 - INFO - Starting CA Match process...
+2025-11-19 18:33:40,541 - WARNING - Could not determine dtype for column 1, falling back to string
+2025-11-19 18:33:40,542 - WARNING - Could not determine dtype for column 6, falling back to string
+2025-11-19 18:33:40,542 - WARNING - Could not determine dtype for column 8, falling back to string
+2025-11-19 18:33:40,543 - WARNING - Could not determine dtype for column 9, falling back to string
+2025-11-19 18:33:40,543 - WARNING - Could not determine dtype for column 11, falling back to string
+2025-11-19 18:33:40,543 - WARNING - Could not determine dtype for column 13, falling back to string
+2025-11-19 18:33:40,544 - WARNING - Could not determine dtype for column 14, falling back to string
+2025-11-19 18:33:40,544 - WARNING - Could not determine dtype for column 17, falling back to string
+2025-11-19 18:33:40,544 - WARNING - Could not determine dtype for column 18, falling back to string
+2025-11-19 18:33:40,545 - WARNING - Could not determine dtype for column 20, falling back to string
+2025-11-19 18:34:57,164 - ERROR - ❌ CA Match failed: Failed to download Excel file after all attempts
+Traceback (most recent call last):
+  File "c:\Users\Lenovo\OneDrive - Cognitive Consulting Sdn Bhd (1)\Desktop\SegmentationCompressionWork\PlayWright-Extractor\ExtractReconcileStatement_Optimized.py", line 428, in export_to_excel
+    raise Exception("Could not find Export to Excel button after trying all selectors")
+Exception: Could not find Export to Excel button after trying all selectors
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\Users\Lenovo\OneDrive - Cognitive Consulting Sdn Bhd (1)\Desktop\SegmentationCompressionWork\PlayWright-Extractor\run_playwright.py", line 133, in run_ca_match
+    records = process_bank_transactions(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Lenovo\OneDrive - Cognitive Consulting Sdn Bhd (1)\Desktop\SegmentationCompressionWork\PlayWright-Extractor\CA_Match_Process_Optimized.py", line 643, in process_bank_transactions
+    return processor.run()
+           ^^^^^^^^^^^^^^^
+  File "c:\Users\Lenovo\OneDrive - Cognitive Consulting Sdn Bhd (1)\Desktop\SegmentationCompressionWork\PlayWright-Extractor\CA_Match_Process_Optimized.py", line 560, in run
+    ExtractReconcileStatement.extract_reconciliation_statements(
+  File "c:\Users\Lenovo\OneDrive - Cognitive Consulting Sdn Bhd (1)\Desktop\SegmentationCompressionWork\PlayWright-Extractor\ExtractReconcileStatement_Optimized.py", line 683, in extract_reconciliation_statements
+    return extractor.run()
+           ^^^^^^^^^^^^^^^
+  File "c:\Users\Lenovo\OneDrive - Cognitive Consulting Sdn Bhd (1)\Desktop\SegmentationCompressionWork\PlayWright-Extractor\ExtractReconcileStatement_Optimized.py", line 569, in run
+    reconciliation_save_path = self.export_to_excel()
+                               ^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Lenovo\OneDrive - Cognitive Consulting Sdn Bhd (1)\Desktop\SegmentationCompressionWork\PlayWright-Extractor\ExtractReconcileStatement_Optimized.py", line 476, in export_to_excel
+    raise Exception("Failed to download Excel file after all attempts")
+Exception: Failed to download Excel file after all attempts
+2025-11-19 18:34:57,168 - ERROR - 
+======================================================================
+2025-11-19 18:34:57,168 - ERROR - ❌ AUTOMATION WORKFLOW FAILED
+2025-11-19 18:34:57,168 - ERROR - ======================================================================
+2025-11-19 18:34:57,169 - ERROR - Error: Failed to download Excel file after all attempts
+2025-11-19 18:34:57,169 - ERROR - ======================================================================
+2025-11-20 09:37:51,617 - INFO - ======================================================================
+2025-11-20 09:37:51,618 - INFO - PLAYWRIGHT AUTOMATION RUNNER
+2025-11-20 09:37:51,618 - INFO - ======================================================================
+2025-11-20 09:37:51,618 - INFO - Account: CIM02
+2025-11-20 09:37:51,619 - INFO - Date: 20/10/2025
+2025-11-20 09:37:51,619 - INFO - Amount: 100.0
+2025-11-20 09:37:51,619 - INFO - Headless Mode: False
+2025-11-20 09:37:51,619 - INFO - ======================================================================
+2025-11-20 09:37:51,619 - INFO - 
+🚀 Starting complete automation workflow...
+
+2025-11-20 09:37:51,619 - INFO - 
+======================================================================
+2025-11-20 09:37:51,620 - INFO - STEP 1: CA MATCH PROCESS
+2025-11-20 09:37:51,620 - INFO - ======================================================================
+2025-11-20 09:38:02,754 - INFO - Starting CA Match process...
+2025-11-20 09:49:16,620 - WARNING - Could not determine dtype for column 1, falling back to string
+2025-11-20 09:49:16,620 - WARNING - Could not determine dtype for column 6, falling back to string
+2025-11-20 09:49:16,620 - WARNING - Could not determine dtype for column 8, falling back to string
+2025-11-20 09:49:16,621 - WARNING - Could not determine dtype for column 9, falling back to string
+2025-11-20 09:49:16,621 - WARNING - Could not determine dtype for column 11, falling back to string
+2025-11-20 09:49:16,621 - WARNING - Could not determine dtype for column 13, falling back to string
+2025-11-20 09:49:16,621 - WARNING - Could not determine dtype for column 14, falling back to string
+2025-11-20 09:49:16,623 - WARNING - Could not determine dtype for column 17, falling back to string
+2025-11-20 09:49:16,623 - WARNING - Could not determine dtype for column 18, falling back to string
+2025-11-20 09:49:16,624 - WARNING - Could not determine dtype for column 20, falling back to string
+2025-11-20 09:50:22,314 - ERROR - ❌ CA Match failed: Locator.is_visible: Error: strict mode violation: locator("li[data-cmd=\"ExportExcel\"]") resolved to 4 elements:
+    1) <li enabled="false" class="menuDisabled" data-cmd="ExportExcel" id="ctl00_phG_tab_t3_gridApproval_menu_item_4">…</li> aka locator("#ctl00_phG_tab_t3_gridApproval_menu_item_4")
+    2) <li class="menuItem" data-cmd="ExportExcel" id="ctl00_phG_tab_t0_grid1_menu_item_7">…</li> aka locator("#ctl00_phG_tab_t0_grid1_menu_item_7")
+    3) <li enabled="false" class="menuDisabled" data-cmd="ExportExcel" id="ctl00_phG_tab_t1_grid2_menu_item_3">…</li> aka locator("#ctl00_phG_tab_t1_grid2_menu_item_3")
+    4) <li enabled="false" class="menuDisabled" data-cmd="ExportExcel" id="ctl00_phG_tab_t2_grid5_menu_item_4">…</li> aka locator("#ctl00_phG_tab_t2_grid5_menu_item_4")
+
+Call log:
+    - checking visibility of locator("li[data-cmd=\"ExportExcel\"]")
+Traceback (most recent call last):
+  File "c:\Users\Lenovo\OneDrive - Cognitive Consulting Sdn Bhd (1)\Desktop\SegmentationCompressionWork\PlayWright-Extractor\run_playwright.py", line 133, in run_ca_match
+    records = process_bank_transactions(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Lenovo\OneDrive - Cognitive Consulting Sdn Bhd (1)\Desktop\SegmentationCompressionWork\PlayWright-Extractor\CA_Match_Process_Optimized.py", line 643, in process_bank_transactions
+    return processor.run()
+           ^^^^^^^^^^^^^^^
+  File "c:\Users\Lenovo\OneDrive - Cognitive Consulting Sdn Bhd (1)\Desktop\SegmentationCompressionWork\PlayWright-Extractor\CA_Match_Process_Optimized.py", line 560, in run
+    ExtractReconcileStatement.extract_reconciliation_statements(
+  File "c:\Users\Lenovo\OneDrive - Cognitive Consulting Sdn Bhd (1)\Desktop\SegmentationCompressionWork\PlayWright-Extractor\ExtractReconcileStatement_Optimized.py", line 652, in extract_reconciliation_statements
+    return extractor.run()
+           ^^^^^^^^^^^^^^^
+  File "c:\Users\Lenovo\OneDrive - Cognitive Consulting Sdn Bhd (1)\Desktop\SegmentationCompressionWork\PlayWright-Extractor\ExtractReconcileStatement_Optimized.py", line 538, in run
+    reconciliation_save_path = self.export_to_excel()
+                               ^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Lenovo\OneDrive - Cognitive Consulting Sdn Bhd (1)\Desktop\SegmentationCompressionWork\PlayWright-Extractor\ExtractReconcileStatement_Optimized.py", line 283, in export_to_excel
+    if export_direct.count() > 0 and export_direct.is_visible():
+                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\OneDrive - Cognitive Consulting Sdn Bhd (1)\Desktop\SegmentationCompressionWork\PlayWright-Extractor\.venv_clean\Lib\site-packages\playwright\sync_api\_generated.py", line 17228, in is_visible
+    self._sync(self._impl_obj.is_visible(timeout=timeout))
+  File "C:\Users\Lenovo\OneDrive - Cognitive Consulting Sdn Bhd (1)\Desktop\SegmentationCompressionWork\PlayWright-Extractor\.venv_clean\Lib\site-packages\playwright\_impl\_sync_base.py", line 115, in _sync
+    return task.result()
+           ^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\OneDrive - Cognitive Consulting Sdn Bhd (1)\Desktop\SegmentationCompressionWork\PlayWright-Extractor\.venv_clean\Lib\site-packages\playwright\_impl\_locator.py", line 513, in is_visible
+    return await self._frame.is_visible(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\OneDrive - Cognitive Consulting Sdn Bhd (1)\Desktop\SegmentationCompressionWork\PlayWright-Extractor\.venv_clean\Lib\site-packages\playwright\_impl\_frame.py", line 408, in is_visible
+    return await self._channel.send(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\OneDrive - Cognitive Consulting Sdn Bhd (1)\Desktop\SegmentationCompressionWork\PlayWright-Extractor\.venv_clean\Lib\site-packages\playwright\_impl\_connection.py", line 69, in send
+    return await self._connection.wrap_api_call(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\OneDrive - Cognitive Consulting Sdn Bhd (1)\Desktop\SegmentationCompressionWork\PlayWright-Extractor\.venv_clean\Lib\site-packages\playwright\_impl\_connection.py", line 559, in wrap_api_call
+    raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
+playwright._impl._errors.Error: Locator.is_visible: Error: strict mode violation: locator("li[data-cmd=\"ExportExcel\"]") resolved to 4 elements:
+    1) <li enabled="false" class="menuDisabled" data-cmd="ExportExcel" id="ctl00_phG_tab_t3_gridApproval_menu_item_4">…</li> aka locator("#ctl00_phG_tab_t3_gridApproval_menu_item_4")
+    2) <li class="menuItem" data-cmd="ExportExcel" id="ctl00_phG_tab_t0_grid1_menu_item_7">…</li> aka locator("#ctl00_phG_tab_t0_grid1_menu_item_7")
+    3) <li enabled="false" class="menuDisabled" data-cmd="ExportExcel" id="ctl00_phG_tab_t1_grid2_menu_item_3">…</li> aka locator("#ctl00_phG_tab_t1_grid2_menu_item_3")
+    4) <li enabled="false" class="menuDisabled" data-cmd="ExportExcel" id="ctl00_phG_tab_t2_grid5_menu_item_4">…</li> aka locator("#ctl00_phG_tab_t2_grid5_menu_item_4")
+
+Call log:
+    - checking visibility of locator("li[data-cmd=\"ExportExcel\"]")
+
+2025-11-20 09:50:22,318 - ERROR - 
+======================================================================
+2025-11-20 09:50:22,319 - ERROR - ❌ AUTOMATION WORKFLOW FAILED
+2025-11-20 09:50:22,319 - ERROR - ======================================================================
+2025-11-20 09:50:22,319 - ERROR - Error: Locator.is_visible: Error: strict mode violation: locator("li[data-cmd=\"ExportExcel\"]") resolved to 4 elements:
+    1) <li enabled="false" class="menuDisabled" data-cmd="ExportExcel" id="ctl00_phG_tab_t3_gridApproval_menu_item_4">…</li> aka locator("#ctl00_phG_tab_t3_gridApproval_menu_item_4")
+    2) <li class="menuItem" data-cmd="ExportExcel" id="ctl00_phG_tab_t0_grid1_menu_item_7">…</li> aka locator("#ctl00_phG_tab_t0_grid1_menu_item_7")
+    3) <li enabled="false" class="menuDisabled" data-cmd="ExportExcel" id="ctl00_phG_tab_t1_grid2_menu_item_3">…</li> aka locator("#ctl00_phG_tab_t1_grid2_menu_item_3")
+    4) <li enabled="false" class="menuDisabled" data-cmd="ExportExcel" id="ctl00_phG_tab_t2_grid5_menu_item_4">…</li> aka locator("#ctl00_phG_tab_t2_grid5_menu_item_4")
+
+Call log:
+    - checking visibility of locator("li[data-cmd=\"ExportExcel\"]")
+
+2025-11-20 09:50:22,320 - ERROR - ======================================================================
+2025-11-20 10:25:25,413 - INFO - ======================================================================
+2025-11-20 10:25:25,414 - INFO - PLAYWRIGHT AUTOMATION RUNNER
+2025-11-20 10:25:25,414 - INFO - ======================================================================
+2025-11-20 10:25:25,415 - INFO - Account: CIM02
+2025-11-20 10:25:25,415 - INFO - Date: 20/10/2025
+2025-11-20 10:25:25,415 - INFO - Amount: 100.0
+2025-11-20 10:25:25,416 - INFO - Headless Mode: False
+2025-11-20 10:25:25,416 - INFO - ======================================================================
+2025-11-20 10:25:25,416 - INFO - 
+🚀 Starting complete automation workflow...
+
+2025-11-20 10:25:25,417 - INFO - 
+======================================================================
+2025-11-20 10:25:25,417 - INFO - STEP 1: CA MATCH PROCESS
+2025-11-20 10:25:25,418 - INFO - ======================================================================
+2025-11-20 10:25:26,771 - INFO - Starting CA Match process...
+2025-11-20 10:36:34,088 - WARNING - Could not determine dtype for column 1, falling back to string
+2025-11-20 10:36:34,089 - WARNING - Could not determine dtype for column 6, falling back to string
+2025-11-20 10:36:34,089 - WARNING - Could not determine dtype for column 8, falling back to string
+2025-11-20 10:36:34,090 - WARNING - Could not determine dtype for column 9, falling back to string
+2025-11-20 10:36:34,090 - WARNING - Could not determine dtype for column 11, falling back to string
+2025-11-20 10:36:34,091 - WARNING - Could not determine dtype for column 13, falling back to string
+2025-11-20 10:36:34,091 - WARNING - Could not determine dtype for column 14, falling back to string
+2025-11-20 10:36:34,091 - WARNING - Could not determine dtype for column 17, falling back to string
+2025-11-20 10:36:34,091 - WARNING - Could not determine dtype for column 18, falling back to string
+2025-11-20 10:36:34,093 - WARNING - Could not determine dtype for column 20, falling back to string
+2025-11-20 10:38:28,526 - WARNING - Could not determine dtype for column 2, falling back to string
+2025-11-20 10:38:28,527 - WARNING - Could not determine dtype for column 11, falling back to string
+2025-11-20 10:38:28,527 - WARNING - Could not determine dtype for column 12, falling back to string
+2025-11-20 10:49:17,805 - INFO - Loaded 102 bank transactions and 3810 company transactions
+2025-11-20 10:49:17,815 - INFO - Starting Stage 1: Traditional reconciliation pipeline...
+2025-11-20 10:49:17,843 - DEBUG - MBB02 credit card matcher skipped: support module not available
+2025-11-20 10:49:17,847 - INFO - Finding transaction ID matches...
+2025-11-20 10:49:42,865 - INFO - Finding bank charges...
+2025-11-20 10:49:42,879 - DEBUG - After bank charges detection: 1 matched (added 1)
+2025-11-20 10:49:42,879 - INFO - Detected 1 bank charges
+2025-11-20 10:49:42,881 - INFO - Finding Reverse CE GL matches...
+2025-11-20 10:49:44,072 - INFO - Found 2 Reverse CE GL matches
+2025-11-20 10:49:44,079 - INFO - Finding name and amount matches...
+2025-11-20 10:50:31,344 - INFO - Found 100 name and amount matches
+2025-11-20 10:50:31,344 - INFO - Finding Hungarian 1:1 matches...
+2025-11-20 10:50:38,065 - INFO - Hungarian 1:1: 0 matches | pairs scored=45, kept=0, time=6.72s
+2025-11-20 10:50:38,068 - INFO - Finding enhanced 1:1 matches...
+2025-11-20 10:50:39,337 - INFO - Found 0 enhanced 1:1 matches
+2025-11-20 10:50:39,339 - INFO - Finding amount and date matches...
+2025-11-20 10:50:39,573 - INFO - Found 0 amount and date matches
+2025-11-20 10:50:39,573 - INFO - Finding fuzzy matches...
+2025-11-20 10:50:39,988 - ERROR - ❌ CA Match failed: Failed to export results to Excel: No module named 'xlsxwriter'
+Traceback (most recent call last):
+  File "c:\Users\Lenovo\OneDrive - Cognitive Consulting Sdn Bhd (1)\Desktop\SegmentationCompressionWork\PlayWright-Extractor\unified_reconciliation.py", line 5316, in reconcile_unified
+    engine.save_results_to_excel(out_path)
+  File "c:\Users\Lenovo\OneDrive - Cognitive Consulting Sdn Bhd (1)\Desktop\SegmentationCompressionWork\PlayWright-Extractor\unified_reconciliation.py", line 4704, in save_results_to_excel
+    with pd.ExcelWriter(path, engine='xlsxwriter') as writer:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\OneDrive - Cognitive Consulting Sdn Bhd (1)\Desktop\SegmentationCompressionWork\PlayWright-Extractor\.venv_clean\Lib\site-packages\pandas\io\excel\_xlsxwriter.py", line 197, in __init__
+    from xlsxwriter import Workbook
+ModuleNotFoundError: No module named 'xlsxwriter'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\Users\Lenovo\OneDrive - Cognitive Consulting Sdn Bhd (1)\Desktop\SegmentationCompressionWork\PlayWright-Extractor\run_playwright.py", line 133, in run_ca_match
+    records = process_bank_transactions(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Lenovo\OneDrive - Cognitive Consulting Sdn Bhd (1)\Desktop\SegmentationCompressionWork\PlayWright-Extractor\CA_Match_Process_Optimized.py", line 643, in process_bank_transactions
+    return processor.run()
+           ^^^^^^^^^^^^^^^
+  File "c:\Users\Lenovo\OneDrive - Cognitive Consulting Sdn Bhd (1)\Desktop\SegmentationCompressionWork\PlayWright-Extractor\CA_Match_Process_Optimized.py", line 560, in run
+    ExtractReconcileStatement.extract_reconciliation_statements(
+  File "c:\Users\Lenovo\OneDrive - Cognitive Consulting Sdn Bhd (1)\Desktop\SegmentationCompressionWork\PlayWright-Extractor\ExtractReconcileStatement_Optimized.py", line 690, in extract_reconciliation_statements
+    return extractor.run()
+           ^^^^^^^^^^^^^^^
+  File "c:\Users\Lenovo\OneDrive - Cognitive Consulting Sdn Bhd (1)\Desktop\SegmentationCompressionWork\PlayWright-Extractor\ExtractReconcileStatement_Optimized.py", line 607, in run
+    RaasPlus.run_RaasPlus(
+  File "c:\Users\Lenovo\OneDrive - Cognitive Consulting Sdn Bhd (1)\Desktop\SegmentationCompressionWork\PlayWright-Extractor\RaasPlus.py", line 94, in run_RaasPlus
+    excel_path = reconcile_unified(
+                 ^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Lenovo\OneDrive - Cognitive Consulting Sdn Bhd (1)\Desktop\SegmentationCompressionWork\PlayWright-Extractor\unified_reconciliation.py", line 5320, in reconcile_unified
+    raise ExportError(f"Failed to export results to Excel: {e}")
+unified_reconciliation.ExportError: Failed to export results to Excel: No module named 'xlsxwriter'
+2025-11-20 10:50:40,077 - ERROR - 
+======================================================================
+2025-11-20 10:50:40,078 - ERROR - ❌ AUTOMATION WORKFLOW FAILED
+2025-11-20 10:50:40,078 - ERROR - ======================================================================
+2025-11-20 10:50:40,079 - ERROR - Error: Failed to export results to Excel: No module named 'xlsxwriter'
+2025-11-20 10:50:40,079 - ERROR - ======================================================================
+2025-11-20 10:54:56,626 - INFO - ======================================================================
+2025-11-20 10:54:56,626 - INFO - PLAYWRIGHT AUTOMATION RUNNER
+2025-11-20 10:54:56,626 - INFO - ======================================================================
+2025-11-20 10:54:56,626 - INFO - Account: CIM02
+2025-11-20 10:54:56,626 - INFO - Date: 20/10/2025
+2025-11-20 10:54:56,626 - INFO - Amount: 100.0
+2025-11-20 10:54:56,626 - INFO - Headless Mode: False
+2025-11-20 10:54:56,631 - INFO - ======================================================================
+2025-11-20 10:54:56,631 - INFO - 
+🚀 Starting complete automation workflow...
+
+2025-11-20 10:54:56,631 - INFO - 
+======================================================================
+2025-11-20 10:54:56,631 - INFO - STEP 1: CA MATCH PROCESS
+2025-11-20 10:54:56,631 - INFO - ======================================================================
+2025-11-20 10:54:57,465 - INFO - Starting CA Match process...
+2025-11-20 11:05:58,439 - WARNING - Could not determine dtype for column 1, falling back to string
+2025-11-20 11:05:58,439 - WARNING - Could not determine dtype for column 6, falling back to string
+2025-11-20 11:05:58,440 - WARNING - Could not determine dtype for column 8, falling back to string
+2025-11-20 11:05:58,440 - WARNING - Could not determine dtype for column 9, falling back to string
+2025-11-20 11:05:58,441 - WARNING - Could not determine dtype for column 11, falling back to string
+2025-11-20 11:05:58,441 - WARNING - Could not determine dtype for column 13, falling back to string
+2025-11-20 11:05:58,441 - WARNING - Could not determine dtype for column 14, falling back to string
+2025-11-20 11:05:58,442 - WARNING - Could not determine dtype for column 17, falling back to string
+2025-11-20 11:05:58,442 - WARNING - Could not determine dtype for column 18, falling back to string
+2025-11-20 11:05:58,443 - WARNING - Could not determine dtype for column 20, falling back to string
+2025-11-20 11:07:52,197 - WARNING - Could not determine dtype for column 2, falling back to string
+2025-11-20 11:07:52,197 - WARNING - Could not determine dtype for column 11, falling back to string
+2025-11-20 11:07:52,201 - WARNING - Could not determine dtype for column 12, falling back to string
+2025-11-20 11:18:38,354 - INFO - Loaded 102 bank transactions and 3810 company transactions
+2025-11-20 11:18:38,363 - INFO - Starting Stage 1: Traditional reconciliation pipeline...
+2025-11-20 11:18:38,386 - DEBUG - MBB02 credit card matcher skipped: support module not available
+2025-11-20 11:18:38,389 - INFO - Finding transaction ID matches...
+2025-11-20 11:19:05,485 - INFO - Finding bank charges...
+2025-11-20 11:19:05,510 - DEBUG - After bank charges detection: 1 matched (added 1)
+2025-11-20 11:19:05,511 - INFO - Detected 1 bank charges
+2025-11-20 11:19:05,512 - INFO - Finding Reverse CE GL matches...
+2025-11-20 11:19:06,734 - INFO - Found 2 Reverse CE GL matches
+2025-11-20 11:19:06,743 - INFO - Finding name and amount matches...
+2025-11-20 11:19:55,081 - INFO - Found 100 name and amount matches
+2025-11-20 11:19:55,089 - INFO - Finding Hungarian 1:1 matches...
+2025-11-20 11:19:56,158 - INFO - Hungarian 1:1: 0 matches | pairs scored=45, kept=0, time=1.07s
+2025-11-20 11:19:56,160 - INFO - Finding enhanced 1:1 matches...
+2025-11-20 11:19:57,903 - INFO - Found 0 enhanced 1:1 matches
+2025-11-20 11:19:57,906 - INFO - Finding amount and date matches...
+2025-11-20 11:19:58,195 - INFO - Found 0 amount and date matches
+2025-11-20 11:19:58,197 - INFO - Finding fuzzy matches...
+2025-11-20 11:23:24,437 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 1.0 seconds
+2025-11-20 11:23:25,452 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 2.0 seconds
+2025-11-20 11:23:26,453 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 3.0 seconds
+2025-11-20 11:23:27,464 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 4.0 seconds
+2025-11-20 11:23:28,465 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 5.0 seconds
+2025-11-20 11:23:29,469 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 6.0 seconds
+2025-11-20 11:23:30,484 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 7.1 seconds
+2025-11-20 11:23:31,485 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 8.1 seconds
+2025-11-20 11:23:32,489 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 9.1 seconds
+2025-11-20 11:23:33,501 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 10.1 seconds
+2025-11-20 11:23:34,502 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 11.1 seconds
+2025-11-20 11:23:35,511 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 12.1 seconds
+2025-11-20 11:23:36,522 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 13.1 seconds
+2025-11-20 11:23:37,527 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 14.1 seconds
+2025-11-20 11:23:38,535 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 15.1 seconds
+2025-11-20 11:23:39,536 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 16.1 seconds
+2025-11-20 11:23:40,538 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 17.1 seconds
+2025-11-20 11:23:41,548 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 18.1 seconds
+2025-11-20 11:23:42,552 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 19.1 seconds
+2025-11-20 11:23:43,552 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 20.1 seconds
+2025-11-20 11:23:44,552 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 21.1 seconds
+2025-11-20 11:23:45,553 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 22.1 seconds
+2025-11-20 11:23:46,553 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 23.1 seconds
+2025-11-20 11:23:47,558 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 24.1 seconds
+2025-11-20 11:23:48,568 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 25.1 seconds
+2025-11-20 11:23:49,570 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 26.1 seconds
+2025-11-20 11:23:50,586 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 27.2 seconds
+2025-11-20 11:23:51,587 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 28.2 seconds
+2025-11-20 11:23:52,601 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 29.2 seconds
+2025-11-20 11:23:53,602 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 30.2 seconds
+2025-11-20 11:23:54,605 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 31.2 seconds
+2025-11-20 11:23:55,619 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 32.2 seconds
+2025-11-20 11:23:56,634 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 33.2 seconds
+2025-11-20 11:23:57,644 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 34.2 seconds
+2025-11-20 11:23:58,656 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 35.2 seconds
+2025-11-20 11:23:59,666 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 36.2 seconds
+2025-11-20 11:24:00,680 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 37.2 seconds
+2025-11-20 11:24:01,690 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 38.3 seconds
+2025-11-20 11:24:02,691 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 39.3 seconds
+2025-11-20 11:24:03,701 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 40.3 seconds
+2025-11-20 11:24:04,715 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 41.3 seconds
+2025-11-20 11:24:05,732 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 42.3 seconds
+2025-11-20 11:24:06,733 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 43.3 seconds
+2025-11-20 11:24:07,735 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 44.3 seconds
+2025-11-20 11:24:08,736 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 45.3 seconds
+2025-11-20 11:24:09,737 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 46.3 seconds
+2025-11-20 11:24:10,741 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 47.3 seconds
+2025-11-20 11:24:11,747 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 48.3 seconds
+2025-11-20 11:24:12,750 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 49.3 seconds
+2025-11-20 11:24:13,754 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 50.3 seconds
+2025-11-20 11:24:14,761 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 51.3 seconds
+2025-11-20 11:24:15,763 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 52.3 seconds
+2025-11-20 11:24:16,774 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 53.4 seconds
+2025-11-20 11:24:17,784 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 54.4 seconds
+2025-11-20 11:24:18,799 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 55.4 seconds
+2025-11-20 11:24:19,801 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 56.4 seconds
+2025-11-20 11:24:20,802 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 57.4 seconds
+2025-11-20 11:24:21,807 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 58.4 seconds
+2025-11-20 11:24:22,815 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 59.4 seconds
+2025-11-20 11:24:23,817 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 60.4 seconds
+2025-11-20 11:24:24,833 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 61.4 seconds
+2025-11-20 11:24:25,836 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 62.4 seconds
+2025-11-20 11:24:26,850 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 63.4 seconds
+2025-11-20 11:24:27,858 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 64.4 seconds
+2025-11-20 11:24:28,869 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 65.5 seconds
+2025-11-20 11:24:29,881 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 66.5 seconds
+2025-11-20 11:24:30,897 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 67.5 seconds
+2025-11-20 11:24:31,906 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 68.5 seconds
+2025-11-20 11:24:32,920 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 69.5 seconds
+2025-11-20 11:24:33,934 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 70.5 seconds
+2025-11-20 11:24:34,950 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 71.5 seconds
+2025-11-20 11:24:35,959 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 72.5 seconds
+2025-11-20 11:24:36,962 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 73.5 seconds
+2025-11-20 11:24:37,964 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 74.5 seconds
+2025-11-20 11:24:38,973 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 75.5 seconds
+2025-11-20 11:24:39,984 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 76.6 seconds
+2025-11-20 11:24:40,995 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 77.6 seconds
+2025-11-20 11:24:42,009 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 78.6 seconds
+2025-11-20 11:24:43,016 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 79.6 seconds
+2025-11-20 11:24:44,031 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 80.6 seconds
+2025-11-20 11:24:45,041 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 81.6 seconds
+2025-11-20 11:24:46,046 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 82.6 seconds
+2025-11-20 11:24:47,051 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 83.6 seconds
+2025-11-20 11:24:48,056 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 84.6 seconds
+2025-11-20 11:24:49,077 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 85.7 seconds
+2025-11-20 11:24:50,084 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 86.7 seconds
+2025-11-20 11:24:51,087 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 87.7 seconds
+2025-11-20 11:24:52,098 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 88.7 seconds
+2025-11-20 11:24:53,111 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 89.7 seconds
+2025-11-20 11:24:54,116 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 90.7 seconds
+2025-11-20 11:24:55,124 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 91.7 seconds
+2025-11-20 11:24:56,137 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 92.7 seconds
+2025-11-20 11:24:57,149 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 93.7 seconds
+2025-11-20 11:24:58,162 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 94.7 seconds
+2025-11-20 11:24:59,164 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 95.8 seconds
+2025-11-20 11:25:00,164 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 96.8 seconds
+2025-11-20 11:25:01,166 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 97.8 seconds
+2025-11-20 11:25:02,176 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 98.8 seconds
+2025-11-20 11:25:03,180 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 99.8 seconds
+2025-11-20 11:25:04,184 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 100.8 seconds
+2025-11-20 11:25:05,197 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 101.8 seconds
+2025-11-20 11:25:06,213 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 102.8 seconds
+2025-11-20 11:25:07,214 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 103.8 seconds
+2025-11-20 11:25:08,230 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 104.8 seconds
+2025-11-20 11:25:09,237 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 105.8 seconds
+2025-11-20 11:25:10,249 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 106.8 seconds
+2025-11-20 11:25:11,249 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 107.8 seconds
+2025-11-20 11:25:12,262 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 108.8 seconds
+2025-11-20 11:25:13,275 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 109.9 seconds
+2025-11-20 11:25:14,277 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 110.9 seconds
+2025-11-20 11:25:15,283 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 111.9 seconds
+2025-11-20 11:25:16,284 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 112.9 seconds
+2025-11-20 11:25:17,290 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 113.9 seconds
+2025-11-20 11:25:18,303 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 114.9 seconds
+2025-11-20 11:25:19,314 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 115.9 seconds
+2025-11-20 11:25:20,317 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 116.9 seconds
+2025-11-20 11:25:21,323 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 117.9 seconds
+2025-11-20 11:25:22,324 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 118.9 seconds
+2025-11-20 11:25:23,330 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 119.9 seconds
+2025-11-20 11:25:24,332 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 120.9 seconds
+2025-11-20 11:25:25,335 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 121.9 seconds
+2025-11-20 11:25:26,335 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 122.9 seconds
+2025-11-20 11:25:27,340 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 123.9 seconds
+2025-11-20 11:25:28,351 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 124.9 seconds
+2025-11-20 11:25:29,363 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 125.9 seconds
+2025-11-20 11:25:30,369 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 127.0 seconds
+2025-11-20 11:25:31,378 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 128.0 seconds
+2025-11-20 11:25:32,379 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 129.0 seconds
+2025-11-20 11:25:33,398 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 130.0 seconds
+2025-11-20 11:25:34,409 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 131.0 seconds
+2025-11-20 11:25:35,411 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 132.0 seconds
+2025-11-20 11:25:36,414 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 133.0 seconds
+2025-11-20 11:25:37,420 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 134.0 seconds
+2025-11-20 11:25:38,429 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 135.0 seconds
+2025-11-20 11:25:39,444 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 136.0 seconds
+2025-11-20 11:25:40,458 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 137.0 seconds
+2025-11-20 11:25:41,461 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 138.0 seconds
+2025-11-20 11:25:42,464 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 139.0 seconds
+2025-11-20 11:25:43,477 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 140.1 seconds
+2025-11-20 11:25:44,481 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 141.1 seconds
+2025-11-20 11:25:45,484 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 142.1 seconds
+2025-11-20 11:25:46,495 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 143.1 seconds
+2025-11-20 11:25:47,496 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 144.1 seconds
+2025-11-20 11:25:48,499 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 145.1 seconds
+2025-11-20 11:25:49,501 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 146.1 seconds
+2025-11-20 11:25:50,502 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 147.1 seconds
+2025-11-20 11:25:51,503 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 148.1 seconds
+2025-11-20 11:25:52,512 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 149.1 seconds
+2025-11-20 11:25:53,524 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 150.1 seconds
+2025-11-20 11:25:54,529 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 151.1 seconds
+2025-11-20 11:25:55,541 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 152.1 seconds
+2025-11-20 11:25:56,553 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 153.1 seconds
+2025-11-20 11:25:57,565 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 154.1 seconds
+2025-11-20 11:25:58,567 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 155.2 seconds
+2025-11-20 11:25:59,579 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 156.2 seconds
+2025-11-20 11:26:00,593 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 157.2 seconds
+2025-11-20 11:26:01,604 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 158.2 seconds
+2025-11-20 11:26:02,619 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 159.2 seconds
+2025-11-20 11:26:03,631 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 160.2 seconds
+2025-11-20 11:26:04,633 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 161.2 seconds
+2025-11-20 11:26:05,643 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 162.2 seconds
+2025-11-20 11:26:06,658 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 163.2 seconds
+2025-11-20 11:26:07,663 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 164.2 seconds
+2025-11-20 11:26:08,664 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 165.2 seconds
+2025-11-20 11:26:09,668 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 166.2 seconds
+2025-11-20 11:26:10,670 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 167.2 seconds
+2025-11-20 11:26:11,676 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 168.2 seconds
+2025-11-20 11:26:12,679 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 169.3 seconds
+2025-11-20 11:26:13,684 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 170.3 seconds
+2025-11-20 11:26:14,698 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 171.3 seconds
+2025-11-20 11:26:15,705 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 172.3 seconds
+2025-11-20 11:26:16,712 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 173.3 seconds
+2025-11-20 11:26:17,728 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 174.3 seconds
+2025-11-20 11:26:18,730 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 175.3 seconds
+2025-11-20 11:26:19,744 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 176.3 seconds
+2025-11-20 11:26:20,745 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 177.3 seconds
+2025-11-20 11:26:21,754 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 178.3 seconds
+2025-11-20 11:26:22,757 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 179.3 seconds
+2025-11-20 11:26:23,761 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 180.3 seconds
+2025-11-20 11:26:24,770 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 181.4 seconds
+2025-11-20 11:26:25,773 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 182.4 seconds
+2025-11-20 11:26:26,778 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 183.4 seconds
+2025-11-20 11:26:27,792 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 184.4 seconds
+2025-11-20 11:26:28,797 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 185.4 seconds
+2025-11-20 11:26:29,799 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 186.4 seconds
+2025-11-20 11:26:30,814 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 187.4 seconds
+2025-11-20 11:26:31,824 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 188.4 seconds
+2025-11-20 11:26:32,828 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 189.4 seconds
+2025-11-20 11:26:33,843 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 190.4 seconds
+2025-11-20 11:26:34,855 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 191.4 seconds
+2025-11-20 11:26:35,868 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 192.5 seconds
+2025-11-20 11:26:36,875 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 193.5 seconds
+2025-11-20 11:26:37,878 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 194.5 seconds
+2025-11-20 11:26:38,880 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 195.5 seconds
+2025-11-20 11:26:39,884 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 196.5 seconds
+2025-11-20 11:26:40,897 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 197.5 seconds
+2025-11-20 11:26:41,911 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 198.5 seconds
+2025-11-20 11:26:42,922 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 199.5 seconds
+2025-11-20 11:26:43,928 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 200.5 seconds
+2025-11-20 11:26:44,938 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 201.5 seconds
+2025-11-20 11:26:45,952 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 202.5 seconds
+2025-11-20 11:26:46,954 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 203.5 seconds
+2025-11-20 11:26:47,960 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 204.5 seconds
+2025-11-20 11:26:48,972 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 205.6 seconds
+2025-11-20 11:26:49,980 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 206.6 seconds
+2025-11-20 11:26:50,983 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 207.6 seconds
+2025-11-20 11:26:51,987 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 208.6 seconds
+2025-11-20 11:26:52,990 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 209.6 seconds
+2025-11-20 11:26:53,992 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 210.6 seconds
+2025-11-20 11:26:55,003 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 211.6 seconds
+2025-11-20 11:26:56,004 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 212.6 seconds
+2025-11-20 11:26:57,012 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 213.6 seconds
+2025-11-20 11:26:58,025 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 214.6 seconds
+2025-11-20 11:26:59,039 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 215.6 seconds
+2025-11-20 11:27:00,040 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 216.6 seconds
+2025-11-20 11:27:01,046 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 217.6 seconds
+2025-11-20 11:27:02,054 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 218.6 seconds
+2025-11-20 11:27:03,062 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 219.6 seconds
+2025-11-20 11:27:04,076 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 220.7 seconds
+2025-11-20 11:27:05,092 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 221.7 seconds
+2025-11-20 11:27:06,100 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 222.7 seconds
+2025-11-20 11:27:07,102 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 223.7 seconds
+2025-11-20 11:27:08,112 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 224.7 seconds
+2025-11-20 11:27:09,126 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 225.7 seconds
+2025-11-20 11:27:10,141 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 226.7 seconds
+2025-11-20 11:27:11,146 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 227.7 seconds
+2025-11-20 11:27:12,159 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 228.8 seconds
+2025-11-20 11:27:13,172 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 229.8 seconds
+2025-11-20 11:27:14,184 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 230.8 seconds
+2025-11-20 11:27:15,192 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 231.8 seconds
+2025-11-20 11:27:16,206 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 232.8 seconds
+2025-11-20 11:27:17,218 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 233.8 seconds
+2025-11-20 11:27:18,229 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 234.8 seconds
+2025-11-20 11:27:19,242 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 235.8 seconds
+2025-11-20 11:27:20,261 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 236.8 seconds
+2025-11-20 11:27:21,262 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 237.8 seconds
+2025-11-20 11:27:22,276 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 238.9 seconds
+2025-11-20 11:27:23,290 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 239.9 seconds
+2025-11-20 11:27:24,291 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 240.9 seconds
+2025-11-20 11:27:25,304 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 241.9 seconds
+2025-11-20 11:27:26,313 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 242.9 seconds
+2025-11-20 11:27:27,323 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 243.9 seconds
+2025-11-20 11:27:28,324 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 244.9 seconds
+2025-11-20 11:27:29,326 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 245.9 seconds
+2025-11-20 11:27:30,339 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 246.9 seconds
+2025-11-20 11:27:31,347 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 247.9 seconds
+2025-11-20 11:27:32,359 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 248.9 seconds
+2025-11-20 11:27:33,372 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 250.0 seconds
+2025-11-20 11:27:34,377 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 251.0 seconds
+2025-11-20 11:27:35,382 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 252.0 seconds
+2025-11-20 11:27:36,385 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 253.0 seconds
+2025-11-20 11:27:37,389 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 254.0 seconds
+2025-11-20 11:27:38,391 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 255.0 seconds
+2025-11-20 11:27:39,391 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 256.0 seconds
+2025-11-20 11:27:40,404 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 257.0 seconds
+2025-11-20 11:27:41,419 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 258.0 seconds
+2025-11-20 11:27:42,434 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 259.0 seconds
+2025-11-20 11:27:43,445 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 260.0 seconds
+2025-11-20 11:27:44,451 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 261.0 seconds
+2025-11-20 11:27:45,452 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 262.0 seconds
+2025-11-20 11:27:46,454 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 263.0 seconds
+2025-11-20 11:27:47,467 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 264.0 seconds
+2025-11-20 11:27:48,481 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 265.1 seconds
+2025-11-20 11:27:49,491 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 266.1 seconds
+2025-11-20 11:27:50,495 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 267.1 seconds
+2025-11-20 11:27:51,499 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 268.1 seconds
+2025-11-20 11:27:52,504 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 269.1 seconds
+2025-11-20 11:27:53,516 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 270.1 seconds
+2025-11-20 11:27:54,532 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 271.1 seconds
+2025-11-20 11:27:55,543 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 272.1 seconds
+2025-11-20 11:27:56,558 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 273.1 seconds
+2025-11-20 11:27:57,570 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 274.2 seconds
+2025-11-20 11:27:58,573 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 275.2 seconds
+2025-11-20 11:27:59,590 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 276.2 seconds
+2025-11-20 11:28:00,592 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 277.2 seconds
+2025-11-20 11:28:01,595 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 278.2 seconds
+2025-11-20 11:28:02,610 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 279.2 seconds
+2025-11-20 11:28:03,611 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 280.2 seconds
+2025-11-20 11:28:04,627 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 281.2 seconds
+2025-11-20 11:28:05,642 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 282.2 seconds
+2025-11-20 11:28:06,654 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 283.2 seconds
+2025-11-20 11:28:07,655 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 284.2 seconds
+2025-11-20 11:28:08,668 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 285.2 seconds
+2025-11-20 11:28:09,674 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 286.3 seconds
+2025-11-20 11:28:10,677 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 287.3 seconds
+2025-11-20 11:28:11,691 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 288.3 seconds
+2025-11-20 11:28:12,704 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 289.3 seconds
+2025-11-20 11:28:13,716 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 290.3 seconds
+2025-11-20 11:28:14,722 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 291.3 seconds
+2025-11-20 11:28:15,725 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 292.3 seconds
+2025-11-20 11:28:16,729 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 293.3 seconds
+2025-11-20 11:28:17,733 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 294.3 seconds
+2025-11-20 11:28:18,746 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 295.3 seconds
+2025-11-20 11:28:19,754 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 296.3 seconds
+2025-11-20 11:28:20,755 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 297.3 seconds
+2025-11-20 11:28:21,766 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 298.4 seconds
+2025-11-20 11:28:22,779 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 299.4 seconds
+2025-11-20 11:28:23,792 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 300.4 seconds
+2025-11-20 11:28:24,804 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 301.4 seconds
+2025-11-20 11:28:25,816 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 302.4 seconds
+2025-11-20 11:28:26,831 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 303.4 seconds
+2025-11-20 11:28:27,842 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 304.4 seconds
+2025-11-20 11:28:28,844 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 305.4 seconds
+2025-11-20 11:28:29,854 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 306.4 seconds
+2025-11-20 11:28:30,856 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 307.4 seconds
+2025-11-20 11:28:31,864 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 308.5 seconds
+2025-11-20 11:28:32,880 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 309.5 seconds
+2025-11-20 11:28:33,895 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 310.5 seconds
+2025-11-20 11:28:34,909 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 311.5 seconds
+2025-11-20 11:28:35,911 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 312.5 seconds
+2025-11-20 11:28:36,925 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 313.5 seconds
+2025-11-20 11:28:37,930 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 314.5 seconds
+2025-11-20 11:28:38,931 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 315.5 seconds
+2025-11-20 11:28:39,937 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 316.5 seconds
+2025-11-20 11:28:40,950 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 317.5 seconds
+2025-11-20 11:28:41,959 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 318.5 seconds
+2025-11-20 11:28:42,970 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 319.6 seconds
+2025-11-20 11:28:43,982 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 320.6 seconds
+2025-11-20 11:28:45,005 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 321.6 seconds
+2025-11-20 11:28:46,021 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 322.6 seconds
+2025-11-20 11:28:47,026 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 323.6 seconds
+2025-11-20 11:28:48,029 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 324.6 seconds
+2025-11-20 11:28:49,042 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 325.6 seconds
+2025-11-20 11:28:50,049 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 326.6 seconds
+2025-11-20 11:28:51,058 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 327.6 seconds
+2025-11-20 11:28:52,072 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 328.7 seconds
+2025-11-20 11:28:53,077 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 329.7 seconds
+2025-11-20 11:28:54,082 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 330.7 seconds
+2025-11-20 11:28:55,088 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 331.7 seconds
+2025-11-20 11:28:56,091 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 332.7 seconds
+2025-11-20 11:28:57,093 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 333.7 seconds
+2025-11-20 11:28:58,105 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 334.7 seconds
+2025-11-20 11:28:59,108 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 335.7 seconds
+2025-11-20 11:29:00,108 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 336.7 seconds
+2025-11-20 11:29:01,121 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 337.7 seconds
+2025-11-20 11:29:02,126 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 338.7 seconds
+2025-11-20 11:29:03,138 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 339.7 seconds
+2025-11-20 11:29:04,152 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 340.7 seconds
+2025-11-20 11:29:05,154 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 341.8 seconds
+2025-11-20 11:29:06,170 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 342.8 seconds
+2025-11-20 11:29:07,185 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 343.8 seconds
+2025-11-20 11:29:08,197 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 344.8 seconds
+2025-11-20 11:29:09,201 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 345.8 seconds
+2025-11-20 11:29:10,201 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 346.8 seconds
+2025-11-20 11:29:11,212 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 347.8 seconds
+2025-11-20 11:29:12,228 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 348.8 seconds
+2025-11-20 11:29:13,240 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 349.8 seconds
+2025-11-20 11:29:14,255 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 350.8 seconds
+2025-11-20 11:29:15,260 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 351.8 seconds
+2025-11-20 11:29:16,276 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 352.9 seconds
+2025-11-20 11:29:17,287 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 353.9 seconds
+2025-11-20 11:29:18,290 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 354.9 seconds
+2025-11-20 11:29:19,290 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 355.9 seconds
+2025-11-20 11:29:20,304 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 356.9 seconds
+2025-11-20 11:29:21,319 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 357.9 seconds
+2025-11-20 11:29:22,320 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 358.9 seconds
+2025-11-20 11:29:23,322 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 359.9 seconds
+2025-11-20 11:29:24,323 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 360.9 seconds
+2025-11-20 11:29:25,339 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 361.9 seconds
+2025-11-20 11:29:26,341 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 362.9 seconds
+2025-11-20 11:29:27,341 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 363.9 seconds
+2025-11-20 11:29:28,353 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 364.9 seconds
+2025-11-20 11:29:29,355 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 365.9 seconds
+2025-11-20 11:29:30,361 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 367.0 seconds
+2025-11-20 11:29:31,370 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 368.0 seconds
+2025-11-20 11:29:32,385 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 369.0 seconds
+2025-11-20 11:29:33,393 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 370.0 seconds
+2025-11-20 11:29:34,403 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 371.0 seconds
+2025-11-20 11:29:35,416 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 372.0 seconds
+2025-11-20 11:29:36,416 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 373.0 seconds
+2025-11-20 11:29:37,418 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 374.0 seconds
+2025-11-20 11:29:38,433 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 375.0 seconds
+2025-11-20 11:29:39,448 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 376.0 seconds
+2025-11-20 11:29:40,449 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 377.0 seconds
+2025-11-20 11:29:41,452 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 378.0 seconds
+2025-11-20 11:29:42,464 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 379.0 seconds
+2025-11-20 11:29:43,480 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 380.1 seconds
+2025-11-20 11:29:44,495 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 381.1 seconds
+2025-11-20 11:29:45,496 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 382.1 seconds
+2025-11-20 11:29:46,496 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 383.1 seconds
+2025-11-20 11:29:47,512 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 384.1 seconds
+2025-11-20 11:29:48,527 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 385.1 seconds
+2025-11-20 11:29:49,529 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 386.1 seconds
+2025-11-20 11:29:50,542 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 387.1 seconds
+2025-11-20 11:29:51,554 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 388.1 seconds
+2025-11-20 11:29:52,569 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 389.2 seconds
+2025-11-20 11:29:53,582 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 390.2 seconds
+2025-11-20 11:29:54,585 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 391.2 seconds
+2025-11-20 11:29:55,593 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 392.2 seconds
+2025-11-20 11:29:56,603 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 393.2 seconds
+2025-11-20 11:29:57,605 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 394.2 seconds
+2025-11-20 11:29:58,606 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 395.2 seconds
+2025-11-20 11:29:59,617 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 396.2 seconds
+2025-11-20 11:30:00,632 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 397.2 seconds
+2025-11-20 11:30:01,635 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 398.2 seconds
+2025-11-20 11:30:02,637 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 399.2 seconds
+2025-11-20 11:30:03,638 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 400.2 seconds
+2025-11-20 11:30:04,641 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 401.2 seconds
+2025-11-20 11:30:05,650 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 402.2 seconds
+2025-11-20 11:30:06,652 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 403.2 seconds
+2025-11-20 11:30:07,655 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 404.2 seconds
+2025-11-20 11:30:08,668 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 405.3 seconds
+2025-11-20 11:30:09,671 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 406.3 seconds
+2025-11-20 11:30:10,685 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 407.3 seconds
+2025-11-20 11:30:11,700 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 408.3 seconds
+2025-11-20 11:30:12,701 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 409.3 seconds
+2025-11-20 11:30:13,716 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 410.3 seconds
+2025-11-20 11:30:14,731 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 411.3 seconds
+2025-11-20 11:30:15,742 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 412.3 seconds
+2025-11-20 11:30:16,750 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 413.3 seconds
+2025-11-20 11:30:17,763 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 414.4 seconds
+2025-11-20 11:30:18,766 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 415.4 seconds
+2025-11-20 11:30:19,780 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 416.4 seconds
+2025-11-20 11:30:20,780 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 417.4 seconds
+2025-11-20 11:30:21,796 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 418.4 seconds
+2025-11-20 11:30:22,796 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 419.4 seconds
+2025-11-20 11:30:23,798 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 420.4 seconds
+2025-11-20 11:30:24,800 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 421.4 seconds
+2025-11-20 11:30:25,804 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 422.4 seconds
+2025-11-20 11:30:26,815 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 423.4 seconds
+2025-11-20 11:30:27,827 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 424.4 seconds
+2025-11-20 11:30:28,841 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 425.4 seconds
+2025-11-20 11:30:29,857 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 426.5 seconds
+2025-11-20 11:30:30,871 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 427.5 seconds
+2025-11-20 11:30:31,873 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 428.5 seconds
+2025-11-20 11:30:32,890 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 429.5 seconds
+2025-11-20 11:30:33,892 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 430.5 seconds
+2025-11-20 11:30:34,896 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 431.5 seconds
+2025-11-20 11:30:35,898 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 432.5 seconds
+2025-11-20 11:30:36,905 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 433.5 seconds
+2025-11-20 11:30:37,920 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 434.5 seconds
+2025-11-20 11:30:38,935 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 435.5 seconds
+2025-11-20 11:30:39,951 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 436.5 seconds
+2025-11-20 11:30:40,967 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 437.6 seconds
+2025-11-20 11:30:41,973 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 438.6 seconds
+2025-11-20 11:30:42,976 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 439.6 seconds
+2025-11-20 11:30:43,978 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 440.6 seconds
+2025-11-20 11:30:44,980 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 441.6 seconds
+2025-11-20 11:30:45,984 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 442.6 seconds
+2025-11-20 11:30:46,998 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 443.6 seconds
+2025-11-20 11:30:48,002 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 444.6 seconds
+2025-11-20 11:30:49,023 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 445.6 seconds
+2025-11-20 11:30:50,034 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 446.6 seconds
+2025-11-20 11:30:51,035 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 447.6 seconds
+2025-11-20 11:30:52,040 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 448.6 seconds
+2025-11-20 11:30:53,043 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 449.6 seconds
+2025-11-20 11:30:54,055 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 450.6 seconds
+2025-11-20 11:30:55,069 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 451.7 seconds
+2025-11-20 11:30:56,079 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 452.7 seconds
+2025-11-20 11:30:57,088 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 453.7 seconds
+2025-11-20 11:30:58,103 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 454.7 seconds
+2025-11-20 11:30:59,116 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 455.7 seconds
+2025-11-20 11:31:00,131 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 456.7 seconds
+2025-11-20 11:31:01,143 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 457.7 seconds
+2025-11-20 11:31:02,159 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 458.8 seconds
+2025-11-20 11:31:03,166 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 459.8 seconds
+2025-11-20 11:31:04,181 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 460.8 seconds
+2025-11-20 11:31:05,183 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 461.8 seconds
+2025-11-20 11:31:06,197 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 462.8 seconds
+2025-11-20 11:31:07,201 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 463.8 seconds
+2025-11-20 11:31:08,211 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 464.8 seconds
+2025-11-20 11:31:09,226 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 465.8 seconds
+2025-11-20 11:31:10,238 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 466.8 seconds
+2025-11-20 11:31:11,248 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 467.8 seconds
+2025-11-20 11:31:12,262 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 468.9 seconds
+2025-11-20 11:31:13,270 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 469.9 seconds
+2025-11-20 11:31:14,271 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 470.9 seconds
+2025-11-20 11:31:15,282 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 471.9 seconds
+2025-11-20 11:31:16,285 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 472.9 seconds
+2025-11-20 11:31:17,286 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 473.9 seconds
+2025-11-20 11:31:18,286 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 474.9 seconds
+2025-11-20 11:31:19,288 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 475.9 seconds
+2025-11-20 11:31:20,303 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 476.9 seconds
+2025-11-20 11:31:21,315 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 477.9 seconds
+2025-11-20 11:31:22,318 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 478.9 seconds
+2025-11-20 11:31:23,320 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 479.9 seconds
+2025-11-20 11:31:24,333 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 480.9 seconds
+2025-11-20 11:31:25,336 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 481.9 seconds
+2025-11-20 11:31:26,336 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 482.9 seconds
+2025-11-20 11:31:27,348 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 483.9 seconds
+2025-11-20 11:31:28,362 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 485.0 seconds
+2025-11-20 11:31:29,363 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 486.0 seconds
+2025-11-20 11:31:30,367 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 487.0 seconds
+2025-11-20 11:31:31,381 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 488.0 seconds
+2025-11-20 11:31:32,396 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 489.0 seconds
+2025-11-20 11:31:33,398 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 490.0 seconds
+2025-11-20 11:31:34,401 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 491.0 seconds
+2025-11-20 11:31:35,402 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 492.0 seconds
+2025-11-20 11:31:36,415 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 493.0 seconds
+2025-11-20 11:31:37,429 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 494.0 seconds
+2025-11-20 11:31:38,433 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 495.0 seconds
+2025-11-20 11:31:39,445 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 496.0 seconds
+2025-11-20 11:31:40,457 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 497.0 seconds
+2025-11-20 11:31:41,472 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 498.1 seconds
+2025-11-20 11:31:42,482 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 499.1 seconds
+2025-11-20 11:31:43,492 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 500.1 seconds
+2025-11-20 11:31:44,498 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 501.1 seconds
+2025-11-20 11:31:45,513 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 502.1 seconds
+2025-11-20 11:31:46,514 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 503.1 seconds
+2025-11-20 11:31:47,519 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 504.1 seconds
+2025-11-20 11:31:48,528 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 505.1 seconds
+2025-11-20 11:31:49,529 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 506.1 seconds
+2025-11-20 11:31:50,531 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 507.1 seconds
+2025-11-20 11:31:51,539 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 508.1 seconds
+2025-11-20 11:31:52,553 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 509.1 seconds
+2025-11-20 11:31:53,566 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 510.2 seconds
+2025-11-20 11:31:54,574 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 511.2 seconds
+2025-11-20 11:31:55,579 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 512.2 seconds
+2025-11-20 11:31:56,587 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 513.2 seconds
+2025-11-20 11:31:57,598 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 514.2 seconds
+2025-11-20 11:31:58,608 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 515.2 seconds
+2025-11-20 11:31:59,614 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 516.2 seconds
+2025-11-20 11:32:00,617 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 517.2 seconds
+2025-11-20 11:32:01,629 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 518.2 seconds
+2025-11-20 11:32:02,636 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 519.2 seconds
+2025-11-20 11:32:03,652 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 520.2 seconds
+2025-11-20 11:32:04,663 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 521.2 seconds
+2025-11-20 11:32:05,665 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 522.2 seconds
+2025-11-20 11:32:06,679 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 523.3 seconds
+2025-11-20 11:32:07,694 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 524.3 seconds
+2025-11-20 11:32:08,704 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 525.3 seconds
+2025-11-20 11:32:09,712 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 526.3 seconds
+2025-11-20 11:32:10,714 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 527.3 seconds
+2025-11-20 11:32:11,726 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 528.3 seconds
+2025-11-20 11:32:12,728 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 529.3 seconds
+2025-11-20 11:32:13,730 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 530.3 seconds
+2025-11-20 11:32:14,730 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 531.3 seconds
+2025-11-20 11:32:15,731 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 532.3 seconds
+2025-11-20 11:32:16,745 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 533.3 seconds
+2025-11-20 11:32:17,747 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 534.3 seconds
+2025-11-20 11:32:18,751 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 535.3 seconds
+2025-11-20 11:32:19,761 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 536.4 seconds
+2025-11-20 11:32:20,772 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 537.4 seconds
+2025-11-20 11:32:21,777 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 538.4 seconds
+2025-11-20 11:32:22,792 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 539.4 seconds
+2025-11-20 11:32:23,797 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 540.4 seconds
+2025-11-20 11:32:24,800 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 541.4 seconds
+2025-11-20 11:32:25,807 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 542.4 seconds
+2025-11-20 11:32:26,819 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 543.4 seconds
+2025-11-20 11:32:27,833 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 544.4 seconds
+2025-11-20 11:32:28,842 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 545.4 seconds
+2025-11-20 11:32:29,852 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 546.5 seconds
+2025-11-20 11:32:30,865 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 547.5 seconds
+2025-11-20 11:32:31,878 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 548.5 seconds
+2025-11-20 11:32:32,878 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 549.5 seconds
+2025-11-20 11:32:33,879 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 550.5 seconds
+2025-11-20 11:32:34,883 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 551.5 seconds
+2025-11-20 11:32:35,896 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 552.5 seconds
+2025-11-20 11:32:36,897 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 553.5 seconds
+2025-11-20 11:32:37,912 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 554.5 seconds
+2025-11-20 11:32:38,915 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 555.5 seconds
+2025-11-20 11:32:39,925 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 556.5 seconds
+2025-11-20 11:32:40,930 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 557.5 seconds
+2025-11-20 11:32:41,940 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 558.5 seconds
+2025-11-20 11:32:42,955 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 559.5 seconds
+2025-11-20 11:32:43,963 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 560.6 seconds
+2025-11-20 11:32:44,976 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 561.6 seconds
+2025-11-20 11:32:45,979 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 562.6 seconds
+2025-11-20 11:32:46,986 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 563.6 seconds
+2025-11-20 11:32:47,996 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 564.6 seconds
+2025-11-20 11:32:48,997 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 565.6 seconds
+2025-11-20 11:32:49,998 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 566.6 seconds
+2025-11-20 11:32:51,013 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 567.6 seconds
+2025-11-20 11:32:52,026 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 568.6 seconds
+2025-11-20 11:32:53,029 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 569.6 seconds
+2025-11-20 11:32:54,043 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 570.6 seconds
+2025-11-20 11:32:55,056 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 571.7 seconds
+2025-11-20 11:32:56,069 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 572.7 seconds
+2025-11-20 11:32:57,072 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 573.7 seconds
+2025-11-20 11:32:58,084 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 574.7 seconds
+2025-11-20 11:32:59,097 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 575.7 seconds
+2025-11-20 11:33:00,107 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 576.7 seconds
+2025-11-20 11:33:01,112 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 577.7 seconds
+2025-11-20 11:33:02,115 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 578.7 seconds
+2025-11-20 11:33:03,127 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 579.7 seconds
+2025-11-20 11:33:04,134 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 580.7 seconds
+2025-11-20 11:33:05,149 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 581.8 seconds
+2025-11-20 11:33:06,165 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 582.8 seconds
+2025-11-20 11:33:07,179 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 583.8 seconds
+2025-11-20 11:33:08,190 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 584.8 seconds
+2025-11-20 11:33:09,200 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 585.8 seconds
+2025-11-20 11:33:10,201 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 586.8 seconds
+2025-11-20 11:33:11,211 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 587.8 seconds
+2025-11-20 11:33:12,217 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 588.8 seconds
+2025-11-20 11:33:13,223 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 589.8 seconds
+2025-11-20 11:33:14,228 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 590.8 seconds
+2025-11-20 11:33:15,232 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 591.8 seconds
+2025-11-20 11:33:16,233 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 592.8 seconds
+2025-11-20 11:33:17,247 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 593.8 seconds
+2025-11-20 11:33:18,248 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 594.8 seconds
+2025-11-20 11:33:19,261 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 595.9 seconds
+2025-11-20 11:33:20,261 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 596.9 seconds
+2025-11-20 11:33:21,263 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 597.9 seconds
+2025-11-20 11:33:22,277 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 598.9 seconds
+2025-11-20 11:33:23,278 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 599.9 seconds
+2025-11-20 11:33:24,279 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 600.9 seconds
+2025-11-20 11:33:25,283 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 601.9 seconds
+2025-11-20 11:33:26,297 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 602.9 seconds
+2025-11-20 11:33:27,300 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 603.9 seconds
+2025-11-20 11:33:28,307 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 604.9 seconds
+2025-11-20 11:33:29,310 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 605.9 seconds
+2025-11-20 11:33:30,314 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 606.9 seconds
+2025-11-20 11:33:31,327 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 607.9 seconds
+2025-11-20 11:33:32,328 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 608.9 seconds
+2025-11-20 11:33:33,331 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 609.9 seconds
+2025-11-20 11:33:34,331 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 610.9 seconds
+2025-11-20 11:33:35,331 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 611.9 seconds
+2025-11-20 11:33:36,346 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 612.9 seconds
+2025-11-20 11:33:37,353 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 614.0 seconds
+2025-11-20 11:33:38,368 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 615.0 seconds
+2025-11-20 11:33:39,382 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 616.0 seconds
+2025-11-20 11:33:40,391 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 617.0 seconds
+2025-11-20 11:33:41,398 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 618.0 seconds
+2025-11-20 11:33:42,406 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 619.0 seconds
+2025-11-20 11:33:43,422 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 620.0 seconds
+2025-11-20 11:33:44,425 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 621.0 seconds
+2025-11-20 11:33:45,426 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 622.0 seconds
+2025-11-20 11:33:46,427 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 623.0 seconds
+2025-11-20 11:33:47,427 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 624.0 seconds
+2025-11-20 11:33:48,442 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 625.0 seconds
+2025-11-20 11:33:49,444 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 626.0 seconds
+2025-11-20 11:33:50,459 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 627.1 seconds
+2025-11-20 11:33:51,473 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 628.1 seconds
+2025-11-20 11:33:52,485 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 629.1 seconds
+2025-11-20 11:33:53,495 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 630.1 seconds
+2025-11-20 11:33:54,508 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 631.1 seconds
+2025-11-20 11:33:55,521 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 632.1 seconds
+2025-11-20 11:33:56,522 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 633.1 seconds
+2025-11-20 11:33:57,537 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 634.1 seconds
+2025-11-20 11:33:58,549 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 635.1 seconds
+2025-11-20 11:33:59,554 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 636.2 seconds
+2025-11-20 11:34:00,556 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 637.2 seconds
+2025-11-20 11:34:01,559 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 638.2 seconds
+2025-11-20 11:34:02,560 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 639.2 seconds
+2025-11-20 11:34:03,573 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 640.2 seconds
+2025-11-20 11:34:04,585 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 641.2 seconds
+2025-11-20 11:34:05,599 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 642.2 seconds
+2025-11-20 11:34:06,607 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 643.2 seconds
+2025-11-20 11:34:07,609 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 644.2 seconds
+2025-11-20 11:34:08,609 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 645.2 seconds
+2025-11-20 11:34:09,612 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 646.2 seconds
+2025-11-20 11:34:10,615 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 647.2 seconds
+2025-11-20 11:34:11,619 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 648.2 seconds
+2025-11-20 11:34:12,631 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 649.2 seconds
+2025-11-20 11:34:13,643 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 650.2 seconds
+2025-11-20 11:34:14,646 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 651.2 seconds
+2025-11-20 11:34:15,659 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 652.2 seconds
+2025-11-20 11:34:16,674 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 653.3 seconds
+2025-11-20 11:34:17,675 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 654.3 seconds
+2025-11-20 11:34:18,678 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 655.3 seconds
+2025-11-20 11:34:19,691 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 656.3 seconds
+2025-11-20 11:34:20,707 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 657.3 seconds
+2025-11-20 11:34:21,722 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 658.3 seconds
+2025-11-20 11:34:22,736 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 659.3 seconds
+2025-11-20 11:34:23,738 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 660.3 seconds
+2025-11-20 11:34:24,739 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 661.3 seconds
+2025-11-20 11:34:25,755 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 662.3 seconds
+2025-11-20 11:34:26,770 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 663.4 seconds
+2025-11-20 11:34:27,786 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 664.4 seconds
+2025-11-20 11:34:28,797 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 665.4 seconds
+2025-11-20 11:34:29,803 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 666.4 seconds
+2025-11-20 11:34:30,807 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 667.4 seconds
+2025-11-20 11:34:31,816 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 668.4 seconds
+2025-11-20 11:34:32,826 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 669.4 seconds
+2025-11-20 11:34:33,837 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 670.4 seconds
+2025-11-20 11:34:34,842 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 671.4 seconds
+2025-11-20 11:34:35,845 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 672.4 seconds
+2025-11-20 11:34:36,845 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 673.4 seconds
+2025-11-20 11:34:37,845 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 674.4 seconds
+2025-11-20 11:34:38,846 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 675.4 seconds
+2025-11-20 11:34:39,858 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 676.5 seconds
+2025-11-20 11:34:40,862 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 677.5 seconds
+2025-11-20 11:34:41,875 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 678.5 seconds
+2025-11-20 11:34:42,875 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 679.5 seconds
+2025-11-20 11:34:43,878 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 680.5 seconds
+2025-11-20 11:34:44,890 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 681.5 seconds
+2025-11-20 11:34:45,895 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 682.5 seconds
+2025-11-20 11:34:46,909 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 683.5 seconds
+2025-11-20 11:34:47,923 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 684.5 seconds
+2025-11-20 11:34:48,925 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 685.5 seconds
+2025-11-20 11:34:49,928 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 686.5 seconds
+2025-11-20 11:34:50,928 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 687.5 seconds
+2025-11-20 11:34:51,928 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 688.5 seconds
+2025-11-20 11:34:52,929 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 689.5 seconds
+2025-11-20 11:34:53,941 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 690.5 seconds
+2025-11-20 11:34:54,943 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 691.5 seconds
+2025-11-20 11:34:55,944 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 692.5 seconds
+2025-11-20 11:34:56,960 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 693.6 seconds
+2025-11-20 11:34:57,974 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 694.6 seconds
+2025-11-20 11:34:58,979 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 695.6 seconds
+2025-11-20 11:34:59,991 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 696.6 seconds
+2025-11-20 11:35:01,005 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 697.6 seconds
+2025-11-20 11:35:02,017 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 698.6 seconds
+2025-11-20 11:35:03,030 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 699.6 seconds
+2025-11-20 11:35:04,042 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 700.6 seconds
+2025-11-20 11:35:05,053 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 701.7 seconds
+2025-11-20 11:35:06,056 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 702.7 seconds
+2025-11-20 11:35:07,067 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 703.7 seconds
+2025-11-20 11:35:08,068 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 704.7 seconds
+2025-11-20 11:35:09,070 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 705.7 seconds
+2025-11-20 11:35:10,080 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 706.7 seconds
+2025-11-20 11:35:11,091 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 707.7 seconds
+2025-11-20 11:35:12,108 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 708.7 seconds
+2025-11-20 11:35:13,120 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 709.7 seconds
+2025-11-20 11:35:14,131 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 710.7 seconds
+2025-11-20 11:35:15,145 - DEBUG - <IocpProactor overlapped#=1 result#=1> is running after closing for 711.8 seconds
+2025-11-20 11:43:40,123 - INFO - ======================================================================
+2025-11-20 11:43:40,123 - INFO - PLAYWRIGHT AUTOMATION RUNNER
+2025-11-20 11:43:40,124 - INFO - ======================================================================
+2025-11-20 11:43:40,124 - INFO - Account: CIM02
+2025-11-20 11:43:40,125 - INFO - Date: 20/10/2025
+2025-11-20 11:43:40,125 - INFO - Amount: 100.0
+2025-11-20 11:43:40,126 - INFO - Headless Mode: False
+2025-11-20 11:43:40,126 - INFO - ======================================================================
+2025-11-20 11:43:40,126 - INFO - 
+🚀 Starting complete automation workflow...
+
+2025-11-20 11:43:40,126 - INFO - 
+======================================================================
+2025-11-20 11:43:40,127 - INFO - STEP 1: CA MATCH PROCESS
+2025-11-20 11:43:40,127 - INFO - ======================================================================
+2025-11-20 11:43:40,963 - INFO - Starting CA Match process...
+2025-11-20 11:54:50,362 - WARNING - Could not determine dtype for column 1, falling back to string
+2025-11-20 11:54:50,362 - WARNING - Could not determine dtype for column 6, falling back to string
+2025-11-20 11:54:50,362 - WARNING - Could not determine dtype for column 8, falling back to string
+2025-11-20 11:54:50,362 - WARNING - Could not determine dtype for column 9, falling back to string
+2025-11-20 11:54:50,362 - WARNING - Could not determine dtype for column 11, falling back to string
+2025-11-20 11:54:50,364 - WARNING - Could not determine dtype for column 13, falling back to string
+2025-11-20 11:54:50,364 - WARNING - Could not determine dtype for column 14, falling back to string
+2025-11-20 11:54:50,364 - WARNING - Could not determine dtype for column 17, falling back to string
+2025-11-20 11:54:50,364 - WARNING - Could not determine dtype for column 18, falling back to string
+2025-11-20 11:54:50,364 - WARNING - Could not determine dtype for column 20, falling back to string
+2025-11-20 11:56:46,410 - WARNING - Could not determine dtype for column 2, falling back to string
+2025-11-20 11:56:46,410 - WARNING - Could not determine dtype for column 11, falling back to string
+2025-11-20 11:56:46,411 - WARNING - Could not determine dtype for column 12, falling back to string
+2025-11-20 12:09:25,658 - INFO - Loaded 102 bank transactions and 3810 company transactions
+2025-11-20 12:09:25,666 - INFO - Starting Stage 1: Traditional reconciliation pipeline...
+2025-11-20 12:09:25,697 - DEBUG - MBB02 credit card matcher skipped: support module not available
+2025-11-20 12:09:25,700 - INFO - Finding transaction ID matches...
+2025-11-20 12:09:51,641 - INFO - Finding bank charges...
+2025-11-20 12:09:51,652 - DEBUG - After bank charges detection: 1 matched (added 1)
+2025-11-20 12:09:51,653 - INFO - Detected 1 bank charges
+2025-11-20 12:09:51,655 - INFO - Finding Reverse CE GL matches...
+2025-11-20 12:09:52,795 - INFO - Found 2 Reverse CE GL matches
+2025-11-20 12:09:52,800 - INFO - Finding name and amount matches...
+2025-11-20 12:10:40,509 - INFO - Found 100 name and amount matches
+2025-11-20 12:10:40,511 - INFO - Finding Hungarian 1:1 matches...
+2025-11-20 12:10:41,982 - INFO - Hungarian 1:1: 0 matches | pairs scored=45, kept=0, time=1.47s
+2025-11-20 12:10:41,985 - INFO - Finding enhanced 1:1 matches...
+2025-11-20 12:10:43,300 - INFO - Found 0 enhanced 1:1 matches
+2025-11-20 12:10:43,302 - INFO - Finding amount and date matches...
+2025-11-20 12:10:43,523 - INFO - Found 0 amount and date matches
+2025-11-20 12:10:43,525 - INFO - Finding fuzzy matches...
+2025-11-20 12:28:16,131 - INFO - ======================================================================
+2025-11-20 12:28:16,132 - INFO - PLAYWRIGHT AUTOMATION RUNNER
+2025-11-20 12:28:16,133 - INFO - ======================================================================
+2025-11-20 12:28:16,133 - INFO - Account: CIM02
+2025-11-20 12:28:16,133 - INFO - Date: 20/10/2025
+2025-11-20 12:28:16,134 - INFO - Amount: 100.0
+2025-11-20 12:28:16,134 - INFO - Headless Mode: False
+2025-11-20 12:28:16,134 - INFO - ======================================================================
+2025-11-20 12:28:16,135 - INFO - 
+🚀 Starting complete automation workflow...
+
+2025-11-20 12:28:16,135 - INFO - 
+======================================================================
+2025-11-20 12:28:16,136 - INFO - STEP 1: CA MATCH PROCESS
+2025-11-20 12:28:16,136 - INFO - ======================================================================
+2025-11-20 12:28:17,309 - INFO - Starting CA Match process...
+2025-11-20 12:39:40,980 - WARNING - Could not determine dtype for column 1, falling back to string
+2025-11-20 12:39:40,980 - WARNING - Could not determine dtype for column 6, falling back to string
+2025-11-20 12:39:40,982 - WARNING - Could not determine dtype for column 8, falling back to string
+2025-11-20 12:39:40,982 - WARNING - Could not determine dtype for column 9, falling back to string
+2025-11-20 12:39:40,982 - WARNING - Could not determine dtype for column 11, falling back to string
+2025-11-20 12:39:40,982 - WARNING - Could not determine dtype for column 13, falling back to string
+2025-11-20 12:39:40,983 - WARNING - Could not determine dtype for column 14, falling back to string
+2025-11-20 12:39:40,983 - WARNING - Could not determine dtype for column 17, falling back to string
+2025-11-20 12:39:40,983 - WARNING - Could not determine dtype for column 18, falling back to string
+2025-11-20 12:39:40,984 - WARNING - Could not determine dtype for column 20, falling back to string
+2025-11-20 12:41:59,742 - WARNING - Could not determine dtype for column 2, falling back to string
+2025-11-20 12:41:59,742 - WARNING - Could not determine dtype for column 11, falling back to string
+2025-11-20 12:41:59,742 - WARNING - Could not determine dtype for column 12, falling back to string
+2025-11-20 12:55:03,095 - INFO - Loaded 102 bank transactions and 3810 company transactions
+2025-11-20 12:55:03,103 - INFO - Starting Stage 1: Traditional reconciliation pipeline...
+2025-11-20 12:55:03,128 - DEBUG - MBB02 credit card matcher skipped: support module not available
+2025-11-20 12:55:03,135 - INFO - Finding transaction ID matches...
+2025-11-20 12:55:28,211 - INFO - Finding bank charges...
+2025-11-20 12:55:28,228 - DEBUG - After bank charges detection: 1 matched (added 1)
+2025-11-20 12:55:28,230 - INFO - Detected 1 bank charges
+2025-11-20 12:55:28,230 - INFO - Finding Reverse CE GL matches...
+2025-11-20 12:55:29,306 - INFO - Found 2 Reverse CE GL matches
+2025-11-20 12:55:29,310 - INFO - Finding name and amount matches...
+2025-11-20 12:56:16,943 - INFO - Found 100 name and amount matches
+2025-11-20 12:56:16,945 - INFO - Finding Hungarian 1:1 matches...
+2025-11-20 12:56:18,246 - INFO - Hungarian 1:1: 0 matches | pairs scored=45, kept=0, time=1.30s
+2025-11-20 12:56:18,249 - INFO - Finding enhanced 1:1 matches...
+2025-11-20 12:56:19,701 - INFO - Found 0 enhanced 1:1 matches
+2025-11-20 12:56:19,704 - INFO - Finding amount and date matches...
+2025-11-20 12:56:19,941 - INFO - Found 0 amount and date matches
+2025-11-20 12:56:19,943 - INFO - Finding fuzzy matches...
+2025-11-20 13:17:32,996 - INFO - ✅ CA Match completed: 102 records processed
+2025-11-20 13:17:33,023 - INFO - 
+======================================================================
+2025-11-20 13:17:33,024 - INFO - ✅ COMPLETE AUTOMATION WORKFLOW FINISHED SUCCESSFULLY
+2025-11-20 13:17:33,024 - INFO - ======================================================================
+2025-11-20 13:17:33,025 - INFO - 
+Workflow Summary:
+2025-11-20 13:17:33,025 - INFO -   ✅ CA Match Process - Completed
+2025-11-20 13:17:33,026 - INFO -   ✅ Extract Reconciliation Statement - Completed (chained)
+2025-11-20 13:17:33,026 - INFO -   ✅ RaasPlus Reconciliation - Completed (chained)
+2025-11-20 13:17:33,026 - INFO -   ✅ Match Statement - Completed (chained)
+2025-11-20 13:17:33,028 - INFO - 
+All processes completed successfully!
+2025-11-20 13:17:33,028 - INFO - Check logs for detailed information.
+2025-11-20 13:17:33,028 - INFO - ======================================================================
+2025-11-20 16:01:42,383 - INFO - ======================================================================
+2025-11-20 16:01:42,384 - INFO - PLAYWRIGHT AUTOMATION RUNNER
+2025-11-20 16:01:42,384 - INFO - ======================================================================
+2025-11-20 16:01:42,384 - INFO - Account: CIM02
+2025-11-20 16:01:42,384 - INFO - Date: 20/10/2025
+2025-11-20 16:01:42,384 - INFO - Amount: 100.0
+2025-11-20 16:01:42,384 - INFO - Headless Mode: False
+2025-11-20 16:01:42,384 - INFO - ======================================================================
+2025-11-20 16:01:42,384 - INFO - 
+🚀 Starting complete automation workflow...
+
+2025-11-20 16:01:42,384 - INFO - 
+======================================================================
+2025-11-20 16:01:42,386 - INFO - STEP 1: CA MATCH PROCESS
+2025-11-20 16:01:42,386 - INFO - ======================================================================
+2025-11-20 16:01:50,296 - INFO - Starting CA Match process...

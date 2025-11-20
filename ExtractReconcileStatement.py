@@ -120,7 +120,7 @@ def extract_reconciliation_statements(
     try:
         functions.send_pingback(pingback_url, requests, "started", payload)
         browser = playwright.chromium.launch(headless=False)
-        context = browser.new_context(no_viewport=True, accept_downloads=True)
+        context = browser.new_context(accept_downloads=True)
         page = context.new_page()
         # Login
         if website_url and username and password:
@@ -130,7 +130,7 @@ def extract_reconciliation_statements(
         page.wait_for_timeout(2000)
         functions.navigatePage(page, "Reconciliation Statements")
         page.locator("iframe[name=\"main\"]").content_frame.locator("#ctl00_phDS_ds_ToolBar_insert div").first.click()
-        page.wait_for_timeout(5000)
+        page.wait_for_timeout(10000)
         frame = page.frame(name="main")
         type_and_select(frame, accountName, "#ctl00_phF_form_t0_edCashAccountID_text")
         # today = datetime.today()
@@ -145,11 +145,19 @@ def extract_reconciliation_statements(
         statement_balance_box.click()
         statement_balance_box.fill(str(amount))
         page.keyboard.press("Enter")
-        # click reconcile processed button
-        frame.locator("#ctl00_phG_tab_t0_grid1_at_tlb_ul > li:nth-child(14) > div > div").click()
-        page.wait_for_timeout(3000)
-        # frame.locator("#ctl00_phG_tab_t0_grid1_at_tlb_menuhi_item_0").nth(0).click()
-        frame.locator("text=Reconcile Processed").nth(1).click()
+        # click reconcile processed button using toolbar button text
+        toolbar = frame.locator("#ctl00_phG_tab_t0_grid1_at_tlb_ul").first
+        toolbar.wait_for(state="visible", timeout=15000)
+        button_candidates = toolbar.locator("div.toolBtnNormal").filter(
+            has_text=re.compile(r"^\s*Reconcile Processed\s*$", re.IGNORECASE)
+        )
+        button_candidates.wait_for(state="visible", timeout=15000)
+        reconcile_btn = button_candidates.first
+        button_text = reconcile_btn.inner_text().strip()
+        if button_text.lower() != "reconcile processed":
+            raise Exception(f"Expected 'Reconcile Processed' button but saw '{button_text}'")
+        reconcile_btn.scroll_into_view_if_needed()
+        reconcile_btn.click()
         page.wait_for_timeout(15000)
 
         # set reconciled to false
