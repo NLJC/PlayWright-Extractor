@@ -25,7 +25,8 @@ def run_RaasPlus(
     accountName=os.getenv("accountName"),
     pingback_url=None,
     payload=None,
-    webhook_url=None
+    webhook_url=None,
+    headless=False
 ) -> None:
     # Input JSON files
     # Old (fabricated dataset):
@@ -115,7 +116,8 @@ def run_RaasPlus(
         accountName=accountName,
         pingback_url=pingback_url,
         payload=payload,
-        webhook_url=webhook_url
+        webhook_url=webhook_url,
+        headless=headless
     )
 
 # def run_RaasPlus(

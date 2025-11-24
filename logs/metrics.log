@@ -149,3 +149,13 @@
 {"type": "timing", "name": "reconcile.core", "value": 77159.99960002955, "tags": {"cid": "run-20251120T045502-20604"}, "ts": "2025-11-20T04:56:20.262548Z"}
 {"type": "gauge", "name": "reconcile.results_count", "value": 103.0, "tags": {"cid": "run-20251120T045502-20604"}, "ts": "2025-11-20T04:56:20.264559Z"}
 {"type": "timing", "name": "reconcile.export", "value": 383.6310000042431, "tags": {"cid": "run-20251120T045502-20604"}, "ts": "2025-11-20T04:56:20.649202Z"}
+{"type": "counter", "name": "reconcile.start", "value": 1, "tags": {"bank_name": "MBB02"}, "ts": "2025-11-20T08:18:44.734162Z"}
+{"type": "timing", "name": "reconcile.load_data", "value": 93.73349999077618, "tags": {"cid": "run-20251120T081844-21384"}, "ts": "2025-11-20T08:18:44.828662Z"}
+{"type": "timing", "name": "reconcile.core", "value": 21066.01149996277, "tags": {"cid": "run-20251120T081844-21384"}, "ts": "2025-11-20T08:19:05.895813Z"}
+{"type": "gauge", "name": "reconcile.results_count", "value": 54.0, "tags": {"cid": "run-20251120T081844-21384"}, "ts": "2025-11-20T08:19:05.896829Z"}
+{"type": "timing", "name": "reconcile.export", "value": 196.6044000000693, "tags": {"cid": "run-20251120T081844-21384"}, "ts": "2025-11-20T08:19:06.091600Z"}
+{"type": "counter", "name": "reconcile.start", "value": 1, "tags": {"bank_name": "MBB02"}, "ts": "2025-11-21T04:46:57.645087Z"}
+{"type": "timing", "name": "reconcile.load_data", "value": 87.71109999997861, "tags": {"cid": "run-20251121T044657-18872"}, "ts": "2025-11-21T04:46:57.733101Z"}
+{"type": "timing", "name": "reconcile.core", "value": 13323.879399999896, "tags": {"cid": "run-20251121T044657-18872"}, "ts": "2025-11-21T04:47:11.058406Z"}
+{"type": "gauge", "name": "reconcile.results_count", "value": 29.0, "tags": {"cid": "run-20251121T044657-18872"}, "ts": "2025-11-21T04:47:11.058406Z"}
+{"type": "timing", "name": "reconcile.export", "value": 174.0882000003694, "tags": {"cid": "run-20251121T044657-18872"}, "ts": "2025-11-21T04:47:11.233497Z"}

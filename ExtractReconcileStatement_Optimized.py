@@ -614,7 +614,8 @@ class ReconciliationExtractor:
                 accountName=self.account_name,
                 pingback_url=self.pingback_url,
                 payload=self.payload,
-                webhook_url=self.webhook_url
+                webhook_url=self.webhook_url,
+                headless=self.headless
             )
             
             self.log("=" * 60)
@@ -651,7 +652,8 @@ def extract_reconciliation_statements(
     password: str = None,
     pingback_url: str = None,
     payload: dict = None,
-    webhook_url: str = None
+    webhook_url: str = None,
+    headless: bool = False
 ) -> list:
     """
     Extract reconciliation statements with automation.
@@ -668,6 +670,7 @@ def extract_reconciliation_statements(
         pingback_url: Optional URL for status callbacks
         payload: Optional payload for pingback
         webhook_url: Optional URL for logging webhooks
+        headless: Run browser in headless mode (default: False)
     
     Returns:
         List of extracted reconciliation records
@@ -684,7 +687,7 @@ def extract_reconciliation_statements(
         pingback_url=pingback_url,
         payload=payload,
         webhook_url=webhook_url,
-        headless=False
+        headless=headless
     )
     
     return extractor.run()

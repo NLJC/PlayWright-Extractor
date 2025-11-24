@@ -568,7 +568,8 @@ class CAMatchProcessor:
                 password=self.password,
                 pingback_url=self.pingback_url,
                 payload=self.payload,
-                webhook_url=self.webhook_url
+                webhook_url=self.webhook_url,
+                headless=self.headless
             )
             
             self.log("=" * 60)

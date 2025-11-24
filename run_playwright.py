@@ -94,6 +94,11 @@ class PlaywrightRunner:
         if not self.account_name:
             raise ValueError("Account name not provided and not set in .env")
         
+        # Check env var for headless mode if not explicitly set via args
+        if not self.headless:
+            env_headless = os.getenv("HEADLESS_MODE", "false").lower()
+            self.headless = env_headless == "true"
+        
         if not self.date:
             # Default to one month ago
             today = datetime.today()
@@ -180,7 +185,8 @@ class PlaywrightRunner:
                     password=os.getenv("PASSWORD"),
                     pingback_url=self.pingback_url,
                     payload={"step": "extract_reconciliation"},
-                    webhook_url=self.webhook_url
+                    webhook_url=self.webhook_url,
+                    headless=self.headless
                 )
                 
                 logger.info(f"✅ Extract Reconciliation completed: {len(records)} records processed")
@@ -216,7 +222,8 @@ class PlaywrightRunner:
                     accountName=self.account_name,
                     pingback_url=self.pingback_url,
                     payload={"step": "match_statement"},
-                    webhook_url=self.webhook_url
+                    webhook_url=self.webhook_url,
+                    headless=self.headless
                 )
                 
                 logger.info("✅ Match Statement completed")

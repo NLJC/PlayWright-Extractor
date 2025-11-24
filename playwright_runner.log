@@ -1186,3 +1186,212 @@ All processes completed successfully!
 2025-11-20 16:01:42,386 - INFO - STEP 1: CA MATCH PROCESS
 2025-11-20 16:01:42,386 - INFO - ======================================================================
 2025-11-20 16:01:50,296 - INFO - Starting CA Match process...
+2025-11-20 16:08:02,573 - WARNING - Could not determine dtype for column 1, falling back to string
+2025-11-20 16:08:02,574 - WARNING - Could not determine dtype for column 6, falling back to string
+2025-11-20 16:08:02,574 - WARNING - Could not determine dtype for column 8, falling back to string
+2025-11-20 16:08:02,574 - WARNING - Could not determine dtype for column 9, falling back to string
+2025-11-20 16:08:02,574 - WARNING - Could not determine dtype for column 11, falling back to string
+2025-11-20 16:08:02,574 - WARNING - Could not determine dtype for column 13, falling back to string
+2025-11-20 16:08:02,574 - WARNING - Could not determine dtype for column 14, falling back to string
+2025-11-20 16:08:02,574 - WARNING - Could not determine dtype for column 17, falling back to string
+2025-11-20 16:08:02,574 - WARNING - Could not determine dtype for column 18, falling back to string
+2025-11-20 16:08:02,574 - WARNING - Could not determine dtype for column 20, falling back to string
+2025-11-20 16:10:12,876 - WARNING - Could not determine dtype for column 2, falling back to string
+2025-11-20 16:10:12,877 - WARNING - Could not determine dtype for column 11, falling back to string
+2025-11-20 16:10:12,877 - WARNING - Could not determine dtype for column 12, falling back to string
+2025-11-20 16:18:44,824 - INFO - Loaded 53 bank transactions and 3761 company transactions
+2025-11-20 16:18:44,829 - INFO - Starting Stage 1: Traditional reconciliation pipeline...
+2025-11-20 16:18:44,852 - DEBUG - MBB02 credit card matcher skipped: support module not available
+2025-11-20 16:18:44,853 - INFO - Finding transaction ID matches...
+2025-11-20 16:18:50,151 - INFO - Finding bank charges...
+2025-11-20 16:18:50,159 - DEBUG - After bank charges detection: 1 matched (added 1)
+2025-11-20 16:18:50,160 - INFO - Detected 1 bank charges
+2025-11-20 16:18:50,161 - INFO - Finding Reverse CE GL matches...
+2025-11-20 16:18:50,597 - INFO - Found 2 Reverse CE GL matches
+2025-11-20 16:18:50,600 - INFO - Finding name and amount matches...
+2025-11-20 16:19:00,728 - INFO - Found 51 name and amount matches
+2025-11-20 16:19:00,730 - INFO - Finding Hungarian 1:1 matches...
+2025-11-20 16:19:05,109 - INFO - Hungarian 1:1: 0 matches | pairs scored=45, kept=0, time=4.38s
+2025-11-20 16:19:05,112 - INFO - Finding enhanced 1:1 matches...
+2025-11-20 16:19:05,702 - INFO - Found 0 enhanced 1:1 matches
+2025-11-20 16:19:05,703 - INFO - Finding amount and date matches...
+2025-11-20 16:19:05,793 - INFO - Found 0 amount and date matches
+2025-11-20 16:19:05,794 - INFO - Finding fuzzy matches...
+2025-11-20 16:29:52,368 - INFO - ✅ CA Match completed: 53 records processed
+2025-11-20 16:29:52,388 - INFO - 
+======================================================================
+2025-11-20 16:29:52,389 - INFO - ✅ COMPLETE AUTOMATION WORKFLOW FINISHED SUCCESSFULLY
+2025-11-20 16:29:52,389 - INFO - ======================================================================
+2025-11-20 16:29:52,389 - INFO - 
+Workflow Summary:
+2025-11-20 16:29:52,390 - INFO -   ✅ CA Match Process - Completed
+2025-11-20 16:29:52,390 - INFO -   ✅ Extract Reconciliation Statement - Completed (chained)
+2025-11-20 16:29:52,390 - INFO -   ✅ RaasPlus Reconciliation - Completed (chained)
+2025-11-20 16:29:52,390 - INFO -   ✅ Match Statement - Completed (chained)
+2025-11-20 16:29:52,390 - INFO - 
+All processes completed successfully!
+2025-11-20 16:29:52,390 - INFO - Check logs for detailed information.
+2025-11-20 16:29:52,391 - INFO - ======================================================================
+2025-11-21 11:32:04,238 - INFO - ======================================================================
+2025-11-21 11:32:04,238 - INFO - PLAYWRIGHT AUTOMATION RUNNER
+2025-11-21 11:32:04,238 - INFO - ======================================================================
+2025-11-21 11:32:04,240 - INFO - Account: CIM02
+2025-11-21 11:32:04,240 - INFO - Date: 21/10/2025
+2025-11-21 11:32:04,240 - INFO - Amount: 100.0
+2025-11-21 11:32:04,240 - INFO - Headless Mode: False
+2025-11-21 11:32:04,240 - INFO - ======================================================================
+2025-11-21 11:32:04,240 - INFO - 
+🚀 Starting complete automation workflow...
+
+2025-11-21 11:32:04,240 - WARNING - ⏭️  Skipping CA Match Process (--skip-ca-match)
+2025-11-21 11:32:04,241 - INFO - 
+======================================================================
+2025-11-21 11:32:04,241 - INFO - ✅ COMPLETE AUTOMATION WORKFLOW FINISHED SUCCESSFULLY
+2025-11-21 11:32:04,241 - INFO - ======================================================================
+2025-11-21 11:32:04,241 - INFO - 
+Workflow Summary:
+2025-11-21 11:32:04,241 - INFO -   ✅ CA Match Process - Completed
+2025-11-21 11:32:04,241 - INFO -   ✅ Extract Reconciliation Statement - Completed (chained)
+2025-11-21 11:32:04,241 - INFO -   ✅ RaasPlus Reconciliation - Completed (chained)
+2025-11-21 11:32:04,241 - INFO -   ✅ Match Statement - Completed (chained)
+2025-11-21 11:32:04,241 - INFO - 
+All processes completed successfully!
+2025-11-21 11:32:04,241 - INFO - Check logs for detailed information.
+2025-11-21 11:32:04,241 - INFO - ======================================================================
+2025-11-21 11:43:49,113 - INFO - ======================================================================
+2025-11-21 11:43:49,114 - INFO - PLAYWRIGHT AUTOMATION RUNNER
+2025-11-21 11:43:49,114 - INFO - ======================================================================
+2025-11-21 11:43:49,114 - INFO - Account: CIM02
+2025-11-21 11:43:49,114 - INFO - Date: 21/10/2025
+2025-11-21 11:43:49,114 - INFO - Amount: 100.0
+2025-11-21 11:43:49,114 - INFO - Headless Mode: False
+2025-11-21 11:43:49,115 - INFO - ======================================================================
+2025-11-21 11:43:49,115 - INFO - 
+🚀 Starting complete automation workflow...
+
+2025-11-21 11:43:49,115 - INFO - 
+======================================================================
+2025-11-21 11:43:49,116 - INFO - STEP 1: CA MATCH PROCESS
+2025-11-21 11:43:49,116 - INFO - ======================================================================
+2025-11-21 11:43:49,570 - INFO - Starting CA Match process...
+2025-11-21 11:46:16,746 - ERROR - Future exception was never retrieved
+future: <Future finished exception=TargetClosedError('Target page, context or browser has been closed')>
+playwright._impl._errors.TargetClosedError: Target page, context or browser has been closed
+2025-11-21 11:46:16,746 - ERROR - Future exception was never retrieved
+future: <Future finished exception=TargetClosedError('Target page, context or browser has been closed')>
+playwright._impl._errors.TargetClosedError: Target page, context or browser has been closed
+2025-11-21 11:46:16,789 - ERROR - Future exception was never retrieved
+future: <Future finished exception=TargetClosedError('Target page, context or browser has been closed')>
+playwright._impl._errors.TargetClosedError: Target page, context or browser has been closed
+2025-11-21 11:49:53,051 - INFO - ======================================================================
+2025-11-21 11:49:53,051 - INFO - PLAYWRIGHT AUTOMATION RUNNER
+2025-11-21 11:49:53,051 - INFO - ======================================================================
+2025-11-21 11:49:53,051 - INFO - Account: CIM02
+2025-11-21 11:49:53,051 - INFO - Date: 21/10/2025
+2025-11-21 11:49:53,051 - INFO - Amount: 100.0
+2025-11-21 11:49:53,052 - INFO - Headless Mode: False
+2025-11-21 11:49:53,052 - INFO - ======================================================================
+2025-11-21 11:49:53,052 - INFO - 
+🚀 Starting complete automation workflow...
+
+2025-11-21 11:49:53,052 - INFO - 
+======================================================================
+2025-11-21 11:49:53,052 - INFO - STEP 1: CA MATCH PROCESS
+2025-11-21 11:49:53,052 - INFO - ======================================================================
+2025-11-21 11:49:53,466 - INFO - Starting CA Match process...
+2025-11-21 11:49:59,037 - ERROR - ❌ CA Match failed: Page.wait_for_timeout: Target page, context or browser has been closed
+Traceback (most recent call last):
+  File "c:\Users\Lenovo\OneDrive - Cognitive Consulting Sdn Bhd (1)\Desktop\SegmentationCompressionWork\PlayWright-Extractor\run_playwright.py", line 133, in run_ca_match
+    records = process_bank_transactions(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Lenovo\OneDrive - Cognitive Consulting Sdn Bhd (1)\Desktop\SegmentationCompressionWork\PlayWright-Extractor\CA_Match_Process_Optimized.py", line 643, in process_bank_transactions
+    return processor.run()
+           ^^^^^^^^^^^^^^^
+  File "c:\Users\Lenovo\OneDrive - Cognitive Consulting Sdn Bhd (1)\Desktop\SegmentationCompressionWork\PlayWright-Extractor\CA_Match_Process_Optimized.py", line 532, in run
+    functions.navigatePage(self.page, "Process Bank Records")
+  File "c:\Users\Lenovo\OneDrive - Cognitive Consulting Sdn Bhd (1)\Desktop\SegmentationCompressionWork\PlayWright-Extractor\functions.py", line 26, in navigatePage
+    page.wait_for_timeout(1000)  # wait 1 second
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\OneDrive - Cognitive Consulting Sdn Bhd (1)\Desktop\SegmentationCompressionWork\PlayWright-Extractor\.venv_clean\Lib\site-packages\playwright\sync_api\_generated.py", line 11496, in wait_for_timeout
+    self._sync(self._impl_obj.wait_for_timeout(timeout=timeout))
+  File "C:\Users\Lenovo\OneDrive - Cognitive Consulting Sdn Bhd (1)\Desktop\SegmentationCompressionWork\PlayWright-Extractor\.venv_clean\Lib\site-packages\playwright\_impl\_sync_base.py", line 115, in _sync
+    return task.result()
+           ^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\OneDrive - Cognitive Consulting Sdn Bhd (1)\Desktop\SegmentationCompressionWork\PlayWright-Extractor\.venv_clean\Lib\site-packages\playwright\_impl\_page.py", line 1103, in wait_for_timeout
+    await self._main_frame.wait_for_timeout(timeout)
+  File "C:\Users\Lenovo\OneDrive - Cognitive Consulting Sdn Bhd (1)\Desktop\SegmentationCompressionWork\PlayWright-Extractor\.venv_clean\Lib\site-packages\playwright\_impl\_frame.py", line 844, in wait_for_timeout
+    await self._channel.send("waitForTimeout", None, {"waitTimeout": timeout})
+  File "C:\Users\Lenovo\OneDrive - Cognitive Consulting Sdn Bhd (1)\Desktop\SegmentationCompressionWork\PlayWright-Extractor\.venv_clean\Lib\site-packages\playwright\_impl\_connection.py", line 69, in send
+    return await self._connection.wrap_api_call(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\OneDrive - Cognitive Consulting Sdn Bhd (1)\Desktop\SegmentationCompressionWork\PlayWright-Extractor\.venv_clean\Lib\site-packages\playwright\_impl\_connection.py", line 559, in wrap_api_call
+    raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
+playwright._impl._errors.TargetClosedError: Page.wait_for_timeout: Target page, context or browser has been closed
+2025-11-21 11:49:59,040 - ERROR - 
+======================================================================
+2025-11-21 11:49:59,040 - ERROR - ❌ AUTOMATION WORKFLOW FAILED
+2025-11-21 11:49:59,040 - ERROR - ======================================================================
+2025-11-21 11:49:59,040 - ERROR - Error: Page.wait_for_timeout: Target page, context or browser has been closed
+2025-11-21 11:49:59,041 - ERROR - ======================================================================
+2025-11-21 12:36:50,314 - INFO - ======================================================================
+2025-11-21 12:36:50,314 - INFO - PLAYWRIGHT AUTOMATION RUNNER
+2025-11-21 12:36:50,314 - INFO - ======================================================================
+2025-11-21 12:36:50,314 - INFO - Account: CIM02
+2025-11-21 12:36:50,315 - INFO - Date: 21/10/2025
+2025-11-21 12:36:50,315 - INFO - Amount: 100.0
+2025-11-21 12:36:50,315 - INFO - Headless Mode: True
+2025-11-21 12:36:50,315 - INFO - ======================================================================
+2025-11-21 12:36:50,315 - INFO - 
+🚀 Starting complete automation workflow...
+
+2025-11-21 12:36:50,315 - INFO - 
+======================================================================
+2025-11-21 12:36:50,315 - INFO - STEP 1: CA MATCH PROCESS
+2025-11-21 12:36:50,315 - INFO - ======================================================================
+2025-11-21 12:36:50,761 - INFO - Starting CA Match process...
+2025-11-21 12:40:11,178 - WARNING - Could not determine dtype for column 1, falling back to string
+2025-11-21 12:40:11,178 - WARNING - Could not determine dtype for column 6, falling back to string
+2025-11-21 12:40:11,178 - WARNING - Could not determine dtype for column 8, falling back to string
+2025-11-21 12:40:11,178 - WARNING - Could not determine dtype for column 9, falling back to string
+2025-11-21 12:40:11,178 - WARNING - Could not determine dtype for column 11, falling back to string
+2025-11-21 12:40:11,178 - WARNING - Could not determine dtype for column 13, falling back to string
+2025-11-21 12:40:11,178 - WARNING - Could not determine dtype for column 14, falling back to string
+2025-11-21 12:40:11,178 - WARNING - Could not determine dtype for column 17, falling back to string
+2025-11-21 12:40:11,178 - WARNING - Could not determine dtype for column 18, falling back to string
+2025-11-21 12:40:11,178 - WARNING - Could not determine dtype for column 20, falling back to string
+2025-11-21 12:42:02,057 - WARNING - Could not determine dtype for column 2, falling back to string
+2025-11-21 12:42:02,060 - WARNING - Could not determine dtype for column 11, falling back to string
+2025-11-21 12:42:02,060 - WARNING - Could not determine dtype for column 12, falling back to string
+2025-11-21 12:46:57,729 - INFO - Loaded 28 bank transactions and 3736 company transactions
+2025-11-21 12:46:57,734 - INFO - Starting Stage 1: Traditional reconciliation pipeline...
+2025-11-21 12:46:57,752 - DEBUG - MBB02 credit card matcher skipped: support module not available
+2025-11-21 12:46:57,754 - INFO - Finding transaction ID matches...
+2025-11-21 12:47:00,591 - INFO - Finding bank charges...
+2025-11-21 12:47:00,594 - DEBUG - After bank charges detection: 1 matched (added 1)
+2025-11-21 12:47:00,594 - INFO - Detected 1 bank charges
+2025-11-21 12:47:00,595 - INFO - Finding Reverse CE GL matches...
+2025-11-21 12:47:01,053 - INFO - Found 2 Reverse CE GL matches
+2025-11-21 12:47:01,057 - INFO - Finding name and amount matches...
+2025-11-21 12:47:06,026 - INFO - Found 26 name and amount matches
+2025-11-21 12:47:06,027 - INFO - Finding Hungarian 1:1 matches...
+2025-11-21 12:47:10,188 - INFO - Hungarian 1:1: 0 matches | pairs scored=45, kept=0, time=4.16s
+2025-11-21 12:47:10,191 - INFO - Finding enhanced 1:1 matches...
+2025-11-21 12:47:10,843 - INFO - Found 0 enhanced 1:1 matches
+2025-11-21 12:47:10,844 - INFO - Finding amount and date matches...
+2025-11-21 12:47:10,951 - INFO - Found 0 amount and date matches
+2025-11-21 12:47:10,952 - INFO - Finding fuzzy matches...
+2025-11-21 12:52:54,705 - INFO - ✅ CA Match completed: 28 records processed
+2025-11-21 12:52:54,721 - INFO - 
+======================================================================
+2025-11-21 12:52:54,721 - INFO - ✅ COMPLETE AUTOMATION WORKFLOW FINISHED SUCCESSFULLY
+2025-11-21 12:52:54,721 - INFO - ======================================================================
+2025-11-21 12:52:54,722 - INFO - 
+Workflow Summary:
+2025-11-21 12:52:54,722 - INFO -   ✅ CA Match Process - Completed
+2025-11-21 12:52:54,722 - INFO -   ✅ Extract Reconciliation Statement - Completed (chained)
+2025-11-21 12:52:54,722 - INFO -   ✅ RaasPlus Reconciliation - Completed (chained)
+2025-11-21 12:52:54,722 - INFO -   ✅ Match Statement - Completed (chained)
+2025-11-21 12:52:54,722 - INFO - 
+All processes completed successfully!
+2025-11-21 12:52:54,722 - INFO - Check logs for detailed information.
+2025-11-21 12:52:54,722 - INFO - ======================================================================

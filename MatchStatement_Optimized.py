@@ -572,7 +572,8 @@ def run_matching_process(
     accountName: str = None,
     pingback_url: str = None,
     payload: dict = None,
-    webhook_url: str = None
+    webhook_url: str = None,
+    headless: bool = False
 ):
     """
     Run the matching process with automation.
@@ -587,6 +588,7 @@ def run_matching_process(
         pingback_url: Optional URL for status callbacks
         payload: Optional payload for pingback
         webhook_url: Optional URL for logging webhooks
+        headless: Run browser in headless mode (default: False)
     """
     processor = MatchStatementProcessor(
         playwright=playwright,
@@ -598,7 +600,7 @@ def run_matching_process(
         pingback_url=pingback_url,
         payload=payload,
         webhook_url=webhook_url,
-        headless=False
+        headless=headless
     )
     
     processor.run()
