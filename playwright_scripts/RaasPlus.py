@@ -1,18 +1,14 @@
-import re
-from playwright.sync_api import Playwright, sync_playwright, expect
-import functions
-from datetime import datetime
-from dateutil.relativedelta import relativedelta
-import requests
-import pandas as pd
-from dotenv import load_dotenv
 import os
-import MatchStatement_Optimized as MatchStatement
-from email_reply import reply_to_trigger_email
 from pathlib import Path
-from unified_reconciliation import reconcile_unified
-from unified_reconciliation import reconcile_unified_uipath
-import convert_with_xlwings
+
+from playwright.sync_api import Playwright, expect, sync_playwright
+
+from helper_playwright import functions
+from helper_playwright.email_reply import reply_to_trigger_email
+from helper_playwright.paths import get_downloads_dir
+from Raas_Plus.unified_reconciliation import reconcile_unified, reconcile_unified_uipath
+from Raas_Plus import convert_with_xlwings
+from . import MatchStatement_Optimized as MatchStatement
 
 
 def run_RaasPlus(
@@ -54,10 +50,13 @@ def run_RaasPlus(
     # company_json = Path(os.path.join(r"D:\PlayWright Extractor\Downloads\json_output", f"{reconciliation_save_path}.json"))
     # print(company_json)
 
+    output_dir = get_downloads_dir() / "json_output"
+    output_dir.mkdir(parents=True, exist_ok=True)
+
     bank_json, company_json = convert_with_xlwings.convert_two_excels_to_json(
         company_statement=reconciliation_save_path,
         bank_statement=save_path,
-        output_dir=os.path.join(r"Downloads\json_output")
+        output_dir=str(output_dir)
     ).split(",")
     print(bank_json)
     print(company_json)

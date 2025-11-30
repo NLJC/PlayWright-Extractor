@@ -12,18 +12,21 @@ Key Improvements:
 - Clear step labeling
 """
 
-import re
-from playwright.sync_api import Playwright, sync_playwright, expect
-import RaasPlus
-import functions
-from datetime import datetime
-from dateutil.relativedelta import relativedelta
-import requests
-import pandas as pd
-from dotenv import load_dotenv
 import os
-from email_reply import reply_to_trigger_email
+import re
+from datetime import datetime
 from typing import Optional
+
+import pandas as pd
+import requests
+from dateutil.relativedelta import relativedelta
+from dotenv import load_dotenv
+from playwright.sync_api import Playwright, expect, sync_playwright
+
+from helper_playwright import functions
+from helper_playwright.email_reply import reply_to_trigger_email
+from helper_playwright.paths import get_downloads_dir
+from . import RaasPlus
 
 # Load environment variables
 load_dotenv()
@@ -59,6 +62,7 @@ class ReconciliationExtractor:
         self.payload = payload
         self.webhook_url = webhook_url
         self.headless = headless
+        self.download_dir = str(get_downloads_dir())
         
         self.browser = None
         self.context = None
@@ -432,8 +436,7 @@ class ReconciliationExtractor:
             filename = download.suggested_filename
             self.log(f"Download started: {filename}")
             
-            save_dir = os.getenv("SAVE_DIRECTORY", "./Downloads/")
-            reconciliation_save_path = os.path.join(save_dir, filename)
+            reconciliation_save_path = os.path.join(self.download_dir, filename)
             
             # Ensure directory exists
             os.makedirs(os.path.dirname(reconciliation_save_path), exist_ok=True)
@@ -468,8 +471,7 @@ class ReconciliationExtractor:
                             
                             download = download_info.value
                             filename = download.suggested_filename
-                            save_dir = os.getenv("SAVE_DIRECTORY", "./Downloads/")
-                            reconciliation_save_path = os.path.join(save_dir, filename)
+                            reconciliation_save_path = os.path.join(self.download_dir, filename)
                             
                             # Ensure directory exists
                             os.makedirs(os.path.dirname(reconciliation_save_path), exist_ok=True)

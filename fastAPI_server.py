@@ -2,10 +2,10 @@ import asyncio
 from fastapi import FastAPI, Request
 from concurrent.futures import ThreadPoolExecutor
 from playwright.sync_api import sync_playwright
-from MatchStatement import run_match_process, failed_entries
-from ExtractReconcileStatement import run_extract_reconcile
-from CAMatchExtract import CAMatchExtract
-from AddStatement import run_add_statement
+from playwright_scripts.old_files.MatchStatement import run_match_process, failed_entries
+from playwright_scripts.old_files.ExtractReconcileStatement import run_extract_reconcile
+from playwright_scripts.old_files.CAMatchExtract import CAMatchExtract
+from helper_playwright.AddStatement import run_add_statement
 
 app = FastAPI()
 executor = ThreadPoolExecutor()

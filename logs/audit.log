@@ -128,3 +128,7 @@
 {"ts": "2025-11-21T04:46:57.733101Z", "event": "reconcile.data_loaded", "correlation_id": "run-20251121T044657-18872"}
 {"ts": "2025-11-21T04:47:11.058406Z", "event": "reconcile.completed", "correlation_id": "run-20251121T044657-18872", "results": 29}
 {"ts": "2025-11-21T04:47:11.233497Z", "event": "reconcile.exported", "correlation_id": "run-20251121T044657-18872", "out_path": "matching_results\\MATCHLIST_MBB02_20251121_124711.xlsx"}
+{"ts": "2025-11-24T05:19:32.223803Z", "event": "reconcile.start", "correlation_id": "run-20251124T051932-2348", "bank_json": "C:\\Users\\Lenovo\\OneDrive - Cognitive Consulting Sdn Bhd (1)\\Desktop\\SegmentationCompressionWork\\PlayWright-Extractor\\Downloads\\json_output\\Process Bank Transactions 20251124.json", "company_json": "C:\\Users\\Lenovo\\OneDrive - Cognitive Consulting Sdn Bhd (1)\\Desktop\\SegmentationCompressionWork\\PlayWright-Extractor\\Downloads\\json_output\\Reconciliation Statements 20251124.json", "enable_ai": false, "run_log": "logs\\runs\\run-20251124T051932-2348.log"}
+{"ts": "2025-11-24T05:19:32.311886Z", "event": "reconcile.data_loaded", "correlation_id": "run-20251124T051932-2348"}
+{"ts": "2025-11-24T05:19:40.432113Z", "event": "reconcile.completed", "correlation_id": "run-20251124T051932-2348", "results": 17}
+{"ts": "2025-11-24T05:19:40.565890Z", "event": "reconcile.exported", "correlation_id": "run-20251124T051932-2348", "out_path": "matching_results\\MATCHLIST_MBB02_20251124_131940.xlsx"}

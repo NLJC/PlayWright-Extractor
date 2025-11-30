@@ -1,7 +1,9 @@
-import requests
-from auth_helper import get_token
-import os
 import base64
+import os
+
+import requests
+
+from helper_playwright.auth_helper import get_token
 
 def reply_to_trigger_email(reply_text):
     """Replies to the original trigger email stored in trigger_email_id.txt"""

@@ -22,7 +22,7 @@ def test_import():
     print("=" * 60)
     
     try:
-        from CA_Match_Process_Optimized import process_bank_transactions, CAMatchProcessor
+        from playwright_scripts.CA_Match_Process_Optimized import process_bank_transactions, CAMatchProcessor
         print("✅ Successfully imported CA_Match_Process_Optimized")
         print(f"   - process_bank_transactions: {type(process_bank_transactions)}")
         print(f"   - CAMatchProcessor: {type(CAMatchProcessor)}")
@@ -88,7 +88,7 @@ def test_class_instantiation():
     print("=" * 60)
     
     try:
-        from CA_Match_Process_Optimized import CAMatchProcessor
+        from playwright_scripts.CA_Match_Process_Optimized import CAMatchProcessor
         
         # Create a mock playwright object for testing
         class MockPlaywright:
@@ -123,7 +123,7 @@ def test_method_signatures():
     print("=" * 60)
     
     try:
-        from CA_Match_Process_Optimized import CAMatchProcessor
+        from playwright_scripts.CA_Match_Process_Optimized import CAMatchProcessor
         
         expected_methods = [
             'log',
@@ -162,7 +162,7 @@ def test_dry_run():
     print("=" * 60)
     
     try:
-        from CA_Match_Process_Optimized import CAMatchProcessor
+        from playwright_scripts.CA_Match_Process_Optimized import CAMatchProcessor
         
         class MockPlaywright:
             pass

@@ -12,14 +12,16 @@ Key Improvements:
 - Improved table detection and filtering
 """
 
+import os
+from typing import Dict, List, Any
+
 import pandas as pd
-from playwright.sync_api import Playwright, sync_playwright, expect
-import functions
 import requests
 from dotenv import load_dotenv
-import os
-from email_reply import reply_to_trigger_email, reply_with_attachment
-from typing import List, Dict, Any
+from playwright.sync_api import Playwright, expect, sync_playwright
+
+from helper_playwright import functions
+from helper_playwright.email_reply import reply_to_trigger_email, reply_with_attachment
 
 # Load environment variables
 load_dotenv()

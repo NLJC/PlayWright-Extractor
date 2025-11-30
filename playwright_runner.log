@@ -1395,3 +1395,143 @@ Workflow Summary:
 All processes completed successfully!
 2025-11-21 12:52:54,722 - INFO - Check logs for detailed information.
 2025-11-21 12:52:54,722 - INFO - ======================================================================
+2025-11-24 13:10:35,850 - INFO - ======================================================================
+2025-11-24 13:10:35,850 - INFO - PLAYWRIGHT AUTOMATION RUNNER
+2025-11-24 13:10:35,850 - INFO - ======================================================================
+2025-11-24 13:10:35,850 - INFO - Account: CIM02
+2025-11-24 13:10:35,850 - INFO - Date: 24/10/2025
+2025-11-24 13:10:35,850 - INFO - Amount: 100.0
+2025-11-24 13:10:35,850 - INFO - Headless Mode: True
+2025-11-24 13:10:35,851 - INFO - Downloads Dir: C:\Users\Lenovo\OneDrive - Cognitive Consulting Sdn Bhd (1)\Desktop\SegmentationCompressionWork\PlayWright-Extractor\Downloads
+2025-11-24 13:10:35,851 - INFO - ======================================================================
+2025-11-24 13:10:35,851 - INFO - 
+🚀 Starting complete automation workflow...
+
+2025-11-24 13:10:35,852 - INFO - 
+======================================================================
+2025-11-24 13:10:35,852 - INFO - STEP 1: CA MATCH PROCESS
+2025-11-24 13:10:35,852 - INFO - ======================================================================
+2025-11-24 13:10:36,115 - ERROR - Task was destroyed but it is pending!
+task: <Task pending name='Task-3' coro=<Connection.run.<locals>.init() running at C:\Users\Lenovo\OneDrive - Cognitive Consulting Sdn Bhd (1)\Desktop\SegmentationCompressionWork\PlayWright-Extractor\.venv_clean\Lib\site-packages\playwright\_impl\_connection.py:310> wait_for=<Future pending cb=[Task.task_wakeup()]> cb=[ProtocolCallback.__init__.<locals>.cb() at C:\Users\Lenovo\OneDrive - Cognitive Consulting Sdn Bhd (1)\Desktop\SegmentationCompressionWork\PlayWright-Extractor\.venv_clean\Lib\site-packages\playwright\_impl\_connection.py:230]>
+2025-11-24 13:10:53,301 - INFO - ======================================================================
+2025-11-24 13:10:53,301 - INFO - PLAYWRIGHT AUTOMATION RUNNER
+2025-11-24 13:10:53,302 - INFO - ======================================================================
+2025-11-24 13:10:53,302 - INFO - Account: CIM02
+2025-11-24 13:10:53,302 - INFO - Date: 24/10/2025
+2025-11-24 13:10:53,303 - INFO - Amount: 100.0
+2025-11-24 13:10:53,303 - INFO - Headless Mode: True
+2025-11-24 13:10:53,303 - INFO - Downloads Dir: C:\Users\Lenovo\OneDrive - Cognitive Consulting Sdn Bhd (1)\Desktop\SegmentationCompressionWork\PlayWright-Extractor\Downloads
+2025-11-24 13:10:53,303 - INFO - ======================================================================
+2025-11-24 13:10:53,303 - INFO - 
+🚀 Starting complete automation workflow...
+
+2025-11-24 13:10:53,303 - INFO - 
+======================================================================
+2025-11-24 13:10:53,303 - INFO - STEP 1: CA MATCH PROCESS
+2025-11-24 13:10:53,303 - INFO - ======================================================================
+2025-11-24 13:10:59,274 - INFO - Starting CA Match process...
+2025-11-24 13:13:06,334 - WARNING - Could not determine dtype for column 1, falling back to string
+2025-11-24 13:13:06,335 - WARNING - Could not determine dtype for column 6, falling back to string
+2025-11-24 13:13:06,335 - WARNING - Could not determine dtype for column 8, falling back to string
+2025-11-24 13:13:06,335 - WARNING - Could not determine dtype for column 9, falling back to string
+2025-11-24 13:13:06,335 - WARNING - Could not determine dtype for column 11, falling back to string
+2025-11-24 13:13:06,335 - WARNING - Could not determine dtype for column 13, falling back to string
+2025-11-24 13:13:06,335 - WARNING - Could not determine dtype for column 14, falling back to string
+2025-11-24 13:13:06,335 - WARNING - Could not determine dtype for column 17, falling back to string
+2025-11-24 13:13:06,335 - WARNING - Could not determine dtype for column 18, falling back to string
+2025-11-24 13:13:06,335 - WARNING - Could not determine dtype for column 20, falling back to string
+2025-11-24 13:14:59,069 - WARNING - Could not determine dtype for column 2, falling back to string
+2025-11-24 13:14:59,069 - WARNING - Could not determine dtype for column 11, falling back to string
+2025-11-24 13:14:59,069 - WARNING - Could not determine dtype for column 12, falling back to string
+2025-11-24 13:19:32,307 - INFO - Loaded 16 bank transactions and 3724 company transactions
+2025-11-24 13:19:32,313 - INFO - Starting Stage 1: Traditional reconciliation pipeline...
+2025-11-24 13:19:32,338 - DEBUG - MBB02 credit card matcher skipped: support module not available
+2025-11-24 13:19:32,340 - INFO - Finding transaction ID matches...
+2025-11-24 13:19:33,675 - INFO - Finding bank charges...
+2025-11-24 13:19:33,678 - DEBUG - After bank charges detection: 1 matched (added 1)
+2025-11-24 13:19:33,678 - INFO - Detected 1 bank charges
+2025-11-24 13:19:33,678 - INFO - Finding Reverse CE GL matches...
+2025-11-24 13:19:34,050 - INFO - Found 2 Reverse CE GL matches
+2025-11-24 13:19:34,055 - INFO - Finding name and amount matches...
+2025-11-24 13:19:36,182 - INFO - Found 14 name and amount matches
+2025-11-24 13:19:36,183 - INFO - Finding Hungarian 1:1 matches...
+2025-11-24 13:19:39,678 - INFO - Hungarian 1:1: 0 matches | pairs scored=45, kept=0, time=3.50s
+2025-11-24 13:19:39,679 - INFO - Finding enhanced 1:1 matches...
+2025-11-24 13:19:40,274 - INFO - Found 0 enhanced 1:1 matches
+2025-11-24 13:19:40,275 - INFO - Finding amount and date matches...
+2025-11-24 13:19:40,352 - INFO - Found 0 amount and date matches
+2025-11-24 13:19:40,353 - INFO - Finding fuzzy matches...
+2025-11-24 13:22:38,179 - INFO - ✅ CA Match completed: 16 records processed
+2025-11-24 13:22:38,197 - INFO - 
+======================================================================
+2025-11-24 13:22:38,197 - INFO - ✅ COMPLETE AUTOMATION WORKFLOW FINISHED SUCCESSFULLY
+2025-11-24 13:22:38,197 - INFO - ======================================================================
+2025-11-24 13:22:38,197 - INFO - 
+Workflow Summary:
+2025-11-24 13:22:38,198 - INFO -   ✅ CA Match Process - Completed
+2025-11-24 13:22:38,198 - INFO -   ✅ Extract Reconciliation Statement - Completed (chained)
+2025-11-24 13:22:38,198 - INFO -   ✅ RaasPlus Reconciliation - Completed (chained)
+2025-11-24 13:22:38,198 - INFO -   ✅ Match Statement - Completed (chained)
+2025-11-24 13:22:38,198 - INFO - 
+All processes completed successfully!
+2025-11-24 13:22:38,198 - INFO - Check logs for detailed information.
+2025-11-24 13:22:38,199 - INFO - ======================================================================
+2025-11-30 13:12:44,698 - INFO - ======================================================================
+2025-11-30 13:12:44,698 - INFO - PLAYWRIGHT AUTOMATION RUNNER
+2025-11-30 13:12:44,698 - INFO - ======================================================================
+2025-11-30 13:12:44,699 - INFO - Account: CIM02
+2025-11-30 13:12:44,699 - INFO - Date: 30/10/2025
+2025-11-30 13:12:44,699 - INFO - Amount: 100.0
+2025-11-30 13:12:44,699 - INFO - Headless Mode: True
+2025-11-30 13:12:44,700 - INFO - Downloads Dir: C:\Users\Lenovo\OneDrive - Cognitive Consulting Sdn Bhd (1)\Desktop\SegmentationCompressionWork\PlayWright-Extractor\Downloads
+2025-11-30 13:12:44,700 - INFO - ======================================================================
+2025-11-30 13:12:44,700 - INFO - 
+🚀 Starting complete automation workflow...
+
+2025-11-30 13:12:44,700 - INFO - 
+======================================================================
+2025-11-30 13:12:44,701 - INFO - STEP 1: CA MATCH PROCESS
+2025-11-30 13:12:44,701 - INFO - ======================================================================
+2025-11-30 13:12:55,041 - INFO - Starting CA Match process...
+2025-11-30 13:13:27,231 - ERROR - ❌ CA Match failed: Page.goto: Timeout 30000ms exceeded.
+Call log:
+  - navigating to "https://csmstg.censof.com/DBKK", waiting until "load"
+Traceback (most recent call last):
+  File "c:\Users\Lenovo\OneDrive - Cognitive Consulting Sdn Bhd (1)\Desktop\SegmentationCompressionWork\PlayWright-Extractor\playwright_scripts\run_playwright.py", line 142, in run_ca_match
+    records = process_bank_transactions(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Lenovo\OneDrive - Cognitive Consulting Sdn Bhd (1)\Desktop\SegmentationCompressionWork\PlayWright-Extractor\playwright_scripts\CA_Match_Process_Optimized.py", line 652, in process_bank_transactions
+    return processor.run()
+           ^^^^^^^^^^^^^^^
+  File "c:\Users\Lenovo\OneDrive - Cognitive Consulting Sdn Bhd (1)\Desktop\SegmentationCompressionWork\PlayWright-Extractor\playwright_scripts\CA_Match_Process_Optimized.py", line 536, in run
+    functions.login(self.page, self.website_url, self.username, self.password)
+  File "c:\Users\Lenovo\OneDrive - Cognitive Consulting Sdn Bhd (1)\Desktop\SegmentationCompressionWork\PlayWright-Extractor\helper_playwright\functions.py", line 11, in login
+    page.goto(website_url)
+  File "C:\Users\Lenovo\OneDrive - Cognitive Consulting Sdn Bhd (1)\Desktop\SegmentationCompressionWork\PlayWright-Extractor\.venv_clean\Lib\site-packages\playwright\sync_api\_generated.py", line 9019, in goto
+    self._sync(
+  File "C:\Users\Lenovo\OneDrive - Cognitive Consulting Sdn Bhd (1)\Desktop\SegmentationCompressionWork\PlayWright-Extractor\.venv_clean\Lib\site-packages\playwright\_impl\_sync_base.py", line 115, in _sync
+    return task.result()
+           ^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\OneDrive - Cognitive Consulting Sdn Bhd (1)\Desktop\SegmentationCompressionWork\PlayWright-Extractor\.venv_clean\Lib\site-packages\playwright\_impl\_page.py", line 555, in goto
+    return await self._main_frame.goto(**locals_to_params(locals()))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\OneDrive - Cognitive Consulting Sdn Bhd (1)\Desktop\SegmentationCompressionWork\PlayWright-Extractor\.venv_clean\Lib\site-packages\playwright\_impl\_frame.py", line 153, in goto
+    await self._channel.send(
+  File "C:\Users\Lenovo\OneDrive - Cognitive Consulting Sdn Bhd (1)\Desktop\SegmentationCompressionWork\PlayWright-Extractor\.venv_clean\Lib\site-packages\playwright\_impl\_connection.py", line 69, in send
+    return await self._connection.wrap_api_call(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\OneDrive - Cognitive Consulting Sdn Bhd (1)\Desktop\SegmentationCompressionWork\PlayWright-Extractor\.venv_clean\Lib\site-packages\playwright\_impl\_connection.py", line 559, in wrap_api_call
+    raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
+playwright._impl._errors.TimeoutError: Page.goto: Timeout 30000ms exceeded.
+Call log:
+  - navigating to "https://csmstg.censof.com/DBKK", waiting until "load"
+
+2025-11-30 13:13:27,234 - ERROR - 
+======================================================================
+2025-11-30 13:13:27,234 - ERROR - ❌ AUTOMATION WORKFLOW FAILED
+2025-11-30 13:13:27,234 - ERROR - ======================================================================
+2025-11-30 13:13:27,235 - ERROR - Error: Page.goto: Timeout 30000ms exceeded.
+Call log:
+  - navigating to "https://csmstg.censof.com/DBKK", waiting until "load"
+
+2025-11-30 13:13:27,235 - ERROR - ======================================================================

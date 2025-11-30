@@ -3,13 +3,13 @@ import re
 from matplotlib.dates import relativedelta
 from playwright.sync_api import Playwright, sync_playwright, expect
 import functions
-from ExcelFilter import process_bank_transactions
+from Raas_Plus.ExcelFilter import process_bank_transactions
 import requests
 import pandas as pd
 from dotenv import load_dotenv
 import os
-import ExtractReconcileStatement
-from email_reply import reply_to_trigger_email
+from playwright_scripts.old_files import ExtractReconcileStatement
+from helper_playwright.email_reply import reply_to_trigger_email
 
 # Load the .env file
 load_dotenv()

@@ -15,17 +15,25 @@ Key Improvements:
 
 from datetime import datetime
 from dateutil.relativedelta import relativedelta
-from playwright.sync_api import Playwright, sync_playwright, expect, TimeoutError as PlaywrightTimeout
-import functions
-import requests
-import pandas as pd
-from dotenv import load_dotenv
-import os
-import ExtractReconcileStatement_Optimized as ExtractReconcileStatement
-from email_reply import reply_to_trigger_email
 from pathlib import Path
 from typing import Optional, Tuple
+import os
 import time
+
+import pandas as pd
+import requests
+from dotenv import load_dotenv
+from playwright.sync_api import (
+    Playwright,
+    TimeoutError as PlaywrightTimeout,
+    expect,
+    sync_playwright,
+)
+
+from helper_playwright import functions
+from helper_playwright.email_reply import reply_to_trigger_email
+from helper_playwright.paths import get_downloads_dir
+from . import ExtractReconcileStatement_Optimized as ExtractReconcileStatement
 
 # Load environment variables
 load_dotenv()
@@ -59,6 +67,7 @@ class CAMatchProcessor:
         self.payload = payload
         self.webhook_url = webhook_url
         self.headless = headless
+        self.download_dir = str(get_downloads_dir())
         
         self.browser = None
         self.context = None
@@ -463,8 +472,7 @@ class CAMatchProcessor:
         filename = download.suggested_filename
         self.log(f"Download started: {filename}")
         
-        save_dir = os.getenv("SAVE_DIRECTORY", "./Downloads/")
-        save_path = os.path.join(save_dir, filename)
+        save_path = os.path.join(self.download_dir, filename)
         
         # Ensure directory exists
         os.makedirs(os.path.dirname(save_path), exist_ok=True)

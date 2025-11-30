@@ -15,7 +15,7 @@ from playwright.sync_api import sync_playwright
 from dotenv import load_dotenv
 
 # Import optimized modules
-from CA_Match_Process_Optimized import process_bank_transactions
+from playwright_scripts.CA_Match_Process_Optimized import process_bank_transactions
 
 # Load environment variables
 load_dotenv()

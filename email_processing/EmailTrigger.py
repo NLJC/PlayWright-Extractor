@@ -7,8 +7,8 @@ import queue
 import os
 import base64
 from playwright.sync_api import sync_playwright
-import functions
-from FundTransfer import run_internal_transfer   # ✅ NEW
+from helper_playwright import functions
+from helper_playwright.FundTransfer import run_internal_transfer   # ✅ NEW
 
 # ============================================================
 # ✅ EMAIL AUTH
@@ -126,8 +126,11 @@ def worker():
         try:
             subprocess.run(
                 [
-                    "python", "CAMatchExtract.py",
-                    params["account"], params["date"], str(params["amount"])
+                    "python",
+                    "playwright_scripts/old_files/CAMatchExtract.py",
+                    params["account"],
+                    params["date"],
+                    str(params["amount"])
                 ],
                 check=True
             )
