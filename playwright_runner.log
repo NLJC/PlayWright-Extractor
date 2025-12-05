@@ -1535,3 +1535,1924 @@ Call log:
   - navigating to "https://csmstg.censof.com/DBKK", waiting until "load"
 
 2025-11-30 13:13:27,235 - ERROR - ======================================================================
+2025-12-02 14:12:19,526 - INFO - ======================================================================
+2025-12-02 14:12:19,527 - INFO - PLAYWRIGHT AUTOMATION RUNNER
+2025-12-02 14:12:19,527 - INFO - ======================================================================
+2025-12-02 14:12:19,528 - INFO - Account: CIM02
+2025-12-02 14:12:19,528 - INFO - Date: 02/12/2025
+2025-12-02 14:12:19,528 - INFO - Amount: 263737.84
+2025-12-02 14:12:19,528 - INFO - Headless Mode: True
+2025-12-02 14:12:19,529 - INFO - Downloads Dir: C:\Users\Lenovo\OneDrive - Cognitive Consulting Sdn Bhd (1)\Desktop\SegmentationCompressionWork\PlayWright-Extractor\Downloads
+2025-12-02 14:12:19,529 - INFO - ======================================================================
+2025-12-02 14:12:19,529 - INFO - 
+🚀 Starting complete automation workflow...
+
+2025-12-02 14:12:19,529 - INFO - 
+======================================================================
+2025-12-02 14:12:19,530 - INFO - STEP 1: CA MATCH PROCESS
+2025-12-02 14:12:19,530 - INFO - ======================================================================
+2025-12-02 14:12:30,908 - INFO - Starting CA Match process...
+2025-12-02 14:12:30,934 - ERROR - ❌ CA Match failed: 'CAMatchProcessor' object has no attribute 'log'
+Traceback (most recent call last):
+  File "C:\Users\Lenovo\OneDrive - Cognitive Consulting Sdn Bhd (1)\Desktop\SegmentationCompressionWork\PlayWright-Extractor\playwright_scripts\CA_Match_Process_Optimized.py", line 498, in run
+    self.send_pingback("started")
+    ^^^^^^^^^^^^^^^^^^
+AttributeError: 'CAMatchProcessor' object has no attribute 'send_pingback'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Lenovo\OneDrive - Cognitive Consulting Sdn Bhd (1)\Desktop\SegmentationCompressionWork\PlayWright-Extractor\playwright_scripts\run_playwright.py", line 142, in run_ca_match
+    records = process_bank_transactions(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\OneDrive - Cognitive Consulting Sdn Bhd (1)\Desktop\SegmentationCompressionWork\PlayWright-Extractor\playwright_scripts\CA_Match_Process_Optimized.py", line 624, in process_bank_transactions
+    return processor.run()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\OneDrive - Cognitive Consulting Sdn Bhd (1)\Desktop\SegmentationCompressionWork\PlayWright-Extractor\playwright_scripts\CA_Match_Process_Optimized.py", line 562, in run
+    self.log(f"FATAL ERROR: {e}", "error")
+    ^^^^^^^^
+AttributeError: 'CAMatchProcessor' object has no attribute 'log'
+2025-12-02 14:12:30,939 - ERROR - 
+======================================================================
+2025-12-02 14:12:30,939 - ERROR - ❌ AUTOMATION WORKFLOW FAILED
+2025-12-02 14:12:30,940 - ERROR - ======================================================================
+2025-12-02 14:12:30,940 - ERROR - Error: 'CAMatchProcessor' object has no attribute 'log'
+2025-12-02 14:12:30,940 - ERROR - ======================================================================
+2025-12-02 14:12:33,048 - INFO - ======================================================================
+2025-12-02 14:12:33,048 - INFO - PLAYWRIGHT AUTOMATION RUNNER
+2025-12-02 14:12:33,049 - INFO - ======================================================================
+2025-12-02 14:12:33,050 - INFO - Account: CIM02
+2025-12-02 14:12:33,050 - INFO - Date: 02/12/2025
+2025-12-02 14:12:33,050 - INFO - Amount: 263737.84
+2025-12-02 14:12:33,050 - INFO - Headless Mode: True
+2025-12-02 14:12:33,050 - INFO - Downloads Dir: C:\Users\Lenovo\OneDrive - Cognitive Consulting Sdn Bhd (1)\Desktop\SegmentationCompressionWork\PlayWright-Extractor\Downloads
+2025-12-02 14:12:33,050 - INFO - ======================================================================
+2025-12-02 14:12:33,052 - INFO - 
+🚀 Starting complete automation workflow...
+
+2025-12-02 14:12:33,052 - INFO - 
+======================================================================
+2025-12-02 14:12:33,052 - INFO - STEP 1: CA MATCH PROCESS
+2025-12-02 14:12:33,052 - INFO - ======================================================================
+2025-12-02 14:12:33,825 - INFO - Starting CA Match process...
+2025-12-02 14:12:33,846 - ERROR - ❌ CA Match failed: 'CAMatchProcessor' object has no attribute 'log'
+Traceback (most recent call last):
+  File "C:\Users\Lenovo\OneDrive - Cognitive Consulting Sdn Bhd (1)\Desktop\SegmentationCompressionWork\PlayWright-Extractor\playwright_scripts\CA_Match_Process_Optimized.py", line 498, in run
+    self.send_pingback("started")
+    ^^^^^^^^^^^^^^^^^^
+AttributeError: 'CAMatchProcessor' object has no attribute 'send_pingback'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Lenovo\OneDrive - Cognitive Consulting Sdn Bhd (1)\Desktop\SegmentationCompressionWork\PlayWright-Extractor\playwright_scripts\run_playwright.py", line 142, in run_ca_match
+    records = process_bank_transactions(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\OneDrive - Cognitive Consulting Sdn Bhd (1)\Desktop\SegmentationCompressionWork\PlayWright-Extractor\playwright_scripts\CA_Match_Process_Optimized.py", line 624, in process_bank_transactions
+    return processor.run()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\OneDrive - Cognitive Consulting Sdn Bhd (1)\Desktop\SegmentationCompressionWork\PlayWright-Extractor\playwright_scripts\CA_Match_Process_Optimized.py", line 562, in run
+    self.log(f"FATAL ERROR: {e}", "error")
+    ^^^^^^^^
+AttributeError: 'CAMatchProcessor' object has no attribute 'log'
+2025-12-02 14:12:33,849 - ERROR - 
+======================================================================
+2025-12-02 14:12:33,849 - ERROR - ❌ AUTOMATION WORKFLOW FAILED
+2025-12-02 14:12:33,850 - ERROR - ======================================================================
+2025-12-02 14:12:33,850 - ERROR - Error: 'CAMatchProcessor' object has no attribute 'log'
+2025-12-02 14:12:33,850 - ERROR - ======================================================================
+2025-12-02 14:12:35,832 - INFO - ======================================================================
+2025-12-02 14:12:35,833 - INFO - PLAYWRIGHT AUTOMATION RUNNER
+2025-12-02 14:12:35,833 - INFO - ======================================================================
+2025-12-02 14:12:35,833 - INFO - Account: CIM02
+2025-12-02 14:12:35,833 - INFO - Date: 02/12/2025
+2025-12-02 14:12:35,834 - INFO - Amount: 263737.84
+2025-12-02 14:12:35,834 - INFO - Headless Mode: True
+2025-12-02 14:12:35,834 - INFO - Downloads Dir: C:\Users\Lenovo\OneDrive - Cognitive Consulting Sdn Bhd (1)\Desktop\SegmentationCompressionWork\PlayWright-Extractor\Downloads
+2025-12-02 14:12:35,835 - INFO - ======================================================================
+2025-12-02 14:12:35,835 - INFO - 
+🚀 Starting complete automation workflow...
+
+2025-12-02 14:12:35,835 - INFO - 
+======================================================================
+2025-12-02 14:12:35,835 - INFO - STEP 1: CA MATCH PROCESS
+2025-12-02 14:12:35,836 - INFO - ======================================================================
+2025-12-02 14:12:36,598 - INFO - Starting CA Match process...
+2025-12-02 14:12:36,621 - ERROR - ❌ CA Match failed: 'CAMatchProcessor' object has no attribute 'log'
+Traceback (most recent call last):
+  File "C:\Users\Lenovo\OneDrive - Cognitive Consulting Sdn Bhd (1)\Desktop\SegmentationCompressionWork\PlayWright-Extractor\playwright_scripts\CA_Match_Process_Optimized.py", line 498, in run
+    self.send_pingback("started")
+    ^^^^^^^^^^^^^^^^^^
+AttributeError: 'CAMatchProcessor' object has no attribute 'send_pingback'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Lenovo\OneDrive - Cognitive Consulting Sdn Bhd (1)\Desktop\SegmentationCompressionWork\PlayWright-Extractor\playwright_scripts\run_playwright.py", line 142, in run_ca_match
+    records = process_bank_transactions(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\OneDrive - Cognitive Consulting Sdn Bhd (1)\Desktop\SegmentationCompressionWork\PlayWright-Extractor\playwright_scripts\CA_Match_Process_Optimized.py", line 624, in process_bank_transactions
+    return processor.run()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\OneDrive - Cognitive Consulting Sdn Bhd (1)\Desktop\SegmentationCompressionWork\PlayWright-Extractor\playwright_scripts\CA_Match_Process_Optimized.py", line 562, in run
+    self.log(f"FATAL ERROR: {e}", "error")
+    ^^^^^^^^
+AttributeError: 'CAMatchProcessor' object has no attribute 'log'
+2025-12-02 14:12:36,624 - ERROR - 
+======================================================================
+2025-12-02 14:12:36,624 - ERROR - ❌ AUTOMATION WORKFLOW FAILED
+2025-12-02 14:12:36,624 - ERROR - ======================================================================
+2025-12-02 14:12:36,624 - ERROR - Error: 'CAMatchProcessor' object has no attribute 'log'
+2025-12-02 14:12:36,625 - ERROR - ======================================================================
+2025-12-02 14:13:07,935 - INFO - ======================================================================
+2025-12-02 14:13:07,936 - INFO - PLAYWRIGHT AUTOMATION RUNNER
+2025-12-02 14:13:07,936 - INFO - ======================================================================
+2025-12-02 14:13:07,937 - INFO - Account: BANK RECON
+2025-12-02 14:13:07,937 - INFO - Date: CIM02
+2025-12-02 14:13:07,937 - INFO - Amount: 100.0
+2025-12-02 14:13:07,937 - INFO - Headless Mode: True
+2025-12-02 14:13:07,937 - INFO - Downloads Dir: C:\Users\Lenovo\OneDrive - Cognitive Consulting Sdn Bhd (1)\Desktop\SegmentationCompressionWork\PlayWright-Extractor\Downloads
+2025-12-02 14:13:07,938 - INFO - ======================================================================
+2025-12-02 14:13:07,938 - INFO - 
+🚀 Starting complete automation workflow...
+
+2025-12-02 14:13:07,939 - INFO - 
+======================================================================
+2025-12-02 14:13:07,939 - INFO - STEP 1: CA MATCH PROCESS
+2025-12-02 14:13:07,939 - INFO - ======================================================================
+2025-12-02 14:13:08,741 - INFO - Starting CA Match process...
+2025-12-02 14:13:08,767 - ERROR - ❌ CA Match failed: 'CAMatchProcessor' object has no attribute 'log'
+Traceback (most recent call last):
+  File "C:\Users\Lenovo\OneDrive - Cognitive Consulting Sdn Bhd (1)\Desktop\SegmentationCompressionWork\PlayWright-Extractor\playwright_scripts\CA_Match_Process_Optimized.py", line 498, in run
+    self.send_pingback("started")
+    ^^^^^^^^^^^^^^^^^^
+AttributeError: 'CAMatchProcessor' object has no attribute 'send_pingback'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Lenovo\OneDrive - Cognitive Consulting Sdn Bhd (1)\Desktop\SegmentationCompressionWork\PlayWright-Extractor\playwright_scripts\run_playwright.py", line 142, in run_ca_match
+    records = process_bank_transactions(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\OneDrive - Cognitive Consulting Sdn Bhd (1)\Desktop\SegmentationCompressionWork\PlayWright-Extractor\playwright_scripts\CA_Match_Process_Optimized.py", line 624, in process_bank_transactions
+    return processor.run()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\OneDrive - Cognitive Consulting Sdn Bhd (1)\Desktop\SegmentationCompressionWork\PlayWright-Extractor\playwright_scripts\CA_Match_Process_Optimized.py", line 562, in run
+    self.log(f"FATAL ERROR: {e}", "error")
+    ^^^^^^^^
+AttributeError: 'CAMatchProcessor' object has no attribute 'log'
+2025-12-02 14:13:08,769 - ERROR - 
+======================================================================
+2025-12-02 14:13:08,770 - ERROR - ❌ AUTOMATION WORKFLOW FAILED
+2025-12-02 14:13:08,770 - ERROR - ======================================================================
+2025-12-02 14:13:08,770 - ERROR - Error: 'CAMatchProcessor' object has no attribute 'log'
+2025-12-02 14:13:08,770 - ERROR - ======================================================================
+2025-12-02 14:13:10,549 - INFO - ======================================================================
+2025-12-02 14:13:10,549 - INFO - PLAYWRIGHT AUTOMATION RUNNER
+2025-12-02 14:13:10,549 - INFO - ======================================================================
+2025-12-02 14:13:10,550 - INFO - Account: CIM02
+2025-12-02 14:13:10,550 - INFO - Date: 02/11/2025
+2025-12-02 14:13:10,550 - INFO - Amount: 100.0
+2025-12-02 14:13:10,550 - INFO - Headless Mode: True
+2025-12-02 14:13:10,551 - INFO - Downloads Dir: C:\Users\Lenovo\OneDrive - Cognitive Consulting Sdn Bhd (1)\Desktop\SegmentationCompressionWork\PlayWright-Extractor\Downloads
+2025-12-02 14:13:10,551 - INFO - ======================================================================
+2025-12-02 14:13:10,551 - INFO - 
+🚀 Starting complete automation workflow...
+
+2025-12-02 14:13:10,551 - INFO - 
+======================================================================
+2025-12-02 14:13:10,552 - INFO - STEP 1: CA MATCH PROCESS
+2025-12-02 14:13:10,552 - INFO - ======================================================================
+2025-12-02 14:13:10,769 - INFO - ======================================================================
+2025-12-02 14:13:10,769 - INFO - PLAYWRIGHT AUTOMATION RUNNER
+2025-12-02 14:13:10,769 - INFO - ======================================================================
+2025-12-02 14:13:10,769 - INFO - Account: BANK RECON
+2025-12-02 14:13:10,769 - INFO - Date: CIM02
+2025-12-02 14:13:10,770 - INFO - Amount: 100.0
+2025-12-02 14:13:10,770 - INFO - Headless Mode: True
+2025-12-02 14:13:10,770 - INFO - Downloads Dir: C:\Users\Lenovo\OneDrive - Cognitive Consulting Sdn Bhd (1)\Desktop\SegmentationCompressionWork\PlayWright-Extractor\Downloads
+2025-12-02 14:13:10,770 - INFO - ======================================================================
+2025-12-02 14:13:10,771 - INFO - 
+🚀 Starting complete automation workflow...
+
+2025-12-02 14:13:10,771 - INFO - 
+======================================================================
+2025-12-02 14:13:10,771 - INFO - STEP 1: CA MATCH PROCESS
+2025-12-02 14:13:10,771 - INFO - ======================================================================
+2025-12-02 14:13:11,019 - ERROR - Task was destroyed but it is pending!
+task: <Task pending name='Task-3' coro=<Connection.run.<locals>.init() running at C:\Users\Lenovo\OneDrive - Cognitive Consulting Sdn Bhd (1)\Desktop\SegmentationCompressionWork\PlayWright-Extractor\.venv_clean\Lib\site-packages\playwright\_impl\_connection.py:310> wait_for=<Future pending cb=[Task.task_wakeup()]> cb=[ProtocolCallback.__init__.<locals>.cb() at C:\Users\Lenovo\OneDrive - Cognitive Consulting Sdn Bhd (1)\Desktop\SegmentationCompressionWork\PlayWright-Extractor\.venv_clean\Lib\site-packages\playwright\_impl\_connection.py:230]>
+2025-12-02 14:13:11,592 - INFO - Starting CA Match process...
+2025-12-02 14:13:11,618 - ERROR - ❌ CA Match failed: 'CAMatchProcessor' object has no attribute 'log'
+Traceback (most recent call last):
+  File "C:\Users\Lenovo\OneDrive - Cognitive Consulting Sdn Bhd (1)\Desktop\SegmentationCompressionWork\PlayWright-Extractor\playwright_scripts\CA_Match_Process_Optimized.py", line 498, in run
+    self.send_pingback("started")
+    ^^^^^^^^^^^^^^^^^^
+AttributeError: 'CAMatchProcessor' object has no attribute 'send_pingback'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Lenovo\OneDrive - Cognitive Consulting Sdn Bhd (1)\Desktop\SegmentationCompressionWork\PlayWright-Extractor\playwright_scripts\run_playwright.py", line 142, in run_ca_match
+    records = process_bank_transactions(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\OneDrive - Cognitive Consulting Sdn Bhd (1)\Desktop\SegmentationCompressionWork\PlayWright-Extractor\playwright_scripts\CA_Match_Process_Optimized.py", line 624, in process_bank_transactions
+    return processor.run()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\OneDrive - Cognitive Consulting Sdn Bhd (1)\Desktop\SegmentationCompressionWork\PlayWright-Extractor\playwright_scripts\CA_Match_Process_Optimized.py", line 562, in run
+    self.log(f"FATAL ERROR: {e}", "error")
+    ^^^^^^^^
+AttributeError: 'CAMatchProcessor' object has no attribute 'log'
+2025-12-02 14:13:11,621 - ERROR - 
+======================================================================
+2025-12-02 14:13:11,622 - ERROR - ❌ AUTOMATION WORKFLOW FAILED
+2025-12-02 14:13:11,622 - ERROR - ======================================================================
+2025-12-02 14:13:11,622 - ERROR - Error: 'CAMatchProcessor' object has no attribute 'log'
+2025-12-02 14:13:11,622 - ERROR - ======================================================================
+2025-12-02 14:13:13,600 - INFO - ======================================================================
+2025-12-02 14:13:13,601 - INFO - PLAYWRIGHT AUTOMATION RUNNER
+2025-12-02 14:13:13,601 - INFO - ======================================================================
+2025-12-02 14:13:13,602 - INFO - Account: BANK RECON
+2025-12-02 14:13:13,602 - INFO - Date: CIM02
+2025-12-02 14:13:13,602 - INFO - Amount: 100.0
+2025-12-02 14:13:13,603 - INFO - Headless Mode: True
+2025-12-02 14:13:13,603 - INFO - Downloads Dir: C:\Users\Lenovo\OneDrive - Cognitive Consulting Sdn Bhd (1)\Desktop\SegmentationCompressionWork\PlayWright-Extractor\Downloads
+2025-12-02 14:13:13,603 - INFO - ======================================================================
+2025-12-02 14:13:13,604 - INFO - 
+🚀 Starting complete automation workflow...
+
+2025-12-02 14:13:13,604 - INFO - 
+======================================================================
+2025-12-02 14:13:13,604 - INFO - STEP 1: CA MATCH PROCESS
+2025-12-02 14:13:13,605 - INFO - ======================================================================
+2025-12-02 14:13:14,383 - INFO - Starting CA Match process...
+2025-12-02 14:13:14,408 - ERROR - ❌ CA Match failed: 'CAMatchProcessor' object has no attribute 'log'
+Traceback (most recent call last):
+  File "C:\Users\Lenovo\OneDrive - Cognitive Consulting Sdn Bhd (1)\Desktop\SegmentationCompressionWork\PlayWright-Extractor\playwright_scripts\CA_Match_Process_Optimized.py", line 498, in run
+    self.send_pingback("started")
+    ^^^^^^^^^^^^^^^^^^
+AttributeError: 'CAMatchProcessor' object has no attribute 'send_pingback'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Lenovo\OneDrive - Cognitive Consulting Sdn Bhd (1)\Desktop\SegmentationCompressionWork\PlayWright-Extractor\playwright_scripts\run_playwright.py", line 142, in run_ca_match
+    records = process_bank_transactions(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\OneDrive - Cognitive Consulting Sdn Bhd (1)\Desktop\SegmentationCompressionWork\PlayWright-Extractor\playwright_scripts\CA_Match_Process_Optimized.py", line 624, in process_bank_transactions
+    return processor.run()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\OneDrive - Cognitive Consulting Sdn Bhd (1)\Desktop\SegmentationCompressionWork\PlayWright-Extractor\playwright_scripts\CA_Match_Process_Optimized.py", line 562, in run
+    self.log(f"FATAL ERROR: {e}", "error")
+    ^^^^^^^^
+AttributeError: 'CAMatchProcessor' object has no attribute 'log'
+2025-12-02 14:13:14,411 - ERROR - 
+======================================================================
+2025-12-02 14:13:14,411 - ERROR - ❌ AUTOMATION WORKFLOW FAILED
+2025-12-02 14:13:14,412 - ERROR - ======================================================================
+2025-12-02 14:13:14,412 - ERROR - Error: 'CAMatchProcessor' object has no attribute 'log'
+2025-12-02 14:13:14,412 - ERROR - ======================================================================
+2025-12-02 14:13:45,256 - INFO - ======================================================================
+2025-12-02 14:13:45,256 - INFO - PLAYWRIGHT AUTOMATION RUNNER
+2025-12-02 14:13:45,257 - INFO - ======================================================================
+2025-12-02 14:13:45,257 - INFO - Account: RPA Process Failed
+2025-12-02 14:13:45,257 - INFO - Date: BANK RECON
+2025-12-02 14:13:45,258 - INFO - Amount: 100.0
+2025-12-02 14:13:45,258 - INFO - Headless Mode: True
+2025-12-02 14:13:45,258 - INFO - Downloads Dir: C:\Users\Lenovo\OneDrive - Cognitive Consulting Sdn Bhd (1)\Desktop\SegmentationCompressionWork\PlayWright-Extractor\Downloads
+2025-12-02 14:13:45,258 - INFO - ======================================================================
+2025-12-02 14:13:45,259 - INFO - 
+🚀 Starting complete automation workflow...
+
+2025-12-02 14:13:45,259 - INFO - 
+======================================================================
+2025-12-02 14:13:45,259 - INFO - STEP 1: CA MATCH PROCESS
+2025-12-02 14:13:45,259 - INFO - ======================================================================
+2025-12-02 14:13:46,028 - INFO - Starting CA Match process...
+2025-12-02 14:13:46,051 - ERROR - ❌ CA Match failed: 'CAMatchProcessor' object has no attribute 'log'
+Traceback (most recent call last):
+  File "C:\Users\Lenovo\OneDrive - Cognitive Consulting Sdn Bhd (1)\Desktop\SegmentationCompressionWork\PlayWright-Extractor\playwright_scripts\CA_Match_Process_Optimized.py", line 498, in run
+    self.send_pingback("started")
+    ^^^^^^^^^^^^^^^^^^
+AttributeError: 'CAMatchProcessor' object has no attribute 'send_pingback'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Lenovo\OneDrive - Cognitive Consulting Sdn Bhd (1)\Desktop\SegmentationCompressionWork\PlayWright-Extractor\playwright_scripts\run_playwright.py", line 142, in run_ca_match
+    records = process_bank_transactions(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\OneDrive - Cognitive Consulting Sdn Bhd (1)\Desktop\SegmentationCompressionWork\PlayWright-Extractor\playwright_scripts\CA_Match_Process_Optimized.py", line 624, in process_bank_transactions
+    return processor.run()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\OneDrive - Cognitive Consulting Sdn Bhd (1)\Desktop\SegmentationCompressionWork\PlayWright-Extractor\playwright_scripts\CA_Match_Process_Optimized.py", line 562, in run
+    self.log(f"FATAL ERROR: {e}", "error")
+    ^^^^^^^^
+AttributeError: 'CAMatchProcessor' object has no attribute 'log'
+2025-12-02 14:13:46,054 - ERROR - 
+======================================================================
+2025-12-02 14:13:46,054 - ERROR - ❌ AUTOMATION WORKFLOW FAILED
+2025-12-02 14:13:46,054 - ERROR - ======================================================================
+2025-12-02 14:13:46,054 - ERROR - Error: 'CAMatchProcessor' object has no attribute 'log'
+2025-12-02 14:13:46,055 - ERROR - ======================================================================
+2025-12-02 14:13:48,167 - INFO - ======================================================================
+2025-12-02 14:13:48,168 - INFO - PLAYWRIGHT AUTOMATION RUNNER
+2025-12-02 14:13:48,168 - INFO - ======================================================================
+2025-12-02 14:13:48,168 - INFO - Account: RPA Process Failed
+2025-12-02 14:13:48,168 - INFO - Date: BANK RECON
+2025-12-02 14:13:48,169 - INFO - Amount: 100.0
+2025-12-02 14:13:48,170 - INFO - Headless Mode: True
+2025-12-02 14:13:48,170 - INFO - Downloads Dir: C:\Users\Lenovo\OneDrive - Cognitive Consulting Sdn Bhd (1)\Desktop\SegmentationCompressionWork\PlayWright-Extractor\Downloads
+2025-12-02 14:13:48,170 - INFO - ======================================================================
+2025-12-02 14:13:48,170 - INFO - 
+🚀 Starting complete automation workflow...
+
+2025-12-02 14:13:48,171 - INFO - 
+======================================================================
+2025-12-02 14:13:48,171 - INFO - STEP 1: CA MATCH PROCESS
+2025-12-02 14:13:48,171 - INFO - ======================================================================
+2025-12-02 14:13:48,943 - INFO - Starting CA Match process...
+2025-12-02 14:13:48,969 - ERROR - ❌ CA Match failed: 'CAMatchProcessor' object has no attribute 'log'
+Traceback (most recent call last):
+  File "C:\Users\Lenovo\OneDrive - Cognitive Consulting Sdn Bhd (1)\Desktop\SegmentationCompressionWork\PlayWright-Extractor\playwright_scripts\CA_Match_Process_Optimized.py", line 498, in run
+    self.send_pingback("started")
+    ^^^^^^^^^^^^^^^^^^
+AttributeError: 'CAMatchProcessor' object has no attribute 'send_pingback'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Lenovo\OneDrive - Cognitive Consulting Sdn Bhd (1)\Desktop\SegmentationCompressionWork\PlayWright-Extractor\playwright_scripts\run_playwright.py", line 142, in run_ca_match
+    records = process_bank_transactions(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\OneDrive - Cognitive Consulting Sdn Bhd (1)\Desktop\SegmentationCompressionWork\PlayWright-Extractor\playwright_scripts\CA_Match_Process_Optimized.py", line 624, in process_bank_transactions
+    return processor.run()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\OneDrive - Cognitive Consulting Sdn Bhd (1)\Desktop\SegmentationCompressionWork\PlayWright-Extractor\playwright_scripts\CA_Match_Process_Optimized.py", line 562, in run
+    self.log(f"FATAL ERROR: {e}", "error")
+    ^^^^^^^^
+AttributeError: 'CAMatchProcessor' object has no attribute 'log'
+2025-12-02 14:13:48,972 - ERROR - 
+======================================================================
+2025-12-02 14:13:48,972 - ERROR - ❌ AUTOMATION WORKFLOW FAILED
+2025-12-02 14:13:48,972 - ERROR - ======================================================================
+2025-12-02 14:13:48,972 - ERROR - Error: 'CAMatchProcessor' object has no attribute 'log'
+2025-12-02 14:13:48,973 - ERROR - ======================================================================
+2025-12-02 14:13:50,909 - INFO - ======================================================================
+2025-12-02 14:13:50,909 - INFO - PLAYWRIGHT AUTOMATION RUNNER
+2025-12-02 14:13:50,910 - INFO - ======================================================================
+2025-12-02 14:13:50,910 - INFO - Account: RPA Process Failed
+2025-12-02 14:13:50,910 - INFO - Date: BANK RECON
+2025-12-02 14:13:50,911 - INFO - Amount: 100.0
+2025-12-02 14:13:50,911 - INFO - Headless Mode: True
+2025-12-02 14:13:50,911 - INFO - Downloads Dir: C:\Users\Lenovo\OneDrive - Cognitive Consulting Sdn Bhd (1)\Desktop\SegmentationCompressionWork\PlayWright-Extractor\Downloads
+2025-12-02 14:13:50,911 - INFO - ======================================================================
+2025-12-02 14:13:50,912 - INFO - 
+🚀 Starting complete automation workflow...
+
+2025-12-02 14:13:50,912 - INFO - 
+======================================================================
+2025-12-02 14:13:50,912 - INFO - STEP 1: CA MATCH PROCESS
+2025-12-02 14:13:50,912 - INFO - ======================================================================
+2025-12-02 14:13:51,657 - INFO - Starting CA Match process...
+2025-12-02 14:13:51,677 - ERROR - ❌ CA Match failed: 'CAMatchProcessor' object has no attribute 'log'
+Traceback (most recent call last):
+  File "C:\Users\Lenovo\OneDrive - Cognitive Consulting Sdn Bhd (1)\Desktop\SegmentationCompressionWork\PlayWright-Extractor\playwright_scripts\CA_Match_Process_Optimized.py", line 498, in run
+    self.send_pingback("started")
+    ^^^^^^^^^^^^^^^^^^
+AttributeError: 'CAMatchProcessor' object has no attribute 'send_pingback'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Lenovo\OneDrive - Cognitive Consulting Sdn Bhd (1)\Desktop\SegmentationCompressionWork\PlayWright-Extractor\playwright_scripts\run_playwright.py", line 142, in run_ca_match
+    records = process_bank_transactions(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\OneDrive - Cognitive Consulting Sdn Bhd (1)\Desktop\SegmentationCompressionWork\PlayWright-Extractor\playwright_scripts\CA_Match_Process_Optimized.py", line 624, in process_bank_transactions
+    return processor.run()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\OneDrive - Cognitive Consulting Sdn Bhd (1)\Desktop\SegmentationCompressionWork\PlayWright-Extractor\playwright_scripts\CA_Match_Process_Optimized.py", line 562, in run
+    self.log(f"FATAL ERROR: {e}", "error")
+    ^^^^^^^^
+AttributeError: 'CAMatchProcessor' object has no attribute 'log'
+2025-12-02 14:13:51,679 - ERROR - 
+======================================================================
+2025-12-02 14:13:51,680 - ERROR - ❌ AUTOMATION WORKFLOW FAILED
+2025-12-02 14:13:51,680 - ERROR - ======================================================================
+2025-12-02 14:13:51,680 - ERROR - Error: 'CAMatchProcessor' object has no attribute 'log'
+2025-12-02 14:13:51,680 - ERROR - ======================================================================
+2025-12-02 14:14:22,789 - INFO - ======================================================================
+2025-12-02 14:14:22,790 - INFO - PLAYWRIGHT AUTOMATION RUNNER
+2025-12-02 14:14:22,790 - INFO - ======================================================================
+2025-12-02 14:14:22,790 - INFO - Account: RPA Process Failed
+2025-12-02 14:14:22,790 - INFO - Date: RPA Process Failed
+2025-12-02 14:14:22,791 - INFO - Amount: 100.0
+2025-12-02 14:14:22,791 - INFO - Headless Mode: True
+2025-12-02 14:14:22,791 - INFO - Downloads Dir: C:\Users\Lenovo\OneDrive - Cognitive Consulting Sdn Bhd (1)\Desktop\SegmentationCompressionWork\PlayWright-Extractor\Downloads
+2025-12-02 14:14:22,792 - INFO - ======================================================================
+2025-12-02 14:14:22,792 - INFO - 
+🚀 Starting complete automation workflow...
+
+2025-12-02 14:14:22,792 - INFO - 
+======================================================================
+2025-12-02 14:14:22,792 - INFO - STEP 1: CA MATCH PROCESS
+2025-12-02 14:14:22,793 - INFO - ======================================================================
+2025-12-02 14:14:23,569 - INFO - Starting CA Match process...
+2025-12-02 14:14:23,594 - ERROR - ❌ CA Match failed: 'CAMatchProcessor' object has no attribute 'log'
+Traceback (most recent call last):
+  File "C:\Users\Lenovo\OneDrive - Cognitive Consulting Sdn Bhd (1)\Desktop\SegmentationCompressionWork\PlayWright-Extractor\playwright_scripts\CA_Match_Process_Optimized.py", line 498, in run
+    self.send_pingback("started")
+    ^^^^^^^^^^^^^^^^^^
+AttributeError: 'CAMatchProcessor' object has no attribute 'send_pingback'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Lenovo\OneDrive - Cognitive Consulting Sdn Bhd (1)\Desktop\SegmentationCompressionWork\PlayWright-Extractor\playwright_scripts\run_playwright.py", line 142, in run_ca_match
+    records = process_bank_transactions(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\OneDrive - Cognitive Consulting Sdn Bhd (1)\Desktop\SegmentationCompressionWork\PlayWright-Extractor\playwright_scripts\CA_Match_Process_Optimized.py", line 624, in process_bank_transactions
+    return processor.run()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\OneDrive - Cognitive Consulting Sdn Bhd (1)\Desktop\SegmentationCompressionWork\PlayWright-Extractor\playwright_scripts\CA_Match_Process_Optimized.py", line 562, in run
+    self.log(f"FATAL ERROR: {e}", "error")
+    ^^^^^^^^
+AttributeError: 'CAMatchProcessor' object has no attribute 'log'
+2025-12-02 14:14:23,597 - ERROR - 
+======================================================================
+2025-12-02 14:14:23,597 - ERROR - ❌ AUTOMATION WORKFLOW FAILED
+2025-12-02 14:14:23,597 - ERROR - ======================================================================
+2025-12-02 14:14:23,598 - ERROR - Error: 'CAMatchProcessor' object has no attribute 'log'
+2025-12-02 14:14:23,598 - ERROR - ======================================================================
+2025-12-02 14:14:25,559 - INFO - ======================================================================
+2025-12-02 14:14:25,559 - INFO - PLAYWRIGHT AUTOMATION RUNNER
+2025-12-02 14:14:25,559 - INFO - ======================================================================
+2025-12-02 14:14:25,560 - INFO - Account: RPA Process Failed
+2025-12-02 14:14:25,560 - INFO - Date: RPA Process Failed
+2025-12-02 14:14:25,560 - INFO - Amount: 100.0
+2025-12-02 14:14:25,560 - INFO - Headless Mode: True
+2025-12-02 14:14:25,561 - INFO - Downloads Dir: C:\Users\Lenovo\OneDrive - Cognitive Consulting Sdn Bhd (1)\Desktop\SegmentationCompressionWork\PlayWright-Extractor\Downloads
+2025-12-02 14:14:25,561 - INFO - ======================================================================
+2025-12-02 14:14:25,561 - INFO - 
+🚀 Starting complete automation workflow...
+
+2025-12-02 14:14:25,561 - INFO - 
+======================================================================
+2025-12-02 14:14:25,562 - INFO - STEP 1: CA MATCH PROCESS
+2025-12-02 14:14:25,562 - INFO - ======================================================================
+2025-12-02 14:14:26,329 - INFO - Starting CA Match process...
+2025-12-02 14:14:26,349 - ERROR - ❌ CA Match failed: 'CAMatchProcessor' object has no attribute 'log'
+Traceback (most recent call last):
+  File "C:\Users\Lenovo\OneDrive - Cognitive Consulting Sdn Bhd (1)\Desktop\SegmentationCompressionWork\PlayWright-Extractor\playwright_scripts\CA_Match_Process_Optimized.py", line 498, in run
+    self.send_pingback("started")
+    ^^^^^^^^^^^^^^^^^^
+AttributeError: 'CAMatchProcessor' object has no attribute 'send_pingback'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Lenovo\OneDrive - Cognitive Consulting Sdn Bhd (1)\Desktop\SegmentationCompressionWork\PlayWright-Extractor\playwright_scripts\run_playwright.py", line 142, in run_ca_match
+    records = process_bank_transactions(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\OneDrive - Cognitive Consulting Sdn Bhd (1)\Desktop\SegmentationCompressionWork\PlayWright-Extractor\playwright_scripts\CA_Match_Process_Optimized.py", line 624, in process_bank_transactions
+    return processor.run()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\OneDrive - Cognitive Consulting Sdn Bhd (1)\Desktop\SegmentationCompressionWork\PlayWright-Extractor\playwright_scripts\CA_Match_Process_Optimized.py", line 562, in run
+    self.log(f"FATAL ERROR: {e}", "error")
+    ^^^^^^^^
+AttributeError: 'CAMatchProcessor' object has no attribute 'log'
+2025-12-02 14:14:26,353 - ERROR - 
+======================================================================
+2025-12-02 14:14:26,353 - ERROR - ❌ AUTOMATION WORKFLOW FAILED
+2025-12-02 14:14:26,353 - ERROR - ======================================================================
+2025-12-02 14:14:26,353 - ERROR - Error: 'CAMatchProcessor' object has no attribute 'log'
+2025-12-02 14:14:26,353 - ERROR - ======================================================================
+2025-12-02 14:14:28,341 - INFO - ======================================================================
+2025-12-02 14:14:28,341 - INFO - PLAYWRIGHT AUTOMATION RUNNER
+2025-12-02 14:14:28,341 - INFO - ======================================================================
+2025-12-02 14:14:28,342 - INFO - Account: RPA Process Failed
+2025-12-02 14:14:28,342 - INFO - Date: RPA Process Failed
+2025-12-02 14:14:28,342 - INFO - Amount: 100.0
+2025-12-02 14:14:28,342 - INFO - Headless Mode: True
+2025-12-02 14:14:28,343 - INFO - Downloads Dir: C:\Users\Lenovo\OneDrive - Cognitive Consulting Sdn Bhd (1)\Desktop\SegmentationCompressionWork\PlayWright-Extractor\Downloads
+2025-12-02 14:14:28,343 - INFO - ======================================================================
+2025-12-02 14:14:28,343 - INFO - 
+🚀 Starting complete automation workflow...
+
+2025-12-02 14:14:28,343 - INFO - 
+======================================================================
+2025-12-02 14:14:28,344 - INFO - STEP 1: CA MATCH PROCESS
+2025-12-02 14:14:28,344 - INFO - ======================================================================
+2025-12-02 14:14:29,103 - INFO - Starting CA Match process...
+2025-12-02 14:14:29,127 - ERROR - ❌ CA Match failed: 'CAMatchProcessor' object has no attribute 'log'
+Traceback (most recent call last):
+  File "C:\Users\Lenovo\OneDrive - Cognitive Consulting Sdn Bhd (1)\Desktop\SegmentationCompressionWork\PlayWright-Extractor\playwright_scripts\CA_Match_Process_Optimized.py", line 498, in run
+    self.send_pingback("started")
+    ^^^^^^^^^^^^^^^^^^
+AttributeError: 'CAMatchProcessor' object has no attribute 'send_pingback'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Lenovo\OneDrive - Cognitive Consulting Sdn Bhd (1)\Desktop\SegmentationCompressionWork\PlayWright-Extractor\playwright_scripts\run_playwright.py", line 142, in run_ca_match
+    records = process_bank_transactions(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\OneDrive - Cognitive Consulting Sdn Bhd (1)\Desktop\SegmentationCompressionWork\PlayWright-Extractor\playwright_scripts\CA_Match_Process_Optimized.py", line 624, in process_bank_transactions
+    return processor.run()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\OneDrive - Cognitive Consulting Sdn Bhd (1)\Desktop\SegmentationCompressionWork\PlayWright-Extractor\playwright_scripts\CA_Match_Process_Optimized.py", line 562, in run
+    self.log(f"FATAL ERROR: {e}", "error")
+    ^^^^^^^^
+AttributeError: 'CAMatchProcessor' object has no attribute 'log'
+2025-12-02 14:14:29,130 - ERROR - 
+======================================================================
+2025-12-02 14:14:29,130 - ERROR - ❌ AUTOMATION WORKFLOW FAILED
+2025-12-02 14:14:29,130 - ERROR - ======================================================================
+2025-12-02 14:14:29,130 - ERROR - Error: 'CAMatchProcessor' object has no attribute 'log'
+2025-12-02 14:14:29,131 - ERROR - ======================================================================
+2025-12-02 14:14:59,198 - INFO - ======================================================================
+2025-12-02 14:14:59,200 - INFO - PLAYWRIGHT AUTOMATION RUNNER
+2025-12-02 14:14:59,200 - INFO - ======================================================================
+2025-12-02 14:14:59,200 - INFO - Account: CIM02
+2025-12-02 14:14:59,201 - INFO - Date: 02/11/2025
+2025-12-02 14:14:59,201 - INFO - Amount: 100.0
+2025-12-02 14:14:59,202 - INFO - Headless Mode: True
+2025-12-02 14:14:59,202 - INFO - Downloads Dir: C:\Users\Lenovo\OneDrive - Cognitive Consulting Sdn Bhd (1)\Desktop\SegmentationCompressionWork\PlayWright-Extractor\Downloads
+2025-12-02 14:14:59,202 - INFO - ======================================================================
+2025-12-02 14:14:59,203 - INFO - 
+🚀 Starting complete automation workflow...
+
+2025-12-02 14:14:59,203 - INFO - 
+======================================================================
+2025-12-02 14:14:59,203 - INFO - STEP 1: CA MATCH PROCESS
+2025-12-02 14:14:59,204 - INFO - ======================================================================
+2025-12-02 14:14:59,906 - INFO - ======================================================================
+2025-12-02 14:14:59,907 - INFO - PLAYWRIGHT AUTOMATION RUNNER
+2025-12-02 14:14:59,907 - INFO - ======================================================================
+2025-12-02 14:14:59,907 - INFO - Account: RPA Process Failed
+2025-12-02 14:14:59,907 - INFO - Date: RPA Process Failed
+2025-12-02 14:14:59,907 - INFO - Amount: 100.0
+2025-12-02 14:14:59,908 - INFO - Headless Mode: True
+2025-12-02 14:14:59,908 - INFO - Downloads Dir: C:\Users\Lenovo\OneDrive - Cognitive Consulting Sdn Bhd (1)\Desktop\SegmentationCompressionWork\PlayWright-Extractor\Downloads
+2025-12-02 14:14:59,908 - INFO - ======================================================================
+2025-12-02 14:14:59,909 - INFO - 
+🚀 Starting complete automation workflow...
+
+2025-12-02 14:14:59,909 - INFO - 
+======================================================================
+2025-12-02 14:14:59,909 - INFO - STEP 1: CA MATCH PROCESS
+2025-12-02 14:14:59,909 - INFO - ======================================================================
+2025-12-02 14:15:00,023 - INFO - Starting CA Match process...
+2025-12-02 14:15:00,043 - ERROR - ❌ CA Match failed: 'CAMatchProcessor' object has no attribute 'log'
+Traceback (most recent call last):
+  File "c:\Users\Lenovo\OneDrive - Cognitive Consulting Sdn Bhd (1)\Desktop\SegmentationCompressionWork\PlayWright-Extractor\playwright_scripts\CA_Match_Process_Optimized.py", line 498, in run
+    self.send_pingback("started")
+    ^^^^^^^^^^^^^^^^^^
+AttributeError: 'CAMatchProcessor' object has no attribute 'send_pingback'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\Users\Lenovo\OneDrive - Cognitive Consulting Sdn Bhd (1)\Desktop\SegmentationCompressionWork\PlayWright-Extractor\playwright_scripts\run_playwright.py", line 142, in run_ca_match
+    records = process_bank_transactions(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Lenovo\OneDrive - Cognitive Consulting Sdn Bhd (1)\Desktop\SegmentationCompressionWork\PlayWright-Extractor\playwright_scripts\CA_Match_Process_Optimized.py", line 624, in process_bank_transactions
+    return processor.run()
+           ^^^^^^^^^^^^^^^
+  File "c:\Users\Lenovo\OneDrive - Cognitive Consulting Sdn Bhd (1)\Desktop\SegmentationCompressionWork\PlayWright-Extractor\playwright_scripts\CA_Match_Process_Optimized.py", line 562, in run
+    self.log(f"FATAL ERROR: {e}", "error")
+    ^^^^^^^^
+AttributeError: 'CAMatchProcessor' object has no attribute 'log'
+2025-12-02 14:15:00,046 - ERROR - 
+======================================================================
+2025-12-02 14:15:00,046 - ERROR - ❌ AUTOMATION WORKFLOW FAILED
+2025-12-02 14:15:00,047 - ERROR - ======================================================================
+2025-12-02 14:15:00,047 - ERROR - Error: 'CAMatchProcessor' object has no attribute 'log'
+2025-12-02 14:15:00,047 - ERROR - ======================================================================
+2025-12-02 14:15:00,700 - INFO - Starting CA Match process...
+2025-12-02 14:15:00,723 - ERROR - ❌ CA Match failed: 'CAMatchProcessor' object has no attribute 'log'
+Traceback (most recent call last):
+  File "C:\Users\Lenovo\OneDrive - Cognitive Consulting Sdn Bhd (1)\Desktop\SegmentationCompressionWork\PlayWright-Extractor\playwright_scripts\CA_Match_Process_Optimized.py", line 498, in run
+    self.send_pingback("started")
+    ^^^^^^^^^^^^^^^^^^
+AttributeError: 'CAMatchProcessor' object has no attribute 'send_pingback'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Lenovo\OneDrive - Cognitive Consulting Sdn Bhd (1)\Desktop\SegmentationCompressionWork\PlayWright-Extractor\playwright_scripts\run_playwright.py", line 142, in run_ca_match
+    records = process_bank_transactions(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\OneDrive - Cognitive Consulting Sdn Bhd (1)\Desktop\SegmentationCompressionWork\PlayWright-Extractor\playwright_scripts\CA_Match_Process_Optimized.py", line 624, in process_bank_transactions
+    return processor.run()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\OneDrive - Cognitive Consulting Sdn Bhd (1)\Desktop\SegmentationCompressionWork\PlayWright-Extractor\playwright_scripts\CA_Match_Process_Optimized.py", line 562, in run
+    self.log(f"FATAL ERROR: {e}", "error")
+    ^^^^^^^^
+AttributeError: 'CAMatchProcessor' object has no attribute 'log'
+2025-12-02 14:15:00,726 - ERROR - 
+======================================================================
+2025-12-02 14:15:00,726 - ERROR - ❌ AUTOMATION WORKFLOW FAILED
+2025-12-02 14:15:00,726 - ERROR - ======================================================================
+2025-12-02 14:15:00,727 - ERROR - Error: 'CAMatchProcessor' object has no attribute 'log'
+2025-12-02 14:15:00,727 - ERROR - ======================================================================
+2025-12-02 14:15:02,753 - INFO - ======================================================================
+2025-12-02 14:15:02,753 - INFO - PLAYWRIGHT AUTOMATION RUNNER
+2025-12-02 14:15:02,754 - INFO - ======================================================================
+2025-12-02 14:15:02,754 - INFO - Account: RPA Process Failed
+2025-12-02 14:15:02,754 - INFO - Date: RPA Process Failed
+2025-12-02 14:15:02,755 - INFO - Amount: 100.0
+2025-12-02 14:15:02,755 - INFO - Headless Mode: True
+2025-12-02 14:15:02,755 - INFO - Downloads Dir: C:\Users\Lenovo\OneDrive - Cognitive Consulting Sdn Bhd (1)\Desktop\SegmentationCompressionWork\PlayWright-Extractor\Downloads
+2025-12-02 14:15:02,755 - INFO - ======================================================================
+2025-12-02 14:15:02,755 - INFO - 
+🚀 Starting complete automation workflow...
+
+2025-12-02 14:15:02,757 - INFO - 
+======================================================================
+2025-12-02 14:15:02,757 - INFO - STEP 1: CA MATCH PROCESS
+2025-12-02 14:15:02,757 - INFO - ======================================================================
+2025-12-02 14:15:03,537 - INFO - Starting CA Match process...
+2025-12-02 14:15:03,559 - ERROR - ❌ CA Match failed: 'CAMatchProcessor' object has no attribute 'log'
+Traceback (most recent call last):
+  File "C:\Users\Lenovo\OneDrive - Cognitive Consulting Sdn Bhd (1)\Desktop\SegmentationCompressionWork\PlayWright-Extractor\playwright_scripts\CA_Match_Process_Optimized.py", line 498, in run
+    self.send_pingback("started")
+    ^^^^^^^^^^^^^^^^^^
+AttributeError: 'CAMatchProcessor' object has no attribute 'send_pingback'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Lenovo\OneDrive - Cognitive Consulting Sdn Bhd (1)\Desktop\SegmentationCompressionWork\PlayWright-Extractor\playwright_scripts\run_playwright.py", line 142, in run_ca_match
+    records = process_bank_transactions(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\OneDrive - Cognitive Consulting Sdn Bhd (1)\Desktop\SegmentationCompressionWork\PlayWright-Extractor\playwright_scripts\CA_Match_Process_Optimized.py", line 624, in process_bank_transactions
+    return processor.run()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\OneDrive - Cognitive Consulting Sdn Bhd (1)\Desktop\SegmentationCompressionWork\PlayWright-Extractor\playwright_scripts\CA_Match_Process_Optimized.py", line 562, in run
+    self.log(f"FATAL ERROR: {e}", "error")
+    ^^^^^^^^
+AttributeError: 'CAMatchProcessor' object has no attribute 'log'
+2025-12-02 14:15:03,561 - ERROR - 
+======================================================================
+2025-12-02 14:15:03,561 - ERROR - ❌ AUTOMATION WORKFLOW FAILED
+2025-12-02 14:15:03,562 - ERROR - ======================================================================
+2025-12-02 14:15:03,562 - ERROR - Error: 'CAMatchProcessor' object has no attribute 'log'
+2025-12-02 14:15:03,562 - ERROR - ======================================================================
+2025-12-02 14:15:05,570 - INFO - ======================================================================
+2025-12-02 14:15:05,570 - INFO - PLAYWRIGHT AUTOMATION RUNNER
+2025-12-02 14:15:05,571 - INFO - ======================================================================
+2025-12-02 14:15:05,571 - INFO - Account: RPA Process Failed
+2025-12-02 14:15:05,571 - INFO - Date: RPA Process Failed
+2025-12-02 14:15:05,571 - INFO - Amount: 100.0
+2025-12-02 14:15:05,572 - INFO - Headless Mode: True
+2025-12-02 14:15:05,572 - INFO - Downloads Dir: C:\Users\Lenovo\OneDrive - Cognitive Consulting Sdn Bhd (1)\Desktop\SegmentationCompressionWork\PlayWright-Extractor\Downloads
+2025-12-02 14:15:05,572 - INFO - ======================================================================
+2025-12-02 14:15:05,572 - INFO - 
+🚀 Starting complete automation workflow...
+
+2025-12-02 14:15:05,573 - INFO - 
+======================================================================
+2025-12-02 14:15:05,573 - INFO - STEP 1: CA MATCH PROCESS
+2025-12-02 14:15:05,573 - INFO - ======================================================================
+2025-12-02 14:15:06,357 - INFO - Starting CA Match process...
+2025-12-02 14:15:06,379 - ERROR - ❌ CA Match failed: 'CAMatchProcessor' object has no attribute 'log'
+Traceback (most recent call last):
+  File "C:\Users\Lenovo\OneDrive - Cognitive Consulting Sdn Bhd (1)\Desktop\SegmentationCompressionWork\PlayWright-Extractor\playwright_scripts\CA_Match_Process_Optimized.py", line 498, in run
+    self.send_pingback("started")
+    ^^^^^^^^^^^^^^^^^^
+AttributeError: 'CAMatchProcessor' object has no attribute 'send_pingback'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Lenovo\OneDrive - Cognitive Consulting Sdn Bhd (1)\Desktop\SegmentationCompressionWork\PlayWright-Extractor\playwright_scripts\run_playwright.py", line 142, in run_ca_match
+    records = process_bank_transactions(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\OneDrive - Cognitive Consulting Sdn Bhd (1)\Desktop\SegmentationCompressionWork\PlayWright-Extractor\playwright_scripts\CA_Match_Process_Optimized.py", line 624, in process_bank_transactions
+    return processor.run()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\OneDrive - Cognitive Consulting Sdn Bhd (1)\Desktop\SegmentationCompressionWork\PlayWright-Extractor\playwright_scripts\CA_Match_Process_Optimized.py", line 562, in run
+    self.log(f"FATAL ERROR: {e}", "error")
+    ^^^^^^^^
+AttributeError: 'CAMatchProcessor' object has no attribute 'log'
+2025-12-02 14:15:06,381 - ERROR - 
+======================================================================
+2025-12-02 14:15:06,381 - ERROR - ❌ AUTOMATION WORKFLOW FAILED
+2025-12-02 14:15:06,382 - ERROR - ======================================================================
+2025-12-02 14:15:06,382 - ERROR - Error: 'CAMatchProcessor' object has no attribute 'log'
+2025-12-02 14:15:06,382 - ERROR - ======================================================================
+2025-12-02 14:15:36,743 - INFO - ======================================================================
+2025-12-02 14:15:36,744 - INFO - PLAYWRIGHT AUTOMATION RUNNER
+2025-12-02 14:15:36,744 - INFO - ======================================================================
+2025-12-02 14:15:36,744 - INFO - Account: RPA Process Failed
+2025-12-02 14:15:36,745 - INFO - Date: RPA Process Failed
+2025-12-02 14:15:36,745 - INFO - Amount: 100.0
+2025-12-02 14:15:36,745 - INFO - Headless Mode: True
+2025-12-02 14:15:36,745 - INFO - Downloads Dir: C:\Users\Lenovo\OneDrive - Cognitive Consulting Sdn Bhd (1)\Desktop\SegmentationCompressionWork\PlayWright-Extractor\Downloads
+2025-12-02 14:15:36,745 - INFO - ======================================================================
+2025-12-02 14:15:36,745 - INFO - 
+🚀 Starting complete automation workflow...
+
+2025-12-02 14:15:36,746 - INFO - 
+======================================================================
+2025-12-02 14:15:36,746 - INFO - STEP 1: CA MATCH PROCESS
+2025-12-02 14:15:36,746 - INFO - ======================================================================
+2025-12-02 14:15:37,548 - INFO - Starting CA Match process...
+2025-12-02 14:15:37,568 - ERROR - ❌ CA Match failed: 'CAMatchProcessor' object has no attribute 'log'
+Traceback (most recent call last):
+  File "C:\Users\Lenovo\OneDrive - Cognitive Consulting Sdn Bhd (1)\Desktop\SegmentationCompressionWork\PlayWright-Extractor\playwright_scripts\CA_Match_Process_Optimized.py", line 498, in run
+    self.send_pingback("started")
+    ^^^^^^^^^^^^^^^^^^
+AttributeError: 'CAMatchProcessor' object has no attribute 'send_pingback'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Lenovo\OneDrive - Cognitive Consulting Sdn Bhd (1)\Desktop\SegmentationCompressionWork\PlayWright-Extractor\playwright_scripts\run_playwright.py", line 142, in run_ca_match
+    records = process_bank_transactions(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\OneDrive - Cognitive Consulting Sdn Bhd (1)\Desktop\SegmentationCompressionWork\PlayWright-Extractor\playwright_scripts\CA_Match_Process_Optimized.py", line 624, in process_bank_transactions
+    return processor.run()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\OneDrive - Cognitive Consulting Sdn Bhd (1)\Desktop\SegmentationCompressionWork\PlayWright-Extractor\playwright_scripts\CA_Match_Process_Optimized.py", line 562, in run
+    self.log(f"FATAL ERROR: {e}", "error")
+    ^^^^^^^^
+AttributeError: 'CAMatchProcessor' object has no attribute 'log'
+2025-12-02 14:15:37,571 - ERROR - 
+======================================================================
+2025-12-02 14:15:37,571 - ERROR - ❌ AUTOMATION WORKFLOW FAILED
+2025-12-02 14:15:37,572 - ERROR - ======================================================================
+2025-12-02 14:15:37,572 - ERROR - Error: 'CAMatchProcessor' object has no attribute 'log'
+2025-12-02 14:15:37,572 - ERROR - ======================================================================
+2025-12-02 14:15:39,649 - INFO - ======================================================================
+2025-12-02 14:15:39,650 - INFO - PLAYWRIGHT AUTOMATION RUNNER
+2025-12-02 14:15:39,654 - INFO - ======================================================================
+2025-12-02 14:15:39,655 - INFO - Account: RPA Process Failed
+2025-12-02 14:15:39,655 - INFO - Date: RPA Process Failed
+2025-12-02 14:15:39,656 - INFO - Amount: 100.0
+2025-12-02 14:15:39,657 - INFO - Headless Mode: True
+2025-12-02 14:15:39,657 - INFO - Downloads Dir: C:\Users\Lenovo\OneDrive - Cognitive Consulting Sdn Bhd (1)\Desktop\SegmentationCompressionWork\PlayWright-Extractor\Downloads
+2025-12-02 14:15:39,657 - INFO - ======================================================================
+2025-12-02 14:15:39,657 - INFO - 
+🚀 Starting complete automation workflow...
+
+2025-12-02 14:15:39,657 - INFO - 
+======================================================================
+2025-12-02 14:15:39,658 - INFO - STEP 1: CA MATCH PROCESS
+2025-12-02 14:15:39,658 - INFO - ======================================================================
+2025-12-02 14:15:40,448 - INFO - Starting CA Match process...
+2025-12-02 14:15:40,449 - INFO - ============================================================
+2025-12-02 14:15:40,450 - INFO - CA MATCH PROCESS - OPTIMIZED VERSION
+2025-12-02 14:15:40,451 - INFO - ============================================================
+2025-12-02 14:15:40,452 - INFO - Initializing browser...
+2025-12-02 14:15:42,631 - INFO - Browser initialized successfully
+2025-12-02 14:15:42,632 - INFO - Logging in...
+2025-12-02 14:15:48,495 - INFO - Navigating to Process Bank Records...
+2025-12-02 14:15:59,756 - INFO - Starting auto-match process...
+2025-12-02 14:16:09,788 - WARNING - Normal click failed for account link 'RPA Process Failed', trying force click...
+2025-12-02 14:16:14,805 - WARNING - Force click failed, trying JS click...
+2025-12-02 14:16:44,825 - ERROR - All click strategies failed for account link 'RPA Process Failed': Locator.evaluate: Timeout 30000ms exceeded.
+Call log:
+  - waiting for get_by_role("link", name="RPA Process Failed").last
+
+2025-12-02 14:16:59,868 - WARNING - Normal click failed for Auto-Match button, trying force click...
+2025-12-02 14:17:04,874 - WARNING - Force click failed, trying JS click...
+2025-12-02 14:17:34,892 - ERROR - All click strategies failed for Auto-Match button: Locator.evaluate: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("iframe[name=\"main\"]").content_frame.locator("#ctl00_phDS_ds_ToolBar_AutoMatch").get_by_text("Auto-Match")
+
+2025-12-02 14:17:36,907 - INFO - Waiting for auto-match confirmation...
+2025-12-02 14:17:41,915 - WARNING - No confirmation popup appeared - auto-match may not have started
+2025-12-02 14:17:41,917 - INFO - Processing auto-matched items...
+2025-12-02 14:17:51,923 - WARNING - Normal click failed for Process button, trying force click...
+2025-12-02 14:17:56,937 - WARNING - Force click failed, trying JS click...
+2025-12-02 14:18:26,957 - ERROR - All click strategies failed for Process button: Locator.evaluate: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("iframe[name=\"main\"]").content_frame.locator("#ctl00_phDS_ds_ToolBar_ProcessMatched").get_by_text("Process")
+
+2025-12-02 14:18:41,971 - WARNING - Normal click failed for Back button, trying force click...
+2025-12-02 14:18:46,976 - WARNING - Force click failed, trying JS click...
+2025-12-02 14:19:16,987 - ERROR - All click strategies failed for Back button: Locator.evaluate: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("iframe[name=\"main\"]").content_frame.locator("#ctl00_phDS_ds_ToolBar_CancelCloseToList div").nth(3)
+
+2025-12-02 14:19:19,999 - INFO - Starting manual matching process...
+2025-12-02 14:19:30,018 - WARNING - Normal click failed for account link 'RPA Process Failed', trying force click...
+2025-12-02 14:19:35,032 - WARNING - Force click failed, trying JS click...
+2025-12-02 14:19:50,450 - INFO - ======================================================================
+2025-12-02 14:19:50,450 - INFO - PLAYWRIGHT AUTOMATION RUNNER
+2025-12-02 14:19:50,450 - INFO - ======================================================================
+2025-12-02 14:19:50,451 - INFO - Account: CIM02
+2025-12-02 14:19:50,451 - INFO - Date: 02/11/2025
+2025-12-02 14:19:50,451 - INFO - Amount: 100.0
+2025-12-02 14:19:50,452 - INFO - Headless Mode: True
+2025-12-02 14:19:50,452 - INFO - Downloads Dir: C:\Users\Lenovo\OneDrive - Cognitive Consulting Sdn Bhd (1)\Desktop\SegmentationCompressionWork\PlayWright-Extractor\Downloads
+2025-12-02 14:19:50,452 - INFO - ======================================================================
+2025-12-02 14:19:50,453 - INFO - 
+🚀 Starting complete automation workflow...
+
+2025-12-02 14:19:50,453 - INFO - 
+======================================================================
+2025-12-02 14:19:50,453 - INFO - STEP 1: CA MATCH PROCESS
+2025-12-02 14:19:50,453 - INFO - ======================================================================
+2025-12-02 14:19:51,238 - INFO - Starting CA Match process...
+2025-12-02 14:19:51,239 - INFO - ============================================================
+2025-12-02 14:19:51,240 - INFO - CA MATCH PROCESS - OPTIMIZED VERSION
+2025-12-02 14:19:51,240 - INFO - ============================================================
+2025-12-02 14:19:51,241 - INFO - Initializing browser...
+2025-12-02 14:19:51,542 - INFO - Browser initialized successfully
+2025-12-02 14:19:51,543 - INFO - Logging in...
+2025-12-02 14:19:53,545 - INFO - Navigating to Process Bank Records...
+2025-12-02 14:20:03,037 - INFO - Starting auto-match process...
+2025-12-02 14:20:03,181 - INFO - Clicked account link 'CIM02' successfully
+2025-12-02 14:20:05,051 - ERROR - All click strategies failed for account link 'RPA Process Failed': Locator.evaluate: Timeout 30000ms exceeded.
+Call log:
+  - waiting for get_by_role("link", name="RPA Process Failed").last
+
+2025-12-02 14:20:10,068 - INFO - Processing page 1...
+2025-12-02 14:20:18,219 - WARNING - Normal click failed for Auto-Match button, trying force click...
+2025-12-02 14:20:20,667 - INFO - Force clicked Auto-Match button
+2025-12-02 14:20:22,694 - INFO - Waiting for auto-match confirmation...
+2025-12-02 14:20:27,702 - WARNING - No confirmation popup appeared - auto-match may not have started
+2025-12-02 14:20:27,704 - INFO - Processing auto-matched items...
+2025-12-02 14:20:27,801 - INFO - Clicked Process button successfully
+2025-12-02 14:20:30,087 - ERROR - Error during pagination on page 1: Frame.wait_for_selector: Timeout 20000ms exceeded.
+Call log:
+  - waiting for locator("#ctl00_phG_PXSplitContainer_grid1_dataT0")
+
+2025-12-02 14:20:30,088 - INFO - Pagination complete - processed 0 total rows across 1 pages
+2025-12-02 14:20:30,090 - INFO - Manual matching complete - 0 rows processed
+2025-12-02 14:20:30,090 - INFO - Processing manually matched items...
+2025-12-02 14:20:32,942 - INFO - Clicked Back button successfully
+2025-12-02 14:20:35,958 - INFO - Starting manual matching process...
+2025-12-02 14:20:36,067 - INFO - Clicked account link 'CIM02' successfully
+2025-12-02 14:20:40,105 - WARNING - Normal click failed for Process button (after manual matching), trying force click...
+2025-12-02 14:20:41,074 - INFO - Processing page 1...
+2025-12-02 14:20:41,124 - INFO - Found 12 rows on page 1
+2025-12-02 14:20:41,148 - INFO - Row 0 - Ext. Ref. Nbr.: 2507312241040258
+2025-12-02 14:20:41,159 - INFO - Row 0 - Already matched, skipping
+2025-12-02 14:20:41,178 - INFO - Row 1 - Ext. Ref. Nbr.: 2507311751140415
+2025-12-02 14:20:41,189 - INFO - Row 1 - Already matched, skipping
+2025-12-02 14:20:41,209 - INFO - Row 2 - Ext. Ref. Nbr.: 2507251839120853
+2025-12-02 14:20:41,220 - INFO - Row 2 - UNMATCHED, attempting to match...
+2025-12-02 14:20:41,311 - INFO - Clicked Ext. Ref. Nbr. in row 2 successfully
+2025-12-02 14:20:45,111 - WARNING - Force click failed, trying JS click...
+2025-12-02 14:20:46,358 - INFO - Found detail table Type B
+2025-12-02 14:20:46,367 - INFO - Processing 6 rows in detail table
+2025-12-02 14:20:46,398 - INFO - Row 1 - relevance: 30.0%
+2025-12-02 14:20:46,417 - INFO - Row 2 - relevance: 28.462%
+2025-12-02 14:20:46,437 - INFO - Row 3 - relevance: 26.705%
+2025-12-02 14:20:46,457 - INFO - Row 4 - relevance: 24.523%
+2025-12-02 14:20:46,466 - WARNING - Row 2 - No suitable match found
+2025-12-02 14:20:46,489 - INFO - Row 3 - Ext. Ref. Nbr.: 30756388
+2025-12-02 14:20:46,503 - INFO - Row 3 - Already matched, skipping
+2025-12-02 14:20:46,526 - INFO - Row 4 - Ext. Ref. Nbr.: 30756388
+2025-12-02 14:20:46,539 - INFO - Row 4 - Already matched, skipping
+2025-12-02 14:20:46,562 - INFO - Row 5 - Ext. Ref. Nbr.: 2507210654350063
+2025-12-02 14:20:46,578 - INFO - Row 5 - UNMATCHED, attempting to match...
+2025-12-02 14:20:46,680 - INFO - Clicked Ext. Ref. Nbr. in row 5 successfully
+2025-12-02 14:20:51,713 - INFO - Found detail table Type B
+2025-12-02 14:20:51,723 - INFO - Processing 6 rows in detail table
+2025-12-02 14:20:51,754 - INFO - Row 1 - relevance: 30.0%
+2025-12-02 14:20:51,773 - INFO - Row 2 - relevance: 28.462%
+2025-12-02 14:20:51,794 - INFO - Row 3 - relevance: 26.705%
+2025-12-02 14:20:51,813 - INFO - Row 4 - relevance: 24.523%
+2025-12-02 14:20:51,824 - WARNING - Row 5 - No suitable match found
+2025-12-02 14:20:51,846 - INFO - Row 6 - Ext. Ref. Nbr.: 2507181637590200
+2025-12-02 14:20:51,857 - INFO - Row 6 - Already matched, skipping
+2025-12-02 14:20:51,877 - INFO - Row 7 - Ext. Ref. Nbr.: 2507150813200409
+2025-12-02 14:20:51,887 - INFO - Row 7 - UNMATCHED, attempting to match...
+2025-12-02 14:20:51,971 - INFO - Clicked Ext. Ref. Nbr. in row 7 successfully
+2025-12-02 14:20:57,011 - INFO - Found detail table Type B
+2025-12-02 14:20:57,021 - INFO - Processing 3 rows in detail table
+2025-12-02 14:20:57,090 - INFO - Row 1 - relevance: 30.0%
+2025-12-02 14:20:57,099 - WARNING - Row 7 - No suitable match found
+2025-12-02 14:20:57,119 - INFO - Row 8 - Ext. Ref. Nbr.: 2507110714350678
+2025-12-02 14:20:57,129 - INFO - Row 8 - Already matched, skipping
+2025-12-02 14:20:57,149 - INFO - Row 9 - Ext. Ref. Nbr.: 2507051851570603
+2025-12-02 14:20:57,159 - INFO - Row 9 - UNMATCHED, attempting to match...
+2025-12-02 14:20:57,254 - INFO - Clicked Ext. Ref. Nbr. in row 9 successfully
+2025-12-02 14:21:02,295 - INFO - Found detail table Type B
+2025-12-02 14:21:02,304 - INFO - Processing 5 rows in detail table
+2025-12-02 14:21:02,334 - INFO - Row 1 - relevance: 30.0%
+2025-12-02 14:21:02,354 - INFO - Row 2 - relevance: 29.604%
+2025-12-02 14:21:02,373 - INFO - Row 3 - relevance: 24.523%
+2025-12-02 14:21:02,385 - WARNING - Row 9 - No suitable match found
+2025-12-02 14:21:02,405 - INFO - Row 10 - Ext. Ref. Nbr.: 2507011814040342
+2025-12-02 14:21:02,415 - INFO - Row 10 - UNMATCHED, attempting to match...
+2025-12-02 14:21:02,482 - INFO - Clicked Ext. Ref. Nbr. in row 10 successfully
+2025-12-02 14:21:07,511 - INFO - Found detail table Type B
+2025-12-02 14:21:07,521 - INFO - Processing 5 rows in detail table
+2025-12-02 14:21:07,552 - INFO - Row 1 - relevance: 30.0%
+2025-12-02 14:21:07,572 - INFO - Row 2 - relevance: 26.705%
+2025-12-02 14:21:07,591 - INFO - Row 3 - relevance: 24.523%
+2025-12-02 14:21:07,602 - WARNING - Row 10 - No suitable match found
+2025-12-02 14:21:07,612 - INFO - No more pages - pagination complete
+2025-12-02 14:21:07,614 - INFO - Pagination complete - processed 11 total rows across 1 pages
+2025-12-02 14:21:07,615 - INFO - Manual matching complete - 11 rows processed
+2025-12-02 14:21:07,616 - INFO - Processing manually matched items...
+2025-12-02 14:21:07,701 - INFO - Clicked Process button (after manual matching) successfully
+2025-12-02 14:21:12,839 - INFO - Clicked Back to list button successfully
+2025-12-02 14:21:15,122 - ERROR - All click strategies failed for Process button (after manual matching): Locator.evaluate: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("iframe[name=\"main\"]").content_frame.locator("#ctl00_phDS_ds_ToolBar_ProcessMatched").get_by_text("Process")
+
+2025-12-02 14:21:15,847 - INFO - Downloading results...
+2025-12-02 14:21:15,963 - INFO - Clicked account link 'CIM02' successfully
+2025-12-02 14:21:21,070 - INFO - Clicked Export dropdown successfully
+2025-12-02 14:21:21,185 - INFO - Clicked Export to Excel button successfully
+2025-12-02 14:21:30,144 - WARNING - Normal click failed for Back to list button, trying force click...
+2025-12-02 14:21:32,703 - INFO - Download started: Process Bank Transactions 20251202.xlsx
+2025-12-02 14:21:33,550 - INFO - âœ… File saved to: C:\Users\Lenovo\OneDrive - Cognitive Consulting Sdn Bhd (1)\Desktop\SegmentationCompressionWork\PlayWright-Extractor\Downloads\Process Bank Transactions 20251202.xlsx
+2025-12-02 14:21:33,551 - INFO - Processing downloaded file: C:\Users\Lenovo\OneDrive - Cognitive Consulting Sdn Bhd (1)\Desktop\SegmentationCompressionWork\PlayWright-Extractor\Downloads\Process Bank Transactions 20251202.xlsx
+2025-12-02 14:21:33,880 - WARNING - Could not determine dtype for column 1, falling back to string
+2025-12-02 14:21:33,880 - WARNING - Could not determine dtype for column 6, falling back to string
+2025-12-02 14:21:33,881 - WARNING - Could not determine dtype for column 8, falling back to string
+2025-12-02 14:21:33,881 - WARNING - Could not determine dtype for column 9, falling back to string
+2025-12-02 14:21:33,882 - WARNING - Could not determine dtype for column 11, falling back to string
+2025-12-02 14:21:33,882 - WARNING - Could not determine dtype for column 13, falling back to string
+2025-12-02 14:21:33,882 - WARNING - Could not determine dtype for column 14, falling back to string
+2025-12-02 14:21:33,883 - WARNING - Could not determine dtype for column 17, falling back to string
+2025-12-02 14:21:33,883 - WARNING - Could not determine dtype for column 18, falling back to string
+2025-12-02 14:21:33,883 - WARNING - Could not determine dtype for column 20, falling back to string
+2025-12-02 14:21:34,016 - INFO - Processed 11 records from downloaded file
+2025-12-02 14:21:34,190 - INFO - Browser cleanup completed
+2025-12-02 14:21:34,192 - INFO - Chaining to Extract Reconciliation Statement...
+2025-12-02 14:21:35,153 - WARNING - Force click failed, trying JS click...
+2025-12-02 14:22:05,161 - ERROR - All click strategies failed for Back to list button: Locator.evaluate: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("iframe[name=\"main\"]").content_frame.locator("#ctl00_phDS_ds_ToolBar_CancelCloseToList div").first
+
+2025-12-02 14:22:08,170 - INFO - Downloading results...
+2025-12-02 14:22:18,198 - WARNING - Normal click failed for account link 'RPA Process Failed', trying force click...
+2025-12-02 14:22:23,208 - WARNING - Force click failed, trying JS click...
+2025-12-02 14:22:53,229 - ERROR - All click strategies failed for account link 'RPA Process Failed': Locator.evaluate: Timeout 30000ms exceeded.
+Call log:
+  - waiting for get_by_role("link", name="RPA Process Failed").last
+
+2025-12-02 14:23:08,262 - WARNING - Normal click failed for Export dropdown, trying force click...
+2025-12-02 14:23:13,271 - WARNING - Force click failed, trying JS click...
+2025-12-02 14:23:30,814 - WARNING - Could not determine dtype for column 2, falling back to string
+2025-12-02 14:23:30,814 - WARNING - Could not determine dtype for column 11, falling back to string
+2025-12-02 14:23:30,815 - WARNING - Could not determine dtype for column 12, falling back to string
+2025-12-02 14:23:43,281 - ERROR - All click strategies failed for Export dropdown: Locator.evaluate: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("iframe[name=\"main\"]").content_frame.locator("#ctl00_phG_PXSplitContainer_grid1_at_tlb_ul > li:nth-child(14)")
+
+2025-12-02 14:23:53,297 - WARNING - Normal click failed for Export to Excel button, trying force click...
+2025-12-02 14:23:58,314 - WARNING - Force click failed, trying JS click...
+2025-12-02 14:24:28,322 - ERROR - All click strategies failed for Export to Excel button: Locator.evaluate: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("#ctl00_phG_PXSplitContainer_grid1_at_tlb_menuhi_item_3")
+
+2025-12-02 14:24:28,323 - ERROR - FATAL ERROR: Timeout 30000ms exceeded while waiting for event "download"
+=========================== logs ===========================
+waiting for event "download"
+============================================================
+2025-12-02 14:24:28,455 - INFO - Browser cleanup completed
+2025-12-02 14:24:28,472 - ERROR - ❌ CA Match failed: Timeout 30000ms exceeded while waiting for event "download"
+=========================== logs ===========================
+waiting for event "download"
+============================================================
+Traceback (most recent call last):
+  File "C:\Users\Lenovo\OneDrive - Cognitive Consulting Sdn Bhd (1)\Desktop\SegmentationCompressionWork\PlayWright-Extractor\playwright_scripts\run_playwright.py", line 142, in run_ca_match
+    records = process_bank_transactions(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\OneDrive - Cognitive Consulting Sdn Bhd (1)\Desktop\SegmentationCompressionWork\PlayWright-Extractor\playwright_scripts\CA_Match_Process_Optimized.py", line 643, in process_bank_transactions
+    return processor.run()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\OneDrive - Cognitive Consulting Sdn Bhd (1)\Desktop\SegmentationCompressionWork\PlayWright-Extractor\playwright_scripts\CA_Match_Process_Optimized.py", line 540, in run
+    save_path = self.download_results()
+                ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\OneDrive - Cognitive Consulting Sdn Bhd (1)\Desktop\SegmentationCompressionWork\PlayWright-Extractor\playwright_scripts\CA_Match_Process_Optimized.py", line 457, in download_results
+    with self.page.expect_download() as download_info:
+  File "C:\Users\Lenovo\OneDrive - Cognitive Consulting Sdn Bhd (1)\Desktop\SegmentationCompressionWork\PlayWright-Extractor\.venv_clean\Lib\site-packages\playwright\_impl\_sync_base.py", line 85, in __exit__
+    self._event.value
+  File "C:\Users\Lenovo\OneDrive - Cognitive Consulting Sdn Bhd (1)\Desktop\SegmentationCompressionWork\PlayWright-Extractor\.venv_clean\Lib\site-packages\playwright\_impl\_sync_base.py", line 59, in value
+    raise exception
+playwright._impl._errors.TimeoutError: Timeout 30000ms exceeded while waiting for event "download"
+=========================== logs ===========================
+waiting for event "download"
+============================================================
+2025-12-02 14:24:28,473 - ERROR - 
+======================================================================
+2025-12-02 14:24:28,474 - ERROR - ❌ AUTOMATION WORKFLOW FAILED
+2025-12-02 14:24:28,474 - ERROR - ======================================================================
+2025-12-02 14:24:28,474 - ERROR - Error: Timeout 30000ms exceeded while waiting for event "download"
+=========================== logs ===========================
+waiting for event "download"
+============================================================
+2025-12-02 14:24:28,474 - ERROR - ======================================================================
+2025-12-02 14:24:30,560 - INFO - ======================================================================
+2025-12-02 14:24:30,561 - INFO - PLAYWRIGHT AUTOMATION RUNNER
+2025-12-02 14:24:30,561 - INFO - ======================================================================
+2025-12-02 14:24:30,562 - INFO - Account: RPA Process Failed
+2025-12-02 14:24:30,562 - INFO - Date: RPA Process Failed
+2025-12-02 14:24:30,562 - INFO - Amount: 100.0
+2025-12-02 14:24:30,562 - INFO - Headless Mode: True
+2025-12-02 14:24:30,562 - INFO - Downloads Dir: C:\Users\Lenovo\OneDrive - Cognitive Consulting Sdn Bhd (1)\Desktop\SegmentationCompressionWork\PlayWright-Extractor\Downloads
+2025-12-02 14:24:30,562 - INFO - ======================================================================
+2025-12-02 14:24:30,563 - INFO - 
+🚀 Starting complete automation workflow...
+
+2025-12-02 14:24:30,563 - INFO - 
+======================================================================
+2025-12-02 14:24:30,563 - INFO - STEP 1: CA MATCH PROCESS
+2025-12-02 14:24:30,564 - INFO - ======================================================================
+2025-12-02 14:24:31,338 - INFO - Starting CA Match process...
+2025-12-02 14:24:31,339 - INFO - ============================================================
+2025-12-02 14:24:31,340 - INFO - CA MATCH PROCESS - OPTIMIZED VERSION
+2025-12-02 14:24:31,340 - INFO - ============================================================
+2025-12-02 14:24:31,341 - INFO - Initializing browser...
+2025-12-02 14:24:31,647 - INFO - Browser initialized successfully
+2025-12-02 14:24:31,648 - INFO - Logging in...
+2025-12-02 14:24:33,550 - INFO - Navigating to Process Bank Records...
+2025-12-02 14:24:43,057 - INFO - Starting auto-match process...
+2025-12-02 14:24:53,085 - WARNING - Normal click failed for account link 'RPA Process Failed', trying force click...
+2025-12-02 14:24:58,091 - WARNING - Force click failed, trying JS click...
+2025-12-02 14:25:28,103 - ERROR - All click strategies failed for account link 'RPA Process Failed': Locator.evaluate: Timeout 30000ms exceeded.
+Call log:
+  - waiting for get_by_role("link", name="RPA Process Failed").last
+
+2025-12-02 14:25:43,135 - WARNING - Normal click failed for Auto-Match button, trying force click...
+2025-12-02 14:25:48,140 - WARNING - Force click failed, trying JS click...
+2025-12-02 14:26:18,151 - ERROR - All click strategies failed for Auto-Match button: Locator.evaluate: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("iframe[name=\"main\"]").content_frame.locator("#ctl00_phDS_ds_ToolBar_AutoMatch").get_by_text("Auto-Match")
+
+2025-12-02 14:26:20,182 - INFO - Waiting for auto-match confirmation...
+2025-12-02 14:26:25,195 - WARNING - No confirmation popup appeared - auto-match may not have started
+2025-12-02 14:26:25,196 - INFO - Processing auto-matched items...
+2025-12-02 14:26:35,206 - WARNING - Normal click failed for Process button, trying force click...
+2025-12-02 14:26:40,210 - WARNING - Force click failed, trying JS click...
+2025-12-02 14:27:10,230 - ERROR - All click strategies failed for Process button: Locator.evaluate: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("iframe[name=\"main\"]").content_frame.locator("#ctl00_phDS_ds_ToolBar_ProcessMatched").get_by_text("Process")
+
+2025-12-02 14:27:25,253 - WARNING - Normal click failed for Back button, trying force click...
+2025-12-02 14:27:30,269 - WARNING - Force click failed, trying JS click...
+2025-12-02 14:28:00,282 - ERROR - All click strategies failed for Back button: Locator.evaluate: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("iframe[name=\"main\"]").content_frame.locator("#ctl00_phDS_ds_ToolBar_CancelCloseToList div").nth(3)
+
+2025-12-02 14:28:03,303 - INFO - Starting manual matching process...
+2025-12-02 14:28:13,327 - WARNING - Normal click failed for account link 'RPA Process Failed', trying force click...
+2025-12-02 14:28:18,337 - WARNING - Force click failed, trying JS click...
+2025-12-02 14:28:48,353 - ERROR - All click strategies failed for account link 'RPA Process Failed': Locator.evaluate: Timeout 30000ms exceeded.
+Call log:
+  - waiting for get_by_role("link", name="RPA Process Failed").last
+
+2025-12-02 14:28:53,362 - INFO - Processing page 1...
+2025-12-02 14:29:13,384 - ERROR - Error during pagination on page 1: Frame.wait_for_selector: Timeout 20000ms exceeded.
+Call log:
+  - waiting for locator("#ctl00_phG_PXSplitContainer_grid1_dataT0")
+
+2025-12-02 14:29:13,385 - INFO - Pagination complete - processed 0 total rows across 1 pages
+2025-12-02 14:29:13,387 - INFO - Manual matching complete - 0 rows processed
+2025-12-02 14:29:13,388 - INFO - Processing manually matched items...
+2025-12-02 14:29:23,398 - WARNING - Normal click failed for Process button (after manual matching), trying force click...
+2025-12-02 14:29:28,405 - WARNING - Force click failed, trying JS click...
+2025-12-02 14:29:58,422 - ERROR - All click strategies failed for Process button (after manual matching): Locator.evaluate: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("iframe[name=\"main\"]").content_frame.locator("#ctl00_phDS_ds_ToolBar_ProcessMatched").get_by_text("Process")
+
+2025-12-02 14:30:13,446 - WARNING - Normal click failed for Back to list button, trying force click...
+2025-12-02 14:30:18,466 - WARNING - Force click failed, trying JS click...
+2025-12-02 14:30:48,481 - ERROR - All click strategies failed for Back to list button: Locator.evaluate: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("iframe[name=\"main\"]").content_frame.locator("#ctl00_phDS_ds_ToolBar_CancelCloseToList div").first
+
+2025-12-02 14:30:51,494 - INFO - Downloading results...
+2025-12-02 14:31:01,527 - WARNING - Normal click failed for account link 'RPA Process Failed', trying force click...
+2025-12-02 14:31:06,538 - WARNING - Force click failed, trying JS click...
+2025-12-02 14:31:36,554 - ERROR - All click strategies failed for account link 'RPA Process Failed': Locator.evaluate: Timeout 30000ms exceeded.
+Call log:
+  - waiting for get_by_role("link", name="RPA Process Failed").last
+
+2025-12-02 14:31:51,593 - WARNING - Normal click failed for Export dropdown, trying force click...
+2025-12-02 14:31:56,608 - WARNING - Force click failed, trying JS click...
+2025-12-02 14:32:26,619 - ERROR - All click strategies failed for Export dropdown: Locator.evaluate: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("iframe[name=\"main\"]").content_frame.locator("#ctl00_phG_PXSplitContainer_grid1_at_tlb_ul > li:nth-child(14)")
+
+2025-12-02 14:32:36,633 - WARNING - Normal click failed for Export to Excel button, trying force click...
+2025-12-02 14:32:41,640 - WARNING - Force click failed, trying JS click...
+2025-12-02 14:33:11,647 - ERROR - All click strategies failed for Export to Excel button: Locator.evaluate: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("#ctl00_phG_PXSplitContainer_grid1_at_tlb_menuhi_item_3")
+
+2025-12-02 14:33:11,649 - ERROR - FATAL ERROR: Timeout 30000ms exceeded while waiting for event "download"
+=========================== logs ===========================
+waiting for event "download"
+============================================================
+2025-12-02 14:33:11,780 - INFO - Browser cleanup completed
+2025-12-02 14:33:11,802 - ERROR - ❌ CA Match failed: Timeout 30000ms exceeded while waiting for event "download"
+=========================== logs ===========================
+waiting for event "download"
+============================================================
+Traceback (most recent call last):
+  File "C:\Users\Lenovo\OneDrive - Cognitive Consulting Sdn Bhd (1)\Desktop\SegmentationCompressionWork\PlayWright-Extractor\playwright_scripts\run_playwright.py", line 142, in run_ca_match
+    records = process_bank_transactions(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\OneDrive - Cognitive Consulting Sdn Bhd (1)\Desktop\SegmentationCompressionWork\PlayWright-Extractor\playwright_scripts\CA_Match_Process_Optimized.py", line 643, in process_bank_transactions
+    return processor.run()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\OneDrive - Cognitive Consulting Sdn Bhd (1)\Desktop\SegmentationCompressionWork\PlayWright-Extractor\playwright_scripts\CA_Match_Process_Optimized.py", line 540, in run
+    save_path = self.download_results()
+                ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\OneDrive - Cognitive Consulting Sdn Bhd (1)\Desktop\SegmentationCompressionWork\PlayWright-Extractor\playwright_scripts\CA_Match_Process_Optimized.py", line 457, in download_results
+    with self.page.expect_download() as download_info:
+  File "C:\Users\Lenovo\OneDrive - Cognitive Consulting Sdn Bhd (1)\Desktop\SegmentationCompressionWork\PlayWright-Extractor\.venv_clean\Lib\site-packages\playwright\_impl\_sync_base.py", line 85, in __exit__
+    self._event.value
+  File "C:\Users\Lenovo\OneDrive - Cognitive Consulting Sdn Bhd (1)\Desktop\SegmentationCompressionWork\PlayWright-Extractor\.venv_clean\Lib\site-packages\playwright\_impl\_sync_base.py", line 59, in value
+    raise exception
+playwright._impl._errors.TimeoutError: Timeout 30000ms exceeded while waiting for event "download"
+=========================== logs ===========================
+waiting for event "download"
+============================================================
+2025-12-02 14:33:11,804 - ERROR - 
+======================================================================
+2025-12-02 14:33:11,804 - ERROR - ❌ AUTOMATION WORKFLOW FAILED
+2025-12-02 14:33:11,805 - ERROR - ======================================================================
+2025-12-02 14:33:11,805 - ERROR - Error: Timeout 30000ms exceeded while waiting for event "download"
+=========================== logs ===========================
+waiting for event "download"
+============================================================
+2025-12-02 14:33:11,805 - ERROR - ======================================================================
+2025-12-02 14:33:27,262 - INFO - Loaded 11 bank transactions and 3719 company transactions
+2025-12-02 14:33:27,268 - INFO - Starting Stage 1: Traditional reconciliation pipeline...
+2025-12-02 14:33:27,305 - DEBUG - MBB02 credit card matcher skipped: support module not available
+2025-12-02 14:33:27,308 - INFO - Finding transaction ID matches...
+2025-12-02 14:33:29,392 - INFO - Finding bank charges...
+2025-12-02 14:33:29,396 - DEBUG - After bank charges detection: 1 matched (added 1)
+2025-12-02 14:33:29,397 - INFO - Detected 1 bank charges
+2025-12-02 14:33:29,398 - INFO - Finding Reverse CE GL matches...
+2025-12-02 14:33:30,372 - INFO - Found 2 Reverse CE GL matches
+2025-12-02 14:33:30,376 - INFO - Finding name and amount matches...
+2025-12-02 14:33:33,680 - INFO - Found 9 name and amount matches
+2025-12-02 14:33:33,681 - INFO - Finding Hungarian 1:1 matches...
+2025-12-02 14:33:40,650 - INFO - Hungarian 1:1: 0 matches | pairs scored=45, kept=0, time=6.97s
+2025-12-02 14:33:40,653 - INFO - Finding enhanced 1:1 matches...
+2025-12-02 14:33:41,991 - INFO - Found 0 enhanced 1:1 matches
+2025-12-02 14:33:41,994 - INFO - Finding amount and date matches...
+2025-12-02 14:33:42,167 - INFO - Found 0 amount and date matches
+2025-12-02 14:33:42,169 - INFO - Finding fuzzy matches...
+2025-12-02 14:33:46,161 - INFO - ======================================================================
+2025-12-02 14:33:46,161 - INFO - PLAYWRIGHT AUTOMATION RUNNER
+2025-12-02 14:33:46,162 - INFO - ======================================================================
+2025-12-02 14:33:46,162 - INFO - Account: RPA Process Failed
+2025-12-02 14:33:46,162 - INFO - Date: RPA Process Failed
+2025-12-02 14:33:46,163 - INFO - Amount: 100.0
+2025-12-02 14:33:46,163 - INFO - Headless Mode: True
+2025-12-02 14:33:46,163 - INFO - Downloads Dir: C:\Users\Lenovo\OneDrive - Cognitive Consulting Sdn Bhd (1)\Desktop\SegmentationCompressionWork\PlayWright-Extractor\Downloads
+2025-12-02 14:33:46,163 - INFO - ======================================================================
+2025-12-02 14:33:46,164 - INFO - 
+🚀 Starting complete automation workflow...
+
+2025-12-02 14:33:46,164 - INFO - 
+======================================================================
+2025-12-02 14:33:46,164 - INFO - STEP 1: CA MATCH PROCESS
+2025-12-02 14:33:46,164 - INFO - ======================================================================
+2025-12-02 14:33:46,996 - INFO - Starting CA Match process...
+2025-12-02 14:33:46,997 - INFO - ============================================================
+2025-12-02 14:33:46,998 - INFO - CA MATCH PROCESS - OPTIMIZED VERSION
+2025-12-02 14:33:46,999 - INFO - ============================================================
+2025-12-02 14:33:47,000 - INFO - Initializing browser...
+2025-12-02 14:33:47,322 - INFO - Browser initialized successfully
+2025-12-02 14:33:47,323 - INFO - Logging in...
+2025-12-02 14:33:49,482 - INFO - Navigating to Process Bank Records...
+2025-12-02 14:33:59,489 - INFO - Starting auto-match process...
+2025-12-02 14:34:09,515 - WARNING - Normal click failed for account link 'RPA Process Failed', trying force click...
+2025-12-02 14:34:14,529 - WARNING - Force click failed, trying JS click...
+2025-12-02 14:34:44,537 - ERROR - All click strategies failed for account link 'RPA Process Failed': Locator.evaluate: Timeout 30000ms exceeded.
+Call log:
+  - waiting for get_by_role("link", name="RPA Process Failed").last
+
+2025-12-02 14:34:59,584 - WARNING - Normal click failed for Auto-Match button, trying force click...
+2025-12-02 14:35:04,594 - WARNING - Force click failed, trying JS click...
+2025-12-02 14:35:34,607 - ERROR - All click strategies failed for Auto-Match button: Locator.evaluate: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("iframe[name=\"main\"]").content_frame.locator("#ctl00_phDS_ds_ToolBar_AutoMatch").get_by_text("Auto-Match")
+
+2025-12-02 14:35:36,630 - INFO - Waiting for auto-match confirmation...
+2025-12-02 14:35:39,039 - INFO - ============================================================
+2025-12-02 14:35:39,040 - INFO - CA MATCH PROCESS COMPLETED SUCCESSFULLY
+2025-12-02 14:35:39,041 - INFO - ============================================================
+2025-12-02 14:35:39,042 - INFO - ✅ CA Match completed: 11 records processed
+2025-12-02 14:35:39,059 - INFO - 
+======================================================================
+2025-12-02 14:35:39,060 - INFO - ✅ COMPLETE AUTOMATION WORKFLOW FINISHED SUCCESSFULLY
+2025-12-02 14:35:39,060 - INFO - ======================================================================
+2025-12-02 14:35:39,060 - INFO - 
+Workflow Summary:
+2025-12-02 14:35:39,060 - INFO -   ✅ CA Match Process - Completed
+2025-12-02 14:35:39,061 - INFO -   ✅ Extract Reconciliation Statement - Completed (chained)
+2025-12-02 14:35:39,061 - INFO -   ✅ RaasPlus Reconciliation - Completed (chained)
+2025-12-02 14:35:39,061 - INFO -   ✅ Match Statement - Completed (chained)
+2025-12-02 14:35:39,061 - INFO - 
+All processes completed successfully!
+2025-12-02 14:35:39,062 - INFO - Check logs for detailed information.
+2025-12-02 14:35:39,062 - INFO - ======================================================================
+2025-12-02 14:35:41,643 - WARNING - No confirmation popup appeared - auto-match may not have started
+2025-12-02 14:35:41,644 - INFO - Processing auto-matched items...
+2025-12-02 14:35:51,648 - WARNING - Normal click failed for Process button, trying force click...
+2025-12-02 14:35:56,656 - WARNING - Force click failed, trying JS click...
+2025-12-02 14:36:26,671 - ERROR - All click strategies failed for Process button: Locator.evaluate: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("iframe[name=\"main\"]").content_frame.locator("#ctl00_phDS_ds_ToolBar_ProcessMatched").get_by_text("Process")
+
+2025-12-02 14:36:41,690 - WARNING - Normal click failed for Back button, trying force click...
+2025-12-02 14:36:46,702 - WARNING - Force click failed, trying JS click...
+2025-12-02 14:37:16,721 - ERROR - All click strategies failed for Back button: Locator.evaluate: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("iframe[name=\"main\"]").content_frame.locator("#ctl00_phDS_ds_ToolBar_CancelCloseToList div").nth(3)
+
+2025-12-02 14:37:19,740 - INFO - Starting manual matching process...
+2025-12-02 14:37:29,757 - WARNING - Normal click failed for account link 'RPA Process Failed', trying force click...
+2025-12-02 14:37:34,770 - WARNING - Force click failed, trying JS click...
+2025-12-02 14:38:04,787 - ERROR - All click strategies failed for account link 'RPA Process Failed': Locator.evaluate: Timeout 30000ms exceeded.
+Call log:
+  - waiting for get_by_role("link", name="RPA Process Failed").last
+
+2025-12-02 14:38:09,803 - INFO - Processing page 1...
+2025-12-02 14:38:29,809 - ERROR - Error during pagination on page 1: Frame.wait_for_selector: Timeout 20000ms exceeded.
+Call log:
+  - waiting for locator("#ctl00_phG_PXSplitContainer_grid1_dataT0")
+
+2025-12-02 14:38:29,810 - INFO - Pagination complete - processed 0 total rows across 1 pages
+2025-12-02 14:38:29,811 - INFO - Manual matching complete - 0 rows processed
+2025-12-02 14:38:29,812 - INFO - Processing manually matched items...
+2025-12-02 14:38:39,831 - WARNING - Normal click failed for Process button (after manual matching), trying force click...
+2025-12-02 14:38:44,837 - WARNING - Force click failed, trying JS click...
+2025-12-02 14:39:14,848 - ERROR - All click strategies failed for Process button (after manual matching): Locator.evaluate: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("iframe[name=\"main\"]").content_frame.locator("#ctl00_phDS_ds_ToolBar_ProcessMatched").get_by_text("Process")
+
+2025-12-02 14:39:29,873 - WARNING - Normal click failed for Back to list button, trying force click...
+2025-12-02 14:39:34,889 - WARNING - Force click failed, trying JS click...
+2025-12-02 14:40:04,902 - ERROR - All click strategies failed for Back to list button: Locator.evaluate: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("iframe[name=\"main\"]").content_frame.locator("#ctl00_phDS_ds_ToolBar_CancelCloseToList div").first
+
+2025-12-02 14:40:07,921 - INFO - Downloading results...
+2025-12-02 14:40:17,949 - WARNING - Normal click failed for account link 'RPA Process Failed', trying force click...
+2025-12-02 14:40:22,971 - WARNING - Force click failed, trying JS click...
+2025-12-02 14:40:52,980 - ERROR - All click strategies failed for account link 'RPA Process Failed': Locator.evaluate: Timeout 30000ms exceeded.
+Call log:
+  - waiting for get_by_role("link", name="RPA Process Failed").last
+
+2025-12-02 14:41:08,005 - WARNING - Normal click failed for Export dropdown, trying force click...
+2025-12-02 14:41:13,022 - WARNING - Force click failed, trying JS click...
+2025-12-02 14:41:43,031 - ERROR - All click strategies failed for Export dropdown: Locator.evaluate: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("iframe[name=\"main\"]").content_frame.locator("#ctl00_phG_PXSplitContainer_grid1_at_tlb_ul > li:nth-child(14)")
+
+2025-12-02 14:41:53,043 - WARNING - Normal click failed for Export to Excel button, trying force click...
+2025-12-02 14:41:58,048 - WARNING - Force click failed, trying JS click...
+2025-12-02 14:42:28,058 - ERROR - All click strategies failed for Export to Excel button: Locator.evaluate: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("#ctl00_phG_PXSplitContainer_grid1_at_tlb_menuhi_item_3")
+
+2025-12-02 14:42:28,060 - ERROR - FATAL ERROR: Timeout 30000ms exceeded while waiting for event "download"
+=========================== logs ===========================
+waiting for event "download"
+============================================================
+2025-12-02 14:42:28,178 - INFO - Browser cleanup completed
+2025-12-02 14:42:28,197 - ERROR - ❌ CA Match failed: Timeout 30000ms exceeded while waiting for event "download"
+=========================== logs ===========================
+waiting for event "download"
+============================================================
+Traceback (most recent call last):
+  File "C:\Users\Lenovo\OneDrive - Cognitive Consulting Sdn Bhd (1)\Desktop\SegmentationCompressionWork\PlayWright-Extractor\playwright_scripts\run_playwright.py", line 142, in run_ca_match
+    records = process_bank_transactions(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\OneDrive - Cognitive Consulting Sdn Bhd (1)\Desktop\SegmentationCompressionWork\PlayWright-Extractor\playwright_scripts\CA_Match_Process_Optimized.py", line 643, in process_bank_transactions
+    return processor.run()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\OneDrive - Cognitive Consulting Sdn Bhd (1)\Desktop\SegmentationCompressionWork\PlayWright-Extractor\playwright_scripts\CA_Match_Process_Optimized.py", line 540, in run
+    save_path = self.download_results()
+                ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\OneDrive - Cognitive Consulting Sdn Bhd (1)\Desktop\SegmentationCompressionWork\PlayWright-Extractor\playwright_scripts\CA_Match_Process_Optimized.py", line 457, in download_results
+    with self.page.expect_download() as download_info:
+  File "C:\Users\Lenovo\OneDrive - Cognitive Consulting Sdn Bhd (1)\Desktop\SegmentationCompressionWork\PlayWright-Extractor\.venv_clean\Lib\site-packages\playwright\_impl\_sync_base.py", line 85, in __exit__
+    self._event.value
+  File "C:\Users\Lenovo\OneDrive - Cognitive Consulting Sdn Bhd (1)\Desktop\SegmentationCompressionWork\PlayWright-Extractor\.venv_clean\Lib\site-packages\playwright\_impl\_sync_base.py", line 59, in value
+    raise exception
+playwright._impl._errors.TimeoutError: Timeout 30000ms exceeded while waiting for event "download"
+=========================== logs ===========================
+waiting for event "download"
+============================================================
+2025-12-02 14:42:28,199 - ERROR - 
+======================================================================
+2025-12-02 14:42:28,200 - ERROR - ❌ AUTOMATION WORKFLOW FAILED
+2025-12-02 14:42:28,200 - ERROR - ======================================================================
+2025-12-02 14:42:28,200 - ERROR - Error: Timeout 30000ms exceeded while waiting for event "download"
+=========================== logs ===========================
+waiting for event "download"
+============================================================
+2025-12-02 14:42:28,200 - ERROR - ======================================================================
+2025-12-02 14:42:30,248 - INFO - ======================================================================
+2025-12-02 14:42:30,248 - INFO - PLAYWRIGHT AUTOMATION RUNNER
+2025-12-02 14:42:30,248 - INFO - ======================================================================
+2025-12-02 14:42:30,249 - INFO - Account: RPA Process Failed
+2025-12-02 14:42:30,249 - INFO - Date: RPA Process Failed
+2025-12-02 14:42:30,249 - INFO - Amount: 100.0
+2025-12-02 14:42:30,249 - INFO - Headless Mode: True
+2025-12-02 14:42:30,250 - INFO - Downloads Dir: C:\Users\Lenovo\OneDrive - Cognitive Consulting Sdn Bhd (1)\Desktop\SegmentationCompressionWork\PlayWright-Extractor\Downloads
+2025-12-02 14:42:30,250 - INFO - ======================================================================
+2025-12-02 14:42:30,251 - INFO - 
+🚀 Starting complete automation workflow...
+
+2025-12-02 14:42:30,251 - INFO - 
+======================================================================
+2025-12-02 14:42:30,251 - INFO - STEP 1: CA MATCH PROCESS
+2025-12-02 14:42:30,251 - INFO - ======================================================================
+2025-12-02 14:42:31,029 - INFO - Starting CA Match process...
+2025-12-02 14:42:31,031 - INFO - ============================================================
+2025-12-02 14:42:31,032 - INFO - CA MATCH PROCESS - OPTIMIZED VERSION
+2025-12-02 14:42:31,032 - INFO - ============================================================
+2025-12-02 14:42:31,033 - INFO - Initializing browser...
+2025-12-02 14:42:31,319 - INFO - Browser initialized successfully
+2025-12-02 14:42:31,319 - INFO - Logging in...
+2025-12-02 14:42:33,073 - INFO - Navigating to Process Bank Records...
+2025-12-02 14:42:42,248 - INFO - Starting auto-match process...
+2025-12-02 14:42:52,289 - WARNING - Normal click failed for account link 'RPA Process Failed', trying force click...
+2025-12-02 14:42:57,297 - WARNING - Force click failed, trying JS click...
+2025-12-02 14:43:27,308 - ERROR - All click strategies failed for account link 'RPA Process Failed': Locator.evaluate: Timeout 30000ms exceeded.
+Call log:
+  - waiting for get_by_role("link", name="RPA Process Failed").last
+
+2025-12-02 14:43:42,342 - WARNING - Normal click failed for Auto-Match button, trying force click...
+2025-12-02 14:43:47,363 - WARNING - Force click failed, trying JS click...
+2025-12-02 14:44:17,374 - ERROR - All click strategies failed for Auto-Match button: Locator.evaluate: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("iframe[name=\"main\"]").content_frame.locator("#ctl00_phDS_ds_ToolBar_AutoMatch").get_by_text("Auto-Match")
+
+2025-12-02 14:44:19,394 - INFO - Waiting for auto-match confirmation...
+2025-12-02 14:44:24,415 - WARNING - No confirmation popup appeared - auto-match may not have started
+2025-12-02 14:44:24,416 - INFO - Processing auto-matched items...
+2025-12-02 14:44:34,431 - WARNING - Normal click failed for Process button, trying force click...
+2025-12-02 14:44:39,451 - WARNING - Force click failed, trying JS click...
+2025-12-02 14:45:09,468 - ERROR - All click strategies failed for Process button: Locator.evaluate: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("iframe[name=\"main\"]").content_frame.locator("#ctl00_phDS_ds_ToolBar_ProcessMatched").get_by_text("Process")
+
+2025-12-02 14:45:24,496 - WARNING - Normal click failed for Back button, trying force click...
+2025-12-02 14:45:29,513 - WARNING - Force click failed, trying JS click...
+2025-12-02 14:45:59,534 - ERROR - All click strategies failed for Back button: Locator.evaluate: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("iframe[name=\"main\"]").content_frame.locator("#ctl00_phDS_ds_ToolBar_CancelCloseToList div").nth(3)
+
+2025-12-02 14:46:02,554 - INFO - Starting manual matching process...
+2025-12-02 14:46:12,580 - WARNING - Normal click failed for account link 'RPA Process Failed', trying force click...
+2025-12-02 14:46:17,593 - WARNING - Force click failed, trying JS click...
+2025-12-02 14:46:47,604 - ERROR - All click strategies failed for account link 'RPA Process Failed': Locator.evaluate: Timeout 30000ms exceeded.
+Call log:
+  - waiting for get_by_role("link", name="RPA Process Failed").last
+
+2025-12-02 14:46:52,620 - INFO - Processing page 1...
+2025-12-02 14:47:12,632 - ERROR - Error during pagination on page 1: Frame.wait_for_selector: Timeout 20000ms exceeded.
+Call log:
+  - waiting for locator("#ctl00_phG_PXSplitContainer_grid1_dataT0")
+
+2025-12-02 14:47:12,633 - INFO - Pagination complete - processed 0 total rows across 1 pages
+2025-12-02 14:47:12,634 - INFO - Manual matching complete - 0 rows processed
+2025-12-02 14:47:12,635 - INFO - Processing manually matched items...
+2025-12-02 14:47:22,657 - WARNING - Normal click failed for Process button (after manual matching), trying force click...
+2025-12-02 14:47:27,678 - WARNING - Force click failed, trying JS click...
+2025-12-02 14:47:57,685 - ERROR - All click strategies failed for Process button (after manual matching): Locator.evaluate: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("iframe[name=\"main\"]").content_frame.locator("#ctl00_phDS_ds_ToolBar_ProcessMatched").get_by_text("Process")
+
+2025-12-02 14:48:12,698 - WARNING - Normal click failed for Back to list button, trying force click...
+2025-12-02 14:48:17,716 - WARNING - Force click failed, trying JS click...
+2025-12-02 14:48:47,727 - ERROR - All click strategies failed for Back to list button: Locator.evaluate: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("iframe[name=\"main\"]").content_frame.locator("#ctl00_phDS_ds_ToolBar_CancelCloseToList div").first
+
+2025-12-02 14:48:50,747 - INFO - Downloading results...
+2025-12-02 14:49:00,774 - WARNING - Normal click failed for account link 'RPA Process Failed', trying force click...
+2025-12-02 14:49:05,793 - WARNING - Force click failed, trying JS click...
+2025-12-02 14:49:35,806 - ERROR - All click strategies failed for account link 'RPA Process Failed': Locator.evaluate: Timeout 30000ms exceeded.
+Call log:
+  - waiting for get_by_role("link", name="RPA Process Failed").last
+
+2025-12-02 14:49:50,836 - WARNING - Normal click failed for Export dropdown, trying force click...
+2025-12-02 14:49:55,841 - WARNING - Force click failed, trying JS click...
+2025-12-02 14:50:25,853 - ERROR - All click strategies failed for Export dropdown: Locator.evaluate: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("iframe[name=\"main\"]").content_frame.locator("#ctl00_phG_PXSplitContainer_grid1_at_tlb_ul > li:nth-child(14)")
+
+2025-12-02 14:50:35,881 - WARNING - Normal click failed for Export to Excel button, trying force click...
+2025-12-02 14:50:40,901 - WARNING - Force click failed, trying JS click...
+2025-12-02 14:51:10,914 - ERROR - All click strategies failed for Export to Excel button: Locator.evaluate: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("#ctl00_phG_PXSplitContainer_grid1_at_tlb_menuhi_item_3")
+
+2025-12-02 14:51:10,915 - ERROR - FATAL ERROR: Timeout 30000ms exceeded while waiting for event "download"
+=========================== logs ===========================
+waiting for event "download"
+============================================================
+2025-12-02 14:51:11,100 - INFO - Browser cleanup completed
+2025-12-02 14:51:11,124 - ERROR - ❌ CA Match failed: Timeout 30000ms exceeded while waiting for event "download"
+=========================== logs ===========================
+waiting for event "download"
+============================================================
+Traceback (most recent call last):
+  File "C:\Users\Lenovo\OneDrive - Cognitive Consulting Sdn Bhd (1)\Desktop\SegmentationCompressionWork\PlayWright-Extractor\playwright_scripts\run_playwright.py", line 142, in run_ca_match
+    records = process_bank_transactions(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\OneDrive - Cognitive Consulting Sdn Bhd (1)\Desktop\SegmentationCompressionWork\PlayWright-Extractor\playwright_scripts\CA_Match_Process_Optimized.py", line 643, in process_bank_transactions
+    return processor.run()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\OneDrive - Cognitive Consulting Sdn Bhd (1)\Desktop\SegmentationCompressionWork\PlayWright-Extractor\playwright_scripts\CA_Match_Process_Optimized.py", line 540, in run
+    save_path = self.download_results()
+                ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\OneDrive - Cognitive Consulting Sdn Bhd (1)\Desktop\SegmentationCompressionWork\PlayWright-Extractor\playwright_scripts\CA_Match_Process_Optimized.py", line 457, in download_results
+    with self.page.expect_download() as download_info:
+  File "C:\Users\Lenovo\OneDrive - Cognitive Consulting Sdn Bhd (1)\Desktop\SegmentationCompressionWork\PlayWright-Extractor\.venv_clean\Lib\site-packages\playwright\_impl\_sync_base.py", line 85, in __exit__
+    self._event.value
+  File "C:\Users\Lenovo\OneDrive - Cognitive Consulting Sdn Bhd (1)\Desktop\SegmentationCompressionWork\PlayWright-Extractor\.venv_clean\Lib\site-packages\playwright\_impl\_sync_base.py", line 59, in value
+    raise exception
+playwright._impl._errors.TimeoutError: Timeout 30000ms exceeded while waiting for event "download"
+=========================== logs ===========================
+waiting for event "download"
+============================================================
+2025-12-02 14:51:11,127 - ERROR - 
+======================================================================
+2025-12-02 14:51:11,127 - ERROR - ❌ AUTOMATION WORKFLOW FAILED
+2025-12-02 14:51:11,127 - ERROR - ======================================================================
+2025-12-02 14:51:11,128 - ERROR - Error: Timeout 30000ms exceeded while waiting for event "download"
+=========================== logs ===========================
+waiting for event "download"
+============================================================
+2025-12-02 14:51:11,128 - ERROR - ======================================================================
+2025-12-02 14:51:15,568 - INFO - ======================================================================
+2025-12-02 14:51:15,569 - INFO - PLAYWRIGHT AUTOMATION RUNNER
+2025-12-02 14:51:15,569 - INFO - ======================================================================
+2025-12-02 14:51:15,570 - INFO - Account: RPA Process Failed
+2025-12-02 14:51:15,570 - INFO - Date: RPA Process Failed
+2025-12-02 14:51:15,571 - INFO - Amount: 100.0
+2025-12-02 14:51:15,571 - INFO - Headless Mode: True
+2025-12-02 14:51:15,571 - INFO - Downloads Dir: C:\Users\Lenovo\OneDrive - Cognitive Consulting Sdn Bhd (1)\Desktop\SegmentationCompressionWork\PlayWright-Extractor\Downloads
+2025-12-02 14:51:15,572 - INFO - ======================================================================
+2025-12-02 14:51:15,572 - INFO - 
+🚀 Starting complete automation workflow...
+
+2025-12-02 14:51:15,572 - INFO - 
+======================================================================
+2025-12-02 14:51:15,573 - INFO - STEP 1: CA MATCH PROCESS
+2025-12-02 14:51:15,573 - INFO - ======================================================================
+2025-12-02 14:51:21,349 - INFO - Starting CA Match process...
+2025-12-02 14:51:21,350 - INFO - ============================================================
+2025-12-02 14:51:21,351 - INFO - CA MATCH PROCESS - OPTIMIZED VERSION
+2025-12-02 14:51:21,352 - INFO - ============================================================
+2025-12-02 14:51:21,353 - INFO - Initializing browser...
+2025-12-02 14:51:23,221 - INFO - Browser initialized successfully
+2025-12-02 14:51:23,222 - INFO - Logging in...
+2025-12-02 14:51:28,030 - INFO - Navigating to Process Bank Records...
+2025-12-02 14:51:38,922 - INFO - Starting auto-match process...
+2025-12-02 14:51:48,954 - WARNING - Normal click failed for account link 'RPA Process Failed', trying force click...
+2025-12-02 14:51:53,969 - WARNING - Force click failed, trying JS click...
+2025-12-02 14:52:23,988 - ERROR - All click strategies failed for account link 'RPA Process Failed': Locator.evaluate: Timeout 30000ms exceeded.
+Call log:
+  - waiting for get_by_role("link", name="RPA Process Failed").last
+
+2025-12-02 14:52:39,024 - WARNING - Normal click failed for Auto-Match button, trying force click...
+2025-12-02 14:52:44,042 - WARNING - Force click failed, trying JS click...
+2025-12-02 14:53:14,051 - ERROR - All click strategies failed for Auto-Match button: Locator.evaluate: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("iframe[name=\"main\"]").content_frame.locator("#ctl00_phDS_ds_ToolBar_AutoMatch").get_by_text("Auto-Match")
+
+2025-12-02 14:53:16,077 - INFO - Waiting for auto-match confirmation...
+2025-12-02 14:53:21,088 - WARNING - No confirmation popup appeared - auto-match may not have started
+2025-12-02 14:53:21,090 - INFO - Processing auto-matched items...
+2025-12-02 14:53:31,097 - WARNING - Normal click failed for Process button, trying force click...
+2025-12-02 14:53:36,119 - WARNING - Force click failed, trying JS click...
+2025-12-02 14:54:05,074 - ERROR - All click strategies failed for Process button: Locator.evaluate: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("iframe[name=\"main\"]").content_frame.locator("#ctl00_phDS_ds_ToolBar_ProcessMatched").get_by_text("Process")
+
+2025-12-02 14:54:20,098 - WARNING - Normal click failed for Back button, trying force click...
+2025-12-02 14:54:25,110 - WARNING - Force click failed, trying JS click...
+2025-12-02 14:54:55,116 - ERROR - All click strategies failed for Back button: Locator.evaluate: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("iframe[name=\"main\"]").content_frame.locator("#ctl00_phDS_ds_ToolBar_CancelCloseToList div").nth(3)
+
+2025-12-02 14:54:58,122 - INFO - Starting manual matching process...
+2025-12-02 14:55:08,153 - WARNING - Normal click failed for account link 'RPA Process Failed', trying force click...
+2025-12-02 14:55:13,162 - WARNING - Force click failed, trying JS click...
+2025-12-02 14:55:43,179 - ERROR - All click strategies failed for account link 'RPA Process Failed': Locator.evaluate: Timeout 30000ms exceeded.
+Call log:
+  - waiting for get_by_role("link", name="RPA Process Failed").last
+
+2025-12-02 14:55:48,192 - INFO - Processing page 1...
+2025-12-02 14:56:08,202 - ERROR - Error during pagination on page 1: Frame.wait_for_selector: Timeout 20000ms exceeded.
+Call log:
+  - waiting for locator("#ctl00_phG_PXSplitContainer_grid1_dataT0")
+
+2025-12-02 14:56:08,203 - INFO - Pagination complete - processed 0 total rows across 1 pages
+2025-12-02 14:56:08,204 - INFO - Manual matching complete - 0 rows processed
+2025-12-02 14:56:08,206 - INFO - Processing manually matched items...
+2025-12-02 14:56:18,210 - WARNING - Normal click failed for Process button (after manual matching), trying force click...
+2025-12-02 14:56:23,221 - WARNING - Force click failed, trying JS click...
+2025-12-02 14:56:53,232 - ERROR - All click strategies failed for Process button (after manual matching): Locator.evaluate: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("iframe[name=\"main\"]").content_frame.locator("#ctl00_phDS_ds_ToolBar_ProcessMatched").get_by_text("Process")
+
+2025-12-02 14:57:08,269 - WARNING - Normal click failed for Back to list button, trying force click...
+2025-12-02 14:57:13,277 - WARNING - Force click failed, trying JS click...
+2025-12-02 14:57:43,289 - ERROR - All click strategies failed for Back to list button: Locator.evaluate: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("iframe[name=\"main\"]").content_frame.locator("#ctl00_phDS_ds_ToolBar_CancelCloseToList div").first
+
+2025-12-02 14:57:46,297 - INFO - Downloading results...
+2025-12-02 14:57:56,320 - WARNING - Normal click failed for account link 'RPA Process Failed', trying force click...
+2025-12-02 14:58:01,336 - WARNING - Force click failed, trying JS click...
+2025-12-02 14:58:31,356 - ERROR - All click strategies failed for account link 'RPA Process Failed': Locator.evaluate: Timeout 30000ms exceeded.
+Call log:
+  - waiting for get_by_role("link", name="RPA Process Failed").last
+
+2025-12-02 14:58:46,382 - WARNING - Normal click failed for Export dropdown, trying force click...
+2025-12-02 14:58:51,403 - WARNING - Force click failed, trying JS click...
+2025-12-02 14:59:21,414 - ERROR - All click strategies failed for Export dropdown: Locator.evaluate: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("iframe[name=\"main\"]").content_frame.locator("#ctl00_phG_PXSplitContainer_grid1_at_tlb_ul > li:nth-child(14)")
+
+2025-12-02 14:59:31,437 - WARNING - Normal click failed for Export to Excel button, trying force click...
+2025-12-02 14:59:36,444 - WARNING - Force click failed, trying JS click...
+2025-12-02 15:00:06,455 - ERROR - All click strategies failed for Export to Excel button: Locator.evaluate: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("#ctl00_phG_PXSplitContainer_grid1_at_tlb_menuhi_item_3")
+
+2025-12-02 15:00:06,457 - ERROR - FATAL ERROR: Timeout 30000ms exceeded while waiting for event "download"
+=========================== logs ===========================
+waiting for event "download"
+============================================================
+2025-12-02 15:00:06,577 - INFO - Browser cleanup completed
+2025-12-02 15:00:06,597 - ERROR - ❌ CA Match failed: Timeout 30000ms exceeded while waiting for event "download"
+=========================== logs ===========================
+waiting for event "download"
+============================================================
+Traceback (most recent call last):
+  File "C:\Users\Lenovo\OneDrive - Cognitive Consulting Sdn Bhd (1)\Desktop\SegmentationCompressionWork\PlayWright-Extractor\playwright_scripts\run_playwright.py", line 142, in run_ca_match
+    records = process_bank_transactions(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\OneDrive - Cognitive Consulting Sdn Bhd (1)\Desktop\SegmentationCompressionWork\PlayWright-Extractor\playwright_scripts\CA_Match_Process_Optimized.py", line 643, in process_bank_transactions
+    return processor.run()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\OneDrive - Cognitive Consulting Sdn Bhd (1)\Desktop\SegmentationCompressionWork\PlayWright-Extractor\playwright_scripts\CA_Match_Process_Optimized.py", line 540, in run
+    save_path = self.download_results()
+                ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\OneDrive - Cognitive Consulting Sdn Bhd (1)\Desktop\SegmentationCompressionWork\PlayWright-Extractor\playwright_scripts\CA_Match_Process_Optimized.py", line 457, in download_results
+    with self.page.expect_download() as download_info:
+  File "C:\Users\Lenovo\OneDrive - Cognitive Consulting Sdn Bhd (1)\Desktop\SegmentationCompressionWork\PlayWright-Extractor\.venv_clean\Lib\site-packages\playwright\_impl\_sync_base.py", line 85, in __exit__
+    self._event.value
+  File "C:\Users\Lenovo\OneDrive - Cognitive Consulting Sdn Bhd (1)\Desktop\SegmentationCompressionWork\PlayWright-Extractor\.venv_clean\Lib\site-packages\playwright\_impl\_sync_base.py", line 59, in value
+    raise exception
+playwright._impl._errors.TimeoutError: Timeout 30000ms exceeded while waiting for event "download"
+=========================== logs ===========================
+waiting for event "download"
+============================================================
+2025-12-02 15:00:06,598 - ERROR - 
+======================================================================
+2025-12-02 15:00:06,599 - ERROR - ❌ AUTOMATION WORKFLOW FAILED
+2025-12-02 15:00:06,599 - ERROR - ======================================================================
+2025-12-02 15:00:06,599 - ERROR - Error: Timeout 30000ms exceeded while waiting for event "download"
+=========================== logs ===========================
+waiting for event "download"
+============================================================
+2025-12-02 15:00:06,600 - ERROR - ======================================================================
+2025-12-02 15:00:38,100 - INFO - ======================================================================
+2025-12-02 15:00:38,100 - INFO - PLAYWRIGHT AUTOMATION RUNNER
+2025-12-02 15:00:38,101 - INFO - ======================================================================
+2025-12-02 15:00:38,101 - INFO - Account: RPA Process Failed
+2025-12-02 15:00:38,101 - INFO - Date: RPA Process Failed
+2025-12-02 15:00:38,101 - INFO - Amount: 100.0
+2025-12-02 15:00:38,102 - INFO - Headless Mode: True
+2025-12-02 15:00:38,102 - INFO - Downloads Dir: C:\Users\Lenovo\OneDrive - Cognitive Consulting Sdn Bhd (1)\Desktop\SegmentationCompressionWork\PlayWright-Extractor\Downloads
+2025-12-02 15:00:38,102 - INFO - ======================================================================
+2025-12-02 15:00:38,103 - INFO - 
+🚀 Starting complete automation workflow...
+
+2025-12-02 15:00:38,103 - INFO - 
+======================================================================
+2025-12-02 15:00:38,103 - INFO - STEP 1: CA MATCH PROCESS
+2025-12-02 15:00:38,103 - INFO - ======================================================================
+2025-12-02 15:00:38,913 - INFO - Starting CA Match process...
+2025-12-02 15:00:38,914 - INFO - ============================================================
+2025-12-02 15:00:38,914 - INFO - CA MATCH PROCESS - OPTIMIZED VERSION
+2025-12-02 15:00:38,915 - INFO - ============================================================
+2025-12-02 15:00:38,916 - INFO - Initializing browser...
+2025-12-02 15:00:39,232 - INFO - Browser initialized successfully
+2025-12-02 15:00:39,233 - INFO - Logging in...
+2025-12-02 15:00:44,427 - INFO - Navigating to Process Bank Records...
+2025-12-02 15:00:54,389 - INFO - Starting auto-match process...
+2025-12-02 15:00:57,158 - ERROR - Future exception was never retrieved
+future: <Future finished exception=TargetClosedError('Target page, context or browser has been closed')>
+playwright._impl._errors.TargetClosedError: Target page, context or browser has been closed
+2025-12-02 15:01:06,135 - INFO - ======================================================================
+2025-12-02 15:01:06,135 - INFO - PLAYWRIGHT AUTOMATION RUNNER
+2025-12-02 15:01:06,136 - INFO - ======================================================================
+2025-12-02 15:01:06,136 - INFO - Account: RPA Process Failed
+2025-12-02 15:01:06,136 - INFO - Date: RPA Process Failed
+2025-12-02 15:01:06,137 - INFO - Amount: 100.0
+2025-12-02 15:01:06,137 - INFO - Headless Mode: True
+2025-12-02 15:01:06,137 - INFO - Downloads Dir: C:\Users\Lenovo\OneDrive - Cognitive Consulting Sdn Bhd (1)\Desktop\SegmentationCompressionWork\PlayWright-Extractor\Downloads
+2025-12-02 15:01:06,137 - INFO - ======================================================================
+2025-12-02 15:01:06,138 - INFO - 
+🚀 Starting complete automation workflow...
+
+2025-12-02 15:01:06,138 - INFO - 
+======================================================================
+2025-12-02 15:01:06,138 - INFO - STEP 1: CA MATCH PROCESS
+2025-12-02 15:01:06,139 - INFO - ======================================================================
+2025-12-02 15:01:06,889 - INFO - Starting CA Match process...
+2025-12-02 15:01:06,890 - INFO - ============================================================
+2025-12-02 15:01:06,891 - INFO - CA MATCH PROCESS - OPTIMIZED VERSION
+2025-12-02 15:01:06,892 - INFO - ============================================================
+2025-12-02 15:01:06,893 - INFO - Initializing browser...
+2025-12-02 15:01:07,170 - INFO - Browser initialized successfully
+2025-12-02 15:01:07,171 - INFO - Logging in...
+2025-12-02 15:01:09,027 - INFO - Navigating to Process Bank Records...
+2025-12-02 15:01:18,586 - INFO - Starting auto-match process...
+2025-12-02 15:01:28,613 - WARNING - Normal click failed for account link 'RPA Process Failed', trying force click...
+2025-12-02 15:01:33,620 - WARNING - Force click failed, trying JS click...
+2025-12-02 15:01:35,076 - ERROR - Task was destroyed but it is pending!
+task: <Task pending name='Task-22' coro=<Locator.evaluate() done, defined at C:\Users\Lenovo\OneDrive - Cognitive Consulting Sdn Bhd (1)\Desktop\SegmentationCompressionWork\PlayWright-Extractor\.venv_clean\Lib\site-packages\playwright\_impl\_locator.py:185> wait_for=<Future pending cb=[Task.task_wakeup()]> cb=[SyncBase._sync.<locals>.<lambda>() at C:\Users\Lenovo\OneDrive - Cognitive Consulting Sdn Bhd (1)\Desktop\SegmentationCompressionWork\PlayWright-Extractor\.venv_clean\Lib\site-packages\playwright\_impl\_sync_base.py:111, ProtocolCallback.__init__.<locals>.cb() at C:\Users\Lenovo\OneDrive - Cognitive Consulting Sdn Bhd (1)\Desktop\SegmentationCompressionWork\PlayWright-Extractor\.venv_clean\Lib\site-packages\playwright\_impl\_connection.py:230]>
+2025-12-02 15:01:46,951 - INFO - ======================================================================
+2025-12-02 15:01:46,951 - INFO - PLAYWRIGHT AUTOMATION RUNNER
+2025-12-02 15:01:46,952 - INFO - ======================================================================
+2025-12-02 15:01:46,952 - INFO - Account: RPA Process Failed
+2025-12-02 15:01:46,952 - INFO - Date: RPA Process Failed
+2025-12-02 15:01:46,952 - INFO - Amount: 100.0
+2025-12-02 15:01:46,953 - INFO - Headless Mode: True
+2025-12-02 15:01:46,953 - INFO - Downloads Dir: C:\Users\Lenovo\OneDrive - Cognitive Consulting Sdn Bhd (1)\Desktop\SegmentationCompressionWork\PlayWright-Extractor\Downloads
+2025-12-02 15:01:46,953 - INFO - ======================================================================
+2025-12-02 15:01:46,954 - INFO - 
+🚀 Starting complete automation workflow...
+
+2025-12-02 15:01:46,954 - INFO - 
+======================================================================
+2025-12-02 15:01:46,954 - INFO - STEP 1: CA MATCH PROCESS
+2025-12-02 15:01:46,954 - INFO - ======================================================================
+2025-12-02 15:01:47,699 - INFO - Starting CA Match process...
+2025-12-02 15:01:47,701 - INFO - ============================================================
+2025-12-02 15:01:47,702 - INFO - CA MATCH PROCESS - OPTIMIZED VERSION
+2025-12-02 15:01:47,703 - INFO - ============================================================
+2025-12-02 15:01:47,703 - INFO - Initializing browser...
+2025-12-02 15:01:47,971 - INFO - Browser initialized successfully
+2025-12-02 15:01:47,972 - INFO - Logging in...
+2025-12-02 15:01:49,743 - INFO - Navigating to Process Bank Records...
+2025-12-02 15:01:59,220 - INFO - Starting auto-match process...
+2025-12-02 15:02:09,249 - WARNING - Normal click failed for account link 'RPA Process Failed', trying force click...
+2025-12-02 15:02:14,021 - ERROR - Task was destroyed but it is pending!
+task: <Task pending name='Task-21' coro=<Locator.click() done, defined at C:\Users\Lenovo\OneDrive - Cognitive Consulting Sdn Bhd (1)\Desktop\SegmentationCompressionWork\PlayWright-Extractor\.venv_clean\Lib\site-packages\playwright\_impl\_locator.py:147> wait_for=<Future pending cb=[Task.task_wakeup()]> cb=[SyncBase._sync.<locals>.<lambda>() at C:\Users\Lenovo\OneDrive - Cognitive Consulting Sdn Bhd (1)\Desktop\SegmentationCompressionWork\PlayWright-Extractor\.venv_clean\Lib\site-packages\playwright\_impl\_sync_base.py:111, ProtocolCallback.__init__.<locals>.cb() at C:\Users\Lenovo\OneDrive - Cognitive Consulting Sdn Bhd (1)\Desktop\SegmentationCompressionWork\PlayWright-Extractor\.venv_clean\Lib\site-packages\playwright\_impl\_connection.py:230]>
+2025-12-02 15:09:09,631 - INFO - ======================================================================
+2025-12-02 15:09:09,631 - INFO - PLAYWRIGHT AUTOMATION RUNNER
+2025-12-02 15:09:09,632 - INFO - ======================================================================
+2025-12-02 15:09:09,632 - INFO - Account: CIM02
+2025-12-02 15:09:09,632 - INFO - Date: 02/12/2025
+2025-12-02 15:09:09,632 - INFO - Amount: 263737.84
+2025-12-02 15:09:09,633 - INFO - Headless Mode: True
+2025-12-02 15:09:09,633 - INFO - Downloads Dir: C:\Users\Lenovo\OneDrive - Cognitive Consulting Sdn Bhd (1)\Desktop\SegmentationCompressionWork\PlayWright-Extractor\Downloads
+2025-12-02 15:09:09,633 - INFO - ======================================================================
+2025-12-02 15:09:09,633 - INFO - 
+🚀 Starting complete automation workflow...
+
+2025-12-02 15:09:09,634 - INFO - 
+======================================================================
+2025-12-02 15:09:09,634 - INFO - STEP 1: CA MATCH PROCESS
+2025-12-02 15:09:09,634 - INFO - ======================================================================
+2025-12-02 15:09:10,407 - INFO - Starting CA Match process...
+2025-12-02 15:09:10,408 - INFO - ============================================================
+2025-12-02 15:09:10,409 - INFO - CA MATCH PROCESS - OPTIMIZED VERSION
+2025-12-02 15:09:10,410 - INFO - ============================================================
+2025-12-02 15:09:10,411 - INFO - Initializing browser...
+2025-12-02 15:09:10,691 - INFO - Browser initialized successfully
+2025-12-02 15:09:10,692 - INFO - Logging in...
+2025-12-02 15:09:15,974 - INFO - Navigating to Process Bank Records...
+2025-12-02 15:09:25,480 - INFO - Starting auto-match process...
+2025-12-02 15:09:25,768 - INFO - Clicked account link 'CIM02' successfully
+2025-12-02 15:09:30,923 - INFO - Clicked Auto-Match button successfully
+2025-12-02 15:09:32,942 - INFO - Waiting for auto-match confirmation...
+2025-12-02 15:09:49,356 - WARNING - No 'Executing' message detected
+2025-12-02 15:09:49,368 - INFO - âœ… Auto-match operation completed successfully!
+2025-12-02 15:09:49,369 - INFO - Processing auto-matched items...
+2025-12-02 15:09:49,454 - INFO - Clicked Process button successfully
+2025-12-02 15:09:54,584 - INFO - Clicked Back button successfully
+2025-12-02 15:09:57,600 - INFO - Starting manual matching process...
+2025-12-02 15:09:57,732 - INFO - Clicked account link 'CIM02' successfully
+2025-12-02 15:10:02,742 - INFO - Processing page 1...
+2025-12-02 15:10:02,793 - INFO - Found 10 rows on page 1
+2025-12-02 15:10:02,814 - INFO - Row 0 - Ext. Ref. Nbr.: 2507312241040258
+2025-12-02 15:10:02,825 - INFO - Row 0 - Already matched, skipping
+2025-12-02 15:10:02,848 - INFO - Row 1 - Ext. Ref. Nbr.: 2507311751140415
+2025-12-02 15:10:02,858 - INFO - Row 1 - Already matched, skipping
+2025-12-02 15:10:02,877 - INFO - Row 2 - Ext. Ref. Nbr.: 30756388
+2025-12-02 15:10:02,888 - INFO - Row 2 - Already matched, skipping
+2025-12-02 15:10:02,906 - INFO - Row 3 - Ext. Ref. Nbr.: 30756388
+2025-12-02 15:10:02,917 - INFO - Row 3 - Already matched, skipping
+2025-12-02 15:10:02,937 - INFO - Row 4 - Ext. Ref. Nbr.: 2507210654350063
+2025-12-02 15:10:02,948 - INFO - Row 4 - UNMATCHED, attempting to match...
+2025-12-02 15:10:03,037 - INFO - Clicked Ext. Ref. Nbr. in row 4 successfully
+2025-12-02 15:10:08,086 - INFO - Found detail table Type B
+2025-12-02 15:10:08,094 - INFO - Processing 5 rows in detail table
+2025-12-02 15:10:08,124 - INFO - Row 1 - relevance: 30.0%
+2025-12-02 15:10:08,144 - INFO - Row 2 - relevance: 28.462%
+2025-12-02 15:10:08,163 - INFO - Row 3 - relevance: 26.705%
+2025-12-02 15:10:08,172 - WARNING - Row 4 - No suitable match found
+2025-12-02 15:10:08,191 - INFO - Row 5 - Ext. Ref. Nbr.: 2507181637590200
+2025-12-02 15:10:08,202 - INFO - Row 5 - Already matched, skipping
+2025-12-02 15:10:08,221 - INFO - Row 6 - Ext. Ref. Nbr.: 2507150813200409
+2025-12-02 15:10:08,231 - INFO - Row 6 - UNMATCHED, attempting to match...
+2025-12-02 15:10:08,303 - INFO - Clicked Ext. Ref. Nbr. in row 6 successfully
+2025-12-02 15:10:13,340 - INFO - Found detail table Type B
+2025-12-02 15:10:13,350 - INFO - Processing 3 rows in detail table
+2025-12-02 15:10:13,378 - INFO - Row 1 - relevance: 30.0%
+2025-12-02 15:10:13,389 - WARNING - Row 6 - No suitable match found
+2025-12-02 15:10:13,408 - INFO - Row 7 - Ext. Ref. Nbr.: 2507110714350678
+2025-12-02 15:10:13,418 - INFO - Row 7 - Already matched, skipping
+2025-12-02 15:10:13,439 - INFO - Row 8 - Ext. Ref. Nbr.: 2507051851570603
+2025-12-02 15:10:13,449 - INFO - Row 8 - Already matched, skipping
+2025-12-02 15:10:13,460 - INFO - No more pages - pagination complete
+2025-12-02 15:10:13,461 - INFO - Pagination complete - processed 9 total rows across 1 pages
+2025-12-02 15:10:13,462 - INFO - Manual matching complete - 9 rows processed
+2025-12-02 15:10:13,463 - INFO - Processing manually matched items...
+2025-12-02 15:10:13,544 - INFO - Clicked Process button (after manual matching) successfully
+2025-12-02 15:10:18,666 - INFO - Clicked Back to list button successfully
+2025-12-02 15:10:21,674 - INFO - Downloading results...
+2025-12-02 15:10:21,807 - INFO - Clicked account link 'CIM02' successfully
+2025-12-02 15:10:26,908 - INFO - Clicked Export dropdown successfully
+2025-12-02 15:10:27,010 - INFO - Clicked Export to Excel button successfully
+2025-12-02 15:10:37,953 - INFO - Download started: Process Bank Transactions 20251202.xlsx
+2025-12-02 15:10:38,852 - INFO - âœ… File saved to: C:\Users\Lenovo\OneDrive - Cognitive Consulting Sdn Bhd (1)\Desktop\SegmentationCompressionWork\PlayWright-Extractor\Downloads\Process Bank Transactions 20251202.xlsx
+2025-12-02 15:10:38,854 - INFO - Processing downloaded file: C:\Users\Lenovo\OneDrive - Cognitive Consulting Sdn Bhd (1)\Desktop\SegmentationCompressionWork\PlayWright-Extractor\Downloads\Process Bank Transactions 20251202.xlsx
+2025-12-02 15:10:39,176 - WARNING - Could not determine dtype for column 1, falling back to string
+2025-12-02 15:10:39,176 - WARNING - Could not determine dtype for column 6, falling back to string
+2025-12-02 15:10:39,177 - WARNING - Could not determine dtype for column 8, falling back to string
+2025-12-02 15:10:39,177 - WARNING - Could not determine dtype for column 9, falling back to string
+2025-12-02 15:10:39,177 - WARNING - Could not determine dtype for column 11, falling back to string
+2025-12-02 15:10:39,178 - WARNING - Could not determine dtype for column 13, falling back to string
+2025-12-02 15:10:39,178 - WARNING - Could not determine dtype for column 14, falling back to string
+2025-12-02 15:10:39,179 - WARNING - Could not determine dtype for column 17, falling back to string
+2025-12-02 15:10:39,179 - WARNING - Could not determine dtype for column 18, falling back to string
+2025-12-02 15:10:39,179 - WARNING - Could not determine dtype for column 20, falling back to string
+2025-12-02 15:10:39,306 - INFO - Processed 9 records from downloaded file
+2025-12-02 15:10:39,429 - INFO - Browser cleanup completed
+2025-12-02 15:10:39,431 - INFO - Chaining to Extract Reconciliation Statement...
+2025-12-02 15:12:32,948 - WARNING - Could not determine dtype for column 2, falling back to string
+2025-12-02 15:12:32,949 - WARNING - Could not determine dtype for column 11, falling back to string
+2025-12-02 15:12:32,949 - WARNING - Could not determine dtype for column 12, falling back to string
+2025-12-02 15:21:57,200 - INFO - Loaded 9 bank transactions and 3717 company transactions
+2025-12-02 15:21:57,207 - INFO - Starting Stage 1: Traditional reconciliation pipeline...
+2025-12-02 15:21:57,234 - DEBUG - MBB02 credit card matcher skipped: support module not available
+2025-12-02 15:21:57,237 - INFO - Finding transaction ID matches...
+2025-12-02 15:21:58,613 - INFO - Finding bank charges...
+2025-12-02 15:21:58,616 - DEBUG - After bank charges detection: 1 matched (added 1)
+2025-12-02 15:21:58,616 - INFO - Detected 1 bank charges
+2025-12-02 15:21:58,617 - INFO - Finding Reverse CE GL matches...
+2025-12-02 15:21:59,343 - INFO - Found 2 Reverse CE GL matches
+2025-12-02 15:21:59,346 - INFO - Finding name and amount matches...
+2025-12-02 15:22:01,418 - INFO - Found 7 name and amount matches
+2025-12-02 15:22:01,420 - INFO - Finding Hungarian 1:1 matches...
+2025-12-02 15:22:08,829 - INFO - Hungarian 1:1: 0 matches | pairs scored=45, kept=0, time=7.41s
+2025-12-02 15:22:08,831 - INFO - Finding enhanced 1:1 matches...
+2025-12-02 15:22:09,739 - INFO - Found 0 enhanced 1:1 matches
+2025-12-02 15:22:09,741 - INFO - Finding amount and date matches...
+2025-12-02 15:22:09,894 - INFO - Found 0 amount and date matches
+2025-12-02 15:22:09,895 - INFO - Finding fuzzy matches...
+2025-12-02 15:24:19,257 - INFO - ============================================================
+2025-12-02 15:24:19,258 - INFO - CA MATCH PROCESS COMPLETED SUCCESSFULLY
+2025-12-02 15:24:19,260 - INFO - ============================================================
+2025-12-02 15:24:19,261 - INFO - ✅ CA Match completed: 9 records processed
+2025-12-02 15:24:19,286 - INFO - 
+======================================================================
+2025-12-02 15:24:19,287 - INFO - ✅ COMPLETE AUTOMATION WORKFLOW FINISHED SUCCESSFULLY
+2025-12-02 15:24:19,287 - INFO - ======================================================================
+2025-12-02 15:24:19,287 - INFO - 
+Workflow Summary:
+2025-12-02 15:24:19,288 - INFO -   ✅ CA Match Process - Completed
+2025-12-02 15:24:19,288 - INFO -   ✅ Extract Reconciliation Statement - Completed (chained)
+2025-12-02 15:24:19,288 - INFO -   ✅ RaasPlus Reconciliation - Completed (chained)
+2025-12-02 15:24:19,289 - INFO -   ✅ Match Statement - Completed (chained)
+2025-12-02 15:24:19,289 - INFO - 
+All processes completed successfully!
+2025-12-02 15:24:19,290 - INFO - Check logs for detailed information.
+2025-12-02 15:24:19,290 - INFO - ======================================================================
+2025-12-02 15:24:31,678 - INFO - ======================================================================
+2025-12-02 15:24:31,678 - INFO - PLAYWRIGHT AUTOMATION RUNNER
+2025-12-02 15:24:31,679 - INFO - ======================================================================
+2025-12-02 15:24:31,679 - INFO - Account: CIM02
+2025-12-02 15:24:31,679 - INFO - Date: 02/12/2025
+2025-12-02 15:24:31,680 - INFO - Amount: 263737.84
+2025-12-02 15:24:31,680 - INFO - Headless Mode: True
+2025-12-02 15:24:31,680 - INFO - Downloads Dir: C:\Users\Lenovo\OneDrive - Cognitive Consulting Sdn Bhd (1)\Desktop\SegmentationCompressionWork\PlayWright-Extractor\Downloads
+2025-12-02 15:24:31,681 - INFO - ======================================================================
+2025-12-02 15:24:31,681 - INFO - 
+🚀 Starting complete automation workflow...
+
+2025-12-02 15:24:31,681 - INFO - 
+======================================================================
+2025-12-02 15:24:31,682 - INFO - STEP 1: CA MATCH PROCESS
+2025-12-02 15:24:31,682 - INFO - ======================================================================
+2025-12-02 15:24:32,733 - INFO - Starting CA Match process...
+2025-12-02 15:24:32,734 - INFO - ============================================================
+2025-12-02 15:24:32,735 - INFO - CA MATCH PROCESS - OPTIMIZED VERSION
+2025-12-02 15:24:32,737 - INFO - ============================================================
+2025-12-02 15:24:32,737 - INFO - Initializing browser...
+2025-12-02 15:24:33,104 - INFO - Browser initialized successfully
+2025-12-02 15:24:33,105 - INFO - Logging in...
+2025-12-02 15:24:34,808 - INFO - Navigating to Process Bank Records...
+2025-12-02 15:24:44,443 - INFO - Starting auto-match process...
+2025-12-02 15:24:48,474 - INFO - Clicked account link 'CIM02' successfully
+2025-12-02 15:24:53,638 - INFO - Clicked Auto-Match button successfully
+2025-12-02 15:24:55,671 - INFO - Waiting for auto-match confirmation...
+2025-12-02 15:25:10,721 - WARNING - No 'Executing' message detected
+2025-12-02 15:25:10,733 - INFO - âœ… Auto-match operation completed successfully!
+2025-12-02 15:25:10,734 - INFO - Processing auto-matched items...
+2025-12-02 15:25:10,832 - INFO - Clicked Process button successfully
+2025-12-02 15:25:15,993 - INFO - Clicked Back button successfully
+2025-12-02 15:25:18,999 - INFO - Starting manual matching process...
+2025-12-02 15:25:19,137 - INFO - Clicked account link 'CIM02' successfully
+2025-12-02 15:25:24,144 - INFO - Processing page 1...
+2025-12-02 15:25:24,211 - INFO - Found 8 rows on page 1
+2025-12-02 15:25:24,240 - INFO - Row 0 - Ext. Ref. Nbr.: 2507312241040258
+2025-12-02 15:25:24,257 - INFO - Row 0 - Already matched, skipping
+2025-12-02 15:25:24,288 - INFO - Row 1 - Ext. Ref. Nbr.: 2507311751140415
+2025-12-02 15:25:24,302 - INFO - Row 1 - Already matched, skipping
+2025-12-02 15:25:24,331 - INFO - Row 2 - Ext. Ref. Nbr.: 30756388
+2025-12-02 15:25:24,346 - INFO - Row 2 - Already matched, skipping
+2025-12-02 15:25:24,374 - INFO - Row 3 - Ext. Ref. Nbr.: 30756388
+2025-12-02 15:25:24,390 - INFO - Row 3 - Already matched, skipping
+2025-12-02 15:25:24,418 - INFO - Row 4 - Ext. Ref. Nbr.: 2507181637590200
+2025-12-02 15:25:24,430 - INFO - Row 4 - Already matched, skipping
+2025-12-02 15:25:24,456 - INFO - Row 5 - Ext. Ref. Nbr.: 2507110714350678
+2025-12-02 15:25:24,472 - INFO - Row 5 - Already matched, skipping
+2025-12-02 15:25:24,502 - INFO - Row 6 - Ext. Ref. Nbr.: 2507051851570603
+2025-12-02 15:25:24,519 - INFO - Row 6 - Already matched, skipping
+2025-12-02 15:25:24,537 - INFO - No more pages - pagination complete
+2025-12-02 15:25:24,539 - INFO - Pagination complete - processed 7 total rows across 1 pages
+2025-12-02 15:25:24,540 - INFO - Manual matching complete - 7 rows processed
+2025-12-02 15:25:24,541 - INFO - Processing manually matched items...
+2025-12-02 15:25:24,678 - INFO - Clicked Process button (after manual matching) successfully
+2025-12-02 15:25:29,894 - INFO - Clicked Back to list button successfully
+2025-12-02 15:25:32,914 - INFO - Downloading results...
+2025-12-02 15:25:33,031 - INFO - Clicked account link 'CIM02' successfully
+2025-12-02 15:25:38,163 - INFO - Clicked Export dropdown successfully
+2025-12-02 15:25:38,272 - INFO - Clicked Export to Excel button successfully
+2025-12-02 15:25:43,855 - INFO - Download started: Process Bank Transactions 20251202.xlsx
+2025-12-02 15:25:44,319 - INFO - âœ… File saved to: C:\Users\Lenovo\OneDrive - Cognitive Consulting Sdn Bhd (1)\Desktop\SegmentationCompressionWork\PlayWright-Extractor\Downloads\Process Bank Transactions 20251202.xlsx
+2025-12-02 15:25:44,321 - INFO - Processing downloaded file: C:\Users\Lenovo\OneDrive - Cognitive Consulting Sdn Bhd (1)\Desktop\SegmentationCompressionWork\PlayWright-Extractor\Downloads\Process Bank Transactions 20251202.xlsx
+2025-12-02 15:25:44,357 - WARNING - Could not determine dtype for column 1, falling back to string
+2025-12-02 15:25:44,358 - WARNING - Could not determine dtype for column 6, falling back to string
+2025-12-02 15:25:44,358 - WARNING - Could not determine dtype for column 8, falling back to string
+2025-12-02 15:25:44,358 - WARNING - Could not determine dtype for column 9, falling back to string
+2025-12-02 15:25:44,359 - WARNING - Could not determine dtype for column 11, falling back to string
+2025-12-02 15:25:44,359 - WARNING - Could not determine dtype for column 13, falling back to string
+2025-12-02 15:25:44,359 - WARNING - Could not determine dtype for column 14, falling back to string
+2025-12-02 15:25:44,360 - WARNING - Could not determine dtype for column 17, falling back to string
+2025-12-02 15:25:44,360 - WARNING - Could not determine dtype for column 18, falling back to string
+2025-12-02 15:25:44,360 - WARNING - Could not determine dtype for column 20, falling back to string
+2025-12-02 15:25:44,443 - INFO - Processed 7 records from downloaded file
+2025-12-02 15:25:44,573 - INFO - Browser cleanup completed
+2025-12-02 15:25:44,575 - INFO - Chaining to Extract Reconciliation Statement...
+2025-12-02 15:27:37,128 - WARNING - Could not determine dtype for column 2, falling back to string
+2025-12-02 15:27:37,129 - WARNING - Could not determine dtype for column 11, falling back to string
+2025-12-02 15:27:37,129 - WARNING - Could not determine dtype for column 12, falling back to string
+2025-12-02 15:37:23,325 - INFO - Loaded 7 bank transactions and 3715 company transactions
+2025-12-02 15:37:23,332 - INFO - Starting Stage 1: Traditional reconciliation pipeline...
+2025-12-02 15:37:23,372 - DEBUG - MBB02 credit card matcher skipped: support module not available
+2025-12-02 15:37:23,376 - INFO - Finding transaction ID matches...
+2025-12-02 15:37:24,721 - INFO - Finding bank charges...
+2025-12-02 15:37:24,725 - DEBUG - After bank charges detection: 1 matched (added 1)
+2025-12-02 15:37:24,725 - INFO - Detected 1 bank charges
+2025-12-02 15:37:24,727 - INFO - Finding Reverse CE GL matches...
+2025-12-02 15:37:25,605 - INFO - Found 2 Reverse CE GL matches
+2025-12-02 15:37:25,611 - INFO - Finding name and amount matches...
+2025-12-02 15:37:27,814 - INFO - Found 5 name and amount matches
+2025-12-02 15:37:27,816 - INFO - Finding Hungarian 1:1 matches...
+2025-12-02 15:37:29,651 - INFO - Hungarian 1:1: 0 matches | pairs scored=45, kept=0, time=1.84s
+2025-12-02 15:37:29,655 - INFO - Finding enhanced 1:1 matches...
+2025-12-02 15:37:31,048 - INFO - Found 0 enhanced 1:1 matches
+2025-12-02 15:37:31,050 - INFO - Finding amount and date matches...
+2025-12-02 15:37:31,297 - INFO - Found 0 amount and date matches
+2025-12-02 15:37:31,299 - INFO - Finding fuzzy matches...
+2025-12-02 15:38:40,410 - INFO - ============================================================
+2025-12-02 15:38:40,411 - INFO - CA MATCH PROCESS COMPLETED SUCCESSFULLY
+2025-12-02 15:38:40,413 - INFO - ============================================================
+2025-12-02 15:38:40,414 - INFO - ✅ CA Match completed: 7 records processed
+2025-12-02 15:38:40,437 - INFO - 
+======================================================================
+2025-12-02 15:38:40,438 - INFO - ✅ COMPLETE AUTOMATION WORKFLOW FINISHED SUCCESSFULLY
+2025-12-02 15:38:40,439 - INFO - ======================================================================
+2025-12-02 15:38:40,439 - INFO - 
+Workflow Summary:
+2025-12-02 15:38:40,439 - INFO -   ✅ CA Match Process - Completed
+2025-12-02 15:38:40,440 - INFO -   ✅ Extract Reconciliation Statement - Completed (chained)
+2025-12-02 15:38:40,440 - INFO -   ✅ RaasPlus Reconciliation - Completed (chained)
+2025-12-02 15:38:40,440 - INFO -   ✅ Match Statement - Completed (chained)
+2025-12-02 15:38:40,441 - INFO - 
+All processes completed successfully!
+2025-12-02 15:38:40,441 - INFO - Check logs for detailed information.
+2025-12-02 15:38:40,441 - INFO - ======================================================================

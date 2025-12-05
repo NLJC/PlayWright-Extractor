@@ -34,6 +34,7 @@ from helper_playwright import functions
 from helper_playwright.email_reply import reply_to_trigger_email
 from helper_playwright.paths import get_downloads_dir
 from . import ExtractReconcileStatement_Optimized as ExtractReconcileStatement
+from logger import logger
 
 # Load environment variables
 load_dotenv()
@@ -68,36 +69,26 @@ class CAMatchProcessor:
         self.webhook_url = webhook_url
         self.headless = headless
         self.download_dir = str(get_downloads_dir())
-        
-        self.browser = None
-        self.context = None
-        self.page = None
-        self.frame = None
-        
+
     def log(self, message: str, level: str = "info"):
-        """Centralized logging with webhook support."""
-        print(f"[{level.upper()}] {message}")
-        if self.webhook_url:
-            try:
-                requests.post(
-                    self.webhook_url,
-                    json={"message": message, "level": level},
-                    timeout=5
-                )
-            except Exception as e:
-                print(f"[WARN] Webhook logging failed: {e}")
-    
+        """Wrapper around shared logger with safe level lookup."""
+        log_fn = getattr(logger, level, logger.info)
+        log_fn(message)
+
     def send_pingback(self, status: str, error: str = None):
-        """Send status update to pingback URL."""
-        if self.pingback_url:
-            data = {"status": status, "payload": self.payload}
-            if error:
-                data["error"] = error
-            try:
-                requests.post(self.pingback_url, json=data, timeout=10)
-            except Exception as e:
-                self.log(f"Pingback failed: {e}", "warning")
-    
+        """Send a status pingback if configured."""
+        if not self.pingback_url:
+            return
+        data = {"status": status, "account": self.account_name, "date": self.date, "amount": self.amount}
+        if self.payload:
+            data["payload"] = self.payload
+        if error:
+            data["error"] = error
+        try:
+            requests.post(self.pingback_url, json=data, timeout=10)
+        except Exception as e:
+            self.log(f"Pingback failed: {e}", "warning")
+
     def initialize_browser(self):
         """Initialize browser with download support."""
         self.log("Initializing browser...")

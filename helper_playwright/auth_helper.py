@@ -37,7 +37,7 @@ def save_cache(cache):
 
 
 def _get_public_client_token():
-    """Device flow (delegated) – no client secret required."""
+    """Device flow (delegated) - no client secret required."""
     cache = load_cache()
     app = msal.PublicClientApplication(CLIENT_ID, authority=AUTHORITY, token_cache=cache)
 
@@ -54,24 +54,24 @@ def _get_public_client_token():
     if "user_code" not in flow:
         raise Exception("Failed to create device flow")
 
-    print("🔐 Please go to:", flow["verification_uri"])
-    print("🪪 Enter this code:", flow["user_code"])
+    print("Please go to:", flow["verification_uri"])
+    print("Enter this code:", flow["user_code"])
     print("Waiting for you to complete sign-in...")
 
     result = app.acquire_token_by_device_flow(flow)
 
     if "access_token" in result:
-        print("✅ Authentication successful! Token cached for future use.")
+        print("Authentication successful. Token cached for future use.")
         save_cache(cache)
         return result["access_token"]
 
-    print("❌ Authentication failed:")
+    print("Authentication failed:")
     print(json.dumps(result, indent=2))
     raise SystemExit("Exiting... please try again.")
 
 
 def _get_confidential_client_token():
-    """Client credentials (application) – requires CLIENT_SECRET."""
+    """Client credentials (application) - requires CLIENT_SECRET."""
     if not CLIENT_SECRET:
         raise ValueError("CLIENT_SECRET is required for client credentials flow.")
 
@@ -84,7 +84,7 @@ def _get_confidential_client_token():
     if "access_token" in result:
         return result["access_token"]
 
-    print("❌ Authentication failed:")
+    print("Authentication failed:")
     print(json.dumps(result, indent=2))
     raise SystemExit("Exiting... please check client credentials.")
 
