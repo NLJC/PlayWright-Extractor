@@ -3456,3 +3456,103 @@ Workflow Summary:
 All processes completed successfully!
 2025-12-02 15:38:40,441 - INFO - Check logs for detailed information.
 2025-12-02 15:38:40,441 - INFO - ======================================================================
+2025-12-07 00:57:09,913 - ERROR - Fatal error: Account name not provided and not set in .env
+Traceback (most recent call last):
+  File "d:\Github\PlayWright-Extractor\playwright_scripts\run_playwright.py", line 369, in main
+    runner = PlaywrightRunner(
+        account_name=args.account,
+    ...<7 lines>...
+        webhook_url=args.webhook_url
+    )
+  File "d:\Github\PlayWright-Extractor\playwright_scripts\run_playwright.py", line 98, in __init__
+    raise ValueError("Account name not provided and not set in .env")
+ValueError: Account name not provided and not set in .env
+2025-12-07 01:14:34,124 - INFO - ======================================================================
+2025-12-07 01:14:34,124 - INFO - PLAYWRIGHT AUTOMATION RUNNER
+2025-12-07 01:14:34,124 - INFO - ======================================================================
+2025-12-07 01:14:34,124 - INFO - Account: CIM02
+2025-12-07 01:14:34,124 - INFO - Date: 07/11/2025
+2025-12-07 01:14:34,125 - INFO - Amount: 100.0
+2025-12-07 01:14:34,125 - INFO - Headless Mode: False
+2025-12-07 01:14:34,125 - INFO - Downloads Dir: d:\Github\PlayWright-Extractor\Downloads
+2025-12-07 01:14:34,125 - INFO - ======================================================================
+2025-12-07 01:14:34,125 - INFO - 
+🚀 Starting complete automation workflow...
+
+2025-12-07 01:14:34,125 - INFO - 
+======================================================================
+2025-12-07 01:14:34,125 - INFO - STEP 1: CA MATCH PROCESS
+2025-12-07 01:14:34,126 - INFO - ======================================================================
+2025-12-07 01:14:34,609 - INFO - Starting CA Match process...
+2025-12-07 01:14:34,609 - INFO - ============================================================
+2025-12-07 01:14:34,610 - INFO - CA MATCH PROCESS - OPTIMIZED VERSION
+2025-12-07 01:14:34,610 - INFO - ============================================================
+2025-12-07 01:14:34,610 - INFO - Initializing browser...
+2025-12-07 01:14:35,608 - INFO - Browser initialized successfully
+2025-12-07 01:14:35,609 - INFO - Logging in...
+2025-12-07 01:15:01,572 - ERROR - FATAL ERROR: Page.goto: net::ERR_ABORTED; maybe frame was detached?
+Call log:
+  - navigating to "https://csmstg.censof.com/DBKK", waiting until "load"
+
+2025-12-07 01:15:01,893 - INFO - Browser cleanup completed
+2025-12-07 01:15:01,904 - ERROR - ❌ CA Match failed: Page.goto: net::ERR_ABORTED; maybe frame was detached?
+Call log:
+  - navigating to "https://csmstg.censof.com/DBKK", waiting until "load"
+Traceback (most recent call last):
+  File "d:\Github\PlayWright-Extractor\playwright_scripts\run_playwright.py", line 142, in run_ca_match
+    records = process_bank_transactions(
+        playwright=playwright,
+    ...<9 lines>...
+        headless=self.headless
+    )
+  File "d:\Github\PlayWright-Extractor\playwright_scripts\CA_Match_Process_Optimized.py", line 643, in process_bank_transactions
+    return processor.run()
+           ~~~~~~~~~~~~~^^
+  File "d:\Github\PlayWright-Extractor\playwright_scripts\CA_Match_Process_Optimized.py", line 527, in run
+    functions.login(self.page, self.website_url, self.username, self.password)
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\Github\PlayWright-Extractor\helper_playwright\functions.py", line 11, in login
+    page.goto(website_url)
+    ~~~~~~~~~^^^^^^^^^^^^^
+  File "D:\Github\PlayWright-Extractor\venv\Lib\site-packages\playwright\sync_api\_generated.py", line 9019, in goto
+    self._sync(
+    ~~~~~~~~~~^
+        self._impl_obj.goto(
+        ^^^^^^^^^^^^^^^^^^^^
+            url=url, timeout=timeout, waitUntil=wait_until, referer=referer
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        )
+        ^
+    )
+    ^
+  File "D:\Github\PlayWright-Extractor\venv\Lib\site-packages\playwright\_impl\_sync_base.py", line 115, in _sync
+    return task.result()
+           ~~~~~~~~~~~^^
+  File "D:\Github\PlayWright-Extractor\venv\Lib\site-packages\playwright\_impl\_page.py", line 555, in goto
+    return await self._main_frame.goto(**locals_to_params(locals()))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Github\PlayWright-Extractor\venv\Lib\site-packages\playwright\_impl\_frame.py", line 153, in goto
+    await self._channel.send(
+        "goto", self._navigation_timeout, locals_to_params(locals())
+    )
+  File "D:\Github\PlayWright-Extractor\venv\Lib\site-packages\playwright\_impl\_connection.py", line 69, in send
+    return await self._connection.wrap_api_call(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "D:\Github\PlayWright-Extractor\venv\Lib\site-packages\playwright\_impl\_connection.py", line 559, in wrap_api_call
+    raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
+playwright._impl._errors.Error: Page.goto: net::ERR_ABORTED; maybe frame was detached?
+Call log:
+  - navigating to "https://csmstg.censof.com/DBKK", waiting until "load"
+
+2025-12-07 01:15:01,907 - ERROR - 
+======================================================================
+2025-12-07 01:15:01,907 - ERROR - ❌ AUTOMATION WORKFLOW FAILED
+2025-12-07 01:15:01,907 - ERROR - ======================================================================
+2025-12-07 01:15:01,907 - ERROR - Error: Page.goto: net::ERR_ABORTED; maybe frame was detached?
+Call log:
+  - navigating to "https://csmstg.censof.com/DBKK", waiting until "load"
+
+2025-12-07 01:15:01,907 - ERROR - ======================================================================

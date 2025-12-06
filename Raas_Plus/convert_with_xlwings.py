@@ -190,7 +190,7 @@ def convert_two_excels_to_json_uipath(company_statement: str, bank_statement: st
 def main():
     # Define directories
     # test_dataset_dir = os.path.join(os.path.dirname(__file__), 'TestDataset')
-    test_dataset_dir = "D:\PlayWright Extractor\Downloads"
+    test_dataset_dir = r"D:\PlayWright Extractor\Downloads"
     output_dir = os.path.join(test_dataset_dir, 'json_output')
     
     # Create output directory if it doesn't exist
