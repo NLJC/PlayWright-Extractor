@@ -3456,3 +3456,349 @@ Workflow Summary:
 All processes completed successfully!
 2025-12-02 15:38:40,441 - INFO - Check logs for detailed information.
 2025-12-02 15:38:40,441 - INFO - ======================================================================
+2025-12-05 15:05:18,116 - INFO - ======================================================================
+2025-12-05 15:05:18,117 - INFO - PLAYWRIGHT AUTOMATION RUNNER
+2025-12-05 15:05:18,118 - INFO - ======================================================================
+2025-12-05 15:05:18,118 - INFO - Account: CIM02
+2025-12-05 15:05:18,120 - INFO - Date: 05/12/2025
+2025-12-05 15:05:18,120 - INFO - Amount: 263737.84
+2025-12-05 15:05:18,120 - INFO - Headless Mode: True
+2025-12-05 15:05:18,120 - INFO - Downloads Dir: C:\Users\Lenovo\OneDrive - Cognitive Consulting Sdn Bhd (1)\Desktop\SegmentationCompressionWork\PlayWright-Extractor\Downloads
+2025-12-05 15:05:18,120 - INFO - ======================================================================
+2025-12-05 15:05:18,121 - INFO - 
+🚀 Starting complete automation workflow...
+
+2025-12-05 15:05:18,121 - INFO - 
+======================================================================
+2025-12-05 15:05:18,122 - INFO - STEP 1: CA MATCH PROCESS
+2025-12-05 15:05:18,122 - INFO - ======================================================================
+2025-12-05 15:05:32,357 - INFO - Starting CA Match process...
+2025-12-05 15:05:32,358 - INFO - ============================================================
+2025-12-05 15:05:32,360 - INFO - CA MATCH PROCESS - OPTIMIZED VERSION
+2025-12-05 15:05:32,361 - INFO - ============================================================
+2025-12-05 15:05:32,362 - INFO - Initializing browser...
+2025-12-05 15:05:34,922 - INFO - Browser initialized successfully
+2025-12-05 15:05:34,923 - INFO - Logging in...
+2025-12-05 15:05:39,714 - INFO - Navigating to Process Bank Records...
+2025-12-05 15:05:49,154 - INFO - Starting auto-match process...
+2025-12-05 15:05:49,316 - INFO - Clicked account link 'CIM02' successfully
+2025-12-05 15:06:02,792 - INFO - Clicked Auto-Match button successfully
+2025-12-05 15:06:04,807 - INFO - Waiting for auto-match confirmation...
+2025-12-05 15:06:23,296 - WARNING - No 'Executing' message detected
+2025-12-05 15:06:23,306 - INFO - âœ… Auto-match operation completed successfully!
+2025-12-05 15:06:23,313 - INFO - Processing auto-matched items...
+2025-12-05 15:06:23,403 - INFO - Clicked Process button successfully
+2025-12-05 15:06:28,537 - INFO - Clicked Back button successfully
+2025-12-05 15:06:31,543 - INFO - Starting manual matching process...
+2025-12-05 15:06:31,665 - INFO - Clicked account link 'CIM02' successfully
+2025-12-05 15:06:36,677 - INFO - Processing page 1...
+2025-12-05 15:06:36,735 - INFO - Found 8 rows on page 1
+2025-12-05 15:06:36,756 - INFO - Row 0 - Ext. Ref. Nbr.: 2507312241040258
+2025-12-05 15:06:36,767 - INFO - Row 0 - Already matched, skipping
+2025-12-05 15:06:36,789 - INFO - Row 1 - Ext. Ref. Nbr.: 2507311751140415
+2025-12-05 15:06:36,799 - INFO - Row 1 - Already matched, skipping
+2025-12-05 15:06:36,822 - INFO - Row 2 - Ext. Ref. Nbr.: 30756388
+2025-12-05 15:06:36,840 - INFO - Row 2 - Already matched, skipping
+2025-12-05 15:06:36,861 - INFO - Row 3 - Ext. Ref. Nbr.: 30756388
+2025-12-05 15:06:36,872 - INFO - Row 3 - Already matched, skipping
+2025-12-05 15:06:36,898 - INFO - Row 4 - Ext. Ref. Nbr.: 2507181637590200
+2025-12-05 15:06:36,909 - INFO - Row 4 - Already matched, skipping
+2025-12-05 15:06:36,940 - INFO - Row 5 - Ext. Ref. Nbr.: 2507110714350678
+2025-12-05 15:06:36,965 - INFO - Row 5 - Already matched, skipping
+2025-12-05 15:06:37,001 - INFO - Row 6 - Ext. Ref. Nbr.: 2507051851570603
+2025-12-05 15:06:37,017 - INFO - Row 6 - Already matched, skipping
+2025-12-05 15:06:37,032 - INFO - No more pages - pagination complete
+2025-12-05 15:06:37,032 - INFO - Pagination complete - processed 7 total rows across 1 pages
+2025-12-05 15:06:37,035 - INFO - Manual matching complete - 7 rows processed
+2025-12-05 15:06:37,035 - INFO - Processing manually matched items...
+2025-12-05 15:06:37,183 - INFO - Clicked Process button (after manual matching) successfully
+2025-12-05 15:06:42,350 - INFO - Clicked Back to list button successfully
+2025-12-05 15:06:45,361 - INFO - Downloading results...
+2025-12-05 15:06:45,480 - INFO - Clicked account link 'CIM02' successfully
+2025-12-05 15:06:50,598 - INFO - Clicked Export dropdown successfully
+2025-12-05 15:06:50,730 - INFO - Clicked Export to Excel button successfully
+2025-12-05 15:07:02,117 - INFO - Download started: Process Bank Transactions 20251205.xlsx
+2025-12-05 15:07:03,063 - INFO - âœ… File saved to: C:\Users\Lenovo\OneDrive - Cognitive Consulting Sdn Bhd (1)\Desktop\SegmentationCompressionWork\PlayWright-Extractor\Downloads\Process Bank Transactions 20251205.xlsx
+2025-12-05 15:07:03,064 - INFO - Processing downloaded file: C:\Users\Lenovo\OneDrive - Cognitive Consulting Sdn Bhd (1)\Desktop\SegmentationCompressionWork\PlayWright-Extractor\Downloads\Process Bank Transactions 20251205.xlsx
+2025-12-05 15:07:03,417 - WARNING - Could not determine dtype for column 1, falling back to string
+2025-12-05 15:07:03,417 - WARNING - Could not determine dtype for column 6, falling back to string
+2025-12-05 15:07:03,417 - WARNING - Could not determine dtype for column 8, falling back to string
+2025-12-05 15:07:03,417 - WARNING - Could not determine dtype for column 9, falling back to string
+2025-12-05 15:07:03,417 - WARNING - Could not determine dtype for column 11, falling back to string
+2025-12-05 15:07:03,417 - WARNING - Could not determine dtype for column 13, falling back to string
+2025-12-05 15:07:03,417 - WARNING - Could not determine dtype for column 14, falling back to string
+2025-12-05 15:07:03,419 - WARNING - Could not determine dtype for column 17, falling back to string
+2025-12-05 15:07:03,419 - WARNING - Could not determine dtype for column 18, falling back to string
+2025-12-05 15:07:03,420 - WARNING - Could not determine dtype for column 20, falling back to string
+2025-12-05 15:07:03,633 - INFO - Processed 7 records from downloaded file
+2025-12-05 15:07:03,857 - INFO - Browser cleanup completed
+2025-12-05 15:07:03,857 - INFO - Chaining to Extract Reconciliation Statement...
+2025-12-05 15:08:56,532 - WARNING - Could not determine dtype for column 2, falling back to string
+2025-12-05 15:08:56,533 - WARNING - Could not determine dtype for column 11, falling back to string
+2025-12-05 15:08:56,533 - WARNING - Could not determine dtype for column 12, falling back to string
+2025-12-05 15:19:18,989 - INFO - Loaded 7 bank transactions and 3715 company transactions
+2025-12-05 15:19:18,997 - INFO - Starting Stage 1: Traditional reconciliation pipeline...
+2025-12-05 15:19:19,037 - DEBUG - MBB02 credit card matcher skipped: support module not available
+2025-12-05 15:19:19,040 - INFO - Finding transaction ID matches...
+2025-12-05 15:19:20,344 - INFO - Finding bank charges...
+2025-12-05 15:19:20,347 - DEBUG - After bank charges detection: 1 matched (added 1)
+2025-12-05 15:19:20,347 - INFO - Detected 1 bank charges
+2025-12-05 15:19:20,349 - INFO - Finding Reverse CE GL matches...
+2025-12-05 15:19:21,260 - INFO - Found 2 Reverse CE GL matches
+2025-12-05 15:19:21,263 - INFO - Finding name and amount matches...
+2025-12-05 15:19:22,973 - INFO - Found 5 name and amount matches
+2025-12-05 15:19:22,973 - INFO - Finding Hungarian 1:1 matches...
+2025-12-05 15:19:30,398 - INFO - Hungarian 1:1: 0 matches | pairs scored=45, kept=0, time=7.42s
+2025-12-05 15:19:30,401 - INFO - Finding enhanced 1:1 matches...
+2025-12-05 15:19:31,351 - INFO - Found 0 enhanced 1:1 matches
+2025-12-05 15:19:31,354 - INFO - Finding amount and date matches...
+2025-12-05 15:19:31,508 - INFO - Found 0 amount and date matches
+2025-12-05 15:19:31,510 - INFO - Finding fuzzy matches...
+2025-12-05 15:20:36,290 - INFO - ============================================================
+2025-12-05 15:20:36,291 - INFO - CA MATCH PROCESS COMPLETED SUCCESSFULLY
+2025-12-05 15:20:36,292 - INFO - ============================================================
+2025-12-05 15:20:36,292 - INFO - ✅ CA Match completed: 7 records processed
+2025-12-05 15:20:36,320 - INFO - 
+======================================================================
+2025-12-05 15:20:36,320 - INFO - ✅ COMPLETE AUTOMATION WORKFLOW FINISHED SUCCESSFULLY
+2025-12-05 15:20:36,320 - INFO - ======================================================================
+2025-12-05 15:20:36,321 - INFO - 
+Workflow Summary:
+2025-12-05 15:20:36,321 - INFO -   ✅ CA Match Process - Completed
+2025-12-05 15:20:36,321 - INFO -   ✅ Extract Reconciliation Statement - Completed (chained)
+2025-12-05 15:20:36,321 - INFO -   ✅ RaasPlus Reconciliation - Completed (chained)
+2025-12-05 15:20:36,322 - INFO -   ✅ Match Statement - Completed (chained)
+2025-12-05 15:20:36,322 - INFO - 
+All processes completed successfully!
+2025-12-05 15:20:36,322 - INFO - Check logs for detailed information.
+2025-12-05 15:20:36,322 - INFO - ======================================================================
+2025-12-05 16:27:00,482 - INFO - ======================================================================
+2025-12-05 16:27:00,482 - INFO - PLAYWRIGHT AUTOMATION RUNNER
+2025-12-05 16:27:00,484 - INFO - ======================================================================
+2025-12-05 16:27:00,484 - INFO - Account: CIM02
+2025-12-05 16:27:00,484 - INFO - Date: 05/12/2025
+2025-12-05 16:27:00,485 - INFO - Amount: 263737.84
+2025-12-05 16:27:00,485 - INFO - Headless Mode: False
+2025-12-05 16:27:00,485 - INFO - Downloads Dir: C:\Users\Lenovo\OneDrive - Cognitive Consulting Sdn Bhd (1)\Desktop\SegmentationCompressionWork\PlayWright-Extractor\Downloads
+2025-12-05 16:27:00,486 - INFO - ======================================================================
+2025-12-05 16:27:00,486 - INFO - 
+🚀 Starting complete automation workflow...
+
+2025-12-05 16:27:00,486 - INFO - 
+======================================================================
+2025-12-05 16:27:00,486 - INFO - STEP 1: CA MATCH PROCESS
+2025-12-05 16:27:00,486 - INFO - ======================================================================
+2025-12-05 16:27:01,810 - INFO - Starting CA Match process...
+2025-12-05 16:27:01,811 - INFO - ============================================================
+2025-12-05 16:27:01,812 - INFO - CA MATCH PROCESS - OPTIMIZED VERSION
+2025-12-05 16:27:01,813 - INFO - ============================================================
+2025-12-05 16:27:01,814 - INFO - Initializing browser...
+2025-12-05 16:27:03,156 - INFO - Browser initialized successfully
+2025-12-05 16:27:03,157 - INFO - Logging in...
+2025-12-05 16:27:04,875 - INFO - Navigating to Process Bank Records...
+2025-12-05 16:27:14,961 - INFO - Starting auto-match process...
+2025-12-05 16:27:17,831 - INFO - Clicked account link 'CIM02' successfully
+2025-12-05 16:27:23,743 - INFO - Clicked Auto-Match button successfully
+2025-12-05 16:27:25,772 - INFO - Waiting for auto-match confirmation...
+2025-12-05 16:27:40,822 - WARNING - No 'Executing' message detected
+2025-12-05 16:27:40,833 - INFO - âœ… Auto-match operation completed successfully!
+2025-12-05 16:27:40,834 - INFO - Processing auto-matched items...
+2025-12-05 16:27:40,928 - INFO - Clicked Process button successfully
+2025-12-05 16:27:46,124 - INFO - Clicked Back button successfully
+2025-12-05 16:27:49,132 - INFO - Starting manual matching process...
+2025-12-05 16:27:49,273 - INFO - Clicked account link 'CIM02' successfully
+2025-12-05 16:27:54,280 - INFO - Processing page 1...
+2025-12-05 16:27:54,332 - INFO - Found 8 rows on page 1
+2025-12-05 16:27:54,360 - INFO - Row 0 - Ext. Ref. Nbr.: 2507312241040258
+2025-12-05 16:27:54,370 - INFO - Row 0 - Already matched, skipping
+2025-12-05 16:27:54,394 - INFO - Row 1 - Ext. Ref. Nbr.: 2507311751140415
+2025-12-05 16:27:54,406 - INFO - Row 1 - Already matched, skipping
+2025-12-05 16:27:54,429 - INFO - Row 2 - Ext. Ref. Nbr.: 30756388
+2025-12-05 16:27:54,442 - INFO - Row 2 - Already matched, skipping
+2025-12-05 16:27:54,462 - INFO - Row 3 - Ext. Ref. Nbr.: 30756388
+2025-12-05 16:27:54,476 - INFO - Row 3 - Already matched, skipping
+2025-12-05 16:27:54,496 - INFO - Row 4 - Ext. Ref. Nbr.: 2507181637590200
+2025-12-05 16:27:54,509 - INFO - Row 4 - Already matched, skipping
+2025-12-05 16:27:54,530 - INFO - Row 5 - Ext. Ref. Nbr.: 2507110714350678
+2025-12-05 16:27:54,543 - INFO - Row 5 - Already matched, skipping
+2025-12-05 16:27:54,565 - INFO - Row 6 - Ext. Ref. Nbr.: 2507051851570603
+2025-12-05 16:27:54,577 - INFO - Row 6 - Already matched, skipping
+2025-12-05 16:27:54,589 - INFO - No more pages - pagination complete
+2025-12-05 16:27:54,590 - INFO - Pagination complete - processed 7 total rows across 1 pages
+2025-12-05 16:27:54,591 - INFO - Manual matching complete - 7 rows processed
+2025-12-05 16:27:54,592 - INFO - Processing manually matched items...
+2025-12-05 16:27:54,675 - INFO - Clicked Process button (after manual matching) successfully
+2025-12-05 16:27:59,839 - INFO - Clicked Back to list button successfully
+2025-12-05 16:28:02,861 - INFO - Downloading results...
+2025-12-05 16:28:02,992 - INFO - Clicked account link 'CIM02' successfully
+2025-12-05 16:28:08,104 - INFO - Clicked Export dropdown successfully
+2025-12-05 16:28:08,276 - INFO - Clicked Export to Excel button successfully
+2025-12-05 16:28:19,481 - INFO - Download started: Process Bank Transactions 20251205.xlsx
+2025-12-05 16:28:20,446 - INFO - âœ… File saved to: C:\Users\Lenovo\OneDrive - Cognitive Consulting Sdn Bhd (1)\Desktop\SegmentationCompressionWork\PlayWright-Extractor\Downloads\Process Bank Transactions 20251205.xlsx
+2025-12-05 16:28:20,446 - INFO - Processing downloaded file: C:\Users\Lenovo\OneDrive - Cognitive Consulting Sdn Bhd (1)\Desktop\SegmentationCompressionWork\PlayWright-Extractor\Downloads\Process Bank Transactions 20251205.xlsx
+2025-12-05 16:28:20,500 - WARNING - Could not determine dtype for column 1, falling back to string
+2025-12-05 16:28:20,500 - WARNING - Could not determine dtype for column 6, falling back to string
+2025-12-05 16:28:20,500 - WARNING - Could not determine dtype for column 8, falling back to string
+2025-12-05 16:28:20,500 - WARNING - Could not determine dtype for column 9, falling back to string
+2025-12-05 16:28:20,501 - WARNING - Could not determine dtype for column 11, falling back to string
+2025-12-05 16:28:20,501 - WARNING - Could not determine dtype for column 13, falling back to string
+2025-12-05 16:28:20,501 - WARNING - Could not determine dtype for column 14, falling back to string
+2025-12-05 16:28:20,502 - WARNING - Could not determine dtype for column 17, falling back to string
+2025-12-05 16:28:20,502 - WARNING - Could not determine dtype for column 18, falling back to string
+2025-12-05 16:28:20,503 - WARNING - Could not determine dtype for column 20, falling back to string
+2025-12-05 16:28:20,624 - INFO - Processed 7 records from downloaded file
+2025-12-05 16:28:21,047 - INFO - Browser cleanup completed
+2025-12-05 16:28:21,048 - INFO - Chaining to Extract Reconciliation Statement...
+2025-12-05 16:30:07,305 - WARNING - Could not determine dtype for column 2, falling back to string
+2025-12-05 16:30:07,305 - WARNING - Could not determine dtype for column 11, falling back to string
+2025-12-05 16:30:07,305 - WARNING - Could not determine dtype for column 12, falling back to string
+2025-12-05 16:40:16,141 - INFO - Loaded 7 bank transactions and 3715 company transactions
+2025-12-05 16:40:16,148 - INFO - Starting Stage 1: Traditional reconciliation pipeline...
+2025-12-05 16:40:16,179 - INFO - Finding transaction ID matches...
+2025-12-05 16:40:17,454 - INFO - Finding bank charges...
+2025-12-05 16:40:17,458 - DEBUG - After bank charges detection: 1 matched (added 1)
+2025-12-05 16:40:17,458 - INFO - Detected 1 bank charges
+2025-12-05 16:40:17,460 - INFO - Finding Reverse CE GL matches...
+2025-12-05 16:40:18,317 - INFO - Found 2 Reverse CE GL matches
+2025-12-05 16:40:18,320 - INFO - Finding name and amount matches...
+2025-12-05 16:40:20,025 - INFO - Found 5 name and amount matches
+2025-12-05 16:40:20,028 - INFO - Finding Hungarian 1:1 matches...
+2025-12-05 16:40:21,645 - INFO - Hungarian 1:1: 0 matches | pairs scored=45, kept=0, time=1.62s
+2025-12-05 16:40:21,648 - INFO - Finding enhanced 1:1 matches...
+2025-12-05 16:40:22,820 - INFO - Found 0 enhanced 1:1 matches
+2025-12-05 16:40:22,822 - INFO - Finding amount and date matches...
+2025-12-05 16:40:23,011 - INFO - Found 0 amount and date matches
+2025-12-05 16:40:23,013 - INFO - Finding fuzzy matches...
+2025-12-05 16:42:29,497 - INFO - ============================================================
+2025-12-05 16:42:29,498 - INFO - CA MATCH PROCESS COMPLETED SUCCESSFULLY
+2025-12-05 16:42:29,498 - INFO - ============================================================
+2025-12-05 16:42:29,499 - INFO - ✅ CA Match completed: 7 records processed
+2025-12-05 16:42:29,521 - INFO - 
+======================================================================
+2025-12-05 16:42:29,522 - INFO - ✅ COMPLETE AUTOMATION WORKFLOW FINISHED SUCCESSFULLY
+2025-12-05 16:42:29,522 - INFO - ======================================================================
+2025-12-05 16:42:29,522 - INFO - 
+Workflow Summary:
+2025-12-05 16:42:29,523 - INFO -   ✅ CA Match Process - Completed
+2025-12-05 16:42:29,523 - INFO -   ✅ Extract Reconciliation Statement - Completed (chained)
+2025-12-05 16:42:29,523 - INFO -   ✅ RaasPlus Reconciliation - Completed (chained)
+2025-12-05 16:42:29,523 - INFO -   ✅ Match Statement - Completed (chained)
+2025-12-05 16:42:29,524 - INFO - 
+All processes completed successfully!
+2025-12-05 16:42:29,524 - INFO - Check logs for detailed information.
+2025-12-05 16:42:29,524 - INFO - ======================================================================
+2025-12-05 16:53:30,657 - INFO - ======================================================================
+2025-12-05 16:53:30,657 - INFO - PLAYWRIGHT AUTOMATION RUNNER
+2025-12-05 16:53:30,657 - INFO - ======================================================================
+2025-12-05 16:53:30,658 - INFO - Account: CIM02
+2025-12-05 16:53:30,658 - INFO - Date: 05/12/2025
+2025-12-05 16:53:30,658 - INFO - Amount: 263737.84
+2025-12-05 16:53:30,658 - INFO - Headless Mode: False
+2025-12-05 16:53:30,659 - INFO - Downloads Dir: C:\Users\Lenovo\OneDrive - Cognitive Consulting Sdn Bhd (1)\Desktop\SegmentationCompressionWork\PlayWright-Extractor\Downloads
+2025-12-05 16:53:30,659 - INFO - ======================================================================
+2025-12-05 16:53:30,659 - INFO - 
+🚀 Starting complete automation workflow...
+
+2025-12-05 16:53:30,660 - INFO - 
+======================================================================
+2025-12-05 16:53:30,660 - INFO - STEP 1: CA MATCH PROCESS
+2025-12-05 16:53:30,660 - INFO - ======================================================================
+2025-12-05 16:53:31,535 - INFO - Starting CA Match process...
+2025-12-05 16:53:31,535 - INFO - ============================================================
+2025-12-05 16:53:31,537 - INFO - CA MATCH PROCESS - OPTIMIZED VERSION
+2025-12-05 16:53:31,538 - INFO - ============================================================
+2025-12-05 16:53:31,539 - INFO - Initializing browser...
+2025-12-05 16:53:32,308 - INFO - Browser initialized successfully
+2025-12-05 16:53:32,309 - INFO - Logging in...
+2025-12-05 16:53:33,873 - INFO - Navigating to Process Bank Records...
+2025-12-05 16:53:43,149 - INFO - Starting auto-match process...
+2025-12-05 16:53:43,323 - INFO - Clicked account link 'CIM02' successfully
+2025-12-05 16:53:48,491 - INFO - Clicked Auto-Match button successfully
+2025-12-05 16:53:50,512 - INFO - Waiting for auto-match confirmation...
+2025-12-05 16:54:05,557 - WARNING - No 'Executing' message detected
+2025-12-05 16:54:05,568 - INFO - âœ… Auto-match operation completed successfully!
+2025-12-05 16:54:05,569 - INFO - Processing auto-matched items...
+2025-12-05 16:54:05,659 - INFO - Clicked Process button successfully
+2025-12-05 16:54:10,805 - INFO - Clicked Back button successfully
+2025-12-05 16:54:13,817 - INFO - Starting manual matching process...
+2025-12-05 16:54:13,955 - INFO - Clicked account link 'CIM02' successfully
+2025-12-05 16:54:18,967 - INFO - Processing page 1...
+2025-12-05 16:54:19,023 - INFO - Found 8 rows on page 1
+2025-12-05 16:54:19,045 - INFO - Row 0 - Ext. Ref. Nbr.: 2507312241040258
+2025-12-05 16:54:19,058 - INFO - Row 0 - Already matched, skipping
+2025-12-05 16:54:19,078 - INFO - Row 1 - Ext. Ref. Nbr.: 2507311751140415
+2025-12-05 16:54:19,091 - INFO - Row 1 - Already matched, skipping
+2025-12-05 16:54:19,113 - INFO - Row 2 - Ext. Ref. Nbr.: 30756388
+2025-12-05 16:54:19,126 - INFO - Row 2 - Already matched, skipping
+2025-12-05 16:54:19,146 - INFO - Row 3 - Ext. Ref. Nbr.: 30756388
+2025-12-05 16:54:19,158 - INFO - Row 3 - Already matched, skipping
+2025-12-05 16:54:19,180 - INFO - Row 4 - Ext. Ref. Nbr.: 2507181637590200
+2025-12-05 16:54:19,192 - INFO - Row 4 - Already matched, skipping
+2025-12-05 16:54:19,214 - INFO - Row 5 - Ext. Ref. Nbr.: 2507110714350678
+2025-12-05 16:54:19,226 - INFO - Row 5 - Already matched, skipping
+2025-12-05 16:54:19,247 - INFO - Row 6 - Ext. Ref. Nbr.: 2507051851570603
+2025-12-05 16:54:19,259 - INFO - Row 6 - Already matched, skipping
+2025-12-05 16:54:19,272 - INFO - No more pages - pagination complete
+2025-12-05 16:54:19,274 - INFO - Pagination complete - processed 7 total rows across 1 pages
+2025-12-05 16:54:19,275 - INFO - Manual matching complete - 7 rows processed
+2025-12-05 16:54:19,275 - INFO - Processing manually matched items...
+2025-12-05 16:54:19,366 - INFO - Clicked Process button (after manual matching) successfully
+2025-12-05 16:54:24,504 - INFO - Clicked Back to list button successfully
+2025-12-05 16:54:27,509 - INFO - Downloading results...
+2025-12-05 16:54:27,635 - INFO - Clicked account link 'CIM02' successfully
+2025-12-05 16:54:32,752 - INFO - Clicked Export dropdown successfully
+2025-12-05 16:54:32,867 - INFO - Clicked Export to Excel button successfully
+2025-12-05 16:54:38,517 - INFO - Download started: Process Bank Transactions 20251205.xlsx
+2025-12-05 16:54:38,812 - INFO - âœ… File saved to: C:\Users\Lenovo\OneDrive - Cognitive Consulting Sdn Bhd (1)\Desktop\SegmentationCompressionWork\PlayWright-Extractor\Downloads\Process Bank Transactions 20251205.xlsx
+2025-12-05 16:54:38,815 - INFO - Processing downloaded file: C:\Users\Lenovo\OneDrive - Cognitive Consulting Sdn Bhd (1)\Desktop\SegmentationCompressionWork\PlayWright-Extractor\Downloads\Process Bank Transactions 20251205.xlsx
+2025-12-05 16:54:38,844 - WARNING - Could not determine dtype for column 1, falling back to string
+2025-12-05 16:54:38,845 - WARNING - Could not determine dtype for column 6, falling back to string
+2025-12-05 16:54:38,845 - WARNING - Could not determine dtype for column 8, falling back to string
+2025-12-05 16:54:38,845 - WARNING - Could not determine dtype for column 9, falling back to string
+2025-12-05 16:54:38,845 - WARNING - Could not determine dtype for column 11, falling back to string
+2025-12-05 16:54:38,847 - WARNING - Could not determine dtype for column 13, falling back to string
+2025-12-05 16:54:38,847 - WARNING - Could not determine dtype for column 14, falling back to string
+2025-12-05 16:54:38,847 - WARNING - Could not determine dtype for column 17, falling back to string
+2025-12-05 16:54:38,847 - WARNING - Could not determine dtype for column 18, falling back to string
+2025-12-05 16:54:38,847 - WARNING - Could not determine dtype for column 20, falling back to string
+2025-12-05 16:54:38,927 - INFO - Processed 7 records from downloaded file
+2025-12-05 16:54:39,355 - INFO - Browser cleanup completed
+2025-12-05 16:54:39,355 - INFO - Chaining to Extract Reconciliation Statement...
+2025-12-05 16:56:29,332 - WARNING - Could not determine dtype for column 2, falling back to string
+2025-12-05 16:56:29,332 - WARNING - Could not determine dtype for column 11, falling back to string
+2025-12-05 16:56:29,333 - WARNING - Could not determine dtype for column 12, falling back to string
+2025-12-05 17:06:59,579 - INFO - Loaded 7 bank transactions and 3715 company transactions
+2025-12-05 17:06:59,584 - INFO - Starting Stage 1: Traditional reconciliation pipeline...
+2025-12-05 17:06:59,608 - INFO - Finding transaction ID matches...
+2025-12-05 17:07:00,865 - INFO - Finding bank charges...
+2025-12-05 17:07:00,868 - DEBUG - After bank charges detection: 1 matched (added 1)
+2025-12-05 17:07:00,869 - INFO - Detected 1 bank charges
+2025-12-05 17:07:00,870 - INFO - Finding Reverse CE GL matches...
+2025-12-05 17:07:01,695 - INFO - Found 2 Reverse CE GL matches
+2025-12-05 17:07:01,698 - INFO - Finding name and amount matches...
+2025-12-05 17:07:03,401 - INFO - Found 5 name and amount matches
+2025-12-05 17:07:03,402 - INFO - Finding Hungarian 1:1 matches...
+2025-12-05 17:07:04,463 - INFO - Hungarian 1:1: 0 matches | pairs scored=45, kept=0, time=1.06s
+2025-12-05 17:07:04,467 - INFO - Finding enhanced 1:1 matches...
+2025-12-05 17:07:05,657 - INFO - Found 0 enhanced 1:1 matches
+2025-12-05 17:07:05,660 - INFO - Finding amount and date matches...
+2025-12-05 17:07:05,862 - INFO - Found 0 amount and date matches
+2025-12-05 17:07:05,864 - INFO - Finding fuzzy matches...
+2025-12-05 17:12:37,004 - INFO - ============================================================
+2025-12-05 17:12:37,005 - INFO - CA MATCH PROCESS COMPLETED SUCCESSFULLY
+2025-12-05 17:12:37,006 - INFO - ============================================================
+2025-12-05 17:12:37,008 - INFO - ✅ CA Match completed: 7 records processed
+2025-12-05 17:12:37,029 - INFO - 
+======================================================================
+2025-12-05 17:12:37,029 - INFO - ✅ COMPLETE AUTOMATION WORKFLOW FINISHED SUCCESSFULLY
+2025-12-05 17:12:37,029 - INFO - ======================================================================
+2025-12-05 17:12:37,029 - INFO - 
+Workflow Summary:
+2025-12-05 17:12:37,030 - INFO -   ✅ CA Match Process - Completed
+2025-12-05 17:12:37,030 - INFO -   ✅ Extract Reconciliation Statement - Completed (chained)
+2025-12-05 17:12:37,030 - INFO -   ✅ RaasPlus Reconciliation - Completed (chained)
+2025-12-05 17:12:37,031 - INFO -   ✅ Match Statement - Completed (chained)
+2025-12-05 17:12:37,031 - INFO - 
+All processes completed successfully!
+2025-12-05 17:12:37,031 - INFO - Check logs for detailed information.
+2025-12-05 17:12:37,031 - INFO - ======================================================================

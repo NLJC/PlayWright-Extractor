@@ -44,7 +44,7 @@ import io
 from itertools import combinations
 
 try:
-    from scripts import mbb02_cr_dr_matching as mbb02_cc
+    from script import mbb02_cr_dr_matching as mbb02_cc
 except Exception:
     mbb02_cc = None
 

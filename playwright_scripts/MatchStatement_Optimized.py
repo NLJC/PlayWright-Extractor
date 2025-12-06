@@ -13,7 +13,8 @@ Key Improvements:
 """
 
 import os
-from typing import Dict, List, Any
+import re
+from typing import Dict, List, Any, Set
 
 import pandas as pd
 import requests
@@ -58,6 +59,7 @@ class MatchStatementProcessor:
         self.page = None
         self.frame = None
         self.failed_entries: List[Dict[str, Any]] = []
+        self.failed_bank_refs: Set[str] = set()  # Track failed BankRefs to prevent duplicates
         
     def log(self, message: str, level: str = "info"):
         """Centralized logging with webhook support."""
@@ -335,7 +337,9 @@ class MatchStatementProcessor:
             
             if self.is_table_empty(rows):
                 self.log(f"No records found for BankRef={bank_ref}", "warning")
-                self.failed_entries.append(row.to_dict())
+                if bank_ref not in self.failed_bank_refs:
+                    self.failed_entries.append(row.to_dict())
+                    self.failed_bank_refs.add(bank_ref)
                 continue
             
             # Check first row for warning icon
@@ -346,7 +350,9 @@ class MatchStatementProcessor:
                 
                 if warning_icon.count() > 0:
                     self.log(f"Warning icon present for {bank_ref}, skipping", "warning")
-                    self.failed_entries.append(row.to_dict())
+                    if bank_ref not in self.failed_bank_refs:
+                        self.failed_entries.append(row.to_dict())
+                        self.failed_bank_refs.add(bank_ref)
                     continue
                 else:
                     # Proceed with matching
@@ -394,50 +400,370 @@ class MatchStatementProcessor:
         self.log("=" * 60)
         self.log(f"STEP 6: Processing Group Matches ({len(df)} rows)")
         self.log("=" * 60)
-        
+
         # Ensure correct tab is selected
         self.ensure_match_to_payments_tab_selected()
-        
+
         for index, row in df.iterrows():
             bank_ref_raw = str(row.get("Bank Reference Number", "")).strip()
             csgp_ref_raw = str(row.get("CSGP Reference", "")).strip()
-            
+            match_type = str(row.get("Match Type", "")).strip().lower()
+
             if not bank_ref_raw or not csgp_ref_raw:
                 continue
-            
+
+            # Skip reverse_ce_gl entries - they will be processed separately
+            if match_type == "reverse_ce_gl":
+                self.log(f"[Group] Row {index+1}: Skipping reverse_ce_gl entry (will be processed in Step 6.5)")
+                continue
+
             # Take first bank ref
             bank_ref = bank_ref_raw.split(",")[0].strip()
-            
+
             # Split CSGP refs
             csgp_refs = [self.clean_ref(ref) for ref in csgp_ref_raw.split(",") if ref.strip()]
-            
-            self.log(f"[Group] Row {index+1}: BankRef={bank_ref}, CSGPRefs={csgp_refs}")
-            
+
+            self.log(f"[Group] Row {index+1}: BankRef={bank_ref}, CSGPRefs={csgp_refs}, MatchType={match_type}")
+
             # Filter by bank reference
             self.filter_table("Ext. Ref. Nbr.", "#ctl00_phG_PXSplitContainer_grid1_fd_txt", bank_ref)
-            
+
             # Check table
             table = self.frame.locator("#ctl00_phG_PXSplitContainer_grid1_dataT0")
             rows = table.locator("tbody tr")
-            
+
             if self.is_table_empty(rows):
                 self.log(f"No records for BankRef={bank_ref}", "warning")
-                self.failed_entries.append(row.to_dict())
+                if bank_ref not in self.failed_bank_refs:
+                    self.failed_entries.append(row.to_dict())
+                    self.failed_bank_refs.add(bank_ref)
                 continue
-            
+
             # Enable multiple matching
             self.enable_multiple_matching()
             self.page.wait_for_timeout(1000)
-            
+
             # Match each CSGP ref
             for csgp_ref in csgp_refs:
                 self.log(f"[Group] Matching CSGPRef={csgp_ref}")
                 self.search_and_match_csgp_ref(csgp_ref)
-        
+
         self.log(f"✅ Completed group matches")
-    
+
+    def process_reverse_ce_gl_matches(self, df: pd.DataFrame):
+        """STEP 6.5: Process reverse CE/GL matches in Acumatica."""
+        self.log("=" * 60)
+        self.log(f"STEP 6.5: Processing Reverse CE/GL Matches ({len(df)} rows)")
+        self.log("=" * 60)
+
+        # Filter for reverse_ce_gl matches only
+        if "Match Type" not in df.columns:
+            self.log("'Match Type' column not found, skipping reverse_ce_gl processing")
+            return
+
+        reverse_ce_gl_df = df[df["Match Type"].str.lower() == "reverse_ce_gl"]
+
+        if reverse_ce_gl_df.empty:
+            self.log("No reverse_ce_gl matches found, skipping")
+            return
+
+        self.log(f"Found {len(reverse_ce_gl_df)} reverse_ce_gl matches to process")
+
+        for index, row in reverse_ce_gl_df.iterrows():
+            csgp_ref_raw = str(row.get("CSGP Reference", "")).strip()
+
+            if not csgp_ref_raw:
+                continue
+
+            # Split CSGP refs - reverse_ce_gl typically has 2 company transactions
+            csgp_refs = [self.clean_ref(ref) for ref in csgp_ref_raw.split(",") if ref.strip()]
+
+            if len(csgp_refs) != 2:
+                self.log(f"[reverse_ce_gl] Row {index+1}: Expected 2 CSGP refs, got {len(csgp_refs)}. Skipping.", "warning")
+                self.failed_entries.append(row.to_dict())
+                continue
+
+            self.log(f"[reverse_ce_gl] Row {index+1}: Processing CSGPRefs={csgp_refs}")
+
+            # Navigate to CashBook -> Account -> Reconciliation Statements
+            success = self.navigate_to_reconciliation_statements()
+            if not success:
+                self.log(f"Failed to navigate to Reconciliation Statements for {csgp_refs}", "error")
+                self.failed_entries.append(row.to_dict())
+                continue
+
+            # Search for the first CSGP reference in Document Ref column
+            matching_records = self.search_document_ref_in_reconciliation(csgp_refs[0])
+
+            if not matching_records:
+                self.log(f"No records found for CSGP ref {csgp_refs[0]}", "warning")
+                self.failed_entries.append(row.to_dict())
+                continue
+
+            # Validate and reconcile based on record count
+            success = self.validate_and_reconcile_reverse_ce_gl(matching_records, csgp_refs)
+
+            if not success:
+                self.log(f"Failed to reconcile reverse_ce_gl for {csgp_refs}", "error")
+                self.failed_entries.append(row.to_dict())
+                continue
+
+            # Navigate back to Process Bank Records
+            self.log("Navigating back to Process Bank Records...")
+            functions.navigatePage(self.page, "Process Bank Records")
+            self.frame = self.wait_for_iframe()
+            account_link = self.frame.get_by_role("link", name=self.account_name).last
+            self.smart_click(account_link, f"Account link: {self.account_name}")
+            self.page.wait_for_timeout(3000)
+
+        self.log(f"✅ Completed reverse_ce_gl matches")
+
+    def navigate_to_reconciliation_statements(self) -> bool:
+        """Navigate to CashBook -> Reconciliation Statements -> Account."""
+        try:
+            self.log("Navigating to CashBook...")
+
+            # Click on CashBook in the menu (similar to navigatePage function)
+            cashbook_link = self.page.locator("div").filter(has_text=re.compile(r"^Cash Book$")).first
+            self.smart_click(cashbook_link, "CashBook menu")
+            self.page.wait_for_timeout(1000)
+
+            # Click on "Reconciliation Statements" button
+            self.log("Clicking Reconciliation Statements button...")
+            recon_button = self.page.get_by_role("link", name="Reconciliation Statements")
+            recon_button.hover()
+            self.page.wait_for_timeout(1000)
+            self.smart_click(recon_button, "Reconciliation Statements button")
+            self.page.wait_for_timeout(5000)
+
+            # Wait for iframe
+            self.frame = self.wait_for_iframe()
+
+            # Now select the account (e.g., CIM02) from the dropdown or link
+            self.log(f"Selecting account: {self.account_name}")
+
+            # Try to find account link in the iframe
+            account_link = self.frame.get_by_role("link", name=self.account_name)
+
+            if account_link.count() == 0:
+                # Try alternate selector - might be a dropdown
+                account_link = self.frame.locator(f"a:has-text('{self.account_name}')").first
+
+            if account_link.count() > 0:
+                self.smart_click(account_link, f"Account: {self.account_name}")
+                self.page.wait_for_timeout(3000)
+            else:
+                self.log(f"Could not find account link for {self.account_name}", "warning")
+                return False
+
+            self.log("✅ Successfully navigated to Reconciliation Statements")
+            return True
+
+        except Exception as e:
+            self.log(f"Failed to navigate to Reconciliation Statements: {e}", "error")
+            return False
+
+    def search_document_ref_in_reconciliation(self, csgp_ref: str) -> List[Dict]:
+        """Search for CSGP reference in Document Ref column and return matching records."""
+        try:
+            self.log(f"Searching for Document Ref: {csgp_ref}")
+
+            # Wait a bit for page to fully load
+            self.page.wait_for_timeout(2000)
+
+            # Try multiple possible table selectors
+            table = None
+            table_selectors = [
+                "#ctl00_phG_tab_t0_grid_dataT0",
+                "#ctl00_phG_grid_dataT0",
+                "table[id*='grid'][id*='dataT0']"
+            ]
+
+            for selector in table_selectors:
+                try:
+                    test_table = self.frame.locator(selector)
+                    test_table.wait_for(state="visible", timeout=3000)
+                    table = test_table
+                    self.log(f"Found table with selector: {selector}")
+                    break
+                except:
+                    continue
+
+            if not table:
+                self.log("Could not find reconciliation table with any known selector", "warning")
+                return []
+
+            # Filter by Document Ref column - try different header texts
+            try:
+                self.filter_table("Document Ref.", "#ctl00_phG_tab_t0_grid_fd_txt", csgp_ref)
+            except:
+                try:
+                    self.filter_table("Document Ref", "#ctl00_phG_grid_fd_txt", csgp_ref)
+                except Exception as e:
+                    self.log(f"Could not filter by Document Ref: {e}", "warning")
+
+            self.page.wait_for_timeout(2000)
+
+            # Get all rows
+            rows = table.locator("tbody tr")
+            row_count = rows.count()
+
+            if row_count == 0 or self.is_table_empty(rows):
+                self.log(f"No records found for Document Ref: {csgp_ref}", "warning")
+                return []
+
+            self.log(f"Found {row_count} matching records")
+
+            # Extract record information
+            matching_records = []
+            for i in range(row_count):
+                row = rows.nth(i)
+                cells = row.locator("td")
+                cell_count = cells.count()
+
+                # Extract description from various possible column positions
+                description = ""
+                try:
+                    # Try different column indices for description
+                    for col_idx in [2, 3, 4]:
+                        if col_idx < cell_count:
+                            desc = cells.nth(col_idx).inner_text().strip()
+                            if desc and desc not in ["0.00", "", "N/A"]:
+                                description = desc
+                                break
+                except:
+                    pass
+
+                matching_records.append({
+                    "row_index": i,
+                    "description": description,
+                    "row_locator": row
+                })
+
+            return matching_records
+
+        except Exception as e:
+            self.log(f"Error searching Document Ref: {e}", "error")
+            return []
+
+    def validate_and_reconcile_reverse_ce_gl(self, matching_records: List[Dict], csgp_refs: List[str]) -> bool:
+        """Validate and reconcile reverse CE/GL records based on count and description."""
+        try:
+            record_count = len(matching_records)
+            self.log(f"Validating {record_count} records for reconciliation")
+
+            # Check if there are more than 2 records
+            if record_count > 2:
+                self.log("More than 2 records found, checking descriptions...")
+
+                # Get first record's description
+                first_description = matching_records[0]["description"]
+
+                # Find first matching pair (same description)
+                matching_pair = None
+                for i in range(1, record_count):
+                    if matching_records[i]["description"] == first_description:
+                        matching_pair = [matching_records[0], matching_records[i]]
+                        break
+
+                if not matching_pair:
+                    self.log("No matching descriptions found in first 2 pairs", "warning")
+                    return False
+
+                records_to_reconcile = matching_pair
+
+            elif record_count == 2:
+                self.log("Exactly 2 records found, proceeding to reconcile")
+                records_to_reconcile = matching_records
+
+            else:
+                self.log(f"Insufficient records ({record_count}), need at least 2", "warning")
+                return False
+
+            # Reconcile the selected records
+            self.log(f"Reconciling {len(records_to_reconcile)} records...")
+
+            for record in records_to_reconcile:
+                row = record["row_locator"]
+
+                # Find the Reconciled checkbox - try multiple strategies
+                reconciled_checkbox = None
+
+                # Strategy 1: Look for checkbox in first few columns
+                for col_idx in range(5):  # Check first 5 columns
+                    try:
+                        checkbox = row.locator("td").nth(col_idx).locator("input[type='checkbox']")
+                        if checkbox.count() > 0:
+                            reconciled_checkbox = checkbox.first
+                            self.log(f"Found checkbox in column {col_idx}")
+                            break
+                    except:
+                        continue
+
+                # Strategy 2: Look for any checkbox in the row
+                if not reconciled_checkbox:
+                    try:
+                        checkbox = row.locator("input[type='checkbox']")
+                        if checkbox.count() > 0:
+                            reconciled_checkbox = checkbox.first
+                            self.log("Found checkbox using generic selector")
+                    except:
+                        pass
+
+                if reconciled_checkbox:
+                    # Check if not already checked
+                    try:
+                        if not reconciled_checkbox.is_checked():
+                            self.smart_click(reconciled_checkbox, "Reconciled checkbox")
+                            self.page.wait_for_timeout(500)
+                        else:
+                            self.log("Checkbox already checked, skipping")
+                    except Exception as e:
+                        self.log(f"Error clicking checkbox: {e}", "warning")
+                        return False
+                else:
+                    self.log("Could not find Reconciled checkbox", "warning")
+                    return False
+
+            # Click Save button - try multiple selectors
+            save_button = None
+            save_selectors = [
+                "#ctl00_phG_tab_t0_tlbDataBar_btnSave",
+                "#ctl00_phG_tlbDataBar_btnSave",
+                "a[id*='btnSave']",
+                "button:has-text('Save')"
+            ]
+
+            for selector in save_selectors:
+                try:
+                    btn = self.frame.locator(selector)
+                    if btn.count() > 0:
+                        save_button = btn.first
+                        self.log(f"Found Save button with selector: {selector}")
+                        break
+                except:
+                    continue
+
+            if not save_button:
+                # Try by role
+                save_button = self.frame.get_by_role("button", name="Save")
+
+            if save_button and save_button.count() > 0:
+                self.smart_click(save_button, "Save button")
+                self.page.wait_for_timeout(3000)
+            else:
+                self.log("Could not find Save button", "warning")
+                return False
+
+            self.log("✅ Successfully reconciled reverse CE/GL records")
+            return True
+
+        except Exception as e:
+            self.log(f"Error during reconciliation: {e}", "error")
+            return False
+
     def save_failed_entries(self):
-        """Save failed entries to Excel file."""
+        """Save failed entries to Excel file and return the file path if there are failures."""
         columns = [
             "Bank Statement Date", "Bank Transaction ID", "Bank Reference Number", "Bank Description",
             "Bank Receipt", "Bank Disbursement",
@@ -446,20 +772,23 @@ class MatchStatementProcessor:
             "Amount Difference", "Date Difference", "Reason", "Confidence", "Match Type",
             "Bank_UID", "CSGP_UID"
         ]
-        
+
         if self.failed_entries:
             df = pd.DataFrame(self.failed_entries)
-            
+
             # Ensure all columns exist
             for col in columns:
                 if col not in df.columns:
                     df[col] = ""
-            
+
             df = df[columns]
-            df.to_excel("failed_entries.xlsx", index=False)
-            self.log(f"❌ Saved {len(self.failed_entries)} failed entries to failed_entries.xlsx")
+            failed_entries_path = "failed_entries.xlsx"
+            df.to_excel(failed_entries_path, index=False)
+            self.log(f"❌ Saved {len(self.failed_entries)} failed entries to {failed_entries_path}")
+            return failed_entries_path
         else:
             self.log("✅ No failed entries")
+            return None
     
     def run(self):
         """
@@ -511,7 +840,10 @@ class MatchStatementProcessor:
             # STEP 6: Process group matches
             if "Group Match" in dfs:
                 self.process_group_matches(dfs["Group Match"])
-            
+
+                # STEP 6.5: Process reverse CE/GL matches
+                self.process_reverse_ce_gl_matches(dfs["Group Match"])
+
             # STEP 7: Process matched items
             self.log("=" * 60)
             self.log("STEP 7: Processing matched items")
@@ -527,20 +859,23 @@ class MatchStatementProcessor:
             self.log("=" * 60)
             self.log("STEP 8: Saving failed entries")
             self.log("=" * 60)
-            self.save_failed_entries()
-            
+            failed_entries_path = self.save_failed_entries()
+
             # Cleanup
             self.cleanup()
-            
+
             # Send success notification
             self.send_pingback("completed")
-            
-            # Send email with attachment
+
+            # Send email with attachment if there are failed entries
             try:
-                reply_with_attachment(
-                    reply_text="✅ Match Statement process completed successfully. Please find the attached file.",
-                    attachment_path="failed_entries.xlsx"
-                )
+                if failed_entries_path:
+                    reply_with_attachment(
+                        reply_text="✅ Match Statement process completed successfully.\n\n⚠️ Some entries could not be matched automatically. Please review the attached failed_entries.xlsx file and process these manually.",
+                        attachment_path=failed_entries_path
+                    )
+                else:
+                    reply_to_trigger_email("✅ Match Statement process completed successfully.\n\n🎉 All entries were matched successfully! No failed entries.")
             except Exception as e:
                 self.log(f"Email notification failed: {e}", "warning")
             

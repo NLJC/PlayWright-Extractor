@@ -87,7 +87,8 @@ def run_RaasPlus(
         raise FileNotFoundError(f"Company JSON not found: {company_json}")
 
     # Run reconciliation and print the resulting Excel path
-    bank_name = "MBB02"  # set to "MBB01" for Bulk EFT by default
+    # Derive bank_name from accountName parameter (e.g., "CIM02", "MBB02", "MBB01")
+    bank_name = accountName if accountName else "MBB02"  # fallback to MBB02 if not provided
     # Optional flags to control the Bulk EFT matcher
     enable_bulk_eft = None  # True/False to explicitly enable/disable
     bulk_eft_allow_any_bank = None  # True to allow Bulk EFT for non-MBB01 banks
@@ -104,7 +105,7 @@ def run_RaasPlus(
 
     functions.log_message(webhook_url, f"Reconciliation completed. Excel saved to:\n{excel_path}")
 
-    reply_to_trigger_email("RAAS+ completed successfully.")
+    # Note: Email with failed_entries.xlsx attachment will be sent after MatchStatement completes
 
     MatchStatement.run_matching_process(
         playwright,
@@ -118,6 +119,8 @@ def run_RaasPlus(
         webhook_url=webhook_url,
         headless=headless
     )
+
+    # Email notification is handled by MatchStatement (includes failed_entries.xlsx if any failures)
 
 # def run_RaasPlus(
 #     playwright: Playwright,
