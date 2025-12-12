@@ -1,0 +1,16 @@
+CLIENT_ID=231e7253-117c-4ae1-ad1f-f93d82c6e36c
+TENANT_ID=eb83ccb1-6ce0-40b1-941c-c7b1e857a690
+CLIENT_SECRET=None
+USERNAME=nicholas@cognitive.com.my
+TARGET_SUBJECT=Playwright Email Trigger
+
+WEBSITE_URL = https://csmstg.censof.com/DBKK
+WEBSITE_USERNAME = rpauser
+PASSWORD = Rp@12345
+
+SAVE_DIRECTORY=D:/PlayWright Extractor/Downloads/
+
+accountName = CIM02
+
+# Wait time in milliseconds for page loads and filter operations (default: 15000 = 15 seconds)
+PAGE_WAIT_TIME_MS = 25000

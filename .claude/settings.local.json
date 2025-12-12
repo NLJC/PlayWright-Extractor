@@ -1,7 +1,11 @@
 {
   "permissions": {
     "allow": [
-      "Bash(ls -la \"c:\\Users\\Lenovo\\OneDrive - Cognitive Consulting Sdn Bhd (1)\\Desktop\\SegmentationCompressionWork\\PlayWright-Extractor\\matching_results\"\" | grep -i \"matchlist \")"
+      "Bash(ls -la \"c:\\Users\\Lenovo\\OneDrive - Cognitive Consulting Sdn Bhd (1)\\Desktop\\SegmentationCompressionWork\\PlayWright-Extractor\\matching_results\"\" | grep -i \"matchlist \")",
+      "Bash(python:*)",
+      "Bash(dir:*)",
+      "Bash(findstr:*)",
+      "Bash(source venv/Scripts/activate:*)"
     ],
     "deny": [],
     "ask": []

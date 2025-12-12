@@ -60,6 +60,9 @@ class MatchStatementProcessor:
         self.frame = None
         self.failed_entries: List[Dict[str, Any]] = []
         self.failed_bank_refs: Set[str] = set()  # Track failed BankRefs to prevent duplicates
+
+        # Load page wait time from environment variable (default: 15000ms = 15 seconds)
+        self.page_wait_time = int(os.getenv("PAGE_WAIT_TIME_MS", "15000"))
         
     def log(self, message: str, level: str = "info"):
         """Centralized logging with webhook support."""
@@ -93,7 +96,7 @@ class MatchStatementProcessor:
         
         self.browser = self.playwright.chromium.launch(headless=self.headless)
         self.page = self.browser.new_page()
-        self.log("✅ Browser initialized successfully")
+        self.log("[OK] Browser initialized successfully")
     
     def cleanup(self):
         """Clean up browser resources."""
@@ -120,11 +123,11 @@ class MatchStatementProcessor:
         """Click with multiple fallback strategies."""
         try:
             locator.wait_for(state="visible", timeout=timeout)
-            locator.click(timeout=5000)
+            locator.click(timeout=int(self.page_wait_time))
             return True
         except:
             try:
-                locator.click(force=True, timeout=5000)
+                locator.click(force=True, timeout=int(self.page_wait_time))
                 return True
             except:
                 try:
@@ -142,6 +145,37 @@ class MatchStatementProcessor:
             if row_text and row_text not in ["0.00\n0.00", "No records found", ""]:
                 return False
         return True
+
+    def smart_wait_for_page_load(self, additional_check=None):
+        """
+        Smart wait that proceeds as soon as page is ready instead of waiting full duration.
+        Uses network idle detection and optional additional checks.
+
+        Args:
+            additional_check: Optional lambda function that returns True when ready
+        """
+        try:
+            # Wait for network to be idle (no more than 2 network connections for 500ms)
+            self.page.wait_for_load_state("networkidle", timeout=self.page_wait_time)
+
+            # If additional check provided, wait for it with polling
+            if additional_check:
+                start_time = self.page.evaluate("Date.now()")
+                while True:
+                    if additional_check():
+                        break
+                    current_time = self.page.evaluate("Date.now()")
+                    if current_time - start_time > self.page_wait_time:
+                        break
+                    self.page.wait_for_timeout(200)  # Poll every 200ms
+
+            # Small buffer to ensure stability
+            self.page.wait_for_timeout(500)
+
+        except Exception as e:
+            # If smart wait fails, fall back to simple timeout
+            self.log(f"Smart wait failed, using fallback: {e}", "debug")
+            self.page.wait_for_timeout(self.page_wait_time)
     
     def filter_table(self, header_text: str, textbox_selector: str, value: str):
         """Filter table by clicking header and entering value."""
@@ -155,12 +189,12 @@ class MatchStatementProcessor:
             
             # Wait for textbox
             try:
-                textbox.wait_for(state="visible", timeout=5000)
+                textbox.wait_for(state="visible", timeout=int(self.page_wait_time))
             except:
                 self.log(f"Textbox for '{header_text}' not visible, retrying...", "warning")
                 self.smart_click(header, f"{header_text} header (retry)")
                 self.page.wait_for_timeout(1000)
-                textbox.wait_for(state="visible", timeout=5000)
+                textbox.wait_for(state="visible", timeout=int(self.page_wait_time))
             
             if not textbox.is_visible():
                 self.log(f"Textbox for '{header_text}' still hidden, skipping", "warning")
@@ -174,9 +208,11 @@ class MatchStatementProcessor:
             
             ok_button = self.frame.get_by_role("button", name="OK")
             self.smart_click(ok_button, "OK button")
-            self.page.wait_for_timeout(2000)
-            
-            self.log(f"✅ Filtered '{header_text}' with value '{value}'")
+
+            # Smart wait for filter to apply
+            self.smart_wait_for_page_load()
+
+            self.log(f"[OK] Filtered '{header_text}' with value '{value}'")
             
         except Exception as e:
             self.log(f"Filter failed for '{header_text}': {e}", "error")
@@ -212,7 +248,7 @@ class MatchStatementProcessor:
             
             # Wait for textbox
             try:
-                textbox.wait_for(state="visible", timeout=5000)
+                textbox.wait_for(state="visible", timeout=int(self.page_wait_time))
             except Exception:
                 self.log(f"Textbox not visible for {csgp_ref}, trying to select tab...", "warning")
                 # Retry by selecting the tab first
@@ -253,12 +289,12 @@ class MatchStatementProcessor:
             table_type = None
             
             try:
-                table_a.wait_for(state="visible", timeout=3000)
+                table_a.wait_for(state="visible", timeout=int(self.page_wait_time))
                 detail_table = table_a
                 table_type = "A"
             except:
                 try:
-                    table_b.wait_for(state="visible", timeout=3000)
+                    table_b.wait_for(state="visible", timeout=int(self.page_wait_time))
                     detail_table = table_b
                     table_type = "B"
                 except:
@@ -293,7 +329,7 @@ class MatchStatementProcessor:
                 self.log(f"Second column not found for {csgp_ref}", "warning")
                 return False
             
-            self.log(f"✅ Clicking match for {csgp_ref}")
+            self.log(f"[OK] Clicking match for {csgp_ref}")
             self.smart_click(second_col, f"Match checkbox for {csgp_ref}")
             self.page.wait_for_timeout(1000)
             
@@ -304,9 +340,9 @@ class MatchStatementProcessor:
             return False
     
     def process_1to1_matches(self, df: pd.DataFrame):
-        """STEP 5: Process 1-to-1 matches."""
+        """STEP 6: Process 1-to-1 matches."""
         self.log("=" * 60)
-        self.log(f"STEP 5: Processing 1-to-1 Matches ({len(df)} rows)")
+        self.log(f"STEP 6: Processing 1-to-1 Matches ({len(df)} rows)")
         self.log("=" * 60)
         
         # Ensure correct tab is selected
@@ -358,7 +394,7 @@ class MatchStatementProcessor:
                     # Proceed with matching
                     self.search_and_match_csgp_ref(csgp_ref)
         
-        self.log(f"✅ Completed 1-to-1 matches")
+        self.log(f"[OK] Completed 1-to-1 matches")
     
     def enable_multiple_matching(self):
         """Enable multiple matching checkbox if available."""
@@ -396,9 +432,9 @@ class MatchStatementProcessor:
             return str(ref).strip()
     
     def process_group_matches(self, df: pd.DataFrame):
-        """STEP 6: Process group matches (1-to-many)."""
+        """STEP 7: Process group matches (1-to-many)."""
         self.log("=" * 60)
-        self.log(f"STEP 6: Processing Group Matches ({len(df)} rows)")
+        self.log(f"STEP 7: Processing Group Matches ({len(df)} rows)")
         self.log("=" * 60)
 
         # Ensure correct tab is selected
@@ -448,12 +484,12 @@ class MatchStatementProcessor:
                 self.log(f"[Group] Matching CSGPRef={csgp_ref}")
                 self.search_and_match_csgp_ref(csgp_ref)
 
-        self.log(f"✅ Completed group matches")
+        self.log(f"[OK] Completed group matches")
 
     def process_reverse_ce_gl_matches(self, df: pd.DataFrame):
-        """STEP 6.5: Process reverse CE/GL matches in Acumatica."""
+        """STEP 4.5: Process reverse CE/GL matches in Acumatica (FIRST)."""
         self.log("=" * 60)
-        self.log(f"STEP 6.5: Processing Reverse CE/GL Matches ({len(df)} rows)")
+        self.log(f"STEP 4.5: Processing Reverse CE/GL Matches ({len(df)} rows)")
         self.log("=" * 60)
 
         # Filter for reverse_ce_gl matches only
@@ -469,6 +505,17 @@ class MatchStatementProcessor:
 
         self.log(f"Found {len(reverse_ce_gl_df)} reverse_ce_gl matches to process")
 
+        # Navigate to Reconciliation Statements ONCE at the beginning
+        self.log("Navigating to Reconciliation Statements (one-time navigation)...")
+        success = self.navigate_to_reconciliation_statements()
+        if not success:
+            self.log("Failed to navigate to Reconciliation Statements, skipping all reverse_ce_gl matches", "error")
+            # Add all rows to failed entries
+            for index, row in reverse_ce_gl_df.iterrows():
+                self.failed_entries.append(row.to_dict())
+            return
+
+        # Process each reverse_ce_gl match WITHOUT navigating away
         for index, row in reverse_ce_gl_df.iterrows():
             csgp_ref_raw = str(row.get("CSGP Reference", "")).strip()
 
@@ -484,13 +531,6 @@ class MatchStatementProcessor:
                 continue
 
             self.log(f"[reverse_ce_gl] Row {index+1}: Processing CSGPRefs={csgp_refs}")
-
-            # Navigate to CashBook -> Account -> Reconciliation Statements
-            success = self.navigate_to_reconciliation_statements()
-            if not success:
-                self.log(f"Failed to navigate to Reconciliation Statements for {csgp_refs}", "error")
-                self.failed_entries.append(row.to_dict())
-                continue
 
             # Search for the first CSGP reference in Document Ref column
             matching_records = self.search_document_ref_in_reconciliation(csgp_refs[0])
@@ -508,15 +548,9 @@ class MatchStatementProcessor:
                 self.failed_entries.append(row.to_dict())
                 continue
 
-            # Navigate back to Process Bank Records
-            self.log("Navigating back to Process Bank Records...")
-            functions.navigatePage(self.page, "Process Bank Records")
-            self.frame = self.wait_for_iframe()
-            account_link = self.frame.get_by_role("link", name=self.account_name).last
-            self.smart_click(account_link, f"Account link: {self.account_name}")
-            self.page.wait_for_timeout(3000)
+            self.log(f"[OK] Successfully processed reverse_ce_gl match for {csgp_refs}")
 
-        self.log(f"✅ Completed reverse_ce_gl matches")
+        self.log(f"[OK] Completed all reverse_ce_gl matches")
 
     def navigate_to_reconciliation_statements(self) -> bool:
         """Navigate to CashBook -> Reconciliation Statements -> Account."""
@@ -534,7 +568,9 @@ class MatchStatementProcessor:
             recon_button.hover()
             self.page.wait_for_timeout(1000)
             self.smart_click(recon_button, "Reconciliation Statements button")
-            self.page.wait_for_timeout(5000)
+
+            # Smart wait for page to load instead of full timeout
+            self.smart_wait_for_page_load()
 
             # Wait for iframe
             self.frame = self.wait_for_iframe()
@@ -542,21 +578,88 @@ class MatchStatementProcessor:
             # Now select the account (e.g., CIM02) from the dropdown or link
             self.log(f"Selecting account: {self.account_name}")
 
-            # Try to find account link in the iframe
-            account_link = self.frame.get_by_role("link", name=self.account_name)
+            # Find all rows in the table to locate the correct account with "On Hold" status
+            table = self.frame.locator("#ctl00_phG_grid_dataT0")
 
-            if account_link.count() == 0:
-                # Try alternate selector - might be a dropdown
-                account_link = self.frame.locator(f"a:has-text('{self.account_name}')").first
+            try:
+                table.wait_for(state="visible", timeout=int(self.page_wait_time))
+                rows = table.locator("tbody tr")
+                row_count = rows.count()
 
-            if account_link.count() > 0:
-                self.smart_click(account_link, f"Account: {self.account_name}")
-                self.page.wait_for_timeout(3000)
-            else:
-                self.log(f"Could not find account link for {self.account_name}", "warning")
-                return False
+                target_row = None
+                self.log(f"Found {row_count} rows in Reconciliation Statements table")
 
-            self.log("✅ Successfully navigated to Reconciliation Statements")
+                # Search for the account with "On Hold" status
+                for i in range(row_count):
+                    row = rows.nth(i)
+                    row_text = row.inner_text()
+
+                    # Check if this row contains the account name and "On Hold" status
+                    if self.account_name in row_text and "On Hold" in row_text:
+                        self.log(f"Found {self.account_name} with 'On Hold' status at row {i}")
+                        # Find the account link in this row
+                        account_link = row.get_by_role("link", name=self.account_name)
+                        if account_link.count() > 0:
+                            target_row = account_link.first
+                            break
+
+                if target_row:
+                    self.smart_click(target_row, f"Account: {self.account_name} (On Hold)")
+                    # Smart wait for account detail page to load
+                    self.smart_wait_for_page_load()
+                else:
+                    # Fallback to first account link if no "On Hold" status found
+                    self.log(f"No 'On Hold' {self.account_name} found, using first available", "warning")
+                    account_link = self.frame.get_by_role("link", name=self.account_name).first
+                    if account_link.count() > 0:
+                        self.smart_click(account_link, f"Account: {self.account_name}")
+                        # Smart wait for account detail page to load
+                        self.smart_wait_for_page_load()
+                    else:
+                        self.log(f"Could not find account link for {self.account_name}", "warning")
+                        return False
+
+            except Exception as e:
+                self.log(f"Error finding 'On Hold' account, trying fallback: {e}", "warning")
+                # Fallback to original approach
+                account_link = self.frame.get_by_role("link", name=self.account_name).first
+                if account_link.count() > 0:
+                    self.smart_click(account_link, f"Account: {self.account_name}")
+                    # Smart wait for account detail page to load
+                    self.smart_wait_for_page_load()
+                else:
+                    self.log(f"Could not find account link for {self.account_name}", "warning")
+                    return False
+
+            # After clicking account, we're now on the reconciliation detail page
+            # The DETAILS tab should be automatically selected - verify the table is visible
+            self.log("Verifying DETAILS tab is accessible...")
+            # Smart wait for details tab to load
+            self.smart_wait_for_page_load()
+
+            # Try to find the details grid to confirm we're on the right view
+            try:
+                details_grid = self.frame.locator("#ctl00_phG_tab_t0_grid1")
+                details_grid.wait_for(state="visible", timeout=int(self.page_wait_time))
+                self.log("[OK] DETAILS tab is active and grid is visible")
+            except:
+                # Try clicking DETAILS tab explicitly
+                self.log("DETAILS grid not visible, trying to click DETAILS tab...")
+                try:
+                    details_tab = self.frame.get_by_text("DETAILS", exact=True).first
+                    if details_tab.count() > 0:
+                        self.smart_click(details_tab, "DETAILS tab")
+                        self.page.wait_for_timeout(self.page_wait_time)
+                    else:
+                        # Try by ID
+                        tab_by_id = self.frame.locator("#ctl00_phG_tab_t0")
+                        if tab_by_id.count() > 0:
+                            self.smart_click(tab_by_id.first, "DETAILS tab (by ID)")
+                            self.page.wait_for_timeout(self.page_wait_time)
+                except Exception as e:
+                    self.log(f"Could not explicitly click DETAILS tab: {e}", "warning")
+
+            self.log("[OK] Successfully navigated to Reconciliation Statements")
             return True
 
         except Exception as e:
@@ -568,21 +671,22 @@ class MatchStatementProcessor:
         try:
             self.log(f"Searching for Document Ref: {csgp_ref}")
 
-            # Wait a bit for page to fully load
-            self.page.wait_for_timeout(2000)
+            # Smart wait for page to fully load
+            self.smart_wait_for_page_load()
 
-            # Try multiple possible table selectors
+            # Use the correct table selector from the DETAILS tab
             table = None
             table_selectors = [
+                "#ctl00_phG_tab_t0_grid1_dataT0",  # Correct selector from debug output
                 "#ctl00_phG_tab_t0_grid_dataT0",
                 "#ctl00_phG_grid_dataT0",
-                "table[id*='grid'][id*='dataT0']"
+                "table[id*='grid'][id*='dataT0']",
             ]
 
             for selector in table_selectors:
                 try:
                     test_table = self.frame.locator(selector)
-                    test_table.wait_for(state="visible", timeout=3000)
+                    test_table.wait_for(state="visible", timeout=int(self.page_wait_time))
                     table = test_table
                     self.log(f"Found table with selector: {selector}")
                     break
@@ -593,20 +697,152 @@ class MatchStatementProcessor:
                 self.log("Could not find reconciliation table with any known selector", "warning")
                 return []
 
-            # Filter by Document Ref column - try different header texts
+            # Filter by "Document Ref." column (same approach as filter_table)
+            filter_success = False
+
             try:
-                self.filter_table("Document Ref.", "#ctl00_phG_tab_t0_grid_fd_txt", csgp_ref)
-            except:
+                # Find the "Document Ref." column header
+                header = self.frame.locator("td.GridHeader.GridRow").filter(has_text="Document Ref.").first
+
+                if header.count() == 0:
+                    self.log("Could not find 'Document Ref.' column header", "warning")
+                else:
+                    self.log(f"Found 'Document Ref.' column header")
+
+                    # Click the header to open filter dropdown
+                    self.smart_click(header, "Document Ref. header")
+                    self.page.wait_for_timeout(1000)
+
+                    # Find the filter textbox
+                    textbox_selector = "#ctl00_phG_tab_t0_grid1_fd_txt"
+                    textbox = self.frame.locator(textbox_selector)
+                    textbox.wait_for(state="visible", timeout=int(self.page_wait_time))
+
+                    if textbox.is_visible():
+                        # "Contains" is selected by default - just type and click OK
+                        textbox.click(force=True)
+                        textbox.fill(str(csgp_ref))
+                        self.page.wait_for_timeout(500)
+
+                        # Click OK button
+                        ok_button = self.frame.get_by_role("button", name="OK")
+                        if ok_button.count() > 0:
+                            self.smart_click(ok_button, "OK button")
+                        else:
+                            textbox.press("Enter")
+
+                        # CRITICAL: Wait for table to reload with filtered data
+                        # Wait for loading indicators first
+                        try:
+                            loading_indicator = self.frame.locator("[id*='loading'], [class*='loading'], .blockUI")
+                            loading_indicator.wait_for(state="hidden", timeout=int(self.page_wait_time))
+                        except:
+                            pass  # No loading indicator found, that's fine
+
+                        # DYNAMIC WAIT: Poll the table until it contains the filtered value
+                        self.log(f"Waiting dynamically for table to show filtered data containing '{csgp_ref}'...")
+                        max_wait_time = 30000  # Maximum 30 seconds
+                        poll_interval = 500  # Check every 500ms
+                        start_time = self.page.evaluate("Date.now()")
+
+                        table_updated = False
+                        while True:
+                            # Check if we've exceeded max wait time
+                            current_time = self.page.evaluate("Date.now()")
+                            if current_time - start_time > max_wait_time:
+                                self.log(f"Timeout waiting for table to update with '{csgp_ref}'", "warning")
+                                break
+
+                            # Get current table rows and check if they contain the filter value
+                            try:
+                                temp_table = self.frame.locator("#ctl00_phG_tab_t0_grid1_dataT0")
+                                temp_rows = temp_table.locator("tbody tr")
+
+                                if temp_rows.count() > 0:
+                                    # Check if any row contains the CSGP ref
+                                    for i in range(min(temp_rows.count(), 10)):  # Check first 10 rows
+                                        row_text = temp_rows.nth(i).inner_text()
+                                        if str(csgp_ref) in row_text:
+                                            self.log(f"Table updated! Found '{csgp_ref}' in row {i} after {current_time - start_time}ms")
+                                            table_updated = True
+                                            break
+
+                                if table_updated:
+                                    break
+                            except:
+                                pass  # Continue polling
+
+                            # Wait before next poll
+                            self.page.wait_for_timeout(poll_interval)
+
+                        # Additional small buffer after detecting the update
+                        if table_updated:
+                            self.page.wait_for_timeout(1000)  # 1 second buffer for stability
+
+                        filter_success = True
+                        self.log(f"[OK] Filtered Document Ref. with value '{csgp_ref}'")
+
+            except Exception as e:
+                self.log(f"Filter attempt failed: {e}", "error")
+
+            if not filter_success:
+                self.log(f"Could not filter by Document Ref. column", "warning")
+
+            # Re-acquire table reference after filtering (table might have reloaded)
+            table = None
+            for selector in table_selectors:
                 try:
-                    self.filter_table("Document Ref", "#ctl00_phG_grid_fd_txt", csgp_ref)
-                except Exception as e:
-                    self.log(f"Could not filter by Document Ref: {e}", "warning")
+                    test_table = self.frame.locator(selector)
+                    if test_table.count() > 0:
+                        table = test_table
+                        self.log(f"Re-acquired table with selector: {selector}")
+                        break
+                except:
+                    continue
 
-            self.page.wait_for_timeout(2000)
+            if not table:
+                self.log("Could not re-acquire table after filtering", "warning")
+                return []
 
-            # Get all rows
+            # Debug: Log the table HTML to understand structure
+            try:
+                table_html = table.evaluate("el => el.outerHTML")
+                self.log(f"DEBUG: Table HTML length: {len(table_html)} chars", "debug")
+                # Log a snippet of the HTML
+                if len(table_html) < 500:
+                    self.log(f"DEBUG: Table HTML: {table_html}", "debug")
+                else:
+                    self.log(f"DEBUG: Table HTML snippet: {table_html[:500]}...", "debug")
+            except Exception as e:
+                self.log(f"DEBUG: Could not get table HTML: {e}", "debug")
+
+            # Get rows from the table - use same pattern as 1to1/group matching
+            # The table variable already has the correct table (#ctl00_phG_tab_t0_grid1_dataT0)
             rows = table.locator("tbody tr")
+            self.log(f"DEBUG: Getting rows from table using 'tbody tr'", "debug")
+
+            if not rows:
+                self.log(f"Could not find any rows in table", "warning")
+                # Try to count all tr elements in the entire iframe as last resort
+                try:
+                    all_trs = self.frame.locator("tr")
+                    tr_count = all_trs.count()
+                    self.log(f"DEBUG: Total tr elements in iframe: {tr_count}", "debug")
+                except:
+                    pass
+                return []
+
             row_count = rows.count()
+            self.log(f"Table has {row_count} rows after filtering")
+
+            # Debug: log first few rows
+            if row_count > 0:
+                for i in range(min(row_count, 3)):
+                    try:
+                        row_text = rows.nth(i).inner_text()
+                        self.log(f"DEBUG: Row {i}: {row_text[:100]}", "debug")
+                    except:
+                        pass
 
             if row_count == 0 or self.is_table_empty(rows):
                 self.log(f"No records found for Document Ref: {csgp_ref}", "warning")
@@ -614,31 +850,60 @@ class MatchStatementProcessor:
 
             self.log(f"Found {row_count} matching records")
 
-            # Extract record information
+            # Extract record information - look for rows containing the CSGP ref
             matching_records = []
             for i in range(row_count):
                 row = rows.nth(i)
+                row_text = row.inner_text().strip()
+
+                # Skip if row contains toolbar/button keywords (but NOT regular headers)
+                skip_keywords = [
+                    "TOGGLE RECONCILED", "TOGGLE CLEARED", "RECONCILE PROCESSED",
+                    "CREATE ADJUSTMENT", "All Records"
+                ]
+
+                should_skip = False
+                for keyword in skip_keywords:
+                    if keyword in row_text:
+                        should_skip = True
+                        self.log(f"DEBUG: Skipping row {i} (toolbar): {row_text[:50]}", "debug")
+                        break
+
+                if should_skip:
+                    continue
+
+                # Check if row has minimal structure
                 cells = row.locator("td")
                 cell_count = cells.count()
 
-                # Extract description from various possible column positions
-                description = ""
-                try:
-                    # Try different column indices for description
-                    for col_idx in [2, 3, 4]:
-                        if col_idx < cell_count:
-                            desc = cells.nth(col_idx).inner_text().strip()
-                            if desc and desc not in ["0.00", "", "N/A"]:
-                                description = desc
-                                break
-                except:
-                    pass
+                if cell_count < 3:
+                    self.log(f"DEBUG: Skipping row {i} (too few cells: {cell_count})", "debug")
+                    continue
 
-                matching_records.append({
-                    "row_index": i,
-                    "description": description,
-                    "row_locator": row
-                })
+                # Check if this row contains the CSGP ref we're looking for
+                if str(csgp_ref) in row_text:
+                    self.log(f"DEBUG: Found row {i} containing '{csgp_ref}'", "debug")
+
+                    # Extract Document Ref from the row to use as description
+                    document_ref = ""
+                    try:
+                        # Look for the Document Ref column (usually around column 5-6)
+                        for col_idx in [5, 6, 4, 7]:
+                            if col_idx < cell_count:
+                                text = cells.nth(col_idx).inner_text().strip()
+                                if text and str(csgp_ref) in text:
+                                    document_ref = text
+                                    break
+                    except:
+                        pass
+
+                    matching_records.append({
+                        "row_index": i,
+                        "description": document_ref or str(csgp_ref),
+                        "row_locator": row,
+                        "cell_count": cell_count
+                    })
+                    self.log(f"DEBUG: Added row {i} as matching data row - Doc Ref: '{document_ref or csgp_ref}'", "debug")
 
             return matching_records
 
@@ -651,6 +916,10 @@ class MatchStatementProcessor:
         try:
             record_count = len(matching_records)
             self.log(f"Validating {record_count} records for reconciliation")
+
+            if record_count == 0:
+                self.log("No matching records found", "warning")
+                return False
 
             # Check if there are more than 2 records
             if record_count > 2:
@@ -680,49 +949,85 @@ class MatchStatementProcessor:
                 self.log(f"Insufficient records ({record_count}), need at least 2", "warning")
                 return False
 
-            # Reconcile the selected records
+            # Reconcile the selected records - Click the first cell (Reconciled column) directly
             self.log(f"Reconciling {len(records_to_reconcile)} records...")
 
-            for record in records_to_reconcile:
+            for idx, record in enumerate(records_to_reconcile):
                 row = record["row_locator"]
 
-                # Find the Reconciled checkbox - try multiple strategies
-                reconciled_checkbox = None
+                self.log(f"Processing record {idx+1}: {record.get('description', 'N/A')}")
 
-                # Strategy 1: Look for checkbox in first few columns
-                for col_idx in range(5):  # Check first 5 columns
-                    try:
-                        checkbox = row.locator("td").nth(col_idx).locator("input[type='checkbox']")
-                        if checkbox.count() > 0:
-                            reconciled_checkbox = checkbox.first
-                            self.log(f"Found checkbox in column {col_idx}")
-                            break
-                    except:
-                        continue
+                try:
+                    # Get all cells in the row
+                    cells = row.locator("td")
+                    cell_count = cells.count()
 
-                # Strategy 2: Look for any checkbox in the row
-                if not reconciled_checkbox:
+                    if cell_count == 0:
+                        self.log(f"No cells found in row {idx+1}", "error")
+                        return False
+
+                    self.log(f"DEBUG: Row {idx+1} has {cell_count} cells", "debug")
+
+                    # Log first few cells to see which is which
+                    for i in range(min(cell_count, 5)):
+                        try:
+                            cell_text = cells.nth(i).inner_text().strip()
+                            self.log(f"DEBUG: Cell {i}: '{cell_text[:50] if cell_text else '(empty)'}'", "debug")
+                        except:
+                            pass
+
+                    # The Reconciled checkbox is in the SECOND cell (index 1), not the first
+                    # The first cell (index 0) is an empty selector/expander cell
+                    if cell_count < 2:
+                        self.log(f"Row doesn't have enough cells (need at least 2, found {cell_count})", "error")
+                        return False
+
+                    reconciled_cell = cells.nth(1)  # Second cell (index 1) is the Reconciled column
+
+                    self.log(f"Clicking Reconciled column cell (cell 1) for record {idx+1}...")
+
+                    # Scroll cell into view and highlight it for debugging
                     try:
-                        checkbox = row.locator("input[type='checkbox']")
-                        if checkbox.count() > 0:
-                            reconciled_checkbox = checkbox.first
-                            self.log("Found checkbox using generic selector")
+                        reconciled_cell.scroll_into_view_if_needed(timeout=2000)
+                        # Highlight the cell temporarily so we can see which one is being clicked
+                        reconciled_cell.evaluate("el => { el.style.border = '3px solid red'; }")
+                        self.page.wait_for_timeout(300)
                     except:
                         pass
 
-                if reconciled_checkbox:
-                    # Check if not already checked
+                    # Try multiple click strategies
+                    click_success = False
                     try:
-                        if not reconciled_checkbox.is_checked():
-                            self.smart_click(reconciled_checkbox, "Reconciled checkbox")
-                            self.page.wait_for_timeout(500)
-                        else:
-                            self.log("Checkbox already checked, skipping")
-                    except Exception as e:
-                        self.log(f"Error clicking checkbox: {e}", "warning")
+                        # Strategy 1: Regular click on the cell
+                        reconciled_cell.click(timeout=3000)
+                        self.log(f"[OK] Clicked Reconciled cell for record {idx+1}")
+                        click_success = True
+                    except Exception as e1:
+                        self.log(f"Regular click failed: {e1}", "debug")
+                        try:
+                            # Strategy 2: Force click on the cell
+                            reconciled_cell.click(force=True, timeout=3000)
+                            self.log(f"[OK] Force-clicked Reconciled cell for record {idx+1}")
+                            click_success = True
+                        except Exception as e2:
+                            self.log(f"Force click failed: {e2}", "debug")
+                            try:
+                                # Strategy 3: JavaScript click on the cell
+                                reconciled_cell.evaluate("el => el.click()")
+                                self.log(f"[OK] JS-clicked Reconciled cell for record {idx+1}")
+                                click_success = True
+                            except Exception as e3:
+                                self.log(f"JS click failed: {e3}", "debug")
+
+                    if not click_success:
+                        self.log(f"All click strategies failed for record {idx+1}", "error")
                         return False
-                else:
-                    self.log("Could not find Reconciled checkbox", "warning")
+
+                    # Wait for the UI to update
+                    self.page.wait_for_timeout(800)
+
+                except Exception as e:
+                    self.log(f"Error processing record {idx+1}: {e}", "error")
                     return False
 
             # Click Save button - try multiple selectors
@@ -750,12 +1055,13 @@ class MatchStatementProcessor:
 
             if save_button and save_button.count() > 0:
                 self.smart_click(save_button, "Save button")
-                self.page.wait_for_timeout(3000)
+                # Smart wait for save operation to complete
+                self.smart_wait_for_page_load()
             else:
                 self.log("Could not find Save button", "warning")
                 return False
 
-            self.log("✅ Successfully reconciled reverse CE/GL records")
+            self.log("[OK] Successfully reconciled reverse CE/GL records")
             return True
 
         except Exception as e:
@@ -784,10 +1090,10 @@ class MatchStatementProcessor:
             df = df[columns]
             failed_entries_path = "failed_entries.xlsx"
             df.to_excel(failed_entries_path, index=False)
-            self.log(f"❌ Saved {len(self.failed_entries)} failed entries to {failed_entries_path}")
+            self.log(f"[ERROR] Saved {len(self.failed_entries)} failed entries to {failed_entries_path}")
             return failed_entries_path
         else:
-            self.log("✅ No failed entries")
+            self.log("[OK] No failed entries")
             return None
     
     def run(self):
@@ -808,56 +1114,57 @@ class MatchStatementProcessor:
             self.log("STEP 2: Logging in...")
             self.log("=" * 60)
             functions.login(self.page, self.website_url, self.username, self.password)
-            self.log("✅ Login successful")
+            self.log("[OK] Login successful")
             
-            # STEP 3: Navigate to Process Bank Records
+            # STEP 3: Load match results
             self.log("=" * 60)
-            self.log("STEP 3: Navigating to Process Bank Records")
-            self.log("=" * 60)
-            functions.navigatePage(self.page, "Process Bank Records")
-            
-            self.frame = self.wait_for_iframe()
-            account_link = self.frame.get_by_role("link", name=self.account_name).last
-            self.smart_click(account_link, f"Account link: {self.account_name}")
-            self.page.wait_for_timeout(5000)
-            self.log("✅ Navigation successful")
-            
-            # STEP 4: Load match results
-            self.log("=" * 60)
-            self.log(f"STEP 4: Loading match results from {self.match_result_path}")
+            self.log(f"STEP 3: Loading match results from {self.match_result_path}")
             self.log("=" * 60)
             dfs = pd.read_excel(
                 self.match_result_path,
                 sheet_name=["1to1 Matches", "Group Match"],
                 dtype=str
             )
-            self.log(f"✅ Loaded {sum(len(df) for df in dfs.values())} total rows")
-            
-            # STEP 5: Process 1-to-1 matches
+            self.log(f"[OK] Loaded {sum(len(df) for df in dfs.values())} total rows")
+
+            # STEP 4: Process reverse CE/GL matches FIRST (if any)
+            if "Group Match" in dfs:
+                self.process_reverse_ce_gl_matches(dfs["Group Match"])
+
+            # STEP 5: Navigate to Process Bank Records
+            self.log("=" * 60)
+            self.log("STEP 5: Navigating to Process Bank Records")
+            self.log("=" * 60)
+            functions.navigatePage(self.page, "Process Bank Records")
+
+            self.frame = self.wait_for_iframe()
+            account_link = self.frame.get_by_role("link", name=self.account_name).last
+            self.smart_click(account_link, f"Account link: {self.account_name}")
+            self.page.wait_for_timeout(self.page_wait_time)
+            self.log("[OK] Navigation successful")
+
+            # STEP 6: Process 1-to-1 matches
             if "1to1 Matches" in dfs:
                 self.process_1to1_matches(dfs["1to1 Matches"])
-            
-            # STEP 6: Process group matches
+
+            # STEP 7: Process group matches (excluding reverse_ce_gl)
             if "Group Match" in dfs:
                 self.process_group_matches(dfs["Group Match"])
 
-                # STEP 6.5: Process reverse CE/GL matches
-                self.process_reverse_ce_gl_matches(dfs["Group Match"])
-
-            # STEP 7: Process matched items
+            # STEP 8: Process matched items
             self.log("=" * 60)
-            self.log("STEP 7: Processing matched items")
+            self.log("STEP 8: Processing matched items")
             self.log("=" * 60)
             process_button = self.page.locator("iframe[name=\"main\"]").content_frame.locator(
                 "#ctl00_phDS_ds_ToolBar_ProcessMatched"
             ).get_by_text("Process")
             self.smart_click(process_button, "Process button")
-            self.page.wait_for_timeout(5000)
-            self.log("✅ Matched items processed")
-            
-            # STEP 8: Save failed entries
+            self.page.wait_for_timeout(self.page_wait_time)
+            self.log("[OK] Matched items processed")
+
+            # STEP 9: Save failed entries
             self.log("=" * 60)
-            self.log("STEP 8: Saving failed entries")
+            self.log("STEP 9: Saving failed entries")
             self.log("=" * 60)
             failed_entries_path = self.save_failed_entries()
 
@@ -871,11 +1178,11 @@ class MatchStatementProcessor:
             try:
                 if failed_entries_path:
                     reply_with_attachment(
-                        reply_text="✅ Match Statement process completed successfully.\n\n⚠️ Some entries could not be matched automatically. Please review the attached failed_entries.xlsx file and process these manually.",
+                        reply_text="[OK] Match Statement process completed successfully.\n\n[WARNING] Some entries could not be matched automatically. Please review the attached failed_entries.xlsx file and process these manually.",
                         attachment_path=failed_entries_path
                     )
                 else:
-                    reply_to_trigger_email("✅ Match Statement process completed successfully.\n\n🎉 All entries were matched successfully! No failed entries.")
+                    reply_to_trigger_email("[OK] Match Statement process completed successfully.\n\n[SUCCESS] All entries were matched successfully! No failed entries.")
             except Exception as e:
                 self.log(f"Email notification failed: {e}", "warning")
             
@@ -889,7 +1196,7 @@ class MatchStatementProcessor:
             
             # Send failure email
             try:
-                reply_to_trigger_email(f"❌ Match Statement failed: {str(e)}")
+                reply_to_trigger_email(f"[ERROR] Match Statement failed: {str(e)}")
             except:
                 pass
             

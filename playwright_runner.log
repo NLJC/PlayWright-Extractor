@@ -3802,3 +3802,1504 @@ Workflow Summary:
 All processes completed successfully!
 2025-12-05 17:12:37,031 - INFO - Check logs for detailed information.
 2025-12-05 17:12:37,031 - INFO - ======================================================================
+2025-12-07 23:18:13,717 - INFO - ======================================================================
+2025-12-07 23:18:13,717 - INFO - PLAYWRIGHT AUTOMATION RUNNER
+2025-12-07 23:18:13,717 - INFO - ======================================================================
+2025-12-07 23:18:13,718 - INFO - Account: CIM02
+2025-12-07 23:18:13,718 - INFO - Date: 07/11/2025
+2025-12-07 23:18:13,718 - INFO - Amount: 100.0
+2025-12-07 23:18:13,718 - INFO - Headless Mode: False
+2025-12-07 23:18:13,718 - INFO - Downloads Dir: d:\Github\PlayWright-Extractor\Downloads
+2025-12-07 23:18:13,718 - INFO - ======================================================================
+2025-12-07 23:18:13,718 - INFO - 
+🚀 Starting complete automation workflow...
+
+2025-12-07 23:18:13,718 - INFO - 
+======================================================================
+2025-12-07 23:18:13,718 - INFO - STEP 1: CA MATCH PROCESS
+2025-12-07 23:18:13,718 - INFO - ======================================================================
+2025-12-07 23:18:21,088 - INFO - Starting CA Match process...
+2025-12-07 23:18:21,089 - INFO - ============================================================
+2025-12-07 23:18:21,090 - INFO - CA MATCH PROCESS - OPTIMIZED VERSION
+2025-12-07 23:18:21,090 - INFO - ============================================================
+2025-12-07 23:18:21,090 - INFO - Initializing browser...
+2025-12-07 23:18:22,100 - INFO - Browser initialized successfully
+2025-12-07 23:18:22,103 - INFO - Logging in...
+2025-12-07 23:18:27,521 - INFO - Navigating to Process Bank Records...
+2025-12-07 23:18:44,236 - INFO - Starting auto-match process...
+2025-12-07 23:18:54,259 - WARNING - Normal click failed for account link 'CIM02', trying force click...
+2025-12-07 23:18:58,236 - INFO - Force clicked account link 'CIM02'
+2025-12-07 23:19:11,469 - INFO - Clicked Auto-Match button successfully
+2025-12-07 23:19:13,478 - INFO - Waiting for auto-match confirmation...
+2025-12-07 23:19:31,382 - WARNING - No 'Executing' message detected
+2025-12-07 23:19:31,388 - INFO - âœ… Auto-match operation completed successfully!
+2025-12-07 23:19:31,389 - INFO - Processing auto-matched items...
+2025-12-07 23:19:31,439 - INFO - Clicked Process button successfully
+2025-12-07 23:19:36,517 - INFO - Clicked Back button successfully
+2025-12-07 23:19:39,525 - INFO - Starting manual matching process...
+2025-12-07 23:19:39,598 - INFO - Clicked account link 'CIM02' successfully
+2025-12-07 23:19:44,607 - INFO - Processing page 1...
+2025-12-07 23:19:44,646 - INFO - Found 8 rows on page 1
+2025-12-07 23:19:44,659 - INFO - Row 0 - Ext. Ref. Nbr.: 2507312241040258
+2025-12-07 23:19:44,666 - INFO - Row 0 - Already matched, skipping
+2025-12-07 23:19:44,678 - INFO - Row 1 - Ext. Ref. Nbr.: 2507311751140415
+2025-12-07 23:19:44,685 - INFO - Row 1 - Already matched, skipping
+2025-12-07 23:19:44,699 - INFO - Row 2 - Ext. Ref. Nbr.: 30756388
+2025-12-07 23:19:44,705 - INFO - Row 2 - Already matched, skipping
+2025-12-07 23:19:44,719 - INFO - Row 3 - Ext. Ref. Nbr.: 30756388
+2025-12-07 23:19:44,725 - INFO - Row 3 - Already matched, skipping
+2025-12-07 23:19:44,736 - INFO - Row 4 - Ext. Ref. Nbr.: 2507181637590200
+2025-12-07 23:19:44,744 - INFO - Row 4 - Already matched, skipping
+2025-12-07 23:19:44,757 - INFO - Row 5 - Ext. Ref. Nbr.: 2507110714350678
+2025-12-07 23:19:44,763 - INFO - Row 5 - Already matched, skipping
+2025-12-07 23:19:44,777 - INFO - Row 6 - Ext. Ref. Nbr.: 2507051851570603
+2025-12-07 23:19:44,783 - INFO - Row 6 - Already matched, skipping
+2025-12-07 23:19:44,790 - INFO - No more pages - pagination complete
+2025-12-07 23:19:44,790 - INFO - Pagination complete - processed 7 total rows across 1 pages
+2025-12-07 23:19:44,790 - INFO - Manual matching complete - 7 rows processed
+2025-12-07 23:19:44,791 - INFO - Processing manually matched items...
+2025-12-07 23:19:44,839 - INFO - Clicked Process button (after manual matching) successfully
+2025-12-07 23:19:49,936 - INFO - Clicked Back to list button successfully
+2025-12-07 23:19:52,949 - INFO - Downloading results...
+2025-12-07 23:19:53,023 - INFO - Clicked account link 'CIM02' successfully
+2025-12-07 23:19:58,097 - INFO - Clicked Export dropdown successfully
+2025-12-07 23:19:58,175 - INFO - Clicked Export to Excel button successfully
+2025-12-07 23:20:09,940 - INFO - Download started: Process Bank Transactions 20251207.xlsx
+2025-12-07 23:20:10,330 - INFO - âœ… File saved to: d:\Github\PlayWright-Extractor\Downloads\Process Bank Transactions 20251207.xlsx
+2025-12-07 23:20:10,331 - INFO - Processing downloaded file: d:\Github\PlayWright-Extractor\Downloads\Process Bank Transactions 20251207.xlsx
+2025-12-07 23:20:10,493 - WARNING - Could not determine dtype for column 1, falling back to string
+2025-12-07 23:20:10,493 - WARNING - Could not determine dtype for column 6, falling back to string
+2025-12-07 23:20:10,493 - WARNING - Could not determine dtype for column 8, falling back to string
+2025-12-07 23:20:10,493 - WARNING - Could not determine dtype for column 9, falling back to string
+2025-12-07 23:20:10,493 - WARNING - Could not determine dtype for column 11, falling back to string
+2025-12-07 23:20:10,494 - WARNING - Could not determine dtype for column 13, falling back to string
+2025-12-07 23:20:10,494 - WARNING - Could not determine dtype for column 14, falling back to string
+2025-12-07 23:20:10,494 - WARNING - Could not determine dtype for column 17, falling back to string
+2025-12-07 23:20:10,494 - WARNING - Could not determine dtype for column 18, falling back to string
+2025-12-07 23:20:10,494 - WARNING - Could not determine dtype for column 20, falling back to string
+2025-12-07 23:20:10,565 - INFO - Processed 7 records from downloaded file
+2025-12-07 23:20:10,874 - INFO - Browser cleanup completed
+2025-12-07 23:20:10,874 - INFO - Chaining to Extract Reconciliation Statement...
+2025-12-07 23:22:00,647 - WARNING - Could not determine dtype for column 2, falling back to string
+2025-12-07 23:22:00,647 - WARNING - Could not determine dtype for column 11, falling back to string
+2025-12-07 23:22:00,647 - WARNING - Could not determine dtype for column 12, falling back to string
+2025-12-07 23:22:03,569 - INFO - generated new fontManager
+2025-12-07 23:25:22,940 - INFO - Loaded 7 bank transactions and 3715 company transactions
+2025-12-07 23:25:22,943 - INFO - Starting Stage 1: Traditional reconciliation pipeline...
+2025-12-07 23:25:22,961 - INFO - Finding transaction ID matches...
+2025-12-07 23:25:23,392 - INFO - Finding bank charges...
+2025-12-07 23:25:23,394 - DEBUG - After bank charges detection: 1 matched (added 1)
+2025-12-07 23:25:23,394 - INFO - Detected 1 bank charges
+2025-12-07 23:25:23,395 - INFO - Finding Reverse CE GL matches...
+2025-12-07 23:25:23,646 - INFO - Found 2 Reverse CE GL matches
+2025-12-07 23:25:23,649 - INFO - Finding name and amount matches...
+2025-12-07 23:25:24,254 - INFO - Found 5 name and amount matches
+2025-12-07 23:25:24,255 - INFO - Finding Hungarian 1:1 matches...
+2025-12-07 23:25:27,404 - INFO - Hungarian 1:1: 0 matches | pairs scored=45, kept=0, time=3.15s
+2025-12-07 23:25:27,406 - INFO - Finding enhanced 1:1 matches...
+2025-12-07 23:25:27,618 - INFO - Found 0 enhanced 1:1 matches
+2025-12-07 23:25:27,619 - INFO - Finding amount and date matches...
+2025-12-07 23:25:27,681 - INFO - Found 0 amount and date matches
+2025-12-07 23:25:27,682 - INFO - Finding fuzzy matches...
+2025-12-08 00:00:38,721 - INFO - ======================================================================
+2025-12-08 00:00:38,721 - INFO - PLAYWRIGHT AUTOMATION RUNNER
+2025-12-08 00:00:38,722 - INFO - ======================================================================
+2025-12-08 00:00:38,722 - INFO - Account: CIM02
+2025-12-08 00:00:38,722 - INFO - Date: 08/11/2025
+2025-12-08 00:00:38,722 - INFO - Amount: 100.0
+2025-12-08 00:00:38,722 - INFO - Headless Mode: False
+2025-12-08 00:00:38,722 - INFO - Downloads Dir: d:\Github\PlayWright-Extractor\Downloads
+2025-12-08 00:00:38,723 - INFO - ======================================================================
+2025-12-08 00:00:38,723 - INFO - 
+🚀 Starting complete automation workflow...
+
+2025-12-08 00:00:38,723 - INFO - 
+======================================================================
+2025-12-08 00:00:38,723 - INFO - STEP 1: CA MATCH PROCESS
+2025-12-08 00:00:38,723 - INFO - ======================================================================
+2025-12-08 00:00:45,503 - INFO - Starting CA Match process...
+2025-12-08 00:00:45,504 - INFO - ============================================================
+2025-12-08 00:00:45,505 - INFO - CA MATCH PROCESS - OPTIMIZED VERSION
+2025-12-08 00:00:45,505 - INFO - ============================================================
+2025-12-08 00:00:45,506 - INFO - Initializing browser...
+2025-12-08 00:00:46,366 - INFO - Browser initialized successfully
+2025-12-08 00:00:46,367 - INFO - Logging in...
+2025-12-08 00:00:53,572 - INFO - Navigating to Process Bank Records...
+2025-12-08 00:01:10,162 - INFO - Starting auto-match process...
+2025-12-08 00:01:19,062 - INFO - Clicked account link 'CIM02' successfully
+2025-12-08 00:01:24,161 - INFO - Clicked Auto-Match button successfully
+2025-12-08 00:01:26,175 - INFO - Waiting for auto-match confirmation...
+2025-12-08 00:01:41,247 - WARNING - No 'Executing' message detected
+2025-12-08 00:01:41,257 - INFO - âœ… Auto-match operation completed successfully!
+2025-12-08 00:01:41,258 - INFO - Processing auto-matched items...
+2025-12-08 00:01:41,341 - INFO - Clicked Process button successfully
+2025-12-08 00:01:46,459 - INFO - Clicked Back button successfully
+2025-12-08 00:01:49,475 - INFO - Starting manual matching process...
+2025-12-08 00:01:49,553 - INFO - Clicked account link 'CIM02' successfully
+2025-12-08 00:01:54,566 - INFO - Processing page 1...
+2025-12-08 00:01:54,608 - INFO - Found 8 rows on page 1
+2025-12-08 00:01:54,620 - INFO - Row 0 - Ext. Ref. Nbr.: 2507312241040258
+2025-12-08 00:01:54,626 - INFO - Row 0 - Already matched, skipping
+2025-12-08 00:01:54,640 - INFO - Row 1 - Ext. Ref. Nbr.: 2507311751140415
+2025-12-08 00:01:54,647 - INFO - Row 1 - Already matched, skipping
+2025-12-08 00:01:54,663 - INFO - Row 2 - Ext. Ref. Nbr.: 30756388
+2025-12-08 00:01:54,671 - INFO - Row 2 - Already matched, skipping
+2025-12-08 00:01:54,682 - INFO - Row 3 - Ext. Ref. Nbr.: 30756388
+2025-12-08 00:01:54,689 - INFO - Row 3 - Already matched, skipping
+2025-12-08 00:01:54,702 - INFO - Row 4 - Ext. Ref. Nbr.: 2507181637590200
+2025-12-08 00:01:54,707 - INFO - Row 4 - Already matched, skipping
+2025-12-08 00:01:54,718 - INFO - Row 5 - Ext. Ref. Nbr.: 2507110714350678
+2025-12-08 00:01:54,723 - INFO - Row 5 - Already matched, skipping
+2025-12-08 00:01:54,733 - INFO - Row 6 - Ext. Ref. Nbr.: 2507051851570603
+2025-12-08 00:01:54,739 - INFO - Row 6 - Already matched, skipping
+2025-12-08 00:01:54,746 - INFO - No more pages - pagination complete
+2025-12-08 00:01:54,746 - INFO - Pagination complete - processed 7 total rows across 1 pages
+2025-12-08 00:01:54,747 - INFO - Manual matching complete - 7 rows processed
+2025-12-08 00:01:54,747 - INFO - Processing manually matched items...
+2025-12-08 00:01:54,802 - INFO - Clicked Process button (after manual matching) successfully
+2025-12-08 00:01:59,926 - INFO - Clicked Back to list button successfully
+2025-12-08 00:02:02,937 - INFO - Downloading results...
+2025-12-08 00:02:03,018 - INFO - Clicked account link 'CIM02' successfully
+2025-12-08 00:02:08,127 - INFO - Clicked Export dropdown successfully
+2025-12-08 00:02:08,219 - INFO - Clicked Export to Excel button successfully
+2025-12-08 00:02:13,968 - INFO - Download started: Process Bank Transactions 20251208.xlsx
+2025-12-08 00:02:14,415 - INFO - âœ… File saved to: d:\Github\PlayWright-Extractor\Downloads\Process Bank Transactions 20251208.xlsx
+2025-12-08 00:02:14,416 - INFO - Processing downloaded file: d:\Github\PlayWright-Extractor\Downloads\Process Bank Transactions 20251208.xlsx
+2025-12-08 00:02:14,603 - WARNING - Could not determine dtype for column 1, falling back to string
+2025-12-08 00:02:14,604 - WARNING - Could not determine dtype for column 6, falling back to string
+2025-12-08 00:02:14,604 - WARNING - Could not determine dtype for column 8, falling back to string
+2025-12-08 00:02:14,604 - WARNING - Could not determine dtype for column 9, falling back to string
+2025-12-08 00:02:14,605 - WARNING - Could not determine dtype for column 11, falling back to string
+2025-12-08 00:02:14,605 - WARNING - Could not determine dtype for column 13, falling back to string
+2025-12-08 00:02:14,605 - WARNING - Could not determine dtype for column 14, falling back to string
+2025-12-08 00:02:14,605 - WARNING - Could not determine dtype for column 17, falling back to string
+2025-12-08 00:02:14,606 - WARNING - Could not determine dtype for column 18, falling back to string
+2025-12-08 00:02:14,606 - WARNING - Could not determine dtype for column 20, falling back to string
+2025-12-08 00:02:14,622 - INFO - Processed 7 records from downloaded file
+2025-12-08 00:02:14,954 - INFO - Browser cleanup completed
+2025-12-08 00:02:14,955 - INFO - Chaining to Extract Reconciliation Statement...
+2025-12-08 00:03:58,959 - WARNING - Could not determine dtype for column 2, falling back to string
+2025-12-08 00:03:58,960 - WARNING - Could not determine dtype for column 11, falling back to string
+2025-12-08 00:03:58,960 - WARNING - Could not determine dtype for column 12, falling back to string
+2025-12-08 00:07:46,818 - INFO - Loaded 7 bank transactions and 3715 company transactions
+2025-12-08 00:07:46,821 - INFO - Starting Stage 1: Traditional reconciliation pipeline...
+2025-12-08 00:07:46,870 - INFO - Finding transaction ID matches...
+2025-12-08 00:07:47,405 - INFO - Finding bank charges...
+2025-12-08 00:07:47,407 - DEBUG - After bank charges detection: 1 matched (added 1)
+2025-12-08 00:07:47,407 - INFO - Detected 1 bank charges
+2025-12-08 00:07:47,408 - INFO - Finding Reverse CE GL matches...
+2025-12-08 00:07:47,738 - INFO - Found 2 Reverse CE GL matches
+2025-12-08 00:07:47,741 - INFO - Finding name and amount matches...
+2025-12-08 00:07:48,458 - INFO - Found 5 name and amount matches
+2025-12-08 00:07:48,460 - INFO - Finding Hungarian 1:1 matches...
+2025-12-08 00:07:52,386 - INFO - Hungarian 1:1: 0 matches | pairs scored=45, kept=0, time=3.93s
+2025-12-08 00:07:52,388 - INFO - Finding enhanced 1:1 matches...
+2025-12-08 00:07:52,737 - INFO - Found 0 enhanced 1:1 matches
+2025-12-08 00:07:52,738 - INFO - Finding amount and date matches...
+2025-12-08 00:07:52,829 - INFO - Found 0 amount and date matches
+2025-12-08 00:07:52,831 - INFO - Finding fuzzy matches...
+2025-12-08 00:10:20,856 - INFO - ============================================================
+2025-12-08 00:10:20,857 - INFO - CA MATCH PROCESS COMPLETED SUCCESSFULLY
+2025-12-08 00:10:20,857 - INFO - ============================================================
+2025-12-08 00:10:20,857 - INFO - ✅ CA Match completed: 7 records processed
+2025-12-08 00:10:20,876 - INFO - 
+======================================================================
+2025-12-08 00:10:20,876 - INFO - ✅ COMPLETE AUTOMATION WORKFLOW FINISHED SUCCESSFULLY
+2025-12-08 00:10:20,876 - INFO - ======================================================================
+2025-12-08 00:10:20,876 - INFO - 
+Workflow Summary:
+2025-12-08 00:10:20,877 - INFO -   ✅ CA Match Process - Completed
+2025-12-08 00:10:20,877 - INFO -   ✅ Extract Reconciliation Statement - Completed (chained)
+2025-12-08 00:10:20,877 - INFO -   ✅ RaasPlus Reconciliation - Completed (chained)
+2025-12-08 00:10:20,877 - INFO -   ✅ Match Statement - Completed (chained)
+2025-12-08 00:10:20,877 - INFO - 
+All processes completed successfully!
+2025-12-08 00:10:20,877 - INFO - Check logs for detailed information.
+2025-12-08 00:10:20,877 - INFO - ======================================================================
+2025-12-08 01:43:44,824 - INFO - ======================================================================
+2025-12-08 01:43:44,824 - INFO - PLAYWRIGHT AUTOMATION RUNNER
+2025-12-08 01:43:44,825 - INFO - ======================================================================
+2025-12-08 01:43:44,825 - INFO - Account: CIM02
+2025-12-08 01:43:44,825 - INFO - Date: 08/11/2025
+2025-12-08 01:43:44,825 - INFO - Amount: 100.0
+2025-12-08 01:43:44,825 - INFO - Headless Mode: False
+2025-12-08 01:43:44,825 - INFO - Downloads Dir: d:\Github\PlayWright-Extractor\Downloads
+2025-12-08 01:43:44,825 - INFO - ======================================================================
+2025-12-08 01:43:44,826 - INFO - 
+🚀 Starting complete automation workflow...
+
+2025-12-08 01:43:44,826 - INFO - 
+======================================================================
+2025-12-08 01:43:44,826 - INFO - STEP 1: CA MATCH PROCESS
+2025-12-08 01:43:44,826 - INFO - ======================================================================
+2025-12-08 01:43:45,358 - INFO - Starting CA Match process...
+2025-12-08 01:43:45,359 - INFO - ============================================================
+2025-12-08 01:43:45,360 - INFO - CA MATCH PROCESS - OPTIMIZED VERSION
+2025-12-08 01:43:45,360 - INFO - ============================================================
+2025-12-08 01:43:45,360 - INFO - Initializing browser...
+2025-12-08 01:43:46,040 - INFO - Browser initialized successfully
+2025-12-08 01:43:46,041 - INFO - Logging in...
+2025-12-08 01:43:50,782 - INFO - Navigating to Process Bank Records...
+2025-12-08 01:44:05,609 - INFO - Starting auto-match process...
+2025-12-08 01:44:14,977 - INFO - Clicked account link 'CIM02' successfully
+2025-12-08 01:44:20,067 - INFO - Clicked Auto-Match button successfully
+2025-12-08 01:44:22,084 - INFO - Waiting for auto-match confirmation...
+2025-12-08 01:44:37,159 - WARNING - No 'Executing' message detected
+2025-12-08 01:44:37,166 - INFO - âœ… Auto-match operation completed successfully!
+2025-12-08 01:44:37,167 - INFO - Processing auto-matched items...
+2025-12-08 01:44:37,221 - INFO - Clicked Process button successfully
+2025-12-08 01:44:42,317 - INFO - Clicked Back button successfully
+2025-12-08 01:44:45,330 - INFO - Starting manual matching process...
+2025-12-08 01:44:45,407 - INFO - Clicked account link 'CIM02' successfully
+2025-12-08 01:44:50,419 - INFO - Processing page 1...
+2025-12-08 01:44:50,455 - INFO - Found 8 rows on page 1
+2025-12-08 01:44:50,469 - INFO - Row 0 - Ext. Ref. Nbr.: 2507312241040258
+2025-12-08 01:44:50,476 - INFO - Row 0 - Already matched, skipping
+2025-12-08 01:44:50,490 - INFO - Row 1 - Ext. Ref. Nbr.: 2507311751140415
+2025-12-08 01:44:50,496 - INFO - Row 1 - Already matched, skipping
+2025-12-08 01:44:50,508 - INFO - Row 2 - Ext. Ref. Nbr.: 30756388
+2025-12-08 01:44:50,514 - INFO - Row 2 - Already matched, skipping
+2025-12-08 01:44:50,527 - INFO - Row 3 - Ext. Ref. Nbr.: 30756388
+2025-12-08 01:44:50,535 - INFO - Row 3 - Already matched, skipping
+2025-12-08 01:44:50,549 - INFO - Row 4 - Ext. Ref. Nbr.: 2507181637590200
+2025-12-08 01:44:50,554 - INFO - Row 4 - Already matched, skipping
+2025-12-08 01:44:50,569 - INFO - Row 5 - Ext. Ref. Nbr.: 2507110714350678
+2025-12-08 01:44:50,574 - INFO - Row 5 - Already matched, skipping
+2025-12-08 01:44:50,588 - INFO - Row 6 - Ext. Ref. Nbr.: 2507051851570603
+2025-12-08 01:44:50,596 - INFO - Row 6 - Already matched, skipping
+2025-12-08 01:44:50,603 - INFO - No more pages - pagination complete
+2025-12-08 01:44:50,604 - INFO - Pagination complete - processed 7 total rows across 1 pages
+2025-12-08 01:44:50,604 - INFO - Manual matching complete - 7 rows processed
+2025-12-08 01:44:50,604 - INFO - Processing manually matched items...
+2025-12-08 01:44:50,653 - INFO - Clicked Process button (after manual matching) successfully
+2025-12-08 01:44:55,733 - INFO - Clicked Back to list button successfully
+2025-12-08 01:44:58,741 - INFO - Downloading results...
+2025-12-08 01:44:58,813 - INFO - Clicked account link 'CIM02' successfully
+2025-12-08 01:45:03,880 - INFO - Clicked Export dropdown successfully
+2025-12-08 01:45:03,939 - INFO - Clicked Export to Excel button successfully
+2025-12-08 01:45:09,584 - INFO - Download started: Process Bank Transactions 20251208.xlsx
+2025-12-08 01:45:09,685 - INFO - âœ… File saved to: d:\Github\PlayWright-Extractor\Downloads\Process Bank Transactions 20251208.xlsx
+2025-12-08 01:45:09,686 - INFO - Processing downloaded file: d:\Github\PlayWright-Extractor\Downloads\Process Bank Transactions 20251208.xlsx
+2025-12-08 01:45:09,710 - WARNING - Could not determine dtype for column 1, falling back to string
+2025-12-08 01:45:09,710 - WARNING - Could not determine dtype for column 6, falling back to string
+2025-12-08 01:45:09,710 - WARNING - Could not determine dtype for column 8, falling back to string
+2025-12-08 01:45:09,711 - WARNING - Could not determine dtype for column 9, falling back to string
+2025-12-08 01:45:09,711 - WARNING - Could not determine dtype for column 11, falling back to string
+2025-12-08 01:45:09,711 - WARNING - Could not determine dtype for column 13, falling back to string
+2025-12-08 01:45:09,711 - WARNING - Could not determine dtype for column 14, falling back to string
+2025-12-08 01:45:09,711 - WARNING - Could not determine dtype for column 17, falling back to string
+2025-12-08 01:45:09,711 - WARNING - Could not determine dtype for column 18, falling back to string
+2025-12-08 01:45:09,711 - WARNING - Could not determine dtype for column 20, falling back to string
+2025-12-08 01:45:09,741 - INFO - Processed 7 records from downloaded file
+2025-12-08 01:45:10,151 - INFO - Browser cleanup completed
+2025-12-08 01:45:10,151 - INFO - Chaining to Extract Reconciliation Statement...
+2025-12-08 01:47:14,136 - WARNING - Could not determine dtype for column 2, falling back to string
+2025-12-08 01:47:14,136 - WARNING - Could not determine dtype for column 11, falling back to string
+2025-12-08 01:47:14,136 - WARNING - Could not determine dtype for column 12, falling back to string
+2025-12-08 01:50:36,154 - INFO - Loaded 7 bank transactions and 3715 company transactions
+2025-12-08 01:50:36,157 - INFO - Starting Stage 1: Traditional reconciliation pipeline...
+2025-12-08 01:50:36,170 - INFO - Finding transaction ID matches...
+2025-12-08 01:50:36,612 - INFO - Finding bank charges...
+2025-12-08 01:50:36,614 - DEBUG - After bank charges detection: 1 matched (added 1)
+2025-12-08 01:50:36,614 - INFO - Detected 1 bank charges
+2025-12-08 01:50:36,614 - INFO - Finding Reverse CE GL matches...
+2025-12-08 01:50:36,892 - INFO - Found 2 Reverse CE GL matches
+2025-12-08 01:50:36,894 - INFO - Finding name and amount matches...
+2025-12-08 01:50:37,534 - INFO - Found 5 name and amount matches
+2025-12-08 01:50:37,535 - INFO - Finding Hungarian 1:1 matches...
+2025-12-08 01:50:38,105 - INFO - Hungarian 1:1: 0 matches | pairs scored=45, kept=0, time=0.57s
+2025-12-08 01:50:38,107 - INFO - Finding enhanced 1:1 matches...
+2025-12-08 01:50:38,318 - INFO - Found 0 enhanced 1:1 matches
+2025-12-08 01:50:38,319 - INFO - Finding amount and date matches...
+2025-12-08 01:50:38,383 - INFO - Found 0 amount and date matches
+2025-12-08 01:50:38,384 - INFO - Finding fuzzy matches...
+2025-12-08 01:51:48,896 - INFO - ============================================================
+2025-12-08 01:51:48,897 - INFO - CA MATCH PROCESS COMPLETED SUCCESSFULLY
+2025-12-08 01:51:48,897 - INFO - ============================================================
+2025-12-08 01:51:48,897 - INFO - ✅ CA Match completed: 7 records processed
+2025-12-08 01:51:48,910 - INFO - 
+======================================================================
+2025-12-08 01:51:48,911 - INFO - ✅ COMPLETE AUTOMATION WORKFLOW FINISHED SUCCESSFULLY
+2025-12-08 01:51:48,911 - INFO - ======================================================================
+2025-12-08 01:51:48,911 - INFO - 
+Workflow Summary:
+2025-12-08 01:51:48,911 - INFO -   ✅ CA Match Process - Completed
+2025-12-08 01:51:48,912 - INFO -   ✅ Extract Reconciliation Statement - Completed (chained)
+2025-12-08 01:51:48,912 - INFO -   ✅ RaasPlus Reconciliation - Completed (chained)
+2025-12-08 01:51:48,912 - INFO -   ✅ Match Statement - Completed (chained)
+2025-12-08 01:51:48,912 - INFO - 
+All processes completed successfully!
+2025-12-08 01:51:48,912 - INFO - Check logs for detailed information.
+2025-12-08 01:51:48,913 - INFO - ======================================================================
+2025-12-08 02:13:22,441 - INFO - ======================================================================
+2025-12-08 02:13:22,441 - INFO - PLAYWRIGHT AUTOMATION RUNNER
+2025-12-08 02:13:22,441 - INFO - ======================================================================
+2025-12-08 02:13:22,442 - INFO - Account: CIM02
+2025-12-08 02:13:22,442 - INFO - Date: 08/11/2025
+2025-12-08 02:13:22,442 - INFO - Amount: 100.0
+2025-12-08 02:13:22,442 - INFO - Headless Mode: False
+2025-12-08 02:13:22,442 - INFO - Downloads Dir: d:\Github\PlayWright-Extractor\Downloads
+2025-12-08 02:13:22,443 - INFO - ======================================================================
+2025-12-08 02:13:22,443 - INFO - 
+🚀 Starting complete automation workflow...
+
+2025-12-08 02:13:22,443 - INFO - 
+======================================================================
+2025-12-08 02:13:22,443 - INFO - STEP 1: CA MATCH PROCESS
+2025-12-08 02:13:22,443 - INFO - ======================================================================
+2025-12-08 02:13:22,880 - INFO - Starting CA Match process...
+2025-12-08 02:13:22,881 - INFO - ============================================================
+2025-12-08 02:13:22,882 - INFO - CA MATCH PROCESS - OPTIMIZED VERSION
+2025-12-08 02:13:22,882 - INFO - ============================================================
+2025-12-08 02:13:22,883 - INFO - Initializing browser...
+2025-12-08 02:13:23,428 - INFO - Browser initialized successfully
+2025-12-08 02:13:23,429 - INFO - Logging in...
+2025-12-08 02:13:27,903 - INFO - Navigating to Process Bank Records...
+2025-12-08 02:13:43,954 - INFO - Starting auto-match process...
+2025-12-08 02:13:46,979 - INFO - Clicked account link 'CIM02' successfully
+2025-12-08 02:13:52,080 - INFO - Clicked Auto-Match button successfully
+2025-12-08 02:13:54,091 - INFO - Waiting for auto-match confirmation...
+2025-12-08 02:14:09,146 - WARNING - No 'Executing' message detected
+2025-12-08 02:14:09,162 - INFO - âœ… Auto-match operation completed successfully!
+2025-12-08 02:14:09,163 - INFO - Processing auto-matched items...
+2025-12-08 02:14:09,224 - INFO - Clicked Process button successfully
+2025-12-08 02:14:14,320 - INFO - Clicked Back button successfully
+2025-12-08 02:14:17,331 - INFO - Starting manual matching process...
+2025-12-08 02:14:17,413 - INFO - Clicked account link 'CIM02' successfully
+2025-12-08 02:14:22,422 - INFO - Processing page 1...
+2025-12-08 02:14:22,462 - INFO - Found 8 rows on page 1
+2025-12-08 02:14:22,477 - INFO - Row 0 - Ext. Ref. Nbr.: 2507312241040258
+2025-12-08 02:14:22,485 - INFO - Row 0 - Already matched, skipping
+2025-12-08 02:14:22,501 - INFO - Row 1 - Ext. Ref. Nbr.: 2507311751140415
+2025-12-08 02:14:22,508 - INFO - Row 1 - Already matched, skipping
+2025-12-08 02:14:22,525 - INFO - Row 2 - Ext. Ref. Nbr.: 30756388
+2025-12-08 02:14:22,533 - INFO - Row 2 - Already matched, skipping
+2025-12-08 02:14:22,550 - INFO - Row 3 - Ext. Ref. Nbr.: 30756388
+2025-12-08 02:14:22,561 - INFO - Row 3 - Already matched, skipping
+2025-12-08 02:14:22,580 - INFO - Row 4 - Ext. Ref. Nbr.: 2507181637590200
+2025-12-08 02:14:22,588 - INFO - Row 4 - Already matched, skipping
+2025-12-08 02:14:22,602 - INFO - Row 5 - Ext. Ref. Nbr.: 2507110714350678
+2025-12-08 02:14:22,610 - INFO - Row 5 - Already matched, skipping
+2025-12-08 02:14:22,626 - INFO - Row 6 - Ext. Ref. Nbr.: 2507051851570603
+2025-12-08 02:14:22,634 - INFO - Row 6 - Already matched, skipping
+2025-12-08 02:14:22,642 - INFO - No more pages - pagination complete
+2025-12-08 02:14:22,642 - INFO - Pagination complete - processed 7 total rows across 1 pages
+2025-12-08 02:14:22,643 - INFO - Manual matching complete - 7 rows processed
+2025-12-08 02:14:22,643 - INFO - Processing manually matched items...
+2025-12-08 02:14:22,696 - INFO - Clicked Process button (after manual matching) successfully
+2025-12-08 02:14:27,785 - INFO - Clicked Back to list button successfully
+2025-12-08 02:14:30,803 - INFO - Downloading results...
+2025-12-08 02:14:30,886 - INFO - Clicked account link 'CIM02' successfully
+2025-12-08 02:14:35,966 - INFO - Clicked Export dropdown successfully
+2025-12-08 02:14:36,019 - INFO - Clicked Export to Excel button successfully
+2025-12-08 02:14:41,665 - INFO - Download started: Process Bank Transactions 20251208.xlsx
+2025-12-08 02:14:41,748 - INFO - âœ… File saved to: d:\Github\PlayWright-Extractor\Downloads\Process Bank Transactions 20251208.xlsx
+2025-12-08 02:14:41,749 - INFO - Processing downloaded file: d:\Github\PlayWright-Extractor\Downloads\Process Bank Transactions 20251208.xlsx
+2025-12-08 02:14:41,768 - WARNING - Could not determine dtype for column 1, falling back to string
+2025-12-08 02:14:41,768 - WARNING - Could not determine dtype for column 6, falling back to string
+2025-12-08 02:14:41,768 - WARNING - Could not determine dtype for column 8, falling back to string
+2025-12-08 02:14:41,768 - WARNING - Could not determine dtype for column 9, falling back to string
+2025-12-08 02:14:41,769 - WARNING - Could not determine dtype for column 11, falling back to string
+2025-12-08 02:14:41,769 - WARNING - Could not determine dtype for column 13, falling back to string
+2025-12-08 02:14:41,769 - WARNING - Could not determine dtype for column 14, falling back to string
+2025-12-08 02:14:41,769 - WARNING - Could not determine dtype for column 17, falling back to string
+2025-12-08 02:14:41,769 - WARNING - Could not determine dtype for column 18, falling back to string
+2025-12-08 02:14:41,769 - WARNING - Could not determine dtype for column 20, falling back to string
+2025-12-08 02:14:41,789 - INFO - Processed 7 records from downloaded file
+2025-12-08 02:14:42,190 - INFO - Browser cleanup completed
+2025-12-08 02:14:42,191 - INFO - Chaining to Extract Reconciliation Statement...
+2025-12-08 02:16:39,676 - WARNING - Could not determine dtype for column 2, falling back to string
+2025-12-08 02:16:39,676 - WARNING - Could not determine dtype for column 11, falling back to string
+2025-12-08 02:16:39,676 - WARNING - Could not determine dtype for column 12, falling back to string
+2025-12-08 02:19:59,986 - INFO - Loaded 7 bank transactions and 3715 company transactions
+2025-12-08 02:19:59,989 - INFO - Starting Stage 1: Traditional reconciliation pipeline...
+2025-12-08 02:20:00,009 - INFO - Finding transaction ID matches...
+2025-12-08 02:20:00,480 - INFO - Finding bank charges...
+2025-12-08 02:20:00,482 - DEBUG - After bank charges detection: 1 matched (added 1)
+2025-12-08 02:20:00,482 - INFO - Detected 1 bank charges
+2025-12-08 02:20:00,483 - INFO - Finding Reverse CE GL matches...
+2025-12-08 02:20:00,746 - INFO - Found 2 Reverse CE GL matches
+2025-12-08 02:20:00,748 - INFO - Finding name and amount matches...
+2025-12-08 02:20:01,336 - INFO - Found 5 name and amount matches
+2025-12-08 02:20:01,337 - INFO - Finding Hungarian 1:1 matches...
+2025-12-08 02:20:01,716 - INFO - Hungarian 1:1: 0 matches | pairs scored=45, kept=0, time=0.38s
+2025-12-08 02:20:01,718 - INFO - Finding enhanced 1:1 matches...
+2025-12-08 02:20:01,920 - INFO - Found 0 enhanced 1:1 matches
+2025-12-08 02:20:01,922 - INFO - Finding amount and date matches...
+2025-12-08 02:20:01,985 - INFO - Found 0 amount and date matches
+2025-12-08 02:20:01,986 - INFO - Finding fuzzy matches...
+2025-12-08 02:21:24,854 - INFO - ============================================================
+2025-12-08 02:21:24,854 - INFO - CA MATCH PROCESS COMPLETED SUCCESSFULLY
+2025-12-08 02:21:24,855 - INFO - ============================================================
+2025-12-08 02:21:24,855 - INFO - ✅ CA Match completed: 7 records processed
+2025-12-08 02:21:24,869 - INFO - 
+======================================================================
+2025-12-08 02:21:24,869 - INFO - ✅ COMPLETE AUTOMATION WORKFLOW FINISHED SUCCESSFULLY
+2025-12-08 02:21:24,869 - INFO - ======================================================================
+2025-12-08 02:21:24,869 - INFO - 
+Workflow Summary:
+2025-12-08 02:21:24,870 - INFO -   ✅ CA Match Process - Completed
+2025-12-08 02:21:24,870 - INFO -   ✅ Extract Reconciliation Statement - Completed (chained)
+2025-12-08 02:21:24,870 - INFO -   ✅ RaasPlus Reconciliation - Completed (chained)
+2025-12-08 02:21:24,870 - INFO -   ✅ Match Statement - Completed (chained)
+2025-12-08 02:21:24,870 - INFO - 
+All processes completed successfully!
+2025-12-08 02:21:24,870 - INFO - Check logs for detailed information.
+2025-12-08 02:21:24,870 - INFO - ======================================================================
+2025-12-08 12:40:06,529 - INFO - ======================================================================
+2025-12-08 12:40:06,530 - INFO - PLAYWRIGHT AUTOMATION RUNNER
+2025-12-08 12:40:06,531 - INFO - ======================================================================
+2025-12-08 12:40:06,531 - INFO - Account: CIM02
+2025-12-08 12:40:06,532 - INFO - Date: 08/11/2025
+2025-12-08 12:40:06,532 - INFO - Amount: 100.0
+2025-12-08 12:40:06,533 - INFO - Headless Mode: False
+2025-12-08 12:40:06,533 - INFO - Downloads Dir: d:\Github\PlayWright-Extractor\Downloads
+2025-12-08 12:40:06,534 - INFO - ======================================================================
+2025-12-08 12:40:06,534 - INFO - 
+🚀 Starting complete automation workflow...
+
+2025-12-08 12:40:06,535 - INFO - 
+======================================================================
+2025-12-08 12:40:06,535 - INFO - STEP 1: CA MATCH PROCESS
+2025-12-08 12:40:06,536 - INFO - ======================================================================
+2025-12-08 12:40:09,346 - INFO - Starting CA Match process...
+2025-12-08 12:40:09,348 - INFO - ============================================================
+2025-12-08 12:40:09,350 - INFO - CA MATCH PROCESS - OPTIMIZED VERSION
+2025-12-08 12:40:09,351 - INFO - ============================================================
+2025-12-08 12:40:09,351 - INFO - Initializing browser...
+2025-12-08 12:40:11,629 - INFO - Browser initialized successfully
+2025-12-08 12:40:11,631 - INFO - Logging in...
+2025-12-08 12:40:26,326 - INFO - Navigating to Process Bank Records...
+2025-12-08 12:40:56,353 - ERROR - FATAL ERROR: Locator.click: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("div").filter(has_text=re.compile(r"^Cash Book$")).first
+    - waiting for" https://csmstg.censof.com/DBKK/Frames/Login.aspx?ReturnUrl=%2fDBKK" navigation to finish...
+    - navigated to "https://csmstg.censof.com/DBKK/Main"
+
+2025-12-08 12:40:56,871 - INFO - Browser cleanup completed
+2025-12-08 12:40:56,894 - ERROR - ❌ CA Match failed: Locator.click: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("div").filter(has_text=re.compile(r"^Cash Book$")).first
+    - waiting for" https://csmstg.censof.com/DBKK/Frames/Login.aspx?ReturnUrl=%2fDBKK" navigation to finish...
+    - navigated to "https://csmstg.censof.com/DBKK/Main"
+Traceback (most recent call last):
+  File "d:\Github\PlayWright-Extractor\playwright_scripts\run_playwright.py", line 142, in run_ca_match
+    records = process_bank_transactions(
+        playwright=playwright,
+    ...<9 lines>...
+        headless=self.headless
+    )
+  File "d:\Github\PlayWright-Extractor\playwright_scripts\CA_Match_Process_Optimized.py", line 643, in process_bank_transactions
+    return processor.run()
+           ~~~~~~~~~~~~~^^
+  File "d:\Github\PlayWright-Extractor\playwright_scripts\CA_Match_Process_Optimized.py", line 531, in run
+    functions.navigatePage(self.page, "Process Bank Records")
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\Github\PlayWright-Extractor\helper_playwright\functions.py", line 23, in navigatePage
+    page.locator("div").filter(has_text=re.compile(r"^Cash Book$")).first.click()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "D:\Github\PlayWright-Extractor\venv\Lib\site-packages\playwright\sync_api\_generated.py", line 15573, in click
+    self._sync(
+    ~~~~~~~~~~^
+        self._impl_obj.click(
+        ^^^^^^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+        )
+        ^
+    )
+    ^
+  File "D:\Github\PlayWright-Extractor\venv\Lib\site-packages\playwright\_impl\_sync_base.py", line 115, in _sync
+    return task.result()
+           ~~~~~~~~~~~^^
+  File "D:\Github\PlayWright-Extractor\venv\Lib\site-packages\playwright\_impl\_locator.py", line 160, in click
+    return await self._frame.click(self._selector, strict=True, **params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Github\PlayWright-Extractor\venv\Lib\site-packages\playwright\_impl\_frame.py", line 549, in click
+    await self._channel.send("click", self._timeout, locals_to_params(locals()))
+  File "D:\Github\PlayWright-Extractor\venv\Lib\site-packages\playwright\_impl\_connection.py", line 69, in send
+    return await self._connection.wrap_api_call(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "D:\Github\PlayWright-Extractor\venv\Lib\site-packages\playwright\_impl\_connection.py", line 559, in wrap_api_call
+    raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
+playwright._impl._errors.TimeoutError: Locator.click: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("div").filter(has_text=re.compile(r"^Cash Book$")).first
+    - waiting for" https://csmstg.censof.com/DBKK/Frames/Login.aspx?ReturnUrl=%2fDBKK" navigation to finish...
+    - navigated to "https://csmstg.censof.com/DBKK/Main"
+
+2025-12-08 12:40:56,899 - ERROR - 
+======================================================================
+2025-12-08 12:40:56,899 - ERROR - ❌ AUTOMATION WORKFLOW FAILED
+2025-12-08 12:40:56,900 - ERROR - ======================================================================
+2025-12-08 12:40:56,900 - ERROR - Error: Locator.click: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("div").filter(has_text=re.compile(r"^Cash Book$")).first
+    - waiting for" https://csmstg.censof.com/DBKK/Frames/Login.aspx?ReturnUrl=%2fDBKK" navigation to finish...
+    - navigated to "https://csmstg.censof.com/DBKK/Main"
+
+2025-12-08 12:40:56,900 - ERROR - ======================================================================
+2025-12-08 12:51:40,920 - INFO - ======================================================================
+2025-12-08 12:51:40,921 - INFO - PLAYWRIGHT AUTOMATION RUNNER
+2025-12-08 12:51:40,921 - INFO - ======================================================================
+2025-12-08 12:51:40,921 - INFO - Account: CIM02
+2025-12-08 12:51:40,921 - INFO - Date: 08/11/2025
+2025-12-08 12:51:40,921 - INFO - Amount: 100.0
+2025-12-08 12:51:40,922 - INFO - Headless Mode: False
+2025-12-08 12:51:40,922 - INFO - Downloads Dir: d:\Github\PlayWright-Extractor\Downloads
+2025-12-08 12:51:40,922 - INFO - ======================================================================
+2025-12-08 12:51:40,922 - INFO - 
+🚀 Starting complete automation workflow...
+
+2025-12-08 12:51:40,922 - INFO - 
+======================================================================
+2025-12-08 12:51:40,922 - INFO - STEP 1: CA MATCH PROCESS
+2025-12-08 12:51:40,922 - INFO - ======================================================================
+2025-12-08 12:51:41,361 - INFO - Starting CA Match process...
+2025-12-08 12:51:41,362 - INFO - ============================================================
+2025-12-08 12:51:41,362 - INFO - CA MATCH PROCESS - OPTIMIZED VERSION
+2025-12-08 12:51:41,363 - INFO - ============================================================
+2025-12-08 12:51:41,363 - INFO - Initializing browser...
+2025-12-08 12:51:41,860 - INFO - Browser initialized successfully
+2025-12-08 12:51:41,861 - INFO - Logging in...
+2025-12-08 12:52:06,718 - INFO - Navigating to Process Bank Records...
+2025-12-08 12:52:36,744 - ERROR - FATAL ERROR: Locator.click: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("div").filter(has_text=re.compile(r"^Cash Book$")).first
+    - waiting for" https://csmstg.censof.com/DBKK/Frames/Login.aspx?ReturnUrl=%2fDBKK" navigation to finish...
+    - navigated to "https://csmstg.censof.com/DBKK/Main"
+
+2025-12-08 12:52:37,071 - INFO - Browser cleanup completed
+2025-12-08 12:52:37,087 - ERROR - ❌ CA Match failed: Locator.click: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("div").filter(has_text=re.compile(r"^Cash Book$")).first
+    - waiting for" https://csmstg.censof.com/DBKK/Frames/Login.aspx?ReturnUrl=%2fDBKK" navigation to finish...
+    - navigated to "https://csmstg.censof.com/DBKK/Main"
+Traceback (most recent call last):
+  File "d:\Github\PlayWright-Extractor\playwright_scripts\run_playwright.py", line 142, in run_ca_match
+    records = process_bank_transactions(
+        playwright=playwright,
+    ...<9 lines>...
+        headless=self.headless
+    )
+  File "d:\Github\PlayWright-Extractor\playwright_scripts\CA_Match_Process_Optimized.py", line 643, in process_bank_transactions
+    return processor.run()
+           ~~~~~~~~~~~~~^^
+  File "d:\Github\PlayWright-Extractor\playwright_scripts\CA_Match_Process_Optimized.py", line 531, in run
+    functions.navigatePage(self.page, "Process Bank Records")
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\Github\PlayWright-Extractor\helper_playwright\functions.py", line 23, in navigatePage
+    page.locator("div").filter(has_text=re.compile(r"^Cash Book$")).first.click()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "D:\Github\PlayWright-Extractor\venv\Lib\site-packages\playwright\sync_api\_generated.py", line 15573, in click
+    self._sync(
+    ~~~~~~~~~~^
+        self._impl_obj.click(
+        ^^^^^^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+        )
+        ^
+    )
+    ^
+  File "D:\Github\PlayWright-Extractor\venv\Lib\site-packages\playwright\_impl\_sync_base.py", line 115, in _sync
+    return task.result()
+           ~~~~~~~~~~~^^
+  File "D:\Github\PlayWright-Extractor\venv\Lib\site-packages\playwright\_impl\_locator.py", line 160, in click
+    return await self._frame.click(self._selector, strict=True, **params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Github\PlayWright-Extractor\venv\Lib\site-packages\playwright\_impl\_frame.py", line 549, in click
+    await self._channel.send("click", self._timeout, locals_to_params(locals()))
+  File "D:\Github\PlayWright-Extractor\venv\Lib\site-packages\playwright\_impl\_connection.py", line 69, in send
+    return await self._connection.wrap_api_call(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "D:\Github\PlayWright-Extractor\venv\Lib\site-packages\playwright\_impl\_connection.py", line 559, in wrap_api_call
+    raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
+playwright._impl._errors.TimeoutError: Locator.click: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("div").filter(has_text=re.compile(r"^Cash Book$")).first
+    - waiting for" https://csmstg.censof.com/DBKK/Frames/Login.aspx?ReturnUrl=%2fDBKK" navigation to finish...
+    - navigated to "https://csmstg.censof.com/DBKK/Main"
+
+2025-12-08 12:52:37,090 - ERROR - 
+======================================================================
+2025-12-08 12:52:37,090 - ERROR - ❌ AUTOMATION WORKFLOW FAILED
+2025-12-08 12:52:37,090 - ERROR - ======================================================================
+2025-12-08 12:52:37,090 - ERROR - Error: Locator.click: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("div").filter(has_text=re.compile(r"^Cash Book$")).first
+    - waiting for" https://csmstg.censof.com/DBKK/Frames/Login.aspx?ReturnUrl=%2fDBKK" navigation to finish...
+    - navigated to "https://csmstg.censof.com/DBKK/Main"
+
+2025-12-08 12:52:37,090 - ERROR - ======================================================================
+2025-12-08 12:54:03,663 - INFO - ======================================================================
+2025-12-08 12:54:03,663 - INFO - PLAYWRIGHT AUTOMATION RUNNER
+2025-12-08 12:54:03,663 - INFO - ======================================================================
+2025-12-08 12:54:03,663 - INFO - Account: CIM02
+2025-12-08 12:54:03,663 - INFO - Date: 08/11/2025
+2025-12-08 12:54:03,664 - INFO - Amount: 100.0
+2025-12-08 12:54:03,664 - INFO - Headless Mode: False
+2025-12-08 12:54:03,664 - INFO - Downloads Dir: d:\Github\PlayWright-Extractor\Downloads
+2025-12-08 12:54:03,664 - INFO - ======================================================================
+2025-12-08 12:54:03,664 - INFO - 
+🚀 Starting complete automation workflow...
+
+2025-12-08 12:54:03,664 - INFO - 
+======================================================================
+2025-12-08 12:54:03,665 - INFO - STEP 1: CA MATCH PROCESS
+2025-12-08 12:54:03,665 - INFO - ======================================================================
+2025-12-08 12:54:11,738 - INFO - Starting CA Match process...
+2025-12-08 12:54:11,739 - INFO - ============================================================
+2025-12-08 12:54:11,739 - INFO - CA MATCH PROCESS - OPTIMIZED VERSION
+2025-12-08 12:54:11,740 - INFO - ============================================================
+2025-12-08 12:54:11,740 - INFO - Initializing browser...
+2025-12-08 12:54:12,451 - INFO - Browser initialized successfully
+2025-12-08 12:54:12,452 - INFO - Logging in...
+2025-12-08 12:54:31,740 - INFO - Navigating to Process Bank Records...
+2025-12-08 12:55:01,750 - ERROR - FATAL ERROR: Locator.click: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("div").filter(has_text=re.compile(r"^Cash Book$")).first
+    - waiting for" https://csmstg.censof.com/DBKK/Frames/Login.aspx?ReturnUrl=%2fDBKK" navigation to finish...
+    - navigated to "https://csmstg.censof.com/DBKK/Main"
+
+2025-12-08 12:55:02,042 - INFO - Browser cleanup completed
+2025-12-08 12:55:02,054 - ERROR - ❌ CA Match failed: Locator.click: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("div").filter(has_text=re.compile(r"^Cash Book$")).first
+    - waiting for" https://csmstg.censof.com/DBKK/Frames/Login.aspx?ReturnUrl=%2fDBKK" navigation to finish...
+    - navigated to "https://csmstg.censof.com/DBKK/Main"
+Traceback (most recent call last):
+  File "d:\Github\PlayWright-Extractor\playwright_scripts\run_playwright.py", line 142, in run_ca_match
+    records = process_bank_transactions(
+        playwright=playwright,
+    ...<9 lines>...
+        headless=self.headless
+    )
+  File "d:\Github\PlayWright-Extractor\playwright_scripts\CA_Match_Process_Optimized.py", line 643, in process_bank_transactions
+    return processor.run()
+           ~~~~~~~~~~~~~^^
+  File "d:\Github\PlayWright-Extractor\playwright_scripts\CA_Match_Process_Optimized.py", line 531, in run
+    functions.navigatePage(self.page, "Process Bank Records")
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\Github\PlayWright-Extractor\helper_playwright\functions.py", line 23, in navigatePage
+    page.locator("div").filter(has_text=re.compile(r"^Cash Book$")).first.click()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "D:\Github\PlayWright-Extractor\venv\Lib\site-packages\playwright\sync_api\_generated.py", line 15573, in click
+    self._sync(
+    ~~~~~~~~~~^
+        self._impl_obj.click(
+        ^^^^^^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+        )
+        ^
+    )
+    ^
+  File "D:\Github\PlayWright-Extractor\venv\Lib\site-packages\playwright\_impl\_sync_base.py", line 115, in _sync
+    return task.result()
+           ~~~~~~~~~~~^^
+  File "D:\Github\PlayWright-Extractor\venv\Lib\site-packages\playwright\_impl\_locator.py", line 160, in click
+    return await self._frame.click(self._selector, strict=True, **params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Github\PlayWright-Extractor\venv\Lib\site-packages\playwright\_impl\_frame.py", line 549, in click
+    await self._channel.send("click", self._timeout, locals_to_params(locals()))
+  File "D:\Github\PlayWright-Extractor\venv\Lib\site-packages\playwright\_impl\_connection.py", line 69, in send
+    return await self._connection.wrap_api_call(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "D:\Github\PlayWright-Extractor\venv\Lib\site-packages\playwright\_impl\_connection.py", line 559, in wrap_api_call
+    raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
+playwright._impl._errors.TimeoutError: Locator.click: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("div").filter(has_text=re.compile(r"^Cash Book$")).first
+    - waiting for" https://csmstg.censof.com/DBKK/Frames/Login.aspx?ReturnUrl=%2fDBKK" navigation to finish...
+    - navigated to "https://csmstg.censof.com/DBKK/Main"
+
+2025-12-08 12:55:02,057 - ERROR - 
+======================================================================
+2025-12-08 12:55:02,057 - ERROR - ❌ AUTOMATION WORKFLOW FAILED
+2025-12-08 12:55:02,057 - ERROR - ======================================================================
+2025-12-08 12:55:02,057 - ERROR - Error: Locator.click: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("div").filter(has_text=re.compile(r"^Cash Book$")).first
+    - waiting for" https://csmstg.censof.com/DBKK/Frames/Login.aspx?ReturnUrl=%2fDBKK" navigation to finish...
+    - navigated to "https://csmstg.censof.com/DBKK/Main"
+
+2025-12-08 12:55:02,057 - ERROR - ======================================================================
+2025-12-08 12:55:21,887 - INFO - ======================================================================
+2025-12-08 12:55:21,887 - INFO - PLAYWRIGHT AUTOMATION RUNNER
+2025-12-08 12:55:21,887 - INFO - ======================================================================
+2025-12-08 12:55:21,887 - INFO - Account: CIM02
+2025-12-08 12:55:21,887 - INFO - Date: 08/11/2025
+2025-12-08 12:55:21,888 - INFO - Amount: 100.0
+2025-12-08 12:55:21,888 - INFO - Headless Mode: False
+2025-12-08 12:55:21,888 - INFO - Downloads Dir: d:\Github\PlayWright-Extractor\Downloads
+2025-12-08 12:55:21,888 - INFO - ======================================================================
+2025-12-08 12:55:21,888 - INFO - 
+🚀 Starting complete automation workflow...
+
+2025-12-08 12:55:21,888 - INFO - 
+======================================================================
+2025-12-08 12:55:21,888 - INFO - STEP 1: CA MATCH PROCESS
+2025-12-08 12:55:21,888 - INFO - ======================================================================
+2025-12-08 12:55:22,308 - INFO - Starting CA Match process...
+2025-12-08 12:55:22,310 - INFO - ============================================================
+2025-12-08 12:55:22,310 - INFO - CA MATCH PROCESS - OPTIMIZED VERSION
+2025-12-08 12:55:22,311 - INFO - ============================================================
+2025-12-08 12:55:22,311 - INFO - Initializing browser...
+2025-12-08 12:55:22,794 - INFO - Browser initialized successfully
+2025-12-08 12:55:22,794 - INFO - Logging in...
+2025-12-08 12:55:52,809 - ERROR - FATAL ERROR: Page.goto: Timeout 30000ms exceeded.
+Call log:
+  - navigating to "https://csmstg.censof.com/DBKK", waiting until "load"
+
+2025-12-08 12:55:53,069 - INFO - Browser cleanup completed
+2025-12-08 12:55:53,080 - ERROR - ❌ CA Match failed: Page.goto: Timeout 30000ms exceeded.
+Call log:
+  - navigating to "https://csmstg.censof.com/DBKK", waiting until "load"
+Traceback (most recent call last):
+  File "d:\Github\PlayWright-Extractor\playwright_scripts\run_playwright.py", line 142, in run_ca_match
+    records = process_bank_transactions(
+        playwright=playwright,
+    ...<9 lines>...
+        headless=self.headless
+    )
+  File "d:\Github\PlayWright-Extractor\playwright_scripts\CA_Match_Process_Optimized.py", line 643, in process_bank_transactions
+    return processor.run()
+           ~~~~~~~~~~~~~^^
+  File "d:\Github\PlayWright-Extractor\playwright_scripts\CA_Match_Process_Optimized.py", line 527, in run
+    functions.login(self.page, self.website_url, self.username, self.password)
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\Github\PlayWright-Extractor\helper_playwright\functions.py", line 11, in login
+    page.goto(website_url)
+    ~~~~~~~~~^^^^^^^^^^^^^
+  File "D:\Github\PlayWright-Extractor\venv\Lib\site-packages\playwright\sync_api\_generated.py", line 9019, in goto
+    self._sync(
+    ~~~~~~~~~~^
+        self._impl_obj.goto(
+        ^^^^^^^^^^^^^^^^^^^^
+            url=url, timeout=timeout, waitUntil=wait_until, referer=referer
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        )
+        ^
+    )
+    ^
+  File "D:\Github\PlayWright-Extractor\venv\Lib\site-packages\playwright\_impl\_sync_base.py", line 115, in _sync
+    return task.result()
+           ~~~~~~~~~~~^^
+  File "D:\Github\PlayWright-Extractor\venv\Lib\site-packages\playwright\_impl\_page.py", line 555, in goto
+    return await self._main_frame.goto(**locals_to_params(locals()))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Github\PlayWright-Extractor\venv\Lib\site-packages\playwright\_impl\_frame.py", line 153, in goto
+    await self._channel.send(
+        "goto", self._navigation_timeout, locals_to_params(locals())
+    )
+  File "D:\Github\PlayWright-Extractor\venv\Lib\site-packages\playwright\_impl\_connection.py", line 69, in send
+    return await self._connection.wrap_api_call(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "D:\Github\PlayWright-Extractor\venv\Lib\site-packages\playwright\_impl\_connection.py", line 559, in wrap_api_call
+    raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
+playwright._impl._errors.TimeoutError: Page.goto: Timeout 30000ms exceeded.
+Call log:
+  - navigating to "https://csmstg.censof.com/DBKK", waiting until "load"
+
+2025-12-08 12:55:53,082 - ERROR - 
+======================================================================
+2025-12-08 12:55:53,083 - ERROR - ❌ AUTOMATION WORKFLOW FAILED
+2025-12-08 12:55:53,083 - ERROR - ======================================================================
+2025-12-08 12:55:53,083 - ERROR - Error: Page.goto: Timeout 30000ms exceeded.
+Call log:
+  - navigating to "https://csmstg.censof.com/DBKK", waiting until "load"
+
+2025-12-08 12:55:53,083 - ERROR - ======================================================================
+2025-12-08 12:56:39,880 - INFO - ======================================================================
+2025-12-08 12:56:39,880 - INFO - PLAYWRIGHT AUTOMATION RUNNER
+2025-12-08 12:56:39,881 - INFO - ======================================================================
+2025-12-08 12:56:39,881 - INFO - Account: CIM02
+2025-12-08 12:56:39,881 - INFO - Date: 08/11/2025
+2025-12-08 12:56:39,881 - INFO - Amount: 100.0
+2025-12-08 12:56:39,881 - INFO - Headless Mode: False
+2025-12-08 12:56:39,881 - INFO - Downloads Dir: d:\Github\PlayWright-Extractor\Downloads
+2025-12-08 12:56:39,881 - INFO - ======================================================================
+2025-12-08 12:56:39,881 - INFO - 
+🚀 Starting complete automation workflow...
+
+2025-12-08 12:56:39,881 - INFO - 
+======================================================================
+2025-12-08 12:56:39,882 - INFO - STEP 1: CA MATCH PROCESS
+2025-12-08 12:56:39,882 - INFO - ======================================================================
+2025-12-08 12:56:40,348 - INFO - Starting CA Match process...
+2025-12-08 12:56:40,349 - INFO - ============================================================
+2025-12-08 12:56:40,349 - INFO - CA MATCH PROCESS - OPTIMIZED VERSION
+2025-12-08 12:56:40,349 - INFO - ============================================================
+2025-12-08 12:56:40,350 - INFO - Initializing browser...
+2025-12-08 12:56:40,989 - INFO - Browser initialized successfully
+2025-12-08 12:56:40,989 - INFO - Logging in...
+2025-12-08 12:56:48,103 - INFO - Navigating to Process Bank Records...
+2025-12-08 12:57:18,121 - ERROR - FATAL ERROR: Locator.click: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("div").filter(has_text=re.compile(r"^Cash Book$")).first
+    - waiting for" https://csmstg.censof.com/DBKK/Frames/Login.aspx?ReturnUrl=%2fDBKK" navigation to finish...
+    - navigated to "https://csmstg.censof.com/DBKK/Main"
+
+2025-12-08 12:57:18,512 - INFO - Browser cleanup completed
+2025-12-08 12:57:18,524 - ERROR - ❌ CA Match failed: Locator.click: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("div").filter(has_text=re.compile(r"^Cash Book$")).first
+    - waiting for" https://csmstg.censof.com/DBKK/Frames/Login.aspx?ReturnUrl=%2fDBKK" navigation to finish...
+    - navigated to "https://csmstg.censof.com/DBKK/Main"
+Traceback (most recent call last):
+  File "d:\Github\PlayWright-Extractor\playwright_scripts\run_playwright.py", line 142, in run_ca_match
+    records = process_bank_transactions(
+        playwright=playwright,
+    ...<9 lines>...
+        headless=self.headless
+    )
+  File "d:\Github\PlayWright-Extractor\playwright_scripts\CA_Match_Process_Optimized.py", line 643, in process_bank_transactions
+    return processor.run()
+           ~~~~~~~~~~~~~^^
+  File "d:\Github\PlayWright-Extractor\playwright_scripts\CA_Match_Process_Optimized.py", line 531, in run
+    functions.navigatePage(self.page, "Process Bank Records")
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\Github\PlayWright-Extractor\helper_playwright\functions.py", line 23, in navigatePage
+    page.locator("div").filter(has_text=re.compile(r"^Cash Book$")).first.click()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "D:\Github\PlayWright-Extractor\venv\Lib\site-packages\playwright\sync_api\_generated.py", line 15573, in click
+    self._sync(
+    ~~~~~~~~~~^
+        self._impl_obj.click(
+        ^^^^^^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+        )
+        ^
+    )
+    ^
+  File "D:\Github\PlayWright-Extractor\venv\Lib\site-packages\playwright\_impl\_sync_base.py", line 115, in _sync
+    return task.result()
+           ~~~~~~~~~~~^^
+  File "D:\Github\PlayWright-Extractor\venv\Lib\site-packages\playwright\_impl\_locator.py", line 160, in click
+    return await self._frame.click(self._selector, strict=True, **params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Github\PlayWright-Extractor\venv\Lib\site-packages\playwright\_impl\_frame.py", line 549, in click
+    await self._channel.send("click", self._timeout, locals_to_params(locals()))
+  File "D:\Github\PlayWright-Extractor\venv\Lib\site-packages\playwright\_impl\_connection.py", line 69, in send
+    return await self._connection.wrap_api_call(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "D:\Github\PlayWright-Extractor\venv\Lib\site-packages\playwright\_impl\_connection.py", line 559, in wrap_api_call
+    raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
+playwright._impl._errors.TimeoutError: Locator.click: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("div").filter(has_text=re.compile(r"^Cash Book$")).first
+    - waiting for" https://csmstg.censof.com/DBKK/Frames/Login.aspx?ReturnUrl=%2fDBKK" navigation to finish...
+    - navigated to "https://csmstg.censof.com/DBKK/Main"
+
+2025-12-08 12:57:18,527 - ERROR - 
+======================================================================
+2025-12-08 12:57:18,528 - ERROR - ❌ AUTOMATION WORKFLOW FAILED
+2025-12-08 12:57:18,528 - ERROR - ======================================================================
+2025-12-08 12:57:18,528 - ERROR - Error: Locator.click: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("div").filter(has_text=re.compile(r"^Cash Book$")).first
+    - waiting for" https://csmstg.censof.com/DBKK/Frames/Login.aspx?ReturnUrl=%2fDBKK" navigation to finish...
+    - navigated to "https://csmstg.censof.com/DBKK/Main"
+
+2025-12-08 12:57:18,528 - ERROR - ======================================================================
+2025-12-08 17:21:02,444 - INFO - ======================================================================
+2025-12-08 17:21:02,444 - INFO - PLAYWRIGHT AUTOMATION RUNNER
+2025-12-08 17:21:02,444 - INFO - ======================================================================
+2025-12-08 17:21:02,444 - INFO - Account: CIM02
+2025-12-08 17:21:02,444 - INFO - Date: 08/11/2025
+2025-12-08 17:21:02,445 - INFO - Amount: 100.0
+2025-12-08 17:21:02,445 - INFO - Headless Mode: False
+2025-12-08 17:21:02,445 - INFO - Downloads Dir: d:\Github\PlayWright-Extractor\Downloads
+2025-12-08 17:21:02,445 - INFO - ======================================================================
+2025-12-08 17:21:02,445 - INFO - 
+🚀 Starting complete automation workflow...
+
+2025-12-08 17:21:02,446 - INFO - 
+======================================================================
+2025-12-08 17:21:02,446 - INFO - STEP 1: CA MATCH PROCESS
+2025-12-08 17:21:02,446 - INFO - ======================================================================
+2025-12-08 17:21:07,231 - INFO - Starting CA Match process...
+2025-12-08 17:21:07,232 - INFO - ============================================================
+2025-12-08 17:21:07,233 - INFO - CA MATCH PROCESS - OPTIMIZED VERSION
+2025-12-08 17:21:07,233 - INFO - ============================================================
+2025-12-08 17:21:07,233 - INFO - Initializing browser...
+2025-12-08 17:21:08,134 - INFO - Browser initialized successfully
+2025-12-08 17:21:08,134 - INFO - Logging in...
+2025-12-08 17:21:14,393 - INFO - Navigating to Process Bank Records...
+2025-12-08 17:21:44,399 - ERROR - FATAL ERROR: Locator.click: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("div").filter(has_text=re.compile(r"^Cash Book$")).first
+
+2025-12-08 17:21:44,760 - INFO - Browser cleanup completed
+2025-12-08 17:21:44,777 - ERROR - ❌ CA Match failed: Locator.click: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("div").filter(has_text=re.compile(r"^Cash Book$")).first
+Traceback (most recent call last):
+  File "d:\Github\PlayWright-Extractor\playwright_scripts\run_playwright.py", line 142, in run_ca_match
+    records = process_bank_transactions(
+        playwright=playwright,
+    ...<9 lines>...
+        headless=self.headless
+    )
+  File "d:\Github\PlayWright-Extractor\playwright_scripts\CA_Match_Process_Optimized.py", line 643, in process_bank_transactions
+    return processor.run()
+           ~~~~~~~~~~~~~^^
+  File "d:\Github\PlayWright-Extractor\playwright_scripts\CA_Match_Process_Optimized.py", line 531, in run
+    functions.navigatePage(self.page, "Process Bank Records")
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\Github\PlayWright-Extractor\helper_playwright\functions.py", line 23, in navigatePage
+    page.locator("div").filter(has_text=re.compile(r"^Cash Book$")).first.click()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "D:\Github\PlayWright-Extractor\venv\Lib\site-packages\playwright\sync_api\_generated.py", line 15573, in click
+    self._sync(
+    ~~~~~~~~~~^
+        self._impl_obj.click(
+        ^^^^^^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+        )
+        ^
+    )
+    ^
+  File "D:\Github\PlayWright-Extractor\venv\Lib\site-packages\playwright\_impl\_sync_base.py", line 115, in _sync
+    return task.result()
+           ~~~~~~~~~~~^^
+  File "D:\Github\PlayWright-Extractor\venv\Lib\site-packages\playwright\_impl\_locator.py", line 160, in click
+    return await self._frame.click(self._selector, strict=True, **params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Github\PlayWright-Extractor\venv\Lib\site-packages\playwright\_impl\_frame.py", line 549, in click
+    await self._channel.send("click", self._timeout, locals_to_params(locals()))
+  File "D:\Github\PlayWright-Extractor\venv\Lib\site-packages\playwright\_impl\_connection.py", line 69, in send
+    return await self._connection.wrap_api_call(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "D:\Github\PlayWright-Extractor\venv\Lib\site-packages\playwright\_impl\_connection.py", line 559, in wrap_api_call
+    raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
+playwright._impl._errors.TimeoutError: Locator.click: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("div").filter(has_text=re.compile(r"^Cash Book$")).first
+
+2025-12-08 17:21:44,781 - ERROR - 
+======================================================================
+2025-12-08 17:21:44,781 - ERROR - ❌ AUTOMATION WORKFLOW FAILED
+2025-12-08 17:21:44,782 - ERROR - ======================================================================
+2025-12-08 17:21:44,782 - ERROR - Error: Locator.click: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("div").filter(has_text=re.compile(r"^Cash Book$")).first
+
+2025-12-08 17:21:44,782 - ERROR - ======================================================================
+2025-12-08 17:21:59,065 - INFO - ======================================================================
+2025-12-08 17:21:59,066 - INFO - PLAYWRIGHT AUTOMATION RUNNER
+2025-12-08 17:21:59,066 - INFO - ======================================================================
+2025-12-08 17:21:59,066 - INFO - Account: CIM02
+2025-12-08 17:21:59,066 - INFO - Date: 08/11/2025
+2025-12-08 17:21:59,066 - INFO - Amount: 100.0
+2025-12-08 17:21:59,066 - INFO - Headless Mode: False
+2025-12-08 17:21:59,066 - INFO - Downloads Dir: d:\Github\PlayWright-Extractor\Downloads
+2025-12-08 17:21:59,066 - INFO - ======================================================================
+2025-12-08 17:21:59,067 - INFO - 
+🚀 Starting complete automation workflow...
+
+2025-12-08 17:21:59,067 - INFO - 
+======================================================================
+2025-12-08 17:21:59,067 - INFO - STEP 1: CA MATCH PROCESS
+2025-12-08 17:21:59,067 - INFO - ======================================================================
+2025-12-08 17:21:59,499 - INFO - Starting CA Match process...
+2025-12-08 17:21:59,500 - INFO - ============================================================
+2025-12-08 17:21:59,500 - INFO - CA MATCH PROCESS - OPTIMIZED VERSION
+2025-12-08 17:21:59,501 - INFO - ============================================================
+2025-12-08 17:21:59,501 - INFO - Initializing browser...
+2025-12-08 17:21:59,975 - INFO - Browser initialized successfully
+2025-12-08 17:21:59,975 - INFO - Logging in...
+2025-12-08 17:22:29,983 - ERROR - FATAL ERROR: Page.goto: Timeout 30000ms exceeded.
+Call log:
+  - navigating to "https://csmstg.censof.com/DBKK", waiting until "load"
+
+2025-12-08 17:22:30,283 - INFO - Browser cleanup completed
+2025-12-08 17:22:30,296 - ERROR - ❌ CA Match failed: Page.goto: Timeout 30000ms exceeded.
+Call log:
+  - navigating to "https://csmstg.censof.com/DBKK", waiting until "load"
+Traceback (most recent call last):
+  File "d:\Github\PlayWright-Extractor\playwright_scripts\run_playwright.py", line 142, in run_ca_match
+    records = process_bank_transactions(
+        playwright=playwright,
+    ...<9 lines>...
+        headless=self.headless
+    )
+  File "d:\Github\PlayWright-Extractor\playwright_scripts\CA_Match_Process_Optimized.py", line 643, in process_bank_transactions
+    return processor.run()
+           ~~~~~~~~~~~~~^^
+  File "d:\Github\PlayWright-Extractor\playwright_scripts\CA_Match_Process_Optimized.py", line 527, in run
+    functions.login(self.page, self.website_url, self.username, self.password)
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\Github\PlayWright-Extractor\helper_playwright\functions.py", line 11, in login
+    page.goto(website_url)
+    ~~~~~~~~~^^^^^^^^^^^^^
+  File "D:\Github\PlayWright-Extractor\venv\Lib\site-packages\playwright\sync_api\_generated.py", line 9019, in goto
+    self._sync(
+    ~~~~~~~~~~^
+        self._impl_obj.goto(
+        ^^^^^^^^^^^^^^^^^^^^
+            url=url, timeout=timeout, waitUntil=wait_until, referer=referer
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        )
+        ^
+    )
+    ^
+  File "D:\Github\PlayWright-Extractor\venv\Lib\site-packages\playwright\_impl\_sync_base.py", line 115, in _sync
+    return task.result()
+           ~~~~~~~~~~~^^
+  File "D:\Github\PlayWright-Extractor\venv\Lib\site-packages\playwright\_impl\_page.py", line 555, in goto
+    return await self._main_frame.goto(**locals_to_params(locals()))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Github\PlayWright-Extractor\venv\Lib\site-packages\playwright\_impl\_frame.py", line 153, in goto
+    await self._channel.send(
+        "goto", self._navigation_timeout, locals_to_params(locals())
+    )
+  File "D:\Github\PlayWright-Extractor\venv\Lib\site-packages\playwright\_impl\_connection.py", line 69, in send
+    return await self._connection.wrap_api_call(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "D:\Github\PlayWright-Extractor\venv\Lib\site-packages\playwright\_impl\_connection.py", line 559, in wrap_api_call
+    raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
+playwright._impl._errors.TimeoutError: Page.goto: Timeout 30000ms exceeded.
+Call log:
+  - navigating to "https://csmstg.censof.com/DBKK", waiting until "load"
+
+2025-12-08 17:22:30,299 - ERROR - 
+======================================================================
+2025-12-08 17:22:30,300 - ERROR - ❌ AUTOMATION WORKFLOW FAILED
+2025-12-08 17:22:30,300 - ERROR - ======================================================================
+2025-12-08 17:22:30,300 - ERROR - Error: Page.goto: Timeout 30000ms exceeded.
+Call log:
+  - navigating to "https://csmstg.censof.com/DBKK", waiting until "load"
+
+2025-12-08 17:22:30,300 - ERROR - ======================================================================
+2025-12-08 17:41:37,504 - INFO - ======================================================================
+2025-12-08 17:41:37,505 - INFO - PLAYWRIGHT AUTOMATION RUNNER
+2025-12-08 17:41:37,505 - INFO - ======================================================================
+2025-12-08 17:41:37,505 - INFO - Account: CIM02
+2025-12-08 17:41:37,505 - INFO - Date: 08/11/2025
+2025-12-08 17:41:37,506 - INFO - Amount: 100.0
+2025-12-08 17:41:37,506 - INFO - Headless Mode: False
+2025-12-08 17:41:37,506 - INFO - Downloads Dir: d:\Github\PlayWright-Extractor\Downloads
+2025-12-08 17:41:37,506 - INFO - ======================================================================
+2025-12-08 17:41:37,506 - INFO - 
+🚀 Starting complete automation workflow...
+
+2025-12-08 17:41:37,506 - INFO - 
+======================================================================
+2025-12-08 17:41:37,506 - INFO - STEP 1: CA MATCH PROCESS
+2025-12-08 17:41:37,507 - INFO - ======================================================================
+2025-12-08 17:41:38,115 - INFO - Starting CA Match process...
+2025-12-08 17:41:38,116 - INFO - ============================================================
+2025-12-08 17:41:38,116 - INFO - CA MATCH PROCESS - OPTIMIZED VERSION
+2025-12-08 17:41:38,116 - INFO - ============================================================
+2025-12-08 17:41:38,117 - INFO - Initializing browser...
+2025-12-08 17:41:38,658 - INFO - Browser initialized successfully
+2025-12-08 17:41:38,658 - INFO - Logging in...
+2025-12-08 17:41:41,136 - INFO - Navigating to Process Bank Records...
+2025-12-08 17:41:51,236 - INFO - Starting auto-match process...
+2025-12-08 17:41:57,431 - INFO - Clicked account link 'CIM02' successfully
+2025-12-08 17:42:12,458 - WARNING - Normal click failed for Auto-Match button, trying force click...
+2025-12-08 17:42:17,468 - WARNING - Force click failed, trying JS click...
+2025-12-08 17:42:47,480 - ERROR - All click strategies failed for Auto-Match button: Locator.evaluate: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("iframe[name=\"main\"]").content_frame.locator("#ctl00_phDS_ds_ToolBar_AutoMatch").get_by_text("Auto-Match")
+
+2025-12-08 17:42:49,508 - INFO - Waiting for auto-match confirmation...
+2025-12-08 17:42:54,520 - WARNING - No confirmation popup appeared - auto-match may not have started
+2025-12-08 17:42:54,520 - INFO - Processing auto-matched items...
+2025-12-08 17:43:04,539 - WARNING - Normal click failed for Process button, trying force click...
+2025-12-08 17:43:09,553 - WARNING - Force click failed, trying JS click...
+2025-12-08 17:43:39,567 - ERROR - All click strategies failed for Process button: Locator.evaluate: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("iframe[name=\"main\"]").content_frame.locator("#ctl00_phDS_ds_ToolBar_ProcessMatched").get_by_text("Process")
+
+2025-12-08 17:43:54,594 - WARNING - Normal click failed for Back button, trying force click...
+2025-12-08 17:43:59,611 - WARNING - Force click failed, trying JS click...
+2025-12-08 17:44:29,628 - ERROR - All click strategies failed for Back button: Locator.evaluate: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("iframe[name=\"main\"]").content_frame.locator("#ctl00_phDS_ds_ToolBar_CancelCloseToList div").nth(3)
+
+2025-12-08 17:44:32,636 - INFO - Starting manual matching process...
+2025-12-08 17:44:37,671 - WARNING - Normal click failed for account link 'CIM02', trying force click...
+2025-12-08 17:44:37,698 - INFO - Force clicked account link 'CIM02'
+2025-12-08 17:44:42,710 - INFO - Processing page 1...
+2025-12-08 17:45:02,724 - ERROR - Error during pagination on page 1: Frame.wait_for_selector: Timeout 20000ms exceeded.
+Call log:
+  - waiting for locator("#ctl00_phG_PXSplitContainer_grid1_dataT0")
+
+2025-12-08 17:45:02,724 - INFO - Pagination complete - processed 0 total rows across 1 pages
+2025-12-08 17:45:02,725 - INFO - Manual matching complete - 0 rows processed
+2025-12-08 17:45:02,725 - INFO - Processing manually matched items...
+2025-12-08 17:45:12,730 - WARNING - Normal click failed for Process button (after manual matching), trying force click...
+2025-12-08 17:45:17,735 - WARNING - Force click failed, trying JS click...
+2025-12-08 17:45:47,741 - ERROR - All click strategies failed for Process button (after manual matching): Locator.evaluate: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("iframe[name=\"main\"]").content_frame.locator("#ctl00_phDS_ds_ToolBar_ProcessMatched").get_by_text("Process")
+
+2025-12-08 17:46:02,760 - WARNING - Normal click failed for Back to list button, trying force click...
+2025-12-08 17:46:07,766 - WARNING - Force click failed, trying JS click...
+2025-12-08 17:46:32,007 - INFO - ======================================================================
+2025-12-08 17:46:32,007 - INFO - PLAYWRIGHT AUTOMATION RUNNER
+2025-12-08 17:46:32,008 - INFO - ======================================================================
+2025-12-08 17:46:32,008 - INFO - Account: CIM02
+2025-12-08 17:46:32,008 - INFO - Date: 08/11/2025
+2025-12-08 17:46:32,008 - INFO - Amount: 100.0
+2025-12-08 17:46:32,008 - INFO - Headless Mode: False
+2025-12-08 17:46:32,008 - INFO - Downloads Dir: d:\Github\PlayWright-Extractor\Downloads
+2025-12-08 17:46:32,008 - INFO - ======================================================================
+2025-12-08 17:46:32,008 - INFO - 
+🚀 Starting complete automation workflow...
+
+2025-12-08 17:46:32,008 - INFO - 
+======================================================================
+2025-12-08 17:46:32,008 - INFO - STEP 1: CA MATCH PROCESS
+2025-12-08 17:46:32,008 - INFO - ======================================================================
+2025-12-08 17:46:32,431 - INFO - Starting CA Match process...
+2025-12-08 17:46:32,432 - INFO - ============================================================
+2025-12-08 17:46:32,432 - INFO - CA MATCH PROCESS - OPTIMIZED VERSION
+2025-12-08 17:46:32,433 - INFO - ============================================================
+2025-12-08 17:46:32,433 - INFO - Initializing browser...
+2025-12-08 17:46:32,933 - INFO - Browser initialized successfully
+2025-12-08 17:46:32,933 - INFO - Logging in...
+2025-12-08 17:46:37,354 - INFO - Navigating to Process Bank Records...
+2025-12-08 17:46:53,237 - INFO - Starting auto-match process...
+2025-12-08 17:46:57,614 - INFO - Clicked account link 'CIM02' successfully
+2025-12-08 17:47:02,717 - INFO - Clicked Auto-Match button successfully
+2025-12-08 17:47:04,731 - INFO - Waiting for auto-match confirmation...
+2025-12-08 17:47:19,816 - WARNING - No 'Executing' message detected
+2025-12-08 17:47:19,828 - INFO - âœ… Auto-match operation completed successfully!
+2025-12-08 17:47:19,829 - INFO - Processing auto-matched items...
+2025-12-08 17:47:19,895 - INFO - Clicked Process button successfully
+2025-12-08 17:47:24,980 - INFO - Clicked Back button successfully
+2025-12-08 17:47:27,994 - INFO - Starting manual matching process...
+2025-12-08 17:47:28,076 - INFO - Clicked account link 'CIM02' successfully
+2025-12-08 17:47:33,081 - INFO - Processing page 1...
+2025-12-08 17:47:33,124 - INFO - Found 8 rows on page 1
+2025-12-08 17:47:33,139 - INFO - Row 0 - Ext. Ref. Nbr.: 2507312241040258
+2025-12-08 17:47:33,144 - INFO - Row 0 - Already matched, skipping
+2025-12-08 17:47:33,158 - INFO - Row 1 - Ext. Ref. Nbr.: 2507311751140415
+2025-12-08 17:47:33,164 - INFO - Row 1 - Already matched, skipping
+2025-12-08 17:47:33,176 - INFO - Row 2 - Ext. Ref. Nbr.: 30756388
+2025-12-08 17:47:33,183 - INFO - Row 2 - Already matched, skipping
+2025-12-08 17:47:33,198 - INFO - Row 3 - Ext. Ref. Nbr.: 30756388
+2025-12-08 17:47:33,206 - INFO - Row 3 - Already matched, skipping
+2025-12-08 17:47:33,217 - INFO - Row 4 - Ext. Ref. Nbr.: 2507181637590200
+2025-12-08 17:47:33,224 - INFO - Row 4 - Already matched, skipping
+2025-12-08 17:47:33,239 - INFO - Row 5 - Ext. Ref. Nbr.: 2507110714350678
+2025-12-08 17:47:33,245 - INFO - Row 5 - Already matched, skipping
+2025-12-08 17:47:33,258 - INFO - Row 6 - Ext. Ref. Nbr.: 2507051851570603
+2025-12-08 17:47:33,265 - INFO - Row 6 - Already matched, skipping
+2025-12-08 17:47:33,272 - INFO - No more pages - pagination complete
+2025-12-08 17:47:33,273 - INFO - Pagination complete - processed 7 total rows across 1 pages
+2025-12-08 17:47:33,273 - INFO - Manual matching complete - 7 rows processed
+2025-12-08 17:47:33,273 - INFO - Processing manually matched items...
+2025-12-08 17:47:33,327 - INFO - Clicked Process button (after manual matching) successfully
+2025-12-08 17:47:38,410 - INFO - Clicked Back to list button successfully
+2025-12-08 17:47:41,418 - INFO - Downloading results...
+2025-12-08 17:47:41,500 - INFO - Clicked account link 'CIM02' successfully
+2025-12-08 17:47:46,591 - INFO - Clicked Export dropdown successfully
+2025-12-08 17:47:46,675 - INFO - Clicked Export to Excel button successfully
+2025-12-08 17:47:52,536 - INFO - Download started: Process Bank Transactions 20251208.xlsx
+2025-12-08 17:47:53,000 - INFO - âœ… File saved to: d:\Github\PlayWright-Extractor\Downloads\Process Bank Transactions 20251208.xlsx
+2025-12-08 17:47:53,000 - INFO - Processing downloaded file: d:\Github\PlayWright-Extractor\Downloads\Process Bank Transactions 20251208.xlsx
+2025-12-08 17:47:53,187 - WARNING - Could not determine dtype for column 1, falling back to string
+2025-12-08 17:47:53,187 - WARNING - Could not determine dtype for column 6, falling back to string
+2025-12-08 17:47:53,187 - WARNING - Could not determine dtype for column 8, falling back to string
+2025-12-08 17:47:53,188 - WARNING - Could not determine dtype for column 9, falling back to string
+2025-12-08 17:47:53,188 - WARNING - Could not determine dtype for column 11, falling back to string
+2025-12-08 17:47:53,188 - WARNING - Could not determine dtype for column 13, falling back to string
+2025-12-08 17:47:53,188 - WARNING - Could not determine dtype for column 14, falling back to string
+2025-12-08 17:47:53,188 - WARNING - Could not determine dtype for column 17, falling back to string
+2025-12-08 17:47:53,188 - WARNING - Could not determine dtype for column 18, falling back to string
+2025-12-08 17:47:53,188 - WARNING - Could not determine dtype for column 20, falling back to string
+2025-12-08 17:47:53,269 - INFO - Processed 7 records from downloaded file
+2025-12-08 17:47:53,629 - INFO - Browser cleanup completed
+2025-12-08 17:47:53,630 - INFO - Chaining to Extract Reconciliation Statement...
+2025-12-08 17:49:51,892 - WARNING - Could not determine dtype for column 2, falling back to string
+2025-12-08 17:49:51,892 - WARNING - Could not determine dtype for column 11, falling back to string
+2025-12-08 17:49:51,892 - WARNING - Could not determine dtype for column 12, falling back to string
+2025-12-08 17:53:17,239 - INFO - Loaded 7 bank transactions and 3715 company transactions
+2025-12-08 17:53:17,244 - INFO - Starting Stage 1: Traditional reconciliation pipeline...
+2025-12-08 17:53:17,303 - INFO - Finding transaction ID matches...
+2025-12-08 17:53:17,754 - INFO - Finding bank charges...
+2025-12-08 17:53:17,756 - DEBUG - After bank charges detection: 1 matched (added 1)
+2025-12-08 17:53:17,756 - INFO - Detected 1 bank charges
+2025-12-08 17:53:17,757 - INFO - Finding Reverse CE GL matches...
+2025-12-08 17:53:18,042 - INFO - Found 2 Reverse CE GL matches
+2025-12-08 17:53:18,044 - INFO - Finding name and amount matches...
+2025-12-08 17:53:18,659 - INFO - Found 5 name and amount matches
+2025-12-08 17:53:18,660 - INFO - Finding Hungarian 1:1 matches...
+2025-12-08 17:53:22,388 - INFO - Hungarian 1:1: 0 matches | pairs scored=45, kept=0, time=3.73s
+2025-12-08 17:53:22,389 - INFO - Finding enhanced 1:1 matches...
+2025-12-08 17:53:22,626 - INFO - Found 0 enhanced 1:1 matches
+2025-12-08 17:53:22,628 - INFO - Finding amount and date matches...
+2025-12-08 17:53:22,693 - INFO - Found 0 amount and date matches
+2025-12-08 17:53:22,694 - INFO - Finding fuzzy matches...
+2025-12-08 17:55:01,102 - INFO - ============================================================
+2025-12-08 17:55:01,102 - INFO - CA MATCH PROCESS COMPLETED SUCCESSFULLY
+2025-12-08 17:55:01,103 - INFO - ============================================================
+2025-12-08 17:55:01,103 - INFO - ✅ CA Match completed: 7 records processed
+2025-12-08 17:55:01,119 - INFO - 
+======================================================================
+2025-12-08 17:55:01,119 - INFO - ✅ COMPLETE AUTOMATION WORKFLOW FINISHED SUCCESSFULLY
+2025-12-08 17:55:01,119 - INFO - ======================================================================
+2025-12-08 17:55:01,119 - INFO - 
+Workflow Summary:
+2025-12-08 17:55:01,120 - INFO -   ✅ CA Match Process - Completed
+2025-12-08 17:55:01,120 - INFO -   ✅ Extract Reconciliation Statement - Completed (chained)
+2025-12-08 17:55:01,120 - INFO -   ✅ RaasPlus Reconciliation - Completed (chained)
+2025-12-08 17:55:01,120 - INFO -   ✅ Match Statement - Completed (chained)
+2025-12-08 17:55:01,120 - INFO - 
+All processes completed successfully!
+2025-12-08 17:55:01,121 - INFO - Check logs for detailed information.
+2025-12-08 17:55:01,121 - INFO - ======================================================================
+2025-12-08 18:10:05,336 - INFO - ======================================================================
+2025-12-08 18:10:05,336 - INFO - PLAYWRIGHT AUTOMATION RUNNER
+2025-12-08 18:10:05,336 - INFO - ======================================================================
+2025-12-08 18:10:05,337 - INFO - Account: CIM02
+2025-12-08 18:10:05,337 - INFO - Date: 08/11/2025
+2025-12-08 18:10:05,337 - INFO - Amount: 100.0
+2025-12-08 18:10:05,337 - INFO - Headless Mode: False
+2025-12-08 18:10:05,337 - INFO - Downloads Dir: d:\Github\PlayWright-Extractor\Downloads
+2025-12-08 18:10:05,338 - INFO - ======================================================================
+2025-12-08 18:10:05,338 - INFO - 
+🚀 Starting complete automation workflow...
+
+2025-12-08 18:10:05,338 - INFO - 
+======================================================================
+2025-12-08 18:10:05,338 - INFO - STEP 1: CA MATCH PROCESS
+2025-12-08 18:10:05,338 - INFO - ======================================================================
+2025-12-08 18:10:05,835 - INFO - Starting CA Match process...
+2025-12-08 18:10:05,836 - INFO - ============================================================
+2025-12-08 18:10:05,836 - INFO - CA MATCH PROCESS - OPTIMIZED VERSION
+2025-12-08 18:10:05,836 - INFO - ============================================================
+2025-12-08 18:10:05,837 - INFO - Initializing browser...
+2025-12-08 18:10:06,457 - INFO - Browser initialized successfully
+2025-12-08 18:10:06,458 - INFO - Logging in...
+2025-12-08 18:10:11,988 - INFO - Navigating to Process Bank Records...
+2025-12-08 18:10:29,023 - INFO - Starting auto-match process...
+2025-12-08 18:10:39,060 - WARNING - Normal click failed for account link 'CIM02', trying force click...
+2025-12-08 18:10:41,636 - INFO - Force clicked account link 'CIM02'
+2025-12-08 18:10:46,732 - INFO - Clicked Auto-Match button successfully
+2025-12-08 18:10:48,755 - INFO - Waiting for auto-match confirmation...
+2025-12-08 18:11:03,793 - WARNING - No 'Executing' message detected
+2025-12-08 18:11:03,800 - INFO - âœ… Auto-match operation completed successfully!
+2025-12-08 18:11:03,801 - INFO - Processing auto-matched items...
+2025-12-08 18:11:03,873 - INFO - Clicked Process button successfully
+2025-12-08 18:11:08,985 - INFO - Clicked Back button successfully
+2025-12-08 18:11:11,990 - INFO - Starting manual matching process...
+2025-12-08 18:11:12,067 - INFO - Clicked account link 'CIM02' successfully
+2025-12-08 18:11:17,081 - INFO - Processing page 1...
+2025-12-08 18:11:17,130 - INFO - Found 8 rows on page 1
+2025-12-08 18:11:17,140 - INFO - Row 0 - Ext. Ref. Nbr.: 2507312241040258
+2025-12-08 18:11:17,147 - INFO - Row 0 - Already matched, skipping
+2025-12-08 18:11:17,165 - INFO - Row 1 - Ext. Ref. Nbr.: 2507311751140415
+2025-12-08 18:11:17,172 - INFO - Row 1 - Already matched, skipping
+2025-12-08 18:11:17,189 - INFO - Row 2 - Ext. Ref. Nbr.: 30756388
+2025-12-08 18:11:17,196 - INFO - Row 2 - Already matched, skipping
+2025-12-08 18:11:17,209 - INFO - Row 3 - Ext. Ref. Nbr.: 30756388
+2025-12-08 18:11:17,217 - INFO - Row 3 - Already matched, skipping
+2025-12-08 18:11:17,230 - INFO - Row 4 - Ext. Ref. Nbr.: 2507181637590200
+2025-12-08 18:11:17,241 - INFO - Row 4 - Already matched, skipping
+2025-12-08 18:11:17,256 - INFO - Row 5 - Ext. Ref. Nbr.: 2507110714350678
+2025-12-08 18:11:17,262 - INFO - Row 5 - Already matched, skipping
+2025-12-08 18:11:17,274 - INFO - Row 6 - Ext. Ref. Nbr.: 2507051851570603
+2025-12-08 18:11:17,281 - INFO - Row 6 - Already matched, skipping
+2025-12-08 18:11:17,288 - INFO - No more pages - pagination complete
+2025-12-08 18:11:17,288 - INFO - Pagination complete - processed 7 total rows across 1 pages
+2025-12-08 18:11:17,288 - INFO - Manual matching complete - 7 rows processed
+2025-12-08 18:11:17,289 - INFO - Processing manually matched items...
+2025-12-08 18:11:17,352 - INFO - Clicked Process button (after manual matching) successfully
+2025-12-08 18:11:22,471 - INFO - Clicked Back to list button successfully
+2025-12-08 18:11:25,485 - INFO - Downloading results...
+2025-12-08 18:11:25,570 - INFO - Clicked account link 'CIM02' successfully
+2025-12-08 18:11:30,638 - INFO - Clicked Export dropdown successfully
+2025-12-08 18:11:30,705 - INFO - Clicked Export to Excel button successfully
+2025-12-08 18:11:36,463 - INFO - Download started: Process Bank Transactions 20251208.xlsx
+2025-12-08 18:11:36,556 - INFO - âœ… File saved to: d:\Github\PlayWright-Extractor\Downloads\Process Bank Transactions 20251208.xlsx
+2025-12-08 18:11:36,557 - INFO - Processing downloaded file: d:\Github\PlayWright-Extractor\Downloads\Process Bank Transactions 20251208.xlsx
+2025-12-08 18:11:36,572 - WARNING - Could not determine dtype for column 1, falling back to string
+2025-12-08 18:11:36,573 - WARNING - Could not determine dtype for column 6, falling back to string
+2025-12-08 18:11:36,573 - WARNING - Could not determine dtype for column 8, falling back to string
+2025-12-08 18:11:36,573 - WARNING - Could not determine dtype for column 9, falling back to string
+2025-12-08 18:11:36,573 - WARNING - Could not determine dtype for column 11, falling back to string
+2025-12-08 18:11:36,574 - WARNING - Could not determine dtype for column 13, falling back to string
+2025-12-08 18:11:36,574 - WARNING - Could not determine dtype for column 14, falling back to string
+2025-12-08 18:11:36,574 - WARNING - Could not determine dtype for column 17, falling back to string
+2025-12-08 18:11:36,574 - WARNING - Could not determine dtype for column 18, falling back to string
+2025-12-08 18:11:36,574 - WARNING - Could not determine dtype for column 20, falling back to string
+2025-12-08 18:11:36,590 - INFO - Processed 7 records from downloaded file
+2025-12-08 18:11:36,948 - INFO - Browser cleanup completed
+2025-12-08 18:11:36,948 - INFO - Chaining to Extract Reconciliation Statement...
+2025-12-08 18:13:32,779 - WARNING - Could not determine dtype for column 2, falling back to string
+2025-12-08 18:13:32,779 - WARNING - Could not determine dtype for column 11, falling back to string
+2025-12-08 18:13:32,779 - WARNING - Could not determine dtype for column 12, falling back to string
+2025-12-08 18:16:45,584 - INFO - Loaded 7 bank transactions and 3715 company transactions
+2025-12-08 18:16:45,587 - INFO - Starting Stage 1: Traditional reconciliation pipeline...
+2025-12-08 18:16:45,607 - INFO - Finding transaction ID matches...
+2025-12-08 18:16:46,137 - INFO - Finding bank charges...
+2025-12-08 18:16:46,138 - DEBUG - After bank charges detection: 1 matched (added 1)
+2025-12-08 18:16:46,139 - INFO - Detected 1 bank charges
+2025-12-08 18:16:46,139 - INFO - Finding Reverse CE GL matches...
+2025-12-08 18:16:46,420 - INFO - Found 2 Reverse CE GL matches
+2025-12-08 18:16:46,422 - INFO - Finding name and amount matches...
+2025-12-08 18:16:47,082 - INFO - Found 5 name and amount matches
+2025-12-08 18:16:47,083 - INFO - Finding Hungarian 1:1 matches...
+2025-12-08 18:16:47,534 - INFO - Hungarian 1:1: 0 matches | pairs scored=45, kept=0, time=0.45s
+2025-12-08 18:16:47,535 - INFO - Finding enhanced 1:1 matches...
+2025-12-08 18:16:47,750 - INFO - Found 0 enhanced 1:1 matches
+2025-12-08 18:16:47,753 - INFO - Finding amount and date matches...
+2025-12-08 18:16:47,818 - INFO - Found 0 amount and date matches
+2025-12-08 18:16:47,819 - INFO - Finding fuzzy matches...
+2025-12-08 18:18:19,984 - INFO - ============================================================
+2025-12-08 18:18:19,985 - INFO - CA MATCH PROCESS COMPLETED SUCCESSFULLY
+2025-12-08 18:18:19,985 - INFO - ============================================================
+2025-12-08 18:18:19,986 - INFO - ✅ CA Match completed: 7 records processed
+2025-12-08 18:18:20,000 - INFO - 
+======================================================================
+2025-12-08 18:18:20,000 - INFO - ✅ COMPLETE AUTOMATION WORKFLOW FINISHED SUCCESSFULLY
+2025-12-08 18:18:20,000 - INFO - ======================================================================
+2025-12-08 18:18:20,001 - INFO - 
+Workflow Summary:
+2025-12-08 18:18:20,001 - INFO -   ✅ CA Match Process - Completed
+2025-12-08 18:18:20,001 - INFO -   ✅ Extract Reconciliation Statement - Completed (chained)
+2025-12-08 18:18:20,001 - INFO -   ✅ RaasPlus Reconciliation - Completed (chained)
+2025-12-08 18:18:20,001 - INFO -   ✅ Match Statement - Completed (chained)
+2025-12-08 18:18:20,001 - INFO - 
+All processes completed successfully!
+2025-12-08 18:18:20,002 - INFO - Check logs for detailed information.
+2025-12-08 18:18:20,002 - INFO - ======================================================================
+2025-12-08 21:22:02,849 - INFO - ======================================================================
+2025-12-08 21:22:02,849 - INFO - PLAYWRIGHT AUTOMATION RUNNER
+2025-12-08 21:22:02,849 - INFO - ======================================================================
+2025-12-08 21:22:02,850 - INFO - Account: CIM02
+2025-12-08 21:22:02,850 - INFO - Date: 08/11/2025
+2025-12-08 21:22:02,850 - INFO - Amount: 100.0
+2025-12-08 21:22:02,850 - INFO - Headless Mode: False
+2025-12-08 21:22:02,850 - INFO - Downloads Dir: d:\Github\PlayWright-Extractor\Downloads
+2025-12-08 21:22:02,850 - INFO - ======================================================================
+2025-12-08 21:22:02,850 - INFO - 
+🚀 Starting complete automation workflow...
+
+2025-12-08 21:22:02,850 - INFO - 
+======================================================================
+2025-12-08 21:22:02,850 - INFO - STEP 1: CA MATCH PROCESS
+2025-12-08 21:22:02,850 - INFO - ======================================================================
+2025-12-08 21:22:03,259 - INFO - Starting CA Match process...
+2025-12-08 21:22:03,260 - INFO - ============================================================
+2025-12-08 21:22:03,260 - INFO - CA MATCH PROCESS - OPTIMIZED VERSION
+2025-12-08 21:22:03,260 - INFO - ============================================================
+2025-12-08 21:22:03,261 - INFO - Initializing browser...
+2025-12-08 21:22:03,672 - INFO - Browser initialized successfully
+2025-12-08 21:22:03,672 - INFO - Logging in...
+2025-12-08 21:22:06,176 - INFO - Navigating to Process Bank Records...
+2025-12-08 21:22:16,398 - INFO - Starting auto-match process...
+2025-12-08 21:22:17,300 - INFO - Clicked account link 'CIM02' successfully
+2025-12-08 21:22:27,587 - INFO - Clicked Auto-Match button successfully
+2025-12-08 21:22:29,603 - INFO - Waiting for auto-match confirmation...
+2025-12-08 21:22:46,975 - WARNING - No 'Executing' message detected
+2025-12-08 21:22:46,988 - INFO - âœ… Auto-match operation completed successfully!
+2025-12-08 21:22:46,989 - INFO - Processing auto-matched items...
+2025-12-08 21:22:47,048 - INFO - Clicked Process button successfully
+2025-12-08 21:22:52,135 - INFO - Clicked Back button successfully
+2025-12-08 21:22:55,150 - INFO - Starting manual matching process...
+2025-12-08 21:22:55,239 - INFO - Clicked account link 'CIM02' successfully
+2025-12-08 21:23:00,245 - INFO - Processing page 1...
+2025-12-08 21:23:00,285 - INFO - Found 8 rows on page 1
+2025-12-08 21:23:00,300 - INFO - Row 0 - Ext. Ref. Nbr.: 2507312241040258
+2025-12-08 21:23:00,308 - INFO - Row 0 - Already matched, skipping
+2025-12-08 21:23:00,320 - INFO - Row 1 - Ext. Ref. Nbr.: 2507311751140415
+2025-12-08 21:23:00,327 - INFO - Row 1 - Already matched, skipping
+2025-12-08 21:23:00,340 - INFO - Row 2 - Ext. Ref. Nbr.: 30756388
+2025-12-08 21:23:00,346 - INFO - Row 2 - Already matched, skipping
+2025-12-08 21:23:00,360 - INFO - Row 3 - Ext. Ref. Nbr.: 30756388
+2025-12-08 21:23:00,366 - INFO - Row 3 - Already matched, skipping
+2025-12-08 21:23:00,380 - INFO - Row 4 - Ext. Ref. Nbr.: 2507181637590200
+2025-12-08 21:23:00,385 - INFO - Row 4 - Already matched, skipping
+2025-12-08 21:23:00,399 - INFO - Row 5 - Ext. Ref. Nbr.: 2507110714350678
+2025-12-08 21:23:00,405 - INFO - Row 5 - Already matched, skipping
+2025-12-08 21:23:00,421 - INFO - Row 6 - Ext. Ref. Nbr.: 2507051851570603
+2025-12-08 21:23:00,427 - INFO - Row 6 - Already matched, skipping
+2025-12-08 21:23:00,433 - INFO - No more pages - pagination complete
+2025-12-08 21:23:00,434 - INFO - Pagination complete - processed 7 total rows across 1 pages
+2025-12-08 21:23:00,434 - INFO - Manual matching complete - 7 rows processed
+2025-12-08 21:23:00,434 - INFO - Processing manually matched items...
+2025-12-08 21:23:00,481 - INFO - Clicked Process button (after manual matching) successfully
+2025-12-08 21:23:05,594 - INFO - Clicked Back to list button successfully
+2025-12-08 21:23:08,605 - INFO - Downloading results...
+2025-12-08 21:23:08,685 - INFO - Clicked account link 'CIM02' successfully
+2025-12-08 21:23:13,765 - INFO - Clicked Export dropdown successfully
+2025-12-08 21:23:13,823 - INFO - Clicked Export to Excel button successfully
+2025-12-08 21:23:20,178 - INFO - Download started: Process Bank Transactions 20251208.xlsx
+2025-12-08 21:23:20,302 - INFO - âœ… File saved to: d:\Github\PlayWright-Extractor\Downloads\Process Bank Transactions 20251208.xlsx
+2025-12-08 21:23:20,303 - INFO - Processing downloaded file: d:\Github\PlayWright-Extractor\Downloads\Process Bank Transactions 20251208.xlsx
+2025-12-08 21:23:20,323 - WARNING - Could not determine dtype for column 1, falling back to string
+2025-12-08 21:23:20,323 - WARNING - Could not determine dtype for column 6, falling back to string
+2025-12-08 21:23:20,323 - WARNING - Could not determine dtype for column 8, falling back to string
+2025-12-08 21:23:20,324 - WARNING - Could not determine dtype for column 9, falling back to string
+2025-12-08 21:23:20,324 - WARNING - Could not determine dtype for column 11, falling back to string
+2025-12-08 21:23:20,324 - WARNING - Could not determine dtype for column 13, falling back to string
+2025-12-08 21:23:20,324 - WARNING - Could not determine dtype for column 14, falling back to string
+2025-12-08 21:23:20,324 - WARNING - Could not determine dtype for column 17, falling back to string
+2025-12-08 21:23:20,324 - WARNING - Could not determine dtype for column 18, falling back to string
+2025-12-08 21:23:20,325 - WARNING - Could not determine dtype for column 20, falling back to string
+2025-12-08 21:23:20,344 - INFO - Processed 7 records from downloaded file
+2025-12-08 21:23:20,691 - INFO - Browser cleanup completed
+2025-12-08 21:23:20,692 - INFO - Chaining to Extract Reconciliation Statement...
+2025-12-08 21:25:06,376 - WARNING - Could not determine dtype for column 2, falling back to string
+2025-12-08 21:25:06,376 - WARNING - Could not determine dtype for column 11, falling back to string
+2025-12-08 21:25:06,376 - WARNING - Could not determine dtype for column 12, falling back to string
+2025-12-08 21:28:19,084 - INFO - Loaded 7 bank transactions and 3715 company transactions
+2025-12-08 21:28:19,087 - INFO - Starting Stage 1: Traditional reconciliation pipeline...
+2025-12-08 21:28:19,105 - INFO - Finding transaction ID matches...
+2025-12-08 21:28:19,529 - INFO - Finding bank charges...
+2025-12-08 21:28:19,530 - DEBUG - After bank charges detection: 1 matched (added 1)
+2025-12-08 21:28:19,531 - INFO - Detected 1 bank charges
+2025-12-08 21:28:19,531 - INFO - Finding Reverse CE GL matches...
+2025-12-08 21:28:19,784 - INFO - Found 2 Reverse CE GL matches
+2025-12-08 21:28:19,786 - INFO - Finding name and amount matches...
+2025-12-08 21:28:20,354 - INFO - Found 5 name and amount matches
+2025-12-08 21:28:20,355 - INFO - Finding Hungarian 1:1 matches...
+2025-12-08 21:28:20,700 - INFO - Hungarian 1:1: 0 matches | pairs scored=45, kept=0, time=0.34s
+2025-12-08 21:28:20,702 - INFO - Finding enhanced 1:1 matches...
+2025-12-08 21:28:20,907 - INFO - Found 0 enhanced 1:1 matches
+2025-12-08 21:28:20,909 - INFO - Finding amount and date matches...
+2025-12-08 21:28:20,968 - INFO - Found 0 amount and date matches
+2025-12-08 21:28:20,969 - INFO - Finding fuzzy matches...
+2025-12-08 21:30:18,820 - INFO - ============================================================
+2025-12-08 21:30:18,821 - INFO - CA MATCH PROCESS COMPLETED SUCCESSFULLY
+2025-12-08 21:30:18,821 - INFO - ============================================================
+2025-12-08 21:30:18,821 - INFO - ✅ CA Match completed: 7 records processed
+2025-12-08 21:30:18,834 - INFO - 
+======================================================================
+2025-12-08 21:30:18,835 - INFO - ✅ COMPLETE AUTOMATION WORKFLOW FINISHED SUCCESSFULLY
+2025-12-08 21:30:18,835 - INFO - ======================================================================
+2025-12-08 21:30:18,835 - INFO - 
+Workflow Summary:
+2025-12-08 21:30:18,835 - INFO -   ✅ CA Match Process - Completed
+2025-12-08 21:30:18,835 - INFO -   ✅ Extract Reconciliation Statement - Completed (chained)
+2025-12-08 21:30:18,836 - INFO -   ✅ RaasPlus Reconciliation - Completed (chained)
+2025-12-08 21:30:18,836 - INFO -   ✅ Match Statement - Completed (chained)
+2025-12-08 21:30:18,836 - INFO - 
+All processes completed successfully!
+2025-12-08 21:30:18,836 - INFO - Check logs for detailed information.
+2025-12-08 21:30:18,836 - INFO - ======================================================================
