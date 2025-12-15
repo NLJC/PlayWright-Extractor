@@ -184,3 +184,11 @@
 {"ts": "2025-12-08T13:28:19.087302Z", "event": "reconcile.data_loaded", "correlation_id": "run-20251208T132819-39776"}
 {"ts": "2025-12-08T13:28:21.032606Z", "event": "reconcile.completed", "correlation_id": "run-20251208T132819-39776", "results": 8}
 {"ts": "2025-12-08T13:28:21.128147Z", "event": "reconcile.exported", "correlation_id": "run-20251208T132819-39776", "out_path": "matching_results\\MATCHLIST_CIM02_20251208_212821.xlsx"}
+{"ts": "2025-12-15T04:52:55.066397Z", "event": "reconcile.start", "correlation_id": "run-20251215T045255-19188", "bank_json": "d:\\Github\\PlayWright-Extractor\\Downloads\\json_output\\Process Bank Transactions 20251215.json", "company_json": "d:\\Github\\PlayWright-Extractor\\Downloads\\json_output\\Reconciliation Statements 20251215.json", "enable_ai": false, "run_log": "logs\\runs\\run-20251215T045255-19188.log"}
+{"ts": "2025-12-15T04:52:55.133676Z", "event": "reconcile.data_loaded", "correlation_id": "run-20251215T045255-19188"}
+{"ts": "2025-12-15T04:53:00.090519Z", "event": "reconcile.completed", "correlation_id": "run-20251215T045255-19188", "results": 8}
+{"ts": "2025-12-15T04:53:00.221806Z", "event": "reconcile.exported", "correlation_id": "run-20251215T045255-19188", "out_path": "matching_results\\MATCHLIST_CIM02_20251215_125300.xlsx"}
+{"ts": "2025-12-15T06:00:01.974321Z", "event": "reconcile.start", "correlation_id": "run-20251215T060001-39332", "bank_json": "d:\\Github\\PlayWright-Extractor\\Downloads\\json_output\\Process Bank Transactions 20251215.json", "company_json": "d:\\Github\\PlayWright-Extractor\\Downloads\\json_output\\Reconciliation Statements 20251215.json", "enable_ai": false, "run_log": "logs\\runs\\run-20251215T060001-39332.log"}
+{"ts": "2025-12-15T06:00:02.039566Z", "event": "reconcile.data_loaded", "correlation_id": "run-20251215T060001-39332"}
+{"ts": "2025-12-15T06:00:04.788517Z", "event": "reconcile.completed", "correlation_id": "run-20251215T060001-39332", "results": 8}
+{"ts": "2025-12-15T06:00:04.924408Z", "event": "reconcile.exported", "correlation_id": "run-20251215T060001-39332", "out_path": "matching_results\\MATCHLIST_CIM02_20251215_140004.xlsx"}

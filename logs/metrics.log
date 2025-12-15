@@ -229,3 +229,13 @@
 {"type": "timing", "name": "reconcile.core", "value": 1944.6294999797828, "tags": {"cid": "run-20251208T132819-39776"}, "ts": "2025-12-08T13:28:21.032238Z"}
 {"type": "gauge", "name": "reconcile.results_count", "value": 8.0, "tags": {"cid": "run-20251208T132819-39776"}, "ts": "2025-12-08T13:28:21.032839Z"}
 {"type": "timing", "name": "reconcile.export", "value": 94.65300000738353, "tags": {"cid": "run-20251208T132819-39776"}, "ts": "2025-12-08T13:28:21.127924Z"}
+{"type": "counter", "name": "reconcile.start", "value": 1, "tags": {"bank_name": "CIM02"}, "ts": "2025-12-15T04:52:55.066645Z"}
+{"type": "timing", "name": "reconcile.load_data", "value": 66.34899997152388, "tags": {"cid": "run-20251215T045255-19188"}, "ts": "2025-12-15T04:52:55.133259Z"}
+{"type": "timing", "name": "reconcile.core", "value": 4956.177300016861, "tags": {"cid": "run-20251215T045255-19188"}, "ts": "2025-12-15T04:53:00.090138Z"}
+{"type": "gauge", "name": "reconcile.results_count", "value": 8.0, "tags": {"cid": "run-20251215T045255-19188"}, "ts": "2025-12-15T04:53:00.090743Z"}
+{"type": "timing", "name": "reconcile.export", "value": 130.36740000825375, "tags": {"cid": "run-20251215T045255-19188"}, "ts": "2025-12-15T04:53:00.221529Z"}
+{"type": "counter", "name": "reconcile.start", "value": 1, "tags": {"bank_name": "CIM02"}, "ts": "2025-12-15T06:00:01.974565Z"}
+{"type": "timing", "name": "reconcile.load_data", "value": 64.14139998378232, "tags": {"cid": "run-20251215T060001-39332"}, "ts": "2025-12-15T06:00:02.039043Z"}
+{"type": "timing", "name": "reconcile.core", "value": 2748.09309997363, "tags": {"cid": "run-20251215T060001-39332"}, "ts": "2025-12-15T06:00:04.787985Z"}
+{"type": "gauge", "name": "reconcile.results_count", "value": 8.0, "tags": {"cid": "run-20251215T060001-39332"}, "ts": "2025-12-15T06:00:04.788942Z"}
+{"type": "timing", "name": "reconcile.export", "value": 134.69529995927587, "tags": {"cid": "run-20251215T060001-39332"}, "ts": "2025-12-15T06:00:04.924123Z"}

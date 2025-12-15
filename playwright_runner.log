@@ -5303,3 +5303,337 @@ Workflow Summary:
 All processes completed successfully!
 2025-12-08 21:30:18,836 - INFO - Check logs for detailed information.
 2025-12-08 21:30:18,836 - INFO - ======================================================================
+2025-12-15 12:45:30,244 - INFO - ======================================================================
+2025-12-15 12:45:30,244 - INFO - PLAYWRIGHT AUTOMATION RUNNER
+2025-12-15 12:45:30,244 - INFO - ======================================================================
+2025-12-15 12:45:30,244 - INFO - Account: CIM02
+2025-12-15 12:45:30,245 - INFO - Date: 15/11/2025
+2025-12-15 12:45:30,245 - INFO - Amount: 100.0
+2025-12-15 12:45:30,245 - INFO - Headless Mode: False
+2025-12-15 12:45:30,245 - INFO - Downloads Dir: d:\Github\PlayWright-Extractor\Downloads
+2025-12-15 12:45:30,245 - INFO - ======================================================================
+2025-12-15 12:45:30,245 - INFO - 
+🚀 Starting complete automation workflow...
+
+2025-12-15 12:45:30,245 - INFO - 
+======================================================================
+2025-12-15 12:45:30,245 - INFO - STEP 1: CA MATCH PROCESS
+2025-12-15 12:45:30,245 - INFO - ======================================================================
+2025-12-15 12:45:37,167 - INFO - Starting CA Match process...
+2025-12-15 12:45:37,168 - INFO - ============================================================
+2025-12-15 12:45:37,169 - INFO - CA MATCH PROCESS - OPTIMIZED VERSION
+2025-12-15 12:45:37,169 - INFO - ============================================================
+2025-12-15 12:45:37,169 - INFO - Initializing browser...
+2025-12-15 12:45:42,395 - INFO - Browser initialized successfully
+2025-12-15 12:45:42,396 - INFO - Logging in...
+2025-12-15 12:45:49,043 - INFO - Navigating to Process Bank Records...
+2025-12-15 12:46:04,862 - INFO - Starting auto-match process...
+2025-12-15 12:46:14,909 - WARNING - Normal click failed for account link 'CIM02', trying force click...
+2025-12-15 12:46:15,776 - INFO - Force clicked account link 'CIM02'
+2025-12-15 12:46:29,489 - INFO - Clicked Auto-Match button successfully
+2025-12-15 12:46:31,503 - INFO - Waiting for auto-match confirmation...
+2025-12-15 12:46:50,045 - WARNING - No 'Executing' message detected
+2025-12-15 12:46:50,056 - INFO - âœ… Auto-match operation completed successfully!
+2025-12-15 12:46:50,056 - INFO - Processing auto-matched items...
+2025-12-15 12:46:50,104 - INFO - Clicked Process button successfully
+2025-12-15 12:46:55,208 - INFO - Clicked Back button successfully
+2025-12-15 12:46:58,224 - INFO - Starting manual matching process...
+2025-12-15 12:46:58,306 - INFO - Clicked account link 'CIM02' successfully
+2025-12-15 12:47:03,323 - INFO - Processing page 1...
+2025-12-15 12:47:03,381 - INFO - Found 8 rows on page 1
+2025-12-15 12:47:03,403 - INFO - Row 0 - Ext. Ref. Nbr.: 2507312241040258
+2025-12-15 12:47:03,413 - INFO - Row 0 - Already matched, skipping
+2025-12-15 12:47:03,429 - INFO - Row 1 - Ext. Ref. Nbr.: 2507311751140415
+2025-12-15 12:47:03,438 - INFO - Row 1 - Already matched, skipping
+2025-12-15 12:47:03,453 - INFO - Row 2 - Ext. Ref. Nbr.: 30756388
+2025-12-15 12:47:03,459 - INFO - Row 2 - Already matched, skipping
+2025-12-15 12:47:03,472 - INFO - Row 3 - Ext. Ref. Nbr.: 30756388
+2025-12-15 12:47:03,478 - INFO - Row 3 - Already matched, skipping
+2025-12-15 12:47:03,490 - INFO - Row 4 - Ext. Ref. Nbr.: 2507181637590200
+2025-12-15 12:47:03,496 - INFO - Row 4 - Already matched, skipping
+2025-12-15 12:47:03,509 - INFO - Row 5 - Ext. Ref. Nbr.: 2507110714350678
+2025-12-15 12:47:03,515 - INFO - Row 5 - Already matched, skipping
+2025-12-15 12:47:03,527 - INFO - Row 6 - Ext. Ref. Nbr.: 2507051851570603
+2025-12-15 12:47:03,532 - INFO - Row 6 - Already matched, skipping
+2025-12-15 12:47:03,540 - INFO - No more pages - pagination complete
+2025-12-15 12:47:03,541 - INFO - Pagination complete - processed 7 total rows across 1 pages
+2025-12-15 12:47:03,541 - INFO - Manual matching complete - 7 rows processed
+2025-12-15 12:47:03,542 - INFO - Processing manually matched items...
+2025-12-15 12:47:03,591 - INFO - Clicked Process button (after manual matching) successfully
+2025-12-15 12:47:08,678 - INFO - Clicked Back to list button successfully
+2025-12-15 12:47:11,688 - INFO - Downloading results...
+2025-12-15 12:47:11,787 - INFO - Clicked account link 'CIM02' successfully
+2025-12-15 12:47:16,895 - INFO - Clicked Export dropdown successfully
+2025-12-15 12:47:17,002 - INFO - Clicked Export to Excel button successfully
+2025-12-15 12:47:28,342 - INFO - Download started: Process Bank Transactions 20251215.xlsx
+2025-12-15 12:47:28,635 - INFO - âœ… File saved to: d:\Github\PlayWright-Extractor\Downloads\Process Bank Transactions 20251215.xlsx
+2025-12-15 12:47:28,636 - INFO - Processing downloaded file: d:\Github\PlayWright-Extractor\Downloads\Process Bank Transactions 20251215.xlsx
+2025-12-15 12:47:28,800 - WARNING - Could not determine dtype for column 1, falling back to string
+2025-12-15 12:47:28,800 - WARNING - Could not determine dtype for column 6, falling back to string
+2025-12-15 12:47:28,801 - WARNING - Could not determine dtype for column 8, falling back to string
+2025-12-15 12:47:28,801 - WARNING - Could not determine dtype for column 9, falling back to string
+2025-12-15 12:47:28,801 - WARNING - Could not determine dtype for column 11, falling back to string
+2025-12-15 12:47:28,801 - WARNING - Could not determine dtype for column 13, falling back to string
+2025-12-15 12:47:28,801 - WARNING - Could not determine dtype for column 14, falling back to string
+2025-12-15 12:47:28,801 - WARNING - Could not determine dtype for column 17, falling back to string
+2025-12-15 12:47:28,801 - WARNING - Could not determine dtype for column 18, falling back to string
+2025-12-15 12:47:28,801 - WARNING - Could not determine dtype for column 20, falling back to string
+2025-12-15 12:47:28,862 - INFO - Processed 7 records from downloaded file
+2025-12-15 12:47:29,190 - INFO - Browser cleanup completed
+2025-12-15 12:47:29,191 - INFO - Chaining to Extract Reconciliation Statement...
+2025-12-15 12:49:19,807 - WARNING - Could not determine dtype for column 2, falling back to string
+2025-12-15 12:49:19,807 - WARNING - Could not determine dtype for column 11, falling back to string
+2025-12-15 12:49:19,807 - WARNING - Could not determine dtype for column 12, falling back to string
+2025-12-15 12:52:55,130 - INFO - Loaded 7 bank transactions and 3715 company transactions
+2025-12-15 12:52:55,133 - INFO - Starting Stage 1: Traditional reconciliation pipeline...
+2025-12-15 12:52:55,148 - INFO - Finding transaction ID matches...
+2025-12-15 12:52:55,578 - INFO - Finding bank charges...
+2025-12-15 12:52:55,580 - DEBUG - After bank charges detection: 1 matched (added 1)
+2025-12-15 12:52:55,580 - INFO - Detected 1 bank charges
+2025-12-15 12:52:55,580 - INFO - Finding Reverse CE GL matches...
+2025-12-15 12:52:55,867 - INFO - Found 2 Reverse CE GL matches
+2025-12-15 12:52:55,870 - INFO - Finding name and amount matches...
+2025-12-15 12:52:56,483 - INFO - Found 5 name and amount matches
+2025-12-15 12:52:56,484 - INFO - Finding Hungarian 1:1 matches...
+2025-12-15 12:52:59,741 - INFO - Hungarian 1:1: 0 matches | pairs scored=45, kept=0, time=3.26s
+2025-12-15 12:52:59,742 - INFO - Finding enhanced 1:1 matches...
+2025-12-15 12:52:59,956 - INFO - Found 0 enhanced 1:1 matches
+2025-12-15 12:52:59,958 - INFO - Finding amount and date matches...
+2025-12-15 12:53:00,022 - INFO - Found 0 amount and date matches
+2025-12-15 12:53:00,023 - INFO - Finding fuzzy matches...
+2025-12-15 13:49:44,692 - INFO - ======================================================================
+2025-12-15 13:49:44,692 - INFO - PLAYWRIGHT AUTOMATION RUNNER
+2025-12-15 13:49:44,692 - INFO - ======================================================================
+2025-12-15 13:49:44,692 - INFO - Account: CIM02
+2025-12-15 13:49:44,692 - INFO - Date: 15/11/2025
+2025-12-15 13:49:44,692 - INFO - Amount: 100.0
+2025-12-15 13:49:44,692 - INFO - Headless Mode: False
+2025-12-15 13:49:44,693 - INFO - Downloads Dir: d:\Github\PlayWright-Extractor\Downloads
+2025-12-15 13:49:44,693 - INFO - ======================================================================
+2025-12-15 13:49:44,693 - INFO - 
+🚀 Starting complete automation workflow...
+
+2025-12-15 13:49:44,693 - INFO - 
+======================================================================
+2025-12-15 13:49:44,693 - INFO - STEP 1: CA MATCH PROCESS
+2025-12-15 13:49:44,693 - INFO - ======================================================================
+2025-12-15 13:49:45,121 - INFO - Starting CA Match process...
+2025-12-15 13:49:45,122 - INFO - ============================================================
+2025-12-15 13:49:45,122 - INFO - CA MATCH PROCESS - OPTIMIZED VERSION
+2025-12-15 13:49:45,122 - INFO - ============================================================
+2025-12-15 13:49:45,123 - INFO - Initializing browser...
+2025-12-15 13:49:45,648 - INFO - Browser initialized successfully
+2025-12-15 13:49:45,649 - INFO - Logging in...
+2025-12-15 13:49:49,307 - INFO - Navigating to Process Bank Records...
+2025-12-15 13:50:12,405 - INFO - Starting auto-match process...
+2025-12-15 13:50:12,514 - INFO - Clicked account link 'CIM02' successfully
+2025-12-15 13:50:17,626 - INFO - Clicked Auto-Match button successfully
+2025-12-15 13:50:19,642 - INFO - Waiting for auto-match confirmation...
+2025-12-15 13:50:34,679 - WARNING - No 'Executing' message detected
+2025-12-15 13:50:34,686 - INFO - âœ… Auto-match operation completed successfully!
+2025-12-15 13:50:34,687 - INFO - Processing auto-matched items...
+2025-12-15 13:50:34,740 - INFO - Clicked Process button successfully
+2025-12-15 13:50:39,830 - INFO - Clicked Back button successfully
+2025-12-15 13:50:42,844 - INFO - Starting manual matching process...
+2025-12-15 13:50:42,912 - INFO - Clicked account link 'CIM02' successfully
+2025-12-15 13:50:47,921 - INFO - Processing page 1...
+2025-12-15 13:50:47,952 - INFO - Found 8 rows on page 1
+2025-12-15 13:50:47,970 - INFO - Row 0 - Ext. Ref. Nbr.: 2507312241040258
+2025-12-15 13:50:47,980 - INFO - Row 0 - Already matched, skipping
+2025-12-15 13:50:48,001 - INFO - Row 1 - Ext. Ref. Nbr.: 2507311751140415
+2025-12-15 13:50:48,011 - INFO - Row 1 - Already matched, skipping
+2025-12-15 13:50:48,027 - INFO - Row 2 - Ext. Ref. Nbr.: 30756388
+2025-12-15 13:50:48,034 - INFO - Row 2 - Already matched, skipping
+2025-12-15 13:50:48,050 - INFO - Row 3 - Ext. Ref. Nbr.: 30756388
+2025-12-15 13:50:48,057 - INFO - Row 3 - Already matched, skipping
+2025-12-15 13:50:48,071 - INFO - Row 4 - Ext. Ref. Nbr.: 2507181637590200
+2025-12-15 13:50:48,078 - INFO - Row 4 - Already matched, skipping
+2025-12-15 13:50:48,091 - INFO - Row 5 - Ext. Ref. Nbr.: 2507110714350678
+2025-12-15 13:50:48,096 - INFO - Row 5 - Already matched, skipping
+2025-12-15 13:50:48,111 - INFO - Row 6 - Ext. Ref. Nbr.: 2507051851570603
+2025-12-15 13:50:48,120 - INFO - Row 6 - Already matched, skipping
+2025-12-15 13:50:48,128 - INFO - No more pages - pagination complete
+2025-12-15 13:50:48,129 - INFO - Pagination complete - processed 7 total rows across 1 pages
+2025-12-15 13:50:48,129 - INFO - Manual matching complete - 7 rows processed
+2025-12-15 13:50:48,130 - INFO - Processing manually matched items...
+2025-12-15 13:50:48,186 - INFO - Clicked Process button (after manual matching) successfully
+2025-12-15 13:50:53,279 - INFO - Clicked Back to list button successfully
+2025-12-15 13:50:56,291 - INFO - Downloading results...
+2025-12-15 13:50:56,372 - INFO - Clicked account link 'CIM02' successfully
+2025-12-15 13:51:01,453 - INFO - Clicked Export dropdown successfully
+2025-12-15 13:51:01,513 - INFO - Clicked Export to Excel button successfully
+2025-12-15 13:51:07,128 - INFO - Download started: Process Bank Transactions 20251215.xlsx
+2025-12-15 13:51:07,239 - INFO - âœ… File saved to: d:\Github\PlayWright-Extractor\Downloads\Process Bank Transactions 20251215.xlsx
+2025-12-15 13:51:07,240 - INFO - Processing downloaded file: d:\Github\PlayWright-Extractor\Downloads\Process Bank Transactions 20251215.xlsx
+2025-12-15 13:51:07,257 - WARNING - Could not determine dtype for column 1, falling back to string
+2025-12-15 13:51:07,258 - WARNING - Could not determine dtype for column 6, falling back to string
+2025-12-15 13:51:07,258 - WARNING - Could not determine dtype for column 8, falling back to string
+2025-12-15 13:51:07,258 - WARNING - Could not determine dtype for column 9, falling back to string
+2025-12-15 13:51:07,258 - WARNING - Could not determine dtype for column 11, falling back to string
+2025-12-15 13:51:07,259 - WARNING - Could not determine dtype for column 13, falling back to string
+2025-12-15 13:51:07,259 - WARNING - Could not determine dtype for column 14, falling back to string
+2025-12-15 13:51:07,259 - WARNING - Could not determine dtype for column 17, falling back to string
+2025-12-15 13:51:07,259 - WARNING - Could not determine dtype for column 18, falling back to string
+2025-12-15 13:51:07,259 - WARNING - Could not determine dtype for column 20, falling back to string
+2025-12-15 13:51:07,276 - INFO - Processed 7 records from downloaded file
+2025-12-15 13:51:07,626 - INFO - Browser cleanup completed
+2025-12-15 13:51:07,627 - INFO - Chaining to Extract Reconciliation Statement...
+2025-12-15 13:52:20,284 - ERROR - FATAL ERROR: Failed to download Excel file after all attempts
+2025-12-15 13:52:20,287 - INFO - Browser cleanup completed
+2025-12-15 13:52:20,301 - ERROR - ❌ CA Match failed: Failed to download Excel file after all attempts
+Traceback (most recent call last):
+  File "d:\Github\PlayWright-Extractor\playwright_scripts\ExtractReconcileStatement_Optimized.py", line 432, in export_to_excel
+    raise Exception("Could not find Export to Excel button after trying all selectors")
+Exception: Could not find Export to Excel button after trying all selectors
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "d:\Github\PlayWright-Extractor\playwright_scripts\run_playwright.py", line 142, in run_ca_match
+    records = process_bank_transactions(
+        playwright=playwright,
+    ...<9 lines>...
+        headless=self.headless
+    )
+  File "d:\Github\PlayWright-Extractor\playwright_scripts\CA_Match_Process_Optimized.py", line 643, in process_bank_transactions
+    return processor.run()
+           ~~~~~~~~~~~~~^^
+  File "d:\Github\PlayWright-Extractor\playwright_scripts\CA_Match_Process_Optimized.py", line 559, in run
+    ExtractReconcileStatement.extract_reconciliation_statements(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        playwright=self.playwright,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<10 lines>...
+        headless=self.headless
+        ^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "d:\Github\PlayWright-Extractor\playwright_scripts\ExtractReconcileStatement_Optimized.py", line 695, in extract_reconciliation_statements
+    return extractor.run()
+           ~~~~~~~~~~~~~^^
+  File "d:\Github\PlayWright-Extractor\playwright_scripts\ExtractReconcileStatement_Optimized.py", line 578, in run
+    reconciliation_save_path = self.export_to_excel()
+  File "d:\Github\PlayWright-Extractor\playwright_scripts\ExtractReconcileStatement_Optimized.py", line 485, in export_to_excel
+    raise Exception("Failed to download Excel file after all attempts")
+Exception: Failed to download Excel file after all attempts
+2025-12-15 13:52:20,304 - ERROR - 
+======================================================================
+2025-12-15 13:52:20,304 - ERROR - ❌ AUTOMATION WORKFLOW FAILED
+2025-12-15 13:52:20,304 - ERROR - ======================================================================
+2025-12-15 13:52:20,304 - ERROR - Error: Failed to download Excel file after all attempts
+2025-12-15 13:52:20,304 - ERROR - ======================================================================
+2025-12-15 13:52:51,388 - INFO - ======================================================================
+2025-12-15 13:52:51,388 - INFO - PLAYWRIGHT AUTOMATION RUNNER
+2025-12-15 13:52:51,388 - INFO - ======================================================================
+2025-12-15 13:52:51,388 - INFO - Account: CIM02
+2025-12-15 13:52:51,388 - INFO - Date: 15/11/2025
+2025-12-15 13:52:51,388 - INFO - Amount: 100.0
+2025-12-15 13:52:51,389 - INFO - Headless Mode: True
+2025-12-15 13:52:51,389 - INFO - Downloads Dir: d:\Github\PlayWright-Extractor\Downloads
+2025-12-15 13:52:51,389 - INFO - ======================================================================
+2025-12-15 13:52:51,389 - INFO - 
+🚀 Starting complete automation workflow...
+
+2025-12-15 13:52:51,389 - INFO - 
+======================================================================
+2025-12-15 13:52:51,389 - INFO - STEP 1: CA MATCH PROCESS
+2025-12-15 13:52:51,389 - INFO - ======================================================================
+2025-12-15 13:52:51,813 - INFO - Starting CA Match process...
+2025-12-15 13:52:51,813 - INFO - ============================================================
+2025-12-15 13:52:51,814 - INFO - CA MATCH PROCESS - OPTIMIZED VERSION
+2025-12-15 13:52:51,814 - INFO - ============================================================
+2025-12-15 13:52:51,814 - INFO - Initializing browser...
+2025-12-15 13:52:53,235 - INFO - Browser initialized successfully
+2025-12-15 13:52:53,235 - INFO - Logging in...
+2025-12-15 13:52:55,202 - INFO - Navigating to Process Bank Records...
+2025-12-15 13:53:05,257 - INFO - Starting auto-match process...
+2025-12-15 13:53:05,352 - INFO - Clicked account link 'CIM02' successfully
+2025-12-15 13:53:10,474 - INFO - Clicked Auto-Match button successfully
+2025-12-15 13:53:12,490 - INFO - Waiting for auto-match confirmation...
+2025-12-15 13:53:27,518 - WARNING - No 'Executing' message detected
+2025-12-15 13:53:27,524 - INFO - âœ… Auto-match operation completed successfully!
+2025-12-15 13:53:27,525 - INFO - Processing auto-matched items...
+2025-12-15 13:53:27,596 - INFO - Clicked Process button successfully
+2025-12-15 13:53:32,735 - INFO - Clicked Back button successfully
+2025-12-15 13:53:35,746 - INFO - Starting manual matching process...
+2025-12-15 13:53:35,814 - INFO - Clicked account link 'CIM02' successfully
+2025-12-15 13:53:40,831 - INFO - Processing page 1...
+2025-12-15 13:53:40,860 - INFO - Found 8 rows on page 1
+2025-12-15 13:53:40,876 - INFO - Row 0 - Ext. Ref. Nbr.: 2507312241040258
+2025-12-15 13:53:40,883 - INFO - Row 0 - Already matched, skipping
+2025-12-15 13:53:40,898 - INFO - Row 1 - Ext. Ref. Nbr.: 2507311751140415
+2025-12-15 13:53:40,906 - INFO - Row 1 - Already matched, skipping
+2025-12-15 13:53:40,919 - INFO - Row 2 - Ext. Ref. Nbr.: 30756388
+2025-12-15 13:53:40,928 - INFO - Row 2 - Already matched, skipping
+2025-12-15 13:53:40,940 - INFO - Row 3 - Ext. Ref. Nbr.: 30756388
+2025-12-15 13:53:40,949 - INFO - Row 3 - Already matched, skipping
+2025-12-15 13:53:40,961 - INFO - Row 4 - Ext. Ref. Nbr.: 2507181637590200
+2025-12-15 13:53:40,968 - INFO - Row 4 - Already matched, skipping
+2025-12-15 13:53:40,982 - INFO - Row 5 - Ext. Ref. Nbr.: 2507110714350678
+2025-12-15 13:53:40,989 - INFO - Row 5 - Already matched, skipping
+2025-12-15 13:53:41,005 - INFO - Row 6 - Ext. Ref. Nbr.: 2507051851570603
+2025-12-15 13:53:41,013 - INFO - Row 6 - Already matched, skipping
+2025-12-15 13:53:41,021 - INFO - No more pages - pagination complete
+2025-12-15 13:53:41,021 - INFO - Pagination complete - processed 7 total rows across 1 pages
+2025-12-15 13:53:41,021 - INFO - Manual matching complete - 7 rows processed
+2025-12-15 13:53:41,022 - INFO - Processing manually matched items...
+2025-12-15 13:53:41,095 - INFO - Clicked Process button (after manual matching) successfully
+2025-12-15 13:53:46,188 - INFO - Clicked Back to list button successfully
+2025-12-15 13:53:49,196 - INFO - Downloading results...
+2025-12-15 13:53:49,264 - INFO - Clicked account link 'CIM02' successfully
+2025-12-15 13:53:54,352 - INFO - Clicked Export dropdown successfully
+2025-12-15 13:53:54,412 - INFO - Clicked Export to Excel button successfully
+2025-12-15 13:54:00,788 - INFO - Download started: Process Bank Transactions 20251215.xlsx
+2025-12-15 13:54:00,884 - INFO - âœ… File saved to: d:\Github\PlayWright-Extractor\Downloads\Process Bank Transactions 20251215.xlsx
+2025-12-15 13:54:00,884 - INFO - Processing downloaded file: d:\Github\PlayWright-Extractor\Downloads\Process Bank Transactions 20251215.xlsx
+2025-12-15 13:54:00,900 - WARNING - Could not determine dtype for column 1, falling back to string
+2025-12-15 13:54:00,900 - WARNING - Could not determine dtype for column 6, falling back to string
+2025-12-15 13:54:00,900 - WARNING - Could not determine dtype for column 8, falling back to string
+2025-12-15 13:54:00,901 - WARNING - Could not determine dtype for column 9, falling back to string
+2025-12-15 13:54:00,901 - WARNING - Could not determine dtype for column 11, falling back to string
+2025-12-15 13:54:00,901 - WARNING - Could not determine dtype for column 13, falling back to string
+2025-12-15 13:54:00,901 - WARNING - Could not determine dtype for column 14, falling back to string
+2025-12-15 13:54:00,901 - WARNING - Could not determine dtype for column 17, falling back to string
+2025-12-15 13:54:00,901 - WARNING - Could not determine dtype for column 18, falling back to string
+2025-12-15 13:54:00,901 - WARNING - Could not determine dtype for column 20, falling back to string
+2025-12-15 13:54:00,916 - INFO - Processed 7 records from downloaded file
+2025-12-15 13:54:01,118 - INFO - Browser cleanup completed
+2025-12-15 13:54:01,119 - INFO - Chaining to Extract Reconciliation Statement...
+2025-12-15 13:55:54,743 - WARNING - Could not determine dtype for column 2, falling back to string
+2025-12-15 13:55:54,743 - WARNING - Could not determine dtype for column 11, falling back to string
+2025-12-15 13:55:54,743 - WARNING - Could not determine dtype for column 12, falling back to string
+2025-12-15 14:00:02,036 - INFO - Loaded 7 bank transactions and 3715 company transactions
+2025-12-15 14:00:02,039 - INFO - Starting Stage 1: Traditional reconciliation pipeline...
+2025-12-15 14:00:02,061 - INFO - Finding transaction ID matches...
+2025-12-15 14:00:02,661 - INFO - Finding bank charges...
+2025-12-15 14:00:02,664 - DEBUG - After bank charges detection: 1 matched (added 1)
+2025-12-15 14:00:02,664 - INFO - Detected 1 bank charges
+2025-12-15 14:00:02,665 - INFO - Finding Reverse CE GL matches...
+2025-12-15 14:00:03,043 - INFO - Found 2 Reverse CE GL matches
+2025-12-15 14:00:03,045 - INFO - Finding name and amount matches...
+2025-12-15 14:00:03,859 - INFO - Found 5 name and amount matches
+2025-12-15 14:00:03,859 - INFO - Finding Hungarian 1:1 matches...
+2025-12-15 14:00:04,335 - INFO - Hungarian 1:1: 0 matches | pairs scored=45, kept=0, time=0.48s
+2025-12-15 14:00:04,336 - INFO - Finding enhanced 1:1 matches...
+2025-12-15 14:00:04,610 - INFO - Found 0 enhanced 1:1 matches
+2025-12-15 14:00:04,612 - INFO - Finding amount and date matches...
+2025-12-15 14:00:04,694 - INFO - Found 0 amount and date matches
+2025-12-15 14:00:04,695 - INFO - Finding fuzzy matches...
+2025-12-15 14:02:32,263 - INFO - ============================================================
+2025-12-15 14:02:32,264 - INFO - CA MATCH PROCESS COMPLETED SUCCESSFULLY
+2025-12-15 14:02:32,264 - INFO - ============================================================
+2025-12-15 14:02:32,264 - INFO - ✅ CA Match completed: 7 records processed
+2025-12-15 14:02:32,278 - INFO - 
+======================================================================
+2025-12-15 14:02:32,279 - INFO - ✅ COMPLETE AUTOMATION WORKFLOW FINISHED SUCCESSFULLY
+2025-12-15 14:02:32,279 - INFO - ======================================================================
+2025-12-15 14:02:32,279 - INFO - 
+Workflow Summary:
+2025-12-15 14:02:32,279 - INFO -   ✅ CA Match Process - Completed
+2025-12-15 14:02:32,279 - INFO -   ✅ Extract Reconciliation Statement - Completed (chained)
+2025-12-15 14:02:32,279 - INFO -   ✅ RaasPlus Reconciliation - Completed (chained)
+2025-12-15 14:02:32,280 - INFO -   ✅ Match Statement - Completed (chained)
+2025-12-15 14:02:32,280 - INFO - 
+All processes completed successfully!
+2025-12-15 14:02:32,280 - INFO - Check logs for detailed information.
+2025-12-15 14:02:32,280 - INFO - ======================================================================

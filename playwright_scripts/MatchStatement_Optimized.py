@@ -15,6 +15,8 @@ Key Improvements:
 import os
 import re
 from typing import Dict, List, Any, Set
+from datetime import datetime
+from pathlib import Path
 
 import pandas as pd
 import requests
@@ -63,10 +65,64 @@ class MatchStatementProcessor:
 
         # Load page wait time from environment variable (default: 15000ms = 15 seconds)
         self.page_wait_time = int(os.getenv("PAGE_WAIT_TIME_MS", "15000"))
-        
+
+        # Load debug mode from environment variable
+        self.debug_mode = os.getenv("DEBUG_MODE", "false").lower() == "true"
+
+        # Setup centralized logging to logs/runs/ directory
+        self.log_file = None
+        self._setup_log_file()
+
+    def _setup_log_file(self):
+        """Setup log file in logs/runs/ directory."""
+        try:
+            # Create logs/runs directory if it doesn't exist
+            log_dir = Path("logs/runs")
+            log_dir.mkdir(parents=True, exist_ok=True)
+
+            # Create log file with timestamp and account name
+            timestamp = datetime.now().strftime("%Y%m%dT%H%M%S")
+            log_filename = f"playwright-match-{self.account_name}-{timestamp}-{os.getpid()}.log"
+            self.log_file = log_dir / log_filename
+
+            # Write header to log file
+            with open(self.log_file, 'w', encoding='utf-8') as f:
+                f.write(f"{'='*80}\n")
+                f.write(f"Playwright Match Statement Process\n")
+                f.write(f"Account: {self.account_name}\n")
+                f.write(f"Started: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\n")
+                f.write(f"Match Result Path: {self.match_result_path}\n")
+                f.write(f"Debug Mode: {'ENABLED' if self.debug_mode else 'DISABLED'}\n")
+                f.write(f"{'='*80}\n\n")
+
+            print(f"[INFO] Logging to: {self.log_file}")
+            if self.debug_mode:
+                print(f"[INFO] Debug mode: ENABLED (detailed logs will be shown)")
+            else:
+                print(f"[INFO] Debug mode: DISABLED (set DEBUG_MODE=true in .env to enable)")
+        except Exception as e:
+            print(f"[WARNING] Could not setup log file: {e}")
+            self.log_file = None
+
     def log(self, message: str, level: str = "info"):
-        """Centralized logging with webhook support."""
-        print(f"[{level.upper()}] {message}")
+        """Centralized logging with file and webhook support."""
+        # Skip debug messages if debug mode is disabled
+        if level == "debug" and not self.debug_mode:
+            return
+
+        log_message = f"[{level.upper()}] {message}"
+        print(log_message)
+
+        # Write to log file
+        if self.log_file:
+            try:
+                with open(self.log_file, 'a', encoding='utf-8') as f:
+                    timestamp = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+                    f.write(f"{timestamp} | {log_message}\n")
+            except Exception as e:
+                print(f"[WARNING] Could not write to log file: {e}")
+
+        # Send to webhook if configured
         if self.webhook_url:
             try:
                 requests.post(
@@ -1030,38 +1086,22 @@ class MatchStatementProcessor:
                     self.log(f"Error processing record {idx+1}: {e}", "error")
                     return False
 
-            # Click Save button - try multiple selectors
-            save_button = None
-            save_selectors = [
-                "#ctl00_phG_tab_t0_tlbDataBar_btnSave",
-                "#ctl00_phG_tlbDataBar_btnSave",
-                "a[id*='btnSave']",
-                "button:has-text('Save')"
-            ]
+            # Save using Ctrl+S keyboard shortcut (more reliable than clicking button)
+            self.log("Saving using Ctrl+S...")
+            try:
+                # Press Ctrl+S to save
+                self.page.keyboard.press("Control+s")
+                self.log("[OK] Pressed Ctrl+S to save")
 
-            for selector in save_selectors:
-                try:
-                    btn = self.frame.locator(selector)
-                    if btn.count() > 0:
-                        save_button = btn.first
-                        self.log(f"Found Save button with selector: {selector}")
-                        break
-                except:
-                    continue
-
-            if not save_button:
-                # Try by role
-                save_button = self.frame.get_by_role("button", name="Save")
-
-            if save_button and save_button.count() > 0:
-                self.smart_click(save_button, "Save button")
-                # Smart wait for save operation to complete
+                # Wait for save operation to complete
                 self.smart_wait_for_page_load()
-            else:
-                self.log("Could not find Save button", "warning")
+                self.log("[OK] Save operation completed")
+
+            except Exception as save_error:
+                self.log(f"Error pressing Ctrl+S: {save_error}", "error")
                 return False
 
-            self.log("[OK] Successfully reconciled reverse CE/GL records")
+            self.log("[OK] Successfully reconciled reverse CE/GL records and saved")
             return True
 
         except Exception as e:
