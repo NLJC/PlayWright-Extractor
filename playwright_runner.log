@@ -5637,3 +5637,1981 @@ Workflow Summary:
 All processes completed successfully!
 2025-12-15 14:02:32,280 - INFO - Check logs for detailed information.
 2025-12-15 14:02:32,280 - INFO - ======================================================================
+2025-12-23 13:18:47,428 - INFO - ======================================================================
+2025-12-23 13:18:47,429 - INFO - PLAYWRIGHT AUTOMATION RUNNER
+2025-12-23 13:18:47,429 - INFO - ======================================================================
+2025-12-23 13:18:47,429 - INFO - Account: MBB02
+2025-12-23 13:18:47,430 - INFO - Date: 23/11/2025
+2025-12-23 13:18:47,430 - INFO - Amount: 100.0
+2025-12-23 13:18:47,430 - INFO - Headless Mode: True
+2025-12-23 13:18:47,430 - INFO - Downloads Dir: d:\Github\PlayWright-Extractor\Downloads
+2025-12-23 13:18:47,431 - INFO - ======================================================================
+2025-12-23 13:18:47,431 - INFO - 
+🚀 Starting complete automation workflow...
+
+2025-12-23 13:18:47,432 - INFO - 
+======================================================================
+2025-12-23 13:18:47,432 - INFO - STEP 1: CA MATCH PROCESS
+2025-12-23 13:18:47,433 - INFO - ======================================================================
+2025-12-23 13:18:59,791 - INFO - Starting CA Match process...
+2025-12-23 13:18:59,792 - INFO - ============================================================
+2025-12-23 13:18:59,793 - INFO - CA MATCH PROCESS - OPTIMIZED VERSION
+2025-12-23 13:18:59,794 - INFO - ============================================================
+2025-12-23 13:18:59,794 - INFO - Initializing browser...
+2025-12-23 13:19:01,809 - INFO - Browser initialized successfully
+2025-12-23 13:19:01,810 - INFO - Logging in...
+2025-12-23 13:19:05,555 - INFO - Navigating to Process Bank Records...
+2025-12-23 13:19:20,038 - INFO - Starting auto-match process...
+2025-12-23 13:19:30,081 - WARNING - Normal click failed for account link 'MBB02', trying force click...
+2025-12-23 13:19:30,139 - INFO - Force clicked account link 'MBB02'
+2025-12-23 13:19:45,165 - WARNING - Normal click failed for Auto-Match button, trying force click...
+2025-12-23 13:19:50,172 - WARNING - Force click failed, trying JS click...
+2025-12-23 13:19:51,163 - INFO - JS clicked Auto-Match button
+2025-12-23 13:19:53,180 - INFO - Waiting for auto-match confirmation...
+2025-12-23 13:19:58,186 - WARNING - No confirmation popup appeared - auto-match may not have started
+2025-12-23 13:19:58,187 - INFO - Processing auto-matched items...
+2025-12-23 13:19:58,525 - INFO - Clicked Process button successfully
+2025-12-23 13:20:05,033 - INFO - Clicked Back button successfully
+2025-12-23 13:20:08,039 - INFO - Starting manual matching process...
+2025-12-23 13:20:10,081 - INFO - Clicked account link 'MBB02' successfully
+2025-12-23 13:20:15,087 - INFO - Processing page 1...
+2025-12-23 13:20:15,161 - INFO - Found 201 rows on page 1
+2025-12-23 13:20:15,220 - INFO - Row 0 - Ext. Ref. Nbr.: 0
+2025-12-23 13:20:15,262 - INFO - Row 0 - Already matched, skipping
+2025-12-23 13:20:15,345 - INFO - Row 1 - Ext. Ref. Nbr.: H0124355
+2025-12-23 13:20:15,370 - INFO - Row 1 - Already matched, skipping
+2025-12-23 13:20:15,416 - INFO - Row 2 - Ext. Ref. Nbr.: 0
+2025-12-23 13:20:15,437 - INFO - Row 2 - Already matched, skipping
+2025-12-23 13:20:15,496 - INFO - Row 3 - Ext. Ref. Nbr.: H0124356
+2025-12-23 13:20:15,518 - INFO - Row 3 - Already matched, skipping
+2025-12-23 13:20:15,576 - INFO - Row 4 - Ext. Ref. Nbr.: 0
+2025-12-23 13:20:15,604 - INFO - Row 4 - Already matched, skipping
+2025-12-23 13:20:15,647 - INFO - Row 5 - Ext. Ref. Nbr.: H0124359
+2025-12-23 13:20:16,299 - INFO - Row 5 - Already matched, skipping
+2025-12-23 13:20:16,372 - INFO - Row 6 - Ext. Ref. Nbr.: 0
+2025-12-23 13:20:16,405 - INFO - Row 6 - Already matched, skipping
+2025-12-23 13:20:16,471 - INFO - Row 7 - Ext. Ref. Nbr.: H0124363
+2025-12-23 13:20:16,507 - INFO - Row 7 - Already matched, skipping
+2025-12-23 13:20:16,574 - INFO - Row 8 - Ext. Ref. Nbr.: 0
+2025-12-23 13:20:16,609 - INFO - Row 8 - Already matched, skipping
+2025-12-23 13:20:16,665 - INFO - Row 9 - Ext. Ref. Nbr.: L0105012
+2025-12-23 13:20:16,694 - INFO - Row 9 - Already matched, skipping
+2025-12-23 13:20:16,745 - INFO - Row 10 - Ext. Ref. Nbr.: 0
+2025-12-23 13:20:16,774 - INFO - Row 10 - Already matched, skipping
+2025-12-23 13:20:16,840 - INFO - Row 11 - Ext. Ref. Nbr.: H0124364
+2025-12-23 13:20:16,865 - INFO - Row 11 - Already matched, skipping
+2025-12-23 13:20:16,909 - INFO - Row 12 - Ext. Ref. Nbr.: 0
+2025-12-23 13:20:16,932 - INFO - Row 12 - Already matched, skipping
+2025-12-23 13:20:16,981 - INFO - Row 13 - Ext. Ref. Nbr.: L0105013
+2025-12-23 13:20:17,007 - INFO - Row 13 - Already matched, skipping
+2025-12-23 13:20:17,060 - INFO - Row 14 - Ext. Ref. Nbr.: 0
+2025-12-23 13:20:17,093 - INFO - Row 14 - Already matched, skipping
+2025-12-23 13:20:17,159 - INFO - Row 15 - Ext. Ref. Nbr.: H0124365
+2025-12-23 13:20:17,198 - INFO - Row 15 - Already matched, skipping
+2025-12-23 13:20:17,278 - INFO - Row 16 - Ext. Ref. Nbr.: 0
+2025-12-23 13:20:17,306 - INFO - Row 16 - Already matched, skipping
+2025-12-23 13:20:17,367 - INFO - Row 17 - Ext. Ref. Nbr.: H0124367
+2025-12-23 13:20:17,401 - INFO - Row 17 - Already matched, skipping
+2025-12-23 13:20:17,446 - INFO - Row 18 - Ext. Ref. Nbr.: H0124368
+2025-12-23 13:20:17,467 - INFO - Row 18 - Already matched, skipping
+2025-12-23 13:20:17,509 - INFO - Row 19 - Ext. Ref. Nbr.: 0
+2025-12-23 13:20:17,526 - INFO - Row 19 - Already matched, skipping
+2025-12-23 13:20:17,573 - INFO - Row 20 - Ext. Ref. Nbr.: 0
+2025-12-23 13:20:17,598 - INFO - Row 20 - Already matched, skipping
+2025-12-23 13:20:17,641 - INFO - Row 21 - Ext. Ref. Nbr.: H0124369
+2025-12-23 13:20:17,671 - INFO - Row 21 - Already matched, skipping
+2025-12-23 13:20:17,709 - INFO - Row 22 - Ext. Ref. Nbr.: 0
+2025-12-23 13:20:17,734 - INFO - Row 22 - Already matched, skipping
+2025-12-23 13:20:17,776 - INFO - Row 23 - Ext. Ref. Nbr.: H0124370
+2025-12-23 13:20:17,795 - INFO - Row 23 - Already matched, skipping
+2025-12-23 13:20:17,832 - INFO - Row 24 - Ext. Ref. Nbr.: 2025063035DBKKA
+2025-12-23 13:20:17,854 - INFO - Row 24 - Already matched, skipping
+2025-12-23 13:20:17,895 - INFO - Row 25 - Ext. Ref. Nbr.: 2025063036DBKKA
+2025-12-23 13:20:17,919 - INFO - Row 25 - Already matched, skipping
+2025-12-23 13:20:17,966 - INFO - Row 26 - Ext. Ref. Nbr.: 2025063019DBKKA
+2025-12-23 13:20:17,995 - INFO - Row 26 - Already matched, skipping
+2025-12-23 13:20:18,037 - INFO - Row 27 - Ext. Ref. Nbr.: 0
+2025-12-23 13:20:18,062 - INFO - Row 27 - Already matched, skipping
+2025-12-23 13:20:18,103 - INFO - Row 28 - Ext. Ref. Nbr.: H0124371
+2025-12-23 13:20:18,124 - INFO - Row 28 - Already matched, skipping
+2025-12-23 13:20:18,160 - INFO - Row 29 - Ext. Ref. Nbr.: 0
+2025-12-23 13:20:18,185 - INFO - Row 29 - Already matched, skipping
+2025-12-23 13:20:18,237 - INFO - Row 30 - Ext. Ref. Nbr.: 0
+2025-12-23 13:20:18,257 - INFO - Row 30 - Already matched, skipping
+2025-12-23 13:20:18,294 - INFO - Row 31 - Ext. Ref. Nbr.: H0124375
+2025-12-23 13:20:18,312 - INFO - Row 31 - Already matched, skipping
+2025-12-23 13:20:18,355 - INFO - Row 32 - Ext. Ref. Nbr.: 0
+2025-12-23 13:20:18,380 - INFO - Row 32 - Already matched, skipping
+2025-12-23 13:20:18,437 - INFO - Row 33 - Ext. Ref. Nbr.: L0105016
+2025-12-23 13:20:18,460 - INFO - Row 33 - Already matched, skipping
+2025-12-23 13:20:18,512 - INFO - Row 34 - Ext. Ref. Nbr.: 0
+2025-12-23 13:20:18,533 - INFO - Row 34 - Already matched, skipping
+2025-12-23 13:20:18,573 - INFO - Row 35 - Ext. Ref. Nbr.: H0124380
+2025-12-23 13:20:18,597 - INFO - Row 35 - Already matched, skipping
+2025-12-23 13:20:18,646 - INFO - Row 36 - Ext. Ref. Nbr.: 0
+2025-12-23 13:20:18,670 - INFO - Row 36 - Already matched, skipping
+2025-12-23 13:20:18,716 - INFO - Row 37 - Ext. Ref. Nbr.: H0124381
+2025-12-23 13:20:18,741 - INFO - Row 37 - Already matched, skipping
+2025-12-23 13:20:18,783 - INFO - Row 38 - Ext. Ref. Nbr.: 0
+2025-12-23 13:20:18,804 - INFO - Row 38 - Already matched, skipping
+2025-12-23 13:20:18,851 - INFO - Row 39 - Ext. Ref. Nbr.: H0124382
+2025-12-23 13:20:18,878 - INFO - Row 39 - Already matched, skipping
+2025-12-23 13:20:18,930 - INFO - Row 40 - Ext. Ref. Nbr.: 0
+2025-12-23 13:20:18,950 - INFO - Row 40 - Already matched, skipping
+2025-12-23 13:20:18,992 - INFO - Row 41 - Ext. Ref. Nbr.: 0
+2025-12-23 13:20:19,015 - INFO - Row 41 - Already matched, skipping
+2025-12-23 13:20:19,062 - INFO - Row 42 - Ext. Ref. Nbr.: H0124384
+2025-12-23 13:20:19,088 - INFO - Row 42 - Already matched, skipping
+2025-12-23 13:20:19,129 - INFO - Row 43 - Ext. Ref. Nbr.: 0
+2025-12-23 13:20:19,146 - INFO - Row 43 - Already matched, skipping
+2025-12-23 13:20:19,199 - INFO - Row 44 - Ext. Ref. Nbr.: H0124387
+2025-12-23 13:20:19,220 - INFO - Row 44 - Already matched, skipping
+2025-12-23 13:20:19,262 - INFO - Row 45 - Ext. Ref. Nbr.: 0
+2025-12-23 13:20:19,286 - INFO - Row 45 - Already matched, skipping
+2025-12-23 13:20:19,326 - INFO - Row 46 - Ext. Ref. Nbr.: 0
+2025-12-23 13:20:19,347 - INFO - Row 46 - Already matched, skipping
+2025-12-23 13:20:19,386 - INFO - Row 47 - Ext. Ref. Nbr.: H0124386
+2025-12-23 13:20:19,405 - INFO - Row 47 - Already matched, skipping
+2025-12-23 13:20:19,456 - INFO - Row 48 - Ext. Ref. Nbr.: 0
+2025-12-23 13:20:19,479 - INFO - Row 48 - Already matched, skipping
+2025-12-23 13:20:19,510 - INFO - Row 49 - Ext. Ref. Nbr.: H0124392
+2025-12-23 13:20:19,537 - INFO - Row 49 - Already matched, skipping
+2025-12-23 13:20:19,573 - INFO - Row 50 - Ext. Ref. Nbr.: 0
+2025-12-23 13:20:19,592 - INFO - Row 50 - Already matched, skipping
+2025-12-23 13:20:19,629 - INFO - Row 51 - Ext. Ref. Nbr.: H0124394
+2025-12-23 13:20:19,648 - INFO - Row 51 - Already matched, skipping
+2025-12-23 13:20:19,691 - INFO - Row 52 - Ext. Ref. Nbr.: 0
+2025-12-23 13:20:19,713 - INFO - Row 52 - Already matched, skipping
+2025-12-23 13:20:19,753 - INFO - Row 53 - Ext. Ref. Nbr.: H0124395
+2025-12-23 13:20:19,771 - INFO - Row 53 - Already matched, skipping
+2025-12-23 13:20:19,812 - INFO - Row 54 - Ext. Ref. Nbr.: 0
+2025-12-23 13:20:19,832 - INFO - Row 54 - Already matched, skipping
+2025-12-23 13:20:19,870 - INFO - Row 55 - Ext. Ref. Nbr.: H0124396
+2025-12-23 13:20:19,891 - INFO - Row 55 - Already matched, skipping
+2025-12-23 13:20:19,933 - INFO - Row 56 - Ext. Ref. Nbr.: 0
+2025-12-23 13:20:19,950 - INFO - Row 56 - Already matched, skipping
+2025-12-23 13:20:19,985 - INFO - Row 57 - Ext. Ref. Nbr.: H0124401
+2025-12-23 13:20:20,001 - INFO - Row 57 - Already matched, skipping
+2025-12-23 13:20:20,031 - INFO - Row 58 - Ext. Ref. Nbr.: 0
+2025-12-23 13:20:20,046 - INFO - Row 58 - Already matched, skipping
+2025-12-23 13:20:20,083 - INFO - Row 59 - Ext. Ref. Nbr.: H0124404
+2025-12-23 13:20:20,105 - INFO - Row 59 - Already matched, skipping
+2025-12-23 13:20:20,142 - INFO - Row 60 - Ext. Ref. Nbr.: 0
+2025-12-23 13:20:20,159 - INFO - Row 60 - Already matched, skipping
+2025-12-23 13:20:20,193 - INFO - Row 61 - Ext. Ref. Nbr.: H0124414
+2025-12-23 13:20:20,211 - INFO - Row 61 - Already matched, skipping
+2025-12-23 13:20:20,242 - INFO - Row 62 - Ext. Ref. Nbr.: 0
+2025-12-23 13:20:20,256 - INFO - Row 62 - Already matched, skipping
+2025-12-23 13:20:20,300 - INFO - Row 63 - Ext. Ref. Nbr.: H0124416
+2025-12-23 13:20:20,323 - INFO - Row 63 - Already matched, skipping
+2025-12-23 13:20:20,368 - INFO - Row 64 - Ext. Ref. Nbr.: 0
+2025-12-23 13:20:20,388 - INFO - Row 64 - Already matched, skipping
+2025-12-23 13:20:20,424 - INFO - Row 65 - Ext. Ref. Nbr.: H0124417
+2025-12-23 13:20:20,445 - INFO - Row 65 - Already matched, skipping
+2025-12-23 13:20:20,487 - INFO - Row 66 - Ext. Ref. Nbr.: 0
+2025-12-23 13:20:20,508 - INFO - Row 66 - Already matched, skipping
+2025-12-23 13:20:20,541 - INFO - Row 67 - Ext. Ref. Nbr.: H0124420
+2025-12-23 13:20:20,561 - INFO - Row 67 - Already matched, skipping
+2025-12-23 13:20:20,592 - INFO - Row 68 - Ext. Ref. Nbr.: 0
+2025-12-23 13:20:20,610 - INFO - Row 68 - Already matched, skipping
+2025-12-23 13:20:20,641 - INFO - Row 69 - Ext. Ref. Nbr.: H0124421
+2025-12-23 13:20:20,661 - INFO - Row 69 - Already matched, skipping
+2025-12-23 13:20:20,708 - INFO - Row 70 - Ext. Ref. Nbr.: 0
+2025-12-23 13:20:20,733 - INFO - Row 70 - Already matched, skipping
+2025-12-23 13:20:20,777 - INFO - Row 71 - Ext. Ref. Nbr.: H0124422
+2025-12-23 13:20:20,801 - INFO - Row 71 - Already matched, skipping
+2025-12-23 13:20:20,841 - INFO - Row 72 - Ext. Ref. Nbr.: 0
+2025-12-23 13:20:20,859 - INFO - Row 72 - Already matched, skipping
+2025-12-23 13:20:20,903 - INFO - Row 73 - Ext. Ref. Nbr.: L0105020
+2025-12-23 13:20:20,923 - INFO - Row 73 - Already matched, skipping
+2025-12-23 13:20:20,972 - INFO - Row 74 - Ext. Ref. Nbr.: 0
+2025-12-23 13:20:20,995 - INFO - Row 74 - Already matched, skipping
+2025-12-23 13:20:21,031 - INFO - Row 75 - Ext. Ref. Nbr.: H0124429
+2025-12-23 13:20:21,047 - INFO - Row 75 - Already matched, skipping
+2025-12-23 13:20:21,077 - INFO - Row 76 - Ext. Ref. Nbr.: 0
+2025-12-23 13:20:21,102 - INFO - Row 76 - Already matched, skipping
+2025-12-23 13:20:21,147 - INFO - Row 77 - Ext. Ref. Nbr.: H0124432
+2025-12-23 13:20:21,170 - INFO - Row 77 - Already matched, skipping
+2025-12-23 13:20:21,214 - INFO - Row 78 - Ext. Ref. Nbr.: 0
+2025-12-23 13:20:21,234 - INFO - Row 78 - Already matched, skipping
+2025-12-23 13:20:21,274 - INFO - Row 79 - Ext. Ref. Nbr.: H0124433
+2025-12-23 13:20:21,298 - INFO - Row 79 - Already matched, skipping
+2025-12-23 13:20:21,347 - INFO - Row 80 - Ext. Ref. Nbr.: 0
+2025-12-23 13:20:21,370 - INFO - Row 80 - Already matched, skipping
+2025-12-23 13:20:21,414 - INFO - Row 81 - Ext. Ref. Nbr.: H0124435
+2025-12-23 13:20:21,438 - INFO - Row 81 - Already matched, skipping
+2025-12-23 13:20:21,479 - INFO - Row 82 - Ext. Ref. Nbr.: L0105022
+2025-12-23 13:20:21,502 - INFO - Row 82 - Already matched, skipping
+2025-12-23 13:20:21,547 - INFO - Row 83 - Ext. Ref. Nbr.: 0
+2025-12-23 13:20:21,564 - INFO - Row 83 - Already matched, skipping
+2025-12-23 13:20:21,604 - INFO - Row 84 - Ext. Ref. Nbr.: 0
+2025-12-23 13:20:21,624 - INFO - Row 84 - Already matched, skipping
+2025-12-23 13:20:21,660 - INFO - Row 85 - Ext. Ref. Nbr.: H0124438
+2025-12-23 13:20:21,681 - INFO - Row 85 - Already matched, skipping
+2025-12-23 13:20:21,725 - INFO - Row 86 - Ext. Ref. Nbr.: 0
+2025-12-23 13:20:21,751 - INFO - Row 86 - Already matched, skipping
+2025-12-23 13:20:21,792 - INFO - Row 87 - Ext. Ref. Nbr.: H0124439
+2025-12-23 13:20:21,811 - INFO - Row 87 - Already matched, skipping
+2025-12-23 13:20:21,845 - INFO - Row 88 - Ext. Ref. Nbr.: 0
+2025-12-23 13:20:21,865 - INFO - Row 88 - Already matched, skipping
+2025-12-23 13:20:21,899 - INFO - Row 89 - Ext. Ref. Nbr.: H0124440
+2025-12-23 13:20:21,918 - INFO - Row 89 - Already matched, skipping
+2025-12-23 13:20:21,954 - INFO - Row 90 - Ext. Ref. Nbr.: 0
+2025-12-23 13:20:21,973 - INFO - Row 90 - Already matched, skipping
+2025-12-23 13:20:22,011 - INFO - Row 91 - Ext. Ref. Nbr.: H0124441
+2025-12-23 13:20:22,029 - INFO - Row 91 - Already matched, skipping
+2025-12-23 13:20:22,066 - INFO - Row 92 - Ext. Ref. Nbr.: 0
+2025-12-23 13:20:22,086 - INFO - Row 92 - Already matched, skipping
+2025-12-23 13:20:22,122 - INFO - Row 93 - Ext. Ref. Nbr.: H0124442
+2025-12-23 13:20:22,138 - INFO - Row 93 - Already matched, skipping
+2025-12-23 13:20:22,177 - INFO - Row 94 - Ext. Ref. Nbr.: 0
+2025-12-23 13:20:22,195 - INFO - Row 94 - Already matched, skipping
+2025-12-23 13:20:22,229 - INFO - Row 95 - Ext. Ref. Nbr.: L0105026
+2025-12-23 13:20:22,245 - INFO - Row 95 - Already matched, skipping
+2025-12-23 13:20:22,287 - INFO - Row 96 - Ext. Ref. Nbr.: 0
+2025-12-23 13:20:22,306 - INFO - Row 96 - Already matched, skipping
+2025-12-23 13:20:22,343 - INFO - Row 97 - Ext. Ref. Nbr.: H0124445
+2025-12-23 13:20:22,364 - INFO - Row 97 - Already matched, skipping
+2025-12-23 13:20:22,406 - INFO - Row 98 - Ext. Ref. Nbr.: 0
+2025-12-23 13:20:22,429 - INFO - Row 98 - Already matched, skipping
+2025-12-23 13:20:22,464 - INFO - Row 99 - Ext. Ref. Nbr.: L0105027
+2025-12-23 13:20:22,483 - INFO - Row 99 - Already matched, skipping
+2025-12-23 13:20:22,524 - INFO - Row 100 - Ext. Ref. Nbr.: 0
+2025-12-23 13:20:22,544 - INFO - Row 100 - Already matched, skipping
+2025-12-23 13:20:22,584 - INFO - Row 101 - Ext. Ref. Nbr.: H0124447
+2025-12-23 13:20:22,598 - INFO - Row 101 - Already matched, skipping
+2025-12-23 13:20:22,636 - INFO - Row 102 - Ext. Ref. Nbr.: 0
+2025-12-23 13:20:22,654 - INFO - Row 102 - Already matched, skipping
+2025-12-23 13:20:22,685 - INFO - Row 103 - Ext. Ref. Nbr.: H0124446
+2025-12-23 13:20:22,704 - INFO - Row 103 - Already matched, skipping
+2025-12-23 13:20:22,742 - INFO - Row 104 - Ext. Ref. Nbr.: 0
+2025-12-23 13:20:22,764 - INFO - Row 104 - Already matched, skipping
+2025-12-23 13:20:22,799 - INFO - Row 105 - Ext. Ref. Nbr.: H0124451
+2025-12-23 13:20:22,822 - INFO - Row 105 - Already matched, skipping
+2025-12-23 13:20:22,858 - INFO - Row 106 - Ext. Ref. Nbr.: 0
+2025-12-23 13:20:22,876 - INFO - Row 106 - Already matched, skipping
+2025-12-23 13:20:22,916 - INFO - Row 107 - Ext. Ref. Nbr.: L0105029
+2025-12-23 13:20:22,937 - INFO - Row 107 - Already matched, skipping
+2025-12-23 13:20:22,981 - INFO - Row 108 - Ext. Ref. Nbr.: 0
+2025-12-23 13:20:23,006 - INFO - Row 108 - Already matched, skipping
+2025-12-23 13:20:23,054 - INFO - Row 109 - Ext. Ref. Nbr.: L0105030
+2025-12-23 13:20:23,074 - INFO - Row 109 - Already matched, skipping
+2025-12-23 13:20:23,111 - INFO - Row 110 - Ext. Ref. Nbr.: 0
+2025-12-23 13:20:23,129 - INFO - Row 110 - Already matched, skipping
+2025-12-23 13:20:23,165 - INFO - Row 111 - Ext. Ref. Nbr.: H0124453
+2025-12-23 13:20:23,187 - INFO - Row 111 - Already matched, skipping
+2025-12-23 13:20:23,228 - INFO - Row 112 - Ext. Ref. Nbr.: 0
+2025-12-23 13:20:23,248 - INFO - Row 112 - Already matched, skipping
+2025-12-23 13:20:23,284 - INFO - Row 113 - Ext. Ref. Nbr.: H0124456
+2025-12-23 13:20:23,306 - INFO - Row 113 - Already matched, skipping
+2025-12-23 13:20:23,345 - INFO - Row 114 - Ext. Ref. Nbr.: 0
+2025-12-23 13:20:23,368 - INFO - Row 114 - Already matched, skipping
+2025-12-23 13:20:23,413 - INFO - Row 115 - Ext. Ref. Nbr.: L0105031
+2025-12-23 13:20:23,436 - INFO - Row 115 - Already matched, skipping
+2025-12-23 13:20:23,477 - INFO - Row 116 - Ext. Ref. Nbr.: 0
+2025-12-23 13:20:23,504 - INFO - Row 116 - Already matched, skipping
+2025-12-23 13:20:23,564 - INFO - Row 117 - Ext. Ref. Nbr.: H0124458
+2025-12-23 13:20:23,591 - INFO - Row 117 - Already matched, skipping
+2025-12-23 13:20:23,628 - INFO - Row 118 - Ext. Ref. Nbr.: 0
+2025-12-23 13:20:23,648 - INFO - Row 118 - Already matched, skipping
+2025-12-23 13:20:23,681 - INFO - Row 119 - Ext. Ref. Nbr.: L0105032
+2025-12-23 13:20:23,707 - INFO - Row 119 - Already matched, skipping
+2025-12-23 13:20:23,768 - INFO - Row 120 - Ext. Ref. Nbr.: 0
+2025-12-23 13:20:23,805 - INFO - Row 120 - Already matched, skipping
+2025-12-23 13:20:23,866 - INFO - Row 121 - Ext. Ref. Nbr.: H0124462
+2025-12-23 13:20:23,897 - INFO - Row 121 - Already matched, skipping
+2025-12-23 13:20:23,958 - INFO - Row 122 - Ext. Ref. Nbr.: H0124463
+2025-12-23 13:20:23,987 - INFO - Row 122 - Already matched, skipping
+2025-12-23 13:20:24,060 - INFO - Row 123 - Ext. Ref. Nbr.: 0
+2025-12-23 13:20:24,094 - INFO - Row 123 - Already matched, skipping
+2025-12-23 13:20:24,154 - INFO - Row 124 - Ext. Ref. Nbr.: 0
+2025-12-23 13:20:24,180 - INFO - Row 124 - Already matched, skipping
+2025-12-23 13:20:24,251 - INFO - Row 125 - Ext. Ref. Nbr.: H0124464
+2025-12-23 13:20:24,286 - INFO - Row 125 - Already matched, skipping
+2025-12-23 13:20:24,347 - INFO - Row 126 - Ext. Ref. Nbr.: 0
+2025-12-23 13:20:24,382 - INFO - Row 126 - Already matched, skipping
+2025-12-23 13:20:24,472 - INFO - Row 127 - Ext. Ref. Nbr.: H0124466
+2025-12-23 13:20:24,508 - INFO - Row 127 - Already matched, skipping
+2025-12-23 13:20:24,578 - INFO - Row 128 - Ext. Ref. Nbr.: 0
+2025-12-23 13:20:24,612 - INFO - Row 128 - Already matched, skipping
+2025-12-23 13:20:24,665 - INFO - Row 129 - Ext. Ref. Nbr.: H0124471
+2025-12-23 13:20:24,690 - INFO - Row 129 - Already matched, skipping
+2025-12-23 13:20:24,735 - INFO - Row 130 - Ext. Ref. Nbr.: 0
+2025-12-23 13:20:24,758 - INFO - Row 130 - Already matched, skipping
+2025-12-23 13:20:24,807 - INFO - Row 131 - Ext. Ref. Nbr.: H0124470
+2025-12-23 13:20:24,832 - INFO - Row 131 - Already matched, skipping
+2025-12-23 13:20:24,878 - INFO - Row 132 - Ext. Ref. Nbr.: H0124467
+2025-12-23 13:20:24,897 - INFO - Row 132 - Already matched, skipping
+2025-12-23 13:20:24,935 - INFO - Row 133 - Ext. Ref. Nbr.: 0
+2025-12-23 13:20:24,957 - INFO - Row 133 - Already matched, skipping
+2025-12-23 13:20:25,014 - INFO - Row 134 - Ext. Ref. Nbr.: 0
+2025-12-23 13:20:25,038 - INFO - Row 134 - Already matched, skipping
+2025-12-23 13:20:25,083 - INFO - Row 135 - Ext. Ref. Nbr.: L0105041
+2025-12-23 13:20:25,105 - INFO - Row 135 - Already matched, skipping
+2025-12-23 13:20:25,153 - INFO - Row 136 - Ext. Ref. Nbr.: 0
+2025-12-23 13:20:25,182 - INFO - Row 136 - Already matched, skipping
+2025-12-23 13:20:25,226 - INFO - Row 137 - Ext. Ref. Nbr.: H0124472
+2025-12-23 13:20:25,248 - INFO - Row 137 - Already matched, skipping
+2025-12-23 13:20:25,308 - INFO - Row 138 - Ext. Ref. Nbr.: 0
+2025-12-23 13:20:25,338 - INFO - Row 138 - Already matched, skipping
+2025-12-23 13:20:25,386 - INFO - Row 139 - Ext. Ref. Nbr.: H0124474
+2025-12-23 13:20:25,413 - INFO - Row 139 - Already matched, skipping
+2025-12-23 13:20:25,464 - INFO - Row 140 - Ext. Ref. Nbr.: 0
+2025-12-23 13:20:25,485 - INFO - Row 140 - Already matched, skipping
+2025-12-23 13:20:25,532 - INFO - Row 141 - Ext. Ref. Nbr.: H0124475
+2025-12-23 13:20:25,555 - INFO - Row 141 - Already matched, skipping
+2025-12-23 13:20:25,608 - INFO - Row 142 - Ext. Ref. Nbr.: 0
+2025-12-23 13:20:25,631 - INFO - Row 142 - Already matched, skipping
+2025-12-23 13:20:25,680 - INFO - Row 143 - Ext. Ref. Nbr.: L0105042
+2025-12-23 13:20:25,707 - INFO - Row 143 - Already matched, skipping
+2025-12-23 13:20:25,756 - INFO - Row 144 - Ext. Ref. Nbr.: 0
+2025-12-23 13:20:25,777 - INFO - Row 144 - Already matched, skipping
+2025-12-23 13:20:25,828 - INFO - Row 145 - Ext. Ref. Nbr.: L0105043
+2025-12-23 13:20:25,848 - INFO - Row 145 - Already matched, skipping
+2025-12-23 13:20:25,897 - INFO - Row 146 - Ext. Ref. Nbr.: 0
+2025-12-23 13:20:25,916 - INFO - Row 146 - Already matched, skipping
+2025-12-23 13:20:25,959 - INFO - Row 147 - Ext. Ref. Nbr.: H0124478
+2025-12-23 13:20:25,982 - INFO - Row 147 - Already matched, skipping
+2025-12-23 13:20:26,026 - INFO - Row 148 - Ext. Ref. Nbr.: 0
+2025-12-23 13:20:26,049 - INFO - Row 148 - Already matched, skipping
+2025-12-23 13:20:26,097 - INFO - Row 149 - Ext. Ref. Nbr.: H0124479
+2025-12-23 13:20:26,116 - INFO - Row 149 - Already matched, skipping
+2025-12-23 13:20:26,158 - INFO - Row 150 - Ext. Ref. Nbr.: 0
+2025-12-23 13:20:26,188 - INFO - Row 150 - Already matched, skipping
+2025-12-23 13:20:26,236 - INFO - Row 151 - Ext. Ref. Nbr.: L0105045
+2025-12-23 13:20:26,260 - INFO - Row 151 - Already matched, skipping
+2025-12-23 13:20:26,298 - INFO - Row 152 - Ext. Ref. Nbr.: 0
+2025-12-23 13:20:26,318 - INFO - Row 152 - Already matched, skipping
+2025-12-23 13:20:26,360 - INFO - Row 153 - Ext. Ref. Nbr.: 0009765H
+2025-12-23 13:20:26,381 - INFO - Row 153 - Already matched, skipping
+2025-12-23 13:20:26,426 - INFO - Row 154 - Ext. Ref. Nbr.: 0
+2025-12-23 13:20:26,446 - INFO - Row 154 - Already matched, skipping
+2025-12-23 13:20:26,483 - INFO - Row 155 - Ext. Ref. Nbr.: H0124481
+2025-12-23 13:20:26,505 - INFO - Row 155 - Already matched, skipping
+2025-12-23 13:20:26,545 - INFO - Row 156 - Ext. Ref. Nbr.: 0
+2025-12-23 13:20:26,560 - INFO - Row 156 - Already matched, skipping
+2025-12-23 13:20:26,606 - INFO - Row 157 - Ext. Ref. Nbr.: L0105047
+2025-12-23 13:20:26,628 - INFO - Row 157 - Already matched, skipping
+2025-12-23 13:20:26,670 - INFO - Row 158 - Ext. Ref. Nbr.: 0
+2025-12-23 13:20:26,688 - INFO - Row 158 - Already matched, skipping
+2025-12-23 13:20:26,729 - INFO - Row 159 - Ext. Ref. Nbr.: L0105049
+2025-12-23 13:20:26,749 - INFO - Row 159 - Already matched, skipping
+2025-12-23 13:20:26,790 - INFO - Row 160 - Ext. Ref. Nbr.: 0
+2025-12-23 13:20:26,808 - INFO - Row 160 - Already matched, skipping
+2025-12-23 13:20:26,844 - INFO - Row 161 - Ext. Ref. Nbr.: H0124482
+2025-12-23 13:20:26,860 - INFO - Row 161 - Already matched, skipping
+2025-12-23 13:20:26,894 - INFO - Row 162 - Ext. Ref. Nbr.: 0
+2025-12-23 13:20:26,912 - INFO - Row 162 - Already matched, skipping
+2025-12-23 13:20:26,950 - INFO - Row 163 - Ext. Ref. Nbr.: 0009767H
+2025-12-23 13:20:26,971 - INFO - Row 163 - Already matched, skipping
+2025-12-23 13:20:27,014 - INFO - Row 164 - Ext. Ref. Nbr.: 0
+2025-12-23 13:20:27,033 - INFO - Row 164 - Already matched, skipping
+2025-12-23 13:20:27,074 - INFO - Row 165 - Ext. Ref. Nbr.: L0105050
+2025-12-23 13:20:27,092 - INFO - Row 165 - Already matched, skipping
+2025-12-23 13:20:27,136 - INFO - Row 166 - Ext. Ref. Nbr.: 0
+2025-12-23 13:20:27,162 - INFO - Row 166 - Already matched, skipping
+2025-12-23 13:20:27,210 - INFO - Row 167 - Ext. Ref. Nbr.: H0124484
+2025-12-23 13:20:27,245 - INFO - Row 167 - Already matched, skipping
+2025-12-23 13:20:27,294 - INFO - Row 168 - Ext. Ref. Nbr.: 0
+2025-12-23 13:20:27,313 - INFO - Row 168 - Already matched, skipping
+2025-12-23 13:20:27,354 - INFO - Row 169 - Ext. Ref. Nbr.: L0105051
+2025-12-23 13:20:27,376 - INFO - Row 169 - Already matched, skipping
+2025-12-23 13:20:27,423 - INFO - Row 170 - Ext. Ref. Nbr.: L0105052
+2025-12-23 13:20:27,439 - INFO - Row 170 - Already matched, skipping
+2025-12-23 13:20:27,475 - INFO - Row 171 - Ext. Ref. Nbr.: 0
+2025-12-23 13:20:27,496 - INFO - Row 171 - Already matched, skipping
+2025-12-23 13:20:27,542 - INFO - Row 172 - Ext. Ref. Nbr.: 0
+2025-12-23 13:20:27,563 - INFO - Row 172 - Already matched, skipping
+2025-12-23 13:20:27,601 - INFO - Row 173 - Ext. Ref. Nbr.: H0124490
+2025-12-23 13:20:27,618 - INFO - Row 173 - Already matched, skipping
+2025-12-23 13:20:27,663 - INFO - Row 174 - Ext. Ref. Nbr.: 0
+2025-12-23 13:20:27,685 - INFO - Row 174 - Already matched, skipping
+2025-12-23 13:20:27,726 - INFO - Row 175 - Ext. Ref. Nbr.: L0105053
+2025-12-23 13:20:27,744 - INFO - Row 175 - Already matched, skipping
+2025-12-23 13:20:27,786 - INFO - Row 176 - Ext. Ref. Nbr.: 0
+2025-12-23 13:20:27,807 - INFO - Row 176 - Already matched, skipping
+2025-12-23 13:20:27,844 - INFO - Row 177 - Ext. Ref. Nbr.: H0124492
+2025-12-23 13:20:27,860 - INFO - Row 177 - Already matched, skipping
+2025-12-23 13:20:27,894 - INFO - Row 178 - Ext. Ref. Nbr.: 0
+2025-12-23 13:20:27,911 - INFO - Row 178 - Already matched, skipping
+2025-12-23 13:20:27,947 - INFO - Row 179 - Ext. Ref. Nbr.: H0124493
+2025-12-23 13:20:27,965 - INFO - Row 179 - Already matched, skipping
+2025-12-23 13:20:28,002 - INFO - Row 180 - Ext. Ref. Nbr.: 0
+2025-12-23 13:20:28,024 - INFO - Row 180 - Already matched, skipping
+2025-12-23 13:20:28,060 - INFO - Row 181 - Ext. Ref. Nbr.: L0105055
+2025-12-23 13:20:28,081 - INFO - Row 181 - Already matched, skipping
+2025-12-23 13:20:28,113 - INFO - Row 182 - Ext. Ref. Nbr.: 0
+2025-12-23 13:20:28,130 - INFO - Row 182 - Already matched, skipping
+2025-12-23 13:20:28,164 - INFO - Row 183 - Ext. Ref. Nbr.: H0124495
+2025-12-23 13:20:28,180 - INFO - Row 183 - Already matched, skipping
+2025-12-23 13:20:28,220 - INFO - Row 184 - Ext. Ref. Nbr.: 0
+2025-12-23 13:20:28,254 - INFO - Row 184 - Already matched, skipping
+2025-12-23 13:20:28,333 - INFO - Row 185 - Ext. Ref. Nbr.: H0124497
+2025-12-23 13:20:28,365 - INFO - Row 185 - Already matched, skipping
+2025-12-23 13:20:28,426 - INFO - Row 186 - Ext. Ref. Nbr.: 0
+2025-12-23 13:20:28,463 - INFO - Row 186 - Already matched, skipping
+2025-12-23 13:20:28,520 - INFO - Row 187 - Ext. Ref. Nbr.: H0124502
+2025-12-23 13:20:28,551 - INFO - Row 187 - Already matched, skipping
+2025-12-23 13:20:28,617 - INFO - Row 188 - Ext. Ref. Nbr.: 0
+2025-12-23 13:20:28,656 - INFO - Row 188 - Already matched, skipping
+2025-12-23 13:20:28,725 - INFO - Row 189 - Ext. Ref. Nbr.: H0124504
+2025-12-23 13:20:28,757 - INFO - Row 189 - Already matched, skipping
+2025-12-23 13:20:28,824 - INFO - Row 190 - Ext. Ref. Nbr.: 0
+2025-12-23 13:20:28,859 - INFO - Row 190 - Already matched, skipping
+2025-12-23 13:20:28,920 - INFO - Row 191 - Ext. Ref. Nbr.: H0124509
+2025-12-23 13:20:28,946 - INFO - Row 191 - Already matched, skipping
+2025-12-23 13:20:29,005 - INFO - Row 192 - Ext. Ref. Nbr.: 0
+2025-12-23 13:20:29,030 - INFO - Row 192 - Already matched, skipping
+2025-12-23 13:20:29,109 - INFO - Row 193 - Ext. Ref. Nbr.: L0105057
+2025-12-23 13:20:29,147 - INFO - Row 193 - Already matched, skipping
+2025-12-23 13:20:29,214 - INFO - Row 194 - Ext. Ref. Nbr.: 0
+2025-12-23 13:20:29,242 - INFO - Row 194 - Already matched, skipping
+2025-12-23 13:20:29,307 - INFO - Row 195 - Ext. Ref. Nbr.: H0124511
+2025-12-23 13:20:29,346 - INFO - Row 195 - Already matched, skipping
+2025-12-23 13:20:29,403 - INFO - Row 196 - Ext. Ref. Nbr.: H0124512
+2025-12-23 13:20:29,434 - INFO - Row 196 - Already matched, skipping
+2025-12-23 13:20:29,498 - INFO - Row 197 - Ext. Ref. Nbr.: 0
+2025-12-23 13:20:29,530 - INFO - Row 197 - Already matched, skipping
+2025-12-23 13:20:29,587 - INFO - Row 198 - Ext. Ref. Nbr.: 0
+2025-12-23 13:20:29,622 - INFO - Row 198 - Already matched, skipping
+2025-12-23 13:20:29,673 - INFO - Row 199 - Ext. Ref. Nbr.: 0
+2025-12-23 13:20:29,698 - INFO - Row 199 - Already matched, skipping
+2025-12-23 13:20:29,818 - ERROR - Error during pagination on page 1: Locator.is_visible: Error: strict mode violation: locator("li:nth-child(4) > .toolsBtn > .toolBtnNormal .main-icon-img.main-PageNext") resolved to 2 elements:
+    1) <div class="main-icon-img main-PageNext">↵↵⇆⇆⇆⇆⇆⇆⇆⇆⇆⇆⇆</div> aka locator(".main-icon-img.main-PageNext").first
+    2) <div class="main-icon-img main-PageNext">↵↵⇆⇆⇆⇆⇆⇆⇆⇆⇆⇆⇆⇆⇆⇆</div> aka locator("#ctl00_phG_PXSplitContainer_tab2_t0_PXGrid1_ab_tlb_ul > li:nth-child(4) > .toolsBtn > .toolBtnNormal > .sprite-icon > .main-icon-img")
+
+Call log:
+    - checking visibility of locator("li:nth-child(4) > .toolsBtn > .toolBtnNormal .main-icon-img.main-PageNext")
+
+2025-12-23 13:20:29,819 - INFO - Pagination complete - processed 200 total rows across 1 pages
+2025-12-23 13:20:29,820 - INFO - Manual matching complete - 200 rows processed
+2025-12-23 13:20:29,821 - INFO - Processing manually matched items...
+2025-12-23 13:20:30,172 - INFO - Clicked Process button (after manual matching) successfully
+2025-12-23 13:20:35,672 - INFO - Clicked Back to list button successfully
+2025-12-23 13:20:38,679 - INFO - Downloading results...
+2025-12-23 13:20:38,795 - INFO - Clicked account link 'MBB02' successfully
+2025-12-23 13:20:45,027 - INFO - Clicked Export dropdown successfully
+2025-12-23 13:20:45,294 - INFO - Clicked Export to Excel button successfully
+2025-12-23 13:21:15,068 - ERROR - FATAL ERROR: Timeout 30000ms exceeded while waiting for event "download"
+=========================== logs ===========================
+waiting for event "download"
+============================================================
+2025-12-23 13:21:15,273 - INFO - Browser cleanup completed
+2025-12-23 13:21:15,286 - ERROR - ❌ CA Match failed: Timeout 30000ms exceeded while waiting for event "download"
+=========================== logs ===========================
+waiting for event "download"
+============================================================
+Traceback (most recent call last):
+  File "d:\Github\PlayWright-Extractor\playwright_scripts\run_playwright.py", line 142, in run_ca_match
+    records = process_bank_transactions(
+        playwright=playwright,
+    ...<9 lines>...
+        headless=self.headless
+    )
+  File "d:\Github\PlayWright-Extractor\playwright_scripts\CA_Match_Process_Optimized.py", line 643, in process_bank_transactions
+    return processor.run()
+           ~~~~~~~~~~~~~^^
+  File "d:\Github\PlayWright-Extractor\playwright_scripts\CA_Match_Process_Optimized.py", line 540, in run
+    save_path = self.download_results()
+  File "d:\Github\PlayWright-Extractor\playwright_scripts\CA_Match_Process_Optimized.py", line 457, in download_results
+    with self.page.expect_download() as download_info:
+         ~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "D:\Github\PlayWright-Extractor\venv\Lib\site-packages\playwright\_impl\_sync_base.py", line 85, in __exit__
+    self._event.value
+  File "D:\Github\PlayWright-Extractor\venv\Lib\site-packages\playwright\_impl\_sync_base.py", line 59, in value
+    raise exception
+playwright._impl._errors.TimeoutError: Timeout 30000ms exceeded while waiting for event "download"
+=========================== logs ===========================
+waiting for event "download"
+============================================================
+2025-12-23 13:21:15,288 - ERROR - 
+======================================================================
+2025-12-23 13:21:15,288 - ERROR - ❌ AUTOMATION WORKFLOW FAILED
+2025-12-23 13:21:15,288 - ERROR - ======================================================================
+2025-12-23 13:21:15,288 - ERROR - Error: Timeout 30000ms exceeded while waiting for event "download"
+=========================== logs ===========================
+waiting for event "download"
+============================================================
+2025-12-23 13:21:15,289 - ERROR - ======================================================================
+2025-12-23 13:21:30,099 - INFO - ======================================================================
+2025-12-23 13:21:30,099 - INFO - PLAYWRIGHT AUTOMATION RUNNER
+2025-12-23 13:21:30,099 - INFO - ======================================================================
+2025-12-23 13:21:30,099 - INFO - Account: MBB02
+2025-12-23 13:21:30,099 - INFO - Date: 23/11/2025
+2025-12-23 13:21:30,099 - INFO - Amount: 100.0
+2025-12-23 13:21:30,100 - INFO - Headless Mode: True
+2025-12-23 13:21:30,100 - INFO - Downloads Dir: d:\Github\PlayWright-Extractor\Downloads
+2025-12-23 13:21:30,100 - INFO - ======================================================================
+2025-12-23 13:21:30,100 - INFO - 
+🚀 Starting complete automation workflow...
+
+2025-12-23 13:21:30,100 - INFO - 
+======================================================================
+2025-12-23 13:21:30,100 - INFO - STEP 1: CA MATCH PROCESS
+2025-12-23 13:21:30,100 - INFO - ======================================================================
+2025-12-23 13:21:30,514 - INFO - Starting CA Match process...
+2025-12-23 13:21:30,515 - INFO - ============================================================
+2025-12-23 13:21:30,515 - INFO - CA MATCH PROCESS - OPTIMIZED VERSION
+2025-12-23 13:21:30,516 - INFO - ============================================================
+2025-12-23 13:21:30,516 - INFO - Initializing browser...
+2025-12-23 13:21:30,934 - INFO - Browser initialized successfully
+2025-12-23 13:21:30,934 - INFO - Logging in...
+2025-12-23 13:21:32,922 - INFO - Navigating to Process Bank Records...
+2025-12-23 13:21:42,556 - INFO - Starting auto-match process...
+2025-12-23 13:21:42,621 - INFO - Clicked account link 'MBB02' successfully
+2025-12-23 13:21:48,095 - INFO - Clicked Auto-Match button successfully
+2025-12-23 13:21:50,113 - INFO - Waiting for auto-match confirmation...
+2025-12-23 13:22:06,129 - WARNING - No 'Executing' message detected
+2025-12-23 13:25:06,139 - WARNING - No completion message found - continuing anyway
+2025-12-23 13:25:06,140 - INFO - Processing auto-matched items...
+2025-12-23 13:25:06,221 - INFO - Clicked Process button successfully
+2025-12-23 13:25:11,299 - INFO - Clicked Back button successfully
+2025-12-23 13:25:14,315 - INFO - Starting manual matching process...
+2025-12-23 13:25:14,378 - INFO - Clicked account link 'MBB02' successfully
+2025-12-23 13:25:19,387 - INFO - Processing page 1...
+2025-12-23 13:25:19,426 - INFO - Found 201 rows on page 1
+2025-12-23 13:25:19,462 - INFO - Row 0 - Ext. Ref. Nbr.: 0
+2025-12-23 13:25:19,474 - INFO - Row 0 - Already matched, skipping
+2025-12-23 13:25:19,495 - INFO - Row 1 - Ext. Ref. Nbr.: H0124355
+2025-12-23 13:25:19,506 - INFO - Row 1 - Already matched, skipping
+2025-12-23 13:25:19,527 - INFO - Row 2 - Ext. Ref. Nbr.: 0
+2025-12-23 13:25:19,541 - INFO - Row 2 - Already matched, skipping
+2025-12-23 13:25:19,563 - INFO - Row 3 - Ext. Ref. Nbr.: H0124356
+2025-12-23 13:25:19,574 - INFO - Row 3 - Already matched, skipping
+2025-12-23 13:25:19,595 - INFO - Row 4 - Ext. Ref. Nbr.: 0
+2025-12-23 13:25:19,605 - INFO - Row 4 - Already matched, skipping
+2025-12-23 13:25:19,627 - INFO - Row 5 - Ext. Ref. Nbr.: H0124359
+2025-12-23 13:25:19,638 - INFO - Row 5 - Already matched, skipping
+2025-12-23 13:25:19,661 - INFO - Row 6 - Ext. Ref. Nbr.: 0
+2025-12-23 13:25:19,672 - INFO - Row 6 - Already matched, skipping
+2025-12-23 13:25:19,693 - INFO - Row 7 - Ext. Ref. Nbr.: H0124363
+2025-12-23 13:25:19,704 - INFO - Row 7 - Already matched, skipping
+2025-12-23 13:25:19,726 - INFO - Row 8 - Ext. Ref. Nbr.: 0
+2025-12-23 13:25:19,738 - INFO - Row 8 - Already matched, skipping
+2025-12-23 13:25:19,766 - INFO - Row 9 - Ext. Ref. Nbr.: L0105012
+2025-12-23 13:25:19,777 - INFO - Row 9 - Already matched, skipping
+2025-12-23 13:25:19,798 - INFO - Row 10 - Ext. Ref. Nbr.: 0
+2025-12-23 13:25:19,810 - INFO - Row 10 - Already matched, skipping
+2025-12-23 13:25:19,830 - INFO - Row 11 - Ext. Ref. Nbr.: H0124364
+2025-12-23 13:25:19,841 - INFO - Row 11 - Already matched, skipping
+2025-12-23 13:25:19,862 - INFO - Row 12 - Ext. Ref. Nbr.: 0
+2025-12-23 13:25:19,877 - INFO - Row 12 - Already matched, skipping
+2025-12-23 13:25:19,911 - INFO - Row 13 - Ext. Ref. Nbr.: L0105013
+2025-12-23 13:25:19,926 - INFO - Row 13 - Already matched, skipping
+2025-12-23 13:25:19,948 - INFO - Row 14 - Ext. Ref. Nbr.: 0
+2025-12-23 13:25:19,959 - INFO - Row 14 - Already matched, skipping
+2025-12-23 13:25:19,981 - INFO - Row 15 - Ext. Ref. Nbr.: H0124365
+2025-12-23 13:25:19,993 - INFO - Row 15 - Already matched, skipping
+2025-12-23 13:25:20,015 - INFO - Row 16 - Ext. Ref. Nbr.: 0
+2025-12-23 13:25:20,029 - INFO - Row 16 - Already matched, skipping
+2025-12-23 13:25:20,058 - INFO - Row 17 - Ext. Ref. Nbr.: H0124367
+2025-12-23 13:25:20,070 - INFO - Row 17 - Already matched, skipping
+2025-12-23 13:25:20,091 - INFO - Row 18 - Ext. Ref. Nbr.: H0124368
+2025-12-23 13:25:20,100 - INFO - Row 18 - Already matched, skipping
+2025-12-23 13:25:20,125 - INFO - Row 19 - Ext. Ref. Nbr.: 0
+2025-12-23 13:25:20,136 - INFO - Row 19 - Already matched, skipping
+2025-12-23 13:25:20,157 - INFO - Row 20 - Ext. Ref. Nbr.: 0
+2025-12-23 13:25:20,175 - INFO - Row 20 - Already matched, skipping
+2025-12-23 13:25:20,224 - INFO - Row 21 - Ext. Ref. Nbr.: H0124369
+2025-12-23 13:25:20,241 - INFO - Row 21 - Already matched, skipping
+2025-12-23 13:25:20,273 - INFO - Row 22 - Ext. Ref. Nbr.: 0
+2025-12-23 13:25:20,286 - INFO - Row 22 - Already matched, skipping
+2025-12-23 13:25:20,308 - INFO - Row 23 - Ext. Ref. Nbr.: H0124370
+2025-12-23 13:25:20,318 - INFO - Row 23 - Already matched, skipping
+2025-12-23 13:25:20,342 - INFO - Row 24 - Ext. Ref. Nbr.: 2025063035DBKKA
+2025-12-23 13:25:20,354 - INFO - Row 24 - Already matched, skipping
+2025-12-23 13:25:20,376 - INFO - Row 25 - Ext. Ref. Nbr.: 2025063036DBKKA
+2025-12-23 13:25:20,387 - INFO - Row 25 - Already matched, skipping
+2025-12-23 13:25:20,409 - INFO - Row 26 - Ext. Ref. Nbr.: 2025063019DBKKA
+2025-12-23 13:25:20,422 - INFO - Row 26 - Already matched, skipping
+2025-12-23 13:25:20,445 - INFO - Row 27 - Ext. Ref. Nbr.: 0
+2025-12-23 13:25:20,457 - INFO - Row 27 - Already matched, skipping
+2025-12-23 13:25:20,481 - INFO - Row 28 - Ext. Ref. Nbr.: H0124371
+2025-12-23 13:25:20,495 - INFO - Row 28 - Already matched, skipping
+2025-12-23 13:25:20,525 - INFO - Row 29 - Ext. Ref. Nbr.: 0
+2025-12-23 13:25:20,539 - INFO - Row 29 - Already matched, skipping
+2025-12-23 13:25:20,567 - INFO - Row 30 - Ext. Ref. Nbr.: 0
+2025-12-23 13:25:20,579 - INFO - Row 30 - Already matched, skipping
+2025-12-23 13:25:20,606 - INFO - Row 31 - Ext. Ref. Nbr.: H0124375
+2025-12-23 13:25:20,619 - INFO - Row 31 - Already matched, skipping
+2025-12-23 13:25:20,646 - INFO - Row 32 - Ext. Ref. Nbr.: 0
+2025-12-23 13:25:20,660 - INFO - Row 32 - Already matched, skipping
+2025-12-23 13:25:20,687 - INFO - Row 33 - Ext. Ref. Nbr.: L0105016
+2025-12-23 13:25:20,700 - INFO - Row 33 - Already matched, skipping
+2025-12-23 13:25:20,727 - INFO - Row 34 - Ext. Ref. Nbr.: 0
+2025-12-23 13:25:20,741 - INFO - Row 34 - Already matched, skipping
+2025-12-23 13:25:20,769 - INFO - Row 35 - Ext. Ref. Nbr.: H0124380
+2025-12-23 13:25:20,781 - INFO - Row 35 - Already matched, skipping
+2025-12-23 13:25:20,807 - INFO - Row 36 - Ext. Ref. Nbr.: 0
+2025-12-23 13:25:20,821 - INFO - Row 36 - Already matched, skipping
+2025-12-23 13:25:20,848 - INFO - Row 37 - Ext. Ref. Nbr.: H0124381
+2025-12-23 13:25:20,862 - INFO - Row 37 - Already matched, skipping
+2025-12-23 13:25:20,887 - INFO - Row 38 - Ext. Ref. Nbr.: 0
+2025-12-23 13:25:20,899 - INFO - Row 38 - Already matched, skipping
+2025-12-23 13:25:20,923 - INFO - Row 39 - Ext. Ref. Nbr.: H0124382
+2025-12-23 13:25:20,935 - INFO - Row 39 - Already matched, skipping
+2025-12-23 13:25:20,957 - INFO - Row 40 - Ext. Ref. Nbr.: 0
+2025-12-23 13:25:20,970 - INFO - Row 40 - Already matched, skipping
+2025-12-23 13:25:20,995 - INFO - Row 41 - Ext. Ref. Nbr.: 0
+2025-12-23 13:25:21,007 - INFO - Row 41 - Already matched, skipping
+2025-12-23 13:25:21,029 - INFO - Row 42 - Ext. Ref. Nbr.: H0124384
+2025-12-23 13:25:21,041 - INFO - Row 42 - Already matched, skipping
+2025-12-23 13:25:21,070 - INFO - Row 43 - Ext. Ref. Nbr.: 0
+2025-12-23 13:25:21,086 - INFO - Row 43 - Already matched, skipping
+2025-12-23 13:25:21,112 - INFO - Row 44 - Ext. Ref. Nbr.: H0124387
+2025-12-23 13:25:21,124 - INFO - Row 44 - Already matched, skipping
+2025-12-23 13:25:21,148 - INFO - Row 45 - Ext. Ref. Nbr.: 0
+2025-12-23 13:25:21,160 - INFO - Row 45 - Already matched, skipping
+2025-12-23 13:25:21,180 - INFO - Row 46 - Ext. Ref. Nbr.: 0
+2025-12-23 13:25:21,194 - INFO - Row 46 - Already matched, skipping
+2025-12-23 13:25:21,218 - INFO - Row 47 - Ext. Ref. Nbr.: H0124386
+2025-12-23 13:25:21,231 - INFO - Row 47 - Already matched, skipping
+2025-12-23 13:25:21,256 - INFO - Row 48 - Ext. Ref. Nbr.: 0
+2025-12-23 13:25:21,267 - INFO - Row 48 - Already matched, skipping
+2025-12-23 13:25:21,295 - INFO - Row 49 - Ext. Ref. Nbr.: H0124392
+2025-12-23 13:25:21,312 - INFO - Row 49 - Already matched, skipping
+2025-12-23 13:25:21,336 - INFO - Row 50 - Ext. Ref. Nbr.: 0
+2025-12-23 13:25:21,348 - INFO - Row 50 - Already matched, skipping
+2025-12-23 13:25:21,368 - INFO - Row 51 - Ext. Ref. Nbr.: H0124394
+2025-12-23 13:25:21,379 - INFO - Row 51 - Already matched, skipping
+2025-12-23 13:25:21,399 - INFO - Row 52 - Ext. Ref. Nbr.: 0
+2025-12-23 13:25:21,411 - INFO - Row 52 - Already matched, skipping
+2025-12-23 13:25:21,433 - INFO - Row 53 - Ext. Ref. Nbr.: H0124395
+2025-12-23 13:25:21,445 - INFO - Row 53 - Already matched, skipping
+2025-12-23 13:25:21,465 - INFO - Row 54 - Ext. Ref. Nbr.: 0
+2025-12-23 13:25:21,477 - INFO - Row 54 - Already matched, skipping
+2025-12-23 13:25:21,498 - INFO - Row 55 - Ext. Ref. Nbr.: H0124396
+2025-12-23 13:25:21,510 - INFO - Row 55 - Already matched, skipping
+2025-12-23 13:25:21,532 - INFO - Row 56 - Ext. Ref. Nbr.: 0
+2025-12-23 13:25:21,544 - INFO - Row 56 - Already matched, skipping
+2025-12-23 13:25:21,567 - INFO - Row 57 - Ext. Ref. Nbr.: H0124401
+2025-12-23 13:25:21,579 - INFO - Row 57 - Already matched, skipping
+2025-12-23 13:25:21,604 - INFO - Row 58 - Ext. Ref. Nbr.: 0
+2025-12-23 13:25:21,614 - INFO - Row 58 - Already matched, skipping
+2025-12-23 13:25:21,636 - INFO - Row 59 - Ext. Ref. Nbr.: H0124404
+2025-12-23 13:25:21,646 - INFO - Row 59 - Already matched, skipping
+2025-12-23 13:25:21,668 - INFO - Row 60 - Ext. Ref. Nbr.: 0
+2025-12-23 13:25:21,680 - INFO - Row 60 - Already matched, skipping
+2025-12-23 13:25:21,704 - INFO - Row 61 - Ext. Ref. Nbr.: H0124414
+2025-12-23 13:25:21,715 - INFO - Row 61 - Already matched, skipping
+2025-12-23 13:25:21,736 - INFO - Row 62 - Ext. Ref. Nbr.: 0
+2025-12-23 13:25:21,748 - INFO - Row 62 - Already matched, skipping
+2025-12-23 13:25:21,770 - INFO - Row 63 - Ext. Ref. Nbr.: H0124416
+2025-12-23 13:25:21,782 - INFO - Row 63 - Already matched, skipping
+2025-12-23 13:25:21,808 - INFO - Row 64 - Ext. Ref. Nbr.: 0
+2025-12-23 13:25:21,820 - INFO - Row 64 - Already matched, skipping
+2025-12-23 13:25:21,843 - INFO - Row 65 - Ext. Ref. Nbr.: H0124417
+2025-12-23 13:25:21,855 - INFO - Row 65 - Already matched, skipping
+2025-12-23 13:25:21,878 - INFO - Row 66 - Ext. Ref. Nbr.: 0
+2025-12-23 13:25:21,890 - INFO - Row 66 - Already matched, skipping
+2025-12-23 13:25:21,915 - INFO - Row 67 - Ext. Ref. Nbr.: H0124420
+2025-12-23 13:25:21,928 - INFO - Row 67 - Already matched, skipping
+2025-12-23 13:25:21,952 - INFO - Row 68 - Ext. Ref. Nbr.: 0
+2025-12-23 13:25:21,965 - INFO - Row 68 - Already matched, skipping
+2025-12-23 13:25:21,990 - INFO - Row 69 - Ext. Ref. Nbr.: H0124421
+2025-12-23 13:25:22,002 - INFO - Row 69 - Already matched, skipping
+2025-12-23 13:25:22,027 - INFO - Row 70 - Ext. Ref. Nbr.: 0
+2025-12-23 13:25:22,039 - INFO - Row 70 - Already matched, skipping
+2025-12-23 13:25:22,062 - INFO - Row 71 - Ext. Ref. Nbr.: H0124422
+2025-12-23 13:25:22,077 - INFO - Row 71 - Already matched, skipping
+2025-12-23 13:25:22,101 - INFO - Row 72 - Ext. Ref. Nbr.: 0
+2025-12-23 13:25:22,116 - INFO - Row 72 - Already matched, skipping
+2025-12-23 13:25:22,147 - INFO - Row 73 - Ext. Ref. Nbr.: L0105020
+2025-12-23 13:25:22,161 - INFO - Row 73 - Already matched, skipping
+2025-12-23 13:25:22,188 - INFO - Row 74 - Ext. Ref. Nbr.: 0
+2025-12-23 13:25:22,200 - INFO - Row 74 - Already matched, skipping
+2025-12-23 13:25:22,226 - INFO - Row 75 - Ext. Ref. Nbr.: H0124429
+2025-12-23 13:25:22,243 - INFO - Row 75 - Already matched, skipping
+2025-12-23 13:25:22,270 - INFO - Row 76 - Ext. Ref. Nbr.: 0
+2025-12-23 13:25:22,288 - INFO - Row 76 - Already matched, skipping
+2025-12-23 13:25:22,321 - INFO - Row 77 - Ext. Ref. Nbr.: H0124432
+2025-12-23 13:25:22,336 - INFO - Row 77 - Already matched, skipping
+2025-12-23 13:25:22,366 - INFO - Row 78 - Ext. Ref. Nbr.: 0
+2025-12-23 13:25:22,377 - INFO - Row 78 - Already matched, skipping
+2025-12-23 13:25:22,398 - INFO - Row 79 - Ext. Ref. Nbr.: H0124433
+2025-12-23 13:25:22,410 - INFO - Row 79 - Already matched, skipping
+2025-12-23 13:25:22,431 - INFO - Row 80 - Ext. Ref. Nbr.: 0
+2025-12-23 13:25:22,443 - INFO - Row 80 - Already matched, skipping
+2025-12-23 13:25:22,465 - INFO - Row 81 - Ext. Ref. Nbr.: H0124435
+2025-12-23 13:25:22,476 - INFO - Row 81 - Already matched, skipping
+2025-12-23 13:25:22,496 - INFO - Row 82 - Ext. Ref. Nbr.: L0105022
+2025-12-23 13:25:22,508 - INFO - Row 82 - Already matched, skipping
+2025-12-23 13:25:22,529 - INFO - Row 83 - Ext. Ref. Nbr.: 0
+2025-12-23 13:25:22,539 - INFO - Row 83 - Already matched, skipping
+2025-12-23 13:25:22,560 - INFO - Row 84 - Ext. Ref. Nbr.: 0
+2025-12-23 13:25:22,574 - INFO - Row 84 - Already matched, skipping
+2025-12-23 13:25:22,598 - INFO - Row 85 - Ext. Ref. Nbr.: H0124438
+2025-12-23 13:25:22,609 - INFO - Row 85 - Already matched, skipping
+2025-12-23 13:25:22,632 - INFO - Row 86 - Ext. Ref. Nbr.: 0
+2025-12-23 13:25:22,644 - INFO - Row 86 - Already matched, skipping
+2025-12-23 13:25:22,673 - INFO - Row 87 - Ext. Ref. Nbr.: H0124439
+2025-12-23 13:25:22,687 - INFO - Row 87 - Already matched, skipping
+2025-12-23 13:25:22,713 - INFO - Row 88 - Ext. Ref. Nbr.: 0
+2025-12-23 13:25:22,728 - INFO - Row 88 - Already matched, skipping
+2025-12-23 13:25:22,753 - INFO - Row 89 - Ext. Ref. Nbr.: H0124440
+2025-12-23 13:25:22,766 - INFO - Row 89 - Already matched, skipping
+2025-12-23 13:25:22,792 - INFO - Row 90 - Ext. Ref. Nbr.: 0
+2025-12-23 13:25:22,806 - INFO - Row 90 - Already matched, skipping
+2025-12-23 13:25:22,833 - INFO - Row 91 - Ext. Ref. Nbr.: H0124441
+2025-12-23 13:25:22,845 - INFO - Row 91 - Already matched, skipping
+2025-12-23 13:25:22,870 - INFO - Row 92 - Ext. Ref. Nbr.: 0
+2025-12-23 13:25:22,883 - INFO - Row 92 - Already matched, skipping
+2025-12-23 13:25:22,911 - INFO - Row 93 - Ext. Ref. Nbr.: H0124442
+2025-12-23 13:25:22,925 - INFO - Row 93 - Already matched, skipping
+2025-12-23 13:25:22,950 - INFO - Row 94 - Ext. Ref. Nbr.: 0
+2025-12-23 13:25:22,962 - INFO - Row 94 - Already matched, skipping
+2025-12-23 13:25:22,988 - INFO - Row 95 - Ext. Ref. Nbr.: L0105026
+2025-12-23 13:25:23,001 - INFO - Row 95 - Already matched, skipping
+2025-12-23 13:25:23,028 - INFO - Row 96 - Ext. Ref. Nbr.: 0
+2025-12-23 13:25:23,042 - INFO - Row 96 - Already matched, skipping
+2025-12-23 13:25:23,067 - INFO - Row 97 - Ext. Ref. Nbr.: H0124445
+2025-12-23 13:25:23,078 - INFO - Row 97 - Already matched, skipping
+2025-12-23 13:25:23,098 - INFO - Row 98 - Ext. Ref. Nbr.: 0
+2025-12-23 13:25:23,109 - INFO - Row 98 - Already matched, skipping
+2025-12-23 13:25:23,130 - INFO - Row 99 - Ext. Ref. Nbr.: L0105027
+2025-12-23 13:25:23,143 - INFO - Row 99 - Already matched, skipping
+2025-12-23 13:25:23,175 - INFO - Row 100 - Ext. Ref. Nbr.: 0
+2025-12-23 13:25:23,188 - INFO - Row 100 - Already matched, skipping
+2025-12-23 13:25:23,212 - INFO - Row 101 - Ext. Ref. Nbr.: H0124447
+2025-12-23 13:25:23,224 - INFO - Row 101 - Already matched, skipping
+2025-12-23 13:25:23,246 - INFO - Row 102 - Ext. Ref. Nbr.: 0
+2025-12-23 13:25:23,259 - INFO - Row 102 - Already matched, skipping
+2025-12-23 13:25:23,283 - INFO - Row 103 - Ext. Ref. Nbr.: H0124446
+2025-12-23 13:25:23,296 - INFO - Row 103 - Already matched, skipping
+2025-12-23 13:25:23,318 - INFO - Row 104 - Ext. Ref. Nbr.: 0
+2025-12-23 13:25:23,329 - INFO - Row 104 - Already matched, skipping
+2025-12-23 13:25:23,350 - INFO - Row 105 - Ext. Ref. Nbr.: H0124451
+2025-12-23 13:25:23,363 - INFO - Row 105 - Already matched, skipping
+2025-12-23 13:25:23,391 - INFO - Row 106 - Ext. Ref. Nbr.: 0
+2025-12-23 13:25:23,407 - INFO - Row 106 - Already matched, skipping
+2025-12-23 13:25:23,431 - INFO - Row 107 - Ext. Ref. Nbr.: L0105029
+2025-12-23 13:25:23,442 - INFO - Row 107 - Already matched, skipping
+2025-12-23 13:25:23,463 - INFO - Row 108 - Ext. Ref. Nbr.: 0
+2025-12-23 13:25:23,474 - INFO - Row 108 - Already matched, skipping
+2025-12-23 13:25:23,496 - INFO - Row 109 - Ext. Ref. Nbr.: L0105030
+2025-12-23 13:25:23,507 - INFO - Row 109 - Already matched, skipping
+2025-12-23 13:25:23,527 - INFO - Row 110 - Ext. Ref. Nbr.: 0
+2025-12-23 13:25:23,538 - INFO - Row 110 - Already matched, skipping
+2025-12-23 13:25:23,558 - INFO - Row 111 - Ext. Ref. Nbr.: H0124453
+2025-12-23 13:25:23,567 - INFO - Row 111 - Already matched, skipping
+2025-12-23 13:25:23,589 - INFO - Row 112 - Ext. Ref. Nbr.: 0
+2025-12-23 13:25:23,600 - INFO - Row 112 - Already matched, skipping
+2025-12-23 13:25:23,624 - INFO - Row 113 - Ext. Ref. Nbr.: H0124456
+2025-12-23 13:25:23,635 - INFO - Row 113 - Already matched, skipping
+2025-12-23 13:25:23,655 - INFO - Row 114 - Ext. Ref. Nbr.: 0
+2025-12-23 13:25:23,665 - INFO - Row 114 - Already matched, skipping
+2025-12-23 13:25:23,686 - INFO - Row 115 - Ext. Ref. Nbr.: L0105031
+2025-12-23 13:25:23,698 - INFO - Row 115 - Already matched, skipping
+2025-12-23 13:25:23,720 - INFO - Row 116 - Ext. Ref. Nbr.: 0
+2025-12-23 13:25:23,731 - INFO - Row 116 - Already matched, skipping
+2025-12-23 13:25:23,750 - INFO - Row 117 - Ext. Ref. Nbr.: H0124458
+2025-12-23 13:25:23,763 - INFO - Row 117 - Already matched, skipping
+2025-12-23 13:25:23,795 - INFO - Row 118 - Ext. Ref. Nbr.: 0
+2025-12-23 13:25:23,808 - INFO - Row 118 - Already matched, skipping
+2025-12-23 13:25:23,831 - INFO - Row 119 - Ext. Ref. Nbr.: L0105032
+2025-12-23 13:25:23,842 - INFO - Row 119 - Already matched, skipping
+2025-12-23 13:25:23,863 - INFO - Row 120 - Ext. Ref. Nbr.: 0
+2025-12-23 13:25:23,874 - INFO - Row 120 - Already matched, skipping
+2025-12-23 13:25:23,896 - INFO - Row 121 - Ext. Ref. Nbr.: H0124462
+2025-12-23 13:25:23,907 - INFO - Row 121 - Already matched, skipping
+2025-12-23 13:25:23,930 - INFO - Row 122 - Ext. Ref. Nbr.: H0124463
+2025-12-23 13:25:23,941 - INFO - Row 122 - Already matched, skipping
+2025-12-23 13:25:23,962 - INFO - Row 123 - Ext. Ref. Nbr.: 0
+2025-12-23 13:25:23,975 - INFO - Row 123 - Already matched, skipping
+2025-12-23 13:25:23,996 - INFO - Row 124 - Ext. Ref. Nbr.: 0
+2025-12-23 13:25:24,007 - INFO - Row 124 - Already matched, skipping
+2025-12-23 13:25:24,028 - INFO - Row 125 - Ext. Ref. Nbr.: H0124464
+2025-12-23 13:25:24,040 - INFO - Row 125 - Already matched, skipping
+2025-12-23 13:25:24,061 - INFO - Row 126 - Ext. Ref. Nbr.: 0
+2025-12-23 13:25:24,073 - INFO - Row 126 - Already matched, skipping
+2025-12-23 13:25:24,095 - INFO - Row 127 - Ext. Ref. Nbr.: H0124466
+2025-12-23 13:25:24,106 - INFO - Row 127 - Already matched, skipping
+2025-12-23 13:25:24,127 - INFO - Row 128 - Ext. Ref. Nbr.: 0
+2025-12-23 13:25:24,139 - INFO - Row 128 - Already matched, skipping
+2025-12-23 13:25:24,160 - INFO - Row 129 - Ext. Ref. Nbr.: H0124471
+2025-12-23 13:25:24,170 - INFO - Row 129 - Already matched, skipping
+2025-12-23 13:25:24,199 - INFO - Row 130 - Ext. Ref. Nbr.: 0
+2025-12-23 13:25:24,214 - INFO - Row 130 - Already matched, skipping
+2025-12-23 13:25:24,236 - INFO - Row 131 - Ext. Ref. Nbr.: H0124470
+2025-12-23 13:25:24,248 - INFO - Row 131 - Already matched, skipping
+2025-12-23 13:25:24,273 - INFO - Row 132 - Ext. Ref. Nbr.: H0124467
+2025-12-23 13:25:24,285 - INFO - Row 132 - Already matched, skipping
+2025-12-23 13:25:24,309 - INFO - Row 133 - Ext. Ref. Nbr.: 0
+2025-12-23 13:25:24,320 - INFO - Row 133 - Already matched, skipping
+2025-12-23 13:25:24,341 - INFO - Row 134 - Ext. Ref. Nbr.: 0
+2025-12-23 13:25:24,352 - INFO - Row 134 - Already matched, skipping
+2025-12-23 13:25:24,372 - INFO - Row 135 - Ext. Ref. Nbr.: L0105041
+2025-12-23 13:25:24,383 - INFO - Row 135 - Already matched, skipping
+2025-12-23 13:25:24,402 - INFO - Row 136 - Ext. Ref. Nbr.: 0
+2025-12-23 13:25:24,414 - INFO - Row 136 - Already matched, skipping
+2025-12-23 13:25:24,443 - INFO - Row 137 - Ext. Ref. Nbr.: H0124472
+2025-12-23 13:25:24,458 - INFO - Row 137 - Already matched, skipping
+2025-12-23 13:25:24,482 - INFO - Row 138 - Ext. Ref. Nbr.: 0
+2025-12-23 13:25:24,494 - INFO - Row 138 - Already matched, skipping
+2025-12-23 13:25:24,515 - INFO - Row 139 - Ext. Ref. Nbr.: H0124474
+2025-12-23 13:25:24,528 - INFO - Row 139 - Already matched, skipping
+2025-12-23 13:25:24,548 - INFO - Row 140 - Ext. Ref. Nbr.: 0
+2025-12-23 13:25:24,558 - INFO - Row 140 - Already matched, skipping
+2025-12-23 13:25:24,581 - INFO - Row 141 - Ext. Ref. Nbr.: H0124475
+2025-12-23 13:25:24,592 - INFO - Row 141 - Already matched, skipping
+2025-12-23 13:25:24,612 - INFO - Row 142 - Ext. Ref. Nbr.: 0
+2025-12-23 13:25:24,622 - INFO - Row 142 - Already matched, skipping
+2025-12-23 13:25:24,644 - INFO - Row 143 - Ext. Ref. Nbr.: L0105042
+2025-12-23 13:25:24,654 - INFO - Row 143 - Already matched, skipping
+2025-12-23 13:25:24,674 - INFO - Row 144 - Ext. Ref. Nbr.: 0
+2025-12-23 13:25:24,686 - INFO - Row 144 - Already matched, skipping
+2025-12-23 13:25:24,707 - INFO - Row 145 - Ext. Ref. Nbr.: L0105043
+2025-12-23 13:25:24,718 - INFO - Row 145 - Already matched, skipping
+2025-12-23 13:25:24,740 - INFO - Row 146 - Ext. Ref. Nbr.: 0
+2025-12-23 13:25:24,750 - INFO - Row 146 - Already matched, skipping
+2025-12-23 13:25:24,770 - INFO - Row 147 - Ext. Ref. Nbr.: H0124478
+2025-12-23 13:25:24,782 - INFO - Row 147 - Already matched, skipping
+2025-12-23 13:25:24,804 - INFO - Row 148 - Ext. Ref. Nbr.: 0
+2025-12-23 13:25:24,816 - INFO - Row 148 - Already matched, skipping
+2025-12-23 13:25:24,843 - INFO - Row 149 - Ext. Ref. Nbr.: H0124479
+2025-12-23 13:25:24,857 - INFO - Row 149 - Already matched, skipping
+2025-12-23 13:25:24,883 - INFO - Row 150 - Ext. Ref. Nbr.: 0
+2025-12-23 13:25:24,896 - INFO - Row 150 - Already matched, skipping
+2025-12-23 13:25:24,920 - INFO - Row 151 - Ext. Ref. Nbr.: L0105045
+2025-12-23 13:25:24,931 - INFO - Row 151 - Already matched, skipping
+2025-12-23 13:25:24,971 - INFO - Row 152 - Ext. Ref. Nbr.: 0
+2025-12-23 13:25:24,989 - INFO - Row 152 - Already matched, skipping
+2025-12-23 13:25:25,016 - INFO - Row 153 - Ext. Ref. Nbr.: 0009765H
+2025-12-23 13:25:25,029 - INFO - Row 153 - Already matched, skipping
+2025-12-23 13:25:25,051 - INFO - Row 154 - Ext. Ref. Nbr.: 0
+2025-12-23 13:25:25,064 - INFO - Row 154 - Already matched, skipping
+2025-12-23 13:25:25,091 - INFO - Row 155 - Ext. Ref. Nbr.: H0124481
+2025-12-23 13:25:25,104 - INFO - Row 155 - Already matched, skipping
+2025-12-23 13:25:25,128 - INFO - Row 156 - Ext. Ref. Nbr.: 0
+2025-12-23 13:25:25,140 - INFO - Row 156 - Already matched, skipping
+2025-12-23 13:25:25,165 - INFO - Row 157 - Ext. Ref. Nbr.: L0105047
+2025-12-23 13:25:25,178 - INFO - Row 157 - Already matched, skipping
+2025-12-23 13:25:25,205 - INFO - Row 158 - Ext. Ref. Nbr.: 0
+2025-12-23 13:25:25,220 - INFO - Row 158 - Already matched, skipping
+2025-12-23 13:25:25,251 - INFO - Row 159 - Ext. Ref. Nbr.: L0105049
+2025-12-23 13:25:25,264 - INFO - Row 159 - Already matched, skipping
+2025-12-23 13:25:25,287 - INFO - Row 160 - Ext. Ref. Nbr.: 0
+2025-12-23 13:25:25,299 - INFO - Row 160 - Already matched, skipping
+2025-12-23 13:25:25,325 - INFO - Row 161 - Ext. Ref. Nbr.: H0124482
+2025-12-23 13:25:25,336 - INFO - Row 161 - Already matched, skipping
+2025-12-23 13:25:25,357 - INFO - Row 162 - Ext. Ref. Nbr.: 0
+2025-12-23 13:25:25,367 - INFO - Row 162 - Already matched, skipping
+2025-12-23 13:25:25,387 - INFO - Row 163 - Ext. Ref. Nbr.: 0009767H
+2025-12-23 13:25:25,397 - INFO - Row 163 - Already matched, skipping
+2025-12-23 13:25:25,418 - INFO - Row 164 - Ext. Ref. Nbr.: 0
+2025-12-23 13:25:25,431 - INFO - Row 164 - Already matched, skipping
+2025-12-23 13:25:25,453 - INFO - Row 165 - Ext. Ref. Nbr.: L0105050
+2025-12-23 13:25:25,464 - INFO - Row 165 - Already matched, skipping
+2025-12-23 13:25:25,492 - INFO - Row 166 - Ext. Ref. Nbr.: 0
+2025-12-23 13:25:25,506 - INFO - Row 166 - Already matched, skipping
+2025-12-23 13:25:25,534 - INFO - Row 167 - Ext. Ref. Nbr.: H0124484
+2025-12-23 13:25:25,547 - INFO - Row 167 - Already matched, skipping
+2025-12-23 13:25:25,568 - INFO - Row 168 - Ext. Ref. Nbr.: 0
+2025-12-23 13:25:25,579 - INFO - Row 168 - Already matched, skipping
+2025-12-23 13:25:25,600 - INFO - Row 169 - Ext. Ref. Nbr.: L0105051
+2025-12-23 13:25:25,610 - INFO - Row 169 - Already matched, skipping
+2025-12-23 13:25:25,631 - INFO - Row 170 - Ext. Ref. Nbr.: L0105052
+2025-12-23 13:25:25,642 - INFO - Row 170 - Already matched, skipping
+2025-12-23 13:25:25,664 - INFO - Row 171 - Ext. Ref. Nbr.: 0
+2025-12-23 13:25:25,677 - INFO - Row 171 - Already matched, skipping
+2025-12-23 13:25:25,696 - INFO - Row 172 - Ext. Ref. Nbr.: 0
+2025-12-23 13:25:25,706 - INFO - Row 172 - Already matched, skipping
+2025-12-23 13:25:25,727 - INFO - Row 173 - Ext. Ref. Nbr.: H0124490
+2025-12-23 13:25:25,737 - INFO - Row 173 - Already matched, skipping
+2025-12-23 13:25:25,759 - INFO - Row 174 - Ext. Ref. Nbr.: 0
+2025-12-23 13:25:25,771 - INFO - Row 174 - Already matched, skipping
+2025-12-23 13:25:25,793 - INFO - Row 175 - Ext. Ref. Nbr.: L0105053
+2025-12-23 13:25:25,804 - INFO - Row 175 - Already matched, skipping
+2025-12-23 13:25:25,823 - INFO - Row 176 - Ext. Ref. Nbr.: 0
+2025-12-23 13:25:25,833 - INFO - Row 176 - Already matched, skipping
+2025-12-23 13:25:25,854 - INFO - Row 177 - Ext. Ref. Nbr.: H0124492
+2025-12-23 13:25:25,865 - INFO - Row 177 - Already matched, skipping
+2025-12-23 13:25:25,888 - INFO - Row 178 - Ext. Ref. Nbr.: 0
+2025-12-23 13:25:25,900 - INFO - Row 178 - Already matched, skipping
+2025-12-23 13:25:25,922 - INFO - Row 179 - Ext. Ref. Nbr.: H0124493
+2025-12-23 13:25:25,931 - INFO - Row 179 - Already matched, skipping
+2025-12-23 13:25:25,951 - INFO - Row 180 - Ext. Ref. Nbr.: 0
+2025-12-23 13:25:25,964 - INFO - Row 180 - Already matched, skipping
+2025-12-23 13:25:25,987 - INFO - Row 181 - Ext. Ref. Nbr.: L0105055
+2025-12-23 13:25:25,998 - INFO - Row 181 - Already matched, skipping
+2025-12-23 13:25:26,018 - INFO - Row 182 - Ext. Ref. Nbr.: 0
+2025-12-23 13:25:26,029 - INFO - Row 182 - Already matched, skipping
+2025-12-23 13:25:26,049 - INFO - Row 183 - Ext. Ref. Nbr.: H0124495
+2025-12-23 13:25:26,059 - INFO - Row 183 - Already matched, skipping
+2025-12-23 13:25:26,080 - INFO - Row 184 - Ext. Ref. Nbr.: 0
+2025-12-23 13:25:26,094 - INFO - Row 184 - Already matched, skipping
+2025-12-23 13:25:26,115 - INFO - Row 185 - Ext. Ref. Nbr.: H0124497
+2025-12-23 13:25:26,125 - INFO - Row 185 - Already matched, skipping
+2025-12-23 13:25:26,146 - INFO - Row 186 - Ext. Ref. Nbr.: 0
+2025-12-23 13:25:26,158 - INFO - Row 186 - Already matched, skipping
+2025-12-23 13:25:26,179 - INFO - Row 187 - Ext. Ref. Nbr.: H0124502
+2025-12-23 13:25:26,189 - INFO - Row 187 - Already matched, skipping
+2025-12-23 13:25:26,209 - INFO - Row 188 - Ext. Ref. Nbr.: 0
+2025-12-23 13:25:26,220 - INFO - Row 188 - Already matched, skipping
+2025-12-23 13:25:26,241 - INFO - Row 189 - Ext. Ref. Nbr.: H0124504
+2025-12-23 13:25:26,253 - INFO - Row 189 - Already matched, skipping
+2025-12-23 13:25:26,282 - INFO - Row 190 - Ext. Ref. Nbr.: 0
+2025-12-23 13:25:26,297 - INFO - Row 190 - Already matched, skipping
+2025-12-23 13:25:26,320 - INFO - Row 191 - Ext. Ref. Nbr.: H0124509
+2025-12-23 13:25:26,333 - INFO - Row 191 - Already matched, skipping
+2025-12-23 13:25:26,356 - INFO - Row 192 - Ext. Ref. Nbr.: 0
+2025-12-23 13:25:26,366 - INFO - Row 192 - Already matched, skipping
+2025-12-23 13:25:26,387 - INFO - Row 193 - Ext. Ref. Nbr.: L0105057
+2025-12-23 13:25:26,397 - INFO - Row 193 - Already matched, skipping
+2025-12-23 13:25:26,417 - INFO - Row 194 - Ext. Ref. Nbr.: 0
+2025-12-23 13:25:26,429 - INFO - Row 194 - Already matched, skipping
+2025-12-23 13:25:26,449 - INFO - Row 195 - Ext. Ref. Nbr.: H0124511
+2025-12-23 13:25:26,459 - INFO - Row 195 - Already matched, skipping
+2025-12-23 13:25:26,479 - INFO - Row 196 - Ext. Ref. Nbr.: H0124512
+2025-12-23 13:25:26,489 - INFO - Row 196 - Already matched, skipping
+2025-12-23 13:25:26,510 - INFO - Row 197 - Ext. Ref. Nbr.: 0
+2025-12-23 13:25:26,521 - INFO - Row 197 - Already matched, skipping
+2025-12-23 13:25:26,547 - INFO - Row 198 - Ext. Ref. Nbr.: 0
+2025-12-23 13:25:26,563 - INFO - Row 198 - Already matched, skipping
+2025-12-23 13:25:26,586 - INFO - Row 199 - Ext. Ref. Nbr.: 0
+2025-12-23 13:25:26,596 - INFO - Row 199 - Already matched, skipping
+2025-12-23 13:25:26,640 - ERROR - Error during pagination on page 1: Locator.is_visible: Error: strict mode violation: locator("li:nth-child(4) > .toolsBtn > .toolBtnNormal .main-icon-img.main-PageNext") resolved to 2 elements:
+    1) <div class="main-icon-img main-PageNext">↵↵⇆⇆⇆⇆⇆⇆⇆⇆⇆⇆⇆</div> aka locator(".main-icon-img.main-PageNext").first
+    2) <div class="main-icon-img main-PageNext">↵↵⇆⇆⇆⇆⇆⇆⇆⇆⇆⇆⇆⇆⇆⇆</div> aka locator("#ctl00_phG_PXSplitContainer_tab2_t0_PXGrid1_ab_tlb_ul > li:nth-child(4) > .toolsBtn > .toolBtnNormal > .sprite-icon > .main-icon-img")
+
+Call log:
+    - checking visibility of locator("li:nth-child(4) > .toolsBtn > .toolBtnNormal .main-icon-img.main-PageNext")
+
+2025-12-23 13:25:26,641 - INFO - Pagination complete - processed 200 total rows across 1 pages
+2025-12-23 13:25:26,641 - INFO - Manual matching complete - 200 rows processed
+2025-12-23 13:25:26,641 - INFO - Processing manually matched items...
+2025-12-23 13:25:26,780 - INFO - Clicked Process button (after manual matching) successfully
+2025-12-23 13:25:31,900 - INFO - Clicked Back to list button successfully
+2025-12-23 13:25:34,916 - INFO - Downloading results...
+2025-12-23 13:25:34,982 - INFO - Clicked account link 'MBB02' successfully
+2025-12-23 13:25:40,087 - INFO - Clicked Export dropdown successfully
+2025-12-23 13:25:40,211 - INFO - Clicked Export to Excel button successfully
+2025-12-23 13:26:10,102 - ERROR - FATAL ERROR: Timeout 30000ms exceeded while waiting for event "download"
+=========================== logs ===========================
+waiting for event "download"
+============================================================
+2025-12-23 13:26:10,274 - INFO - Browser cleanup completed
+2025-12-23 13:26:10,286 - ERROR - ❌ CA Match failed: Timeout 30000ms exceeded while waiting for event "download"
+=========================== logs ===========================
+waiting for event "download"
+============================================================
+Traceback (most recent call last):
+  File "d:\Github\PlayWright-Extractor\playwright_scripts\run_playwright.py", line 142, in run_ca_match
+    records = process_bank_transactions(
+        playwright=playwright,
+    ...<9 lines>...
+        headless=self.headless
+    )
+  File "d:\Github\PlayWright-Extractor\playwright_scripts\CA_Match_Process_Optimized.py", line 643, in process_bank_transactions
+    return processor.run()
+           ~~~~~~~~~~~~~^^
+  File "d:\Github\PlayWright-Extractor\playwright_scripts\CA_Match_Process_Optimized.py", line 540, in run
+    save_path = self.download_results()
+  File "d:\Github\PlayWright-Extractor\playwright_scripts\CA_Match_Process_Optimized.py", line 457, in download_results
+    with self.page.expect_download() as download_info:
+         ~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "D:\Github\PlayWright-Extractor\venv\Lib\site-packages\playwright\_impl\_sync_base.py", line 85, in __exit__
+    self._event.value
+  File "D:\Github\PlayWright-Extractor\venv\Lib\site-packages\playwright\_impl\_sync_base.py", line 59, in value
+    raise exception
+playwright._impl._errors.TimeoutError: Timeout 30000ms exceeded while waiting for event "download"
+=========================== logs ===========================
+waiting for event "download"
+============================================================
+2025-12-23 13:26:10,288 - ERROR - 
+======================================================================
+2025-12-23 13:26:10,289 - ERROR - ❌ AUTOMATION WORKFLOW FAILED
+2025-12-23 13:26:10,289 - ERROR - ======================================================================
+2025-12-23 13:26:10,289 - ERROR - Error: Timeout 30000ms exceeded while waiting for event "download"
+=========================== logs ===========================
+waiting for event "download"
+============================================================
+2025-12-23 13:26:10,289 - ERROR - ======================================================================
+2025-12-23 13:29:25,693 - INFO - ======================================================================
+2025-12-23 13:29:25,693 - INFO - PLAYWRIGHT AUTOMATION RUNNER
+2025-12-23 13:29:25,693 - INFO - ======================================================================
+2025-12-23 13:29:25,694 - INFO - Account: MBB02
+2025-12-23 13:29:25,694 - INFO - Date: 23/11/2025
+2025-12-23 13:29:25,694 - INFO - Amount: 100.0
+2025-12-23 13:29:25,694 - INFO - Headless Mode: False
+2025-12-23 13:29:25,694 - INFO - Downloads Dir: d:\Github\PlayWright-Extractor\Downloads
+2025-12-23 13:29:25,694 - INFO - ======================================================================
+2025-12-23 13:29:25,694 - INFO - 
+🚀 Starting complete automation workflow...
+
+2025-12-23 13:29:25,695 - INFO - 
+======================================================================
+2025-12-23 13:29:25,695 - INFO - STEP 1: CA MATCH PROCESS
+2025-12-23 13:29:25,695 - INFO - ======================================================================
+2025-12-23 13:29:33,168 - INFO - Starting CA Match process...
+2025-12-23 13:29:33,169 - INFO - ============================================================
+2025-12-23 13:29:33,170 - INFO - CA MATCH PROCESS - OPTIMIZED VERSION
+2025-12-23 13:29:33,171 - INFO - ============================================================
+2025-12-23 13:29:33,171 - INFO - Initializing browser...
+2025-12-23 13:29:34,195 - INFO - Browser initialized successfully
+2025-12-23 13:29:34,195 - INFO - Logging in...
+2025-12-23 13:29:36,053 - INFO - Navigating to Process Bank Records...
+2025-12-23 13:29:45,127 - INFO - Starting auto-match process...
+2025-12-23 13:29:45,204 - INFO - Clicked account link 'MBB02' successfully
+2025-12-23 13:29:50,627 - INFO - Clicked Auto-Match button successfully
+2025-12-23 13:29:52,653 - INFO - Waiting for auto-match confirmation...
+2025-12-23 13:30:09,346 - WARNING - No 'Executing' message detected
+2025-12-23 13:32:15,395 - WARNING - No completion message found - continuing anyway
+2025-12-23 13:32:15,395 - INFO - Processing auto-matched items...
+2025-12-23 13:32:16,846 - INFO - Clicked Process button successfully
+2025-12-23 13:32:21,949 - INFO - Clicked Back button successfully
+2025-12-23 13:32:24,956 - INFO - Starting manual matching process...
+2025-12-23 13:32:25,038 - INFO - Clicked account link 'MBB02' successfully
+2025-12-23 13:32:30,052 - INFO - Processing page 1...
+2025-12-23 13:32:30,103 - INFO - Found 201 rows on page 1
+2025-12-23 13:32:30,131 - INFO - Row 0 - Ext. Ref. Nbr.: 0
+2025-12-23 13:32:30,141 - INFO - Row 0 - Already matched, skipping
+2025-12-23 13:32:30,164 - INFO - Row 1 - Ext. Ref. Nbr.: H0124355
+2025-12-23 13:32:30,175 - INFO - Row 1 - Already matched, skipping
+2025-12-23 13:32:30,204 - INFO - Row 2 - Ext. Ref. Nbr.: 0
+2025-12-23 13:32:30,220 - INFO - Row 2 - Already matched, skipping
+2025-12-23 13:32:30,242 - INFO - Row 3 - Ext. Ref. Nbr.: H0124356
+2025-12-23 13:32:30,253 - INFO - Row 3 - Already matched, skipping
+2025-12-23 13:32:30,276 - INFO - Row 4 - Ext. Ref. Nbr.: 0
+2025-12-23 13:32:30,289 - INFO - Row 4 - Already matched, skipping
+2025-12-23 13:32:30,315 - INFO - Row 5 - Ext. Ref. Nbr.: H0124359
+2025-12-23 13:32:30,328 - INFO - Row 5 - Already matched, skipping
+2025-12-23 13:32:30,360 - INFO - Row 6 - Ext. Ref. Nbr.: 0
+2025-12-23 13:32:30,375 - INFO - Row 6 - Already matched, skipping
+2025-12-23 13:32:30,405 - INFO - Row 7 - Ext. Ref. Nbr.: H0124363
+2025-12-23 13:32:30,418 - INFO - Row 7 - Already matched, skipping
+2025-12-23 13:32:30,444 - INFO - Row 8 - Ext. Ref. Nbr.: 0
+2025-12-23 13:32:30,458 - INFO - Row 8 - Already matched, skipping
+2025-12-23 13:32:30,483 - INFO - Row 9 - Ext. Ref. Nbr.: L0105012
+2025-12-23 13:32:30,494 - INFO - Row 9 - Already matched, skipping
+2025-12-23 13:32:30,524 - INFO - Row 10 - Ext. Ref. Nbr.: 0
+2025-12-23 13:32:30,537 - INFO - Row 10 - Already matched, skipping
+2025-12-23 13:32:30,558 - INFO - Row 11 - Ext. Ref. Nbr.: H0124364
+2025-12-23 13:32:30,573 - INFO - Row 11 - Already matched, skipping
+2025-12-23 13:32:30,603 - INFO - Row 12 - Ext. Ref. Nbr.: 0
+2025-12-23 13:32:30,617 - INFO - Row 12 - Already matched, skipping
+2025-12-23 13:32:30,646 - INFO - Row 13 - Ext. Ref. Nbr.: L0105013
+2025-12-23 13:32:30,659 - INFO - Row 13 - Already matched, skipping
+2025-12-23 13:32:30,685 - INFO - Row 14 - Ext. Ref. Nbr.: 0
+2025-12-23 13:32:30,698 - INFO - Row 14 - Already matched, skipping
+2025-12-23 13:32:30,724 - INFO - Row 15 - Ext. Ref. Nbr.: H0124365
+2025-12-23 13:32:30,737 - INFO - Row 15 - Already matched, skipping
+2025-12-23 13:32:30,764 - INFO - Row 16 - Ext. Ref. Nbr.: 0
+2025-12-23 13:32:30,777 - INFO - Row 16 - Already matched, skipping
+2025-12-23 13:32:30,805 - INFO - Row 17 - Ext. Ref. Nbr.: H0124367
+2025-12-23 13:32:30,817 - INFO - Row 17 - Already matched, skipping
+2025-12-23 13:32:30,841 - INFO - Row 18 - Ext. Ref. Nbr.: H0124368
+2025-12-23 13:32:30,855 - INFO - Row 18 - Already matched, skipping
+2025-12-23 13:32:30,883 - INFO - Row 19 - Ext. Ref. Nbr.: 0
+2025-12-23 13:32:30,897 - INFO - Row 19 - Already matched, skipping
+2025-12-23 13:32:30,922 - INFO - Row 20 - Ext. Ref. Nbr.: 0
+2025-12-23 13:32:30,934 - INFO - Row 20 - Already matched, skipping
+2025-12-23 13:32:30,960 - INFO - Row 21 - Ext. Ref. Nbr.: H0124369
+2025-12-23 13:32:30,974 - INFO - Row 21 - Already matched, skipping
+2025-12-23 13:32:31,004 - INFO - Row 22 - Ext. Ref. Nbr.: 0
+2025-12-23 13:32:31,023 - INFO - Row 22 - Already matched, skipping
+2025-12-23 13:32:31,050 - INFO - Row 23 - Ext. Ref. Nbr.: H0124370
+2025-12-23 13:32:31,064 - INFO - Row 23 - Already matched, skipping
+2025-12-23 13:32:31,086 - INFO - Row 24 - Ext. Ref. Nbr.: 2025063035DBKKA
+2025-12-23 13:32:31,097 - INFO - Row 24 - Already matched, skipping
+2025-12-23 13:32:31,123 - INFO - Row 25 - Ext. Ref. Nbr.: 2025063036DBKKA
+2025-12-23 13:32:31,138 - INFO - Row 25 - Already matched, skipping
+2025-12-23 13:32:31,166 - INFO - Row 26 - Ext. Ref. Nbr.: 2025063019DBKKA
+2025-12-23 13:32:31,180 - INFO - Row 26 - Already matched, skipping
+2025-12-23 13:32:31,202 - INFO - Row 27 - Ext. Ref. Nbr.: 0
+2025-12-23 13:32:31,211 - INFO - Row 27 - Already matched, skipping
+2025-12-23 13:32:31,233 - INFO - Row 28 - Ext. Ref. Nbr.: H0124371
+2025-12-23 13:32:31,244 - INFO - Row 28 - Already matched, skipping
+2025-12-23 13:32:31,268 - INFO - Row 29 - Ext. Ref. Nbr.: 0
+2025-12-23 13:32:31,279 - INFO - Row 29 - Already matched, skipping
+2025-12-23 13:32:31,299 - INFO - Row 30 - Ext. Ref. Nbr.: 0
+2025-12-23 13:32:31,311 - INFO - Row 30 - Already matched, skipping
+2025-12-23 13:32:31,345 - INFO - Row 31 - Ext. Ref. Nbr.: H0124375
+2025-12-23 13:32:31,357 - INFO - Row 31 - Already matched, skipping
+2025-12-23 13:32:31,381 - INFO - Row 32 - Ext. Ref. Nbr.: 0
+2025-12-23 13:32:31,396 - INFO - Row 32 - Already matched, skipping
+2025-12-23 13:32:31,419 - INFO - Row 33 - Ext. Ref. Nbr.: L0105016
+2025-12-23 13:32:31,441 - INFO - Row 33 - Already matched, skipping
+2025-12-23 13:32:31,464 - INFO - Row 34 - Ext. Ref. Nbr.: 0
+2025-12-23 13:32:31,479 - INFO - Row 34 - Already matched, skipping
+2025-12-23 13:32:31,504 - INFO - Row 35 - Ext. Ref. Nbr.: H0124380
+2025-12-23 13:32:31,521 - INFO - Row 35 - Already matched, skipping
+2025-12-23 13:32:31,552 - INFO - Row 36 - Ext. Ref. Nbr.: 0
+2025-12-23 13:32:31,569 - INFO - Row 36 - Already matched, skipping
+2025-12-23 13:32:31,594 - INFO - Row 37 - Ext. Ref. Nbr.: H0124381
+2025-12-23 13:32:31,608 - INFO - Row 37 - Already matched, skipping
+2025-12-23 13:32:31,636 - INFO - Row 38 - Ext. Ref. Nbr.: 0
+2025-12-23 13:32:31,646 - INFO - Row 38 - Already matched, skipping
+2025-12-23 13:32:31,672 - INFO - Row 39 - Ext. Ref. Nbr.: H0124382
+2025-12-23 13:32:31,684 - INFO - Row 39 - Already matched, skipping
+2025-12-23 13:32:31,709 - INFO - Row 40 - Ext. Ref. Nbr.: 0
+2025-12-23 13:32:31,722 - INFO - Row 40 - Already matched, skipping
+2025-12-23 13:32:31,751 - INFO - Row 41 - Ext. Ref. Nbr.: 0
+2025-12-23 13:32:31,761 - INFO - Row 41 - Already matched, skipping
+2025-12-23 13:32:31,785 - INFO - Row 42 - Ext. Ref. Nbr.: H0124384
+2025-12-23 13:32:31,798 - INFO - Row 42 - Already matched, skipping
+2025-12-23 13:32:31,836 - INFO - Row 43 - Ext. Ref. Nbr.: 0
+2025-12-23 13:32:31,848 - INFO - Row 43 - Already matched, skipping
+2025-12-23 13:32:31,872 - INFO - Row 44 - Ext. Ref. Nbr.: H0124387
+2025-12-23 13:32:31,883 - INFO - Row 44 - Already matched, skipping
+2025-12-23 13:32:31,907 - INFO - Row 45 - Ext. Ref. Nbr.: 0
+2025-12-23 13:32:31,919 - INFO - Row 45 - Already matched, skipping
+2025-12-23 13:32:31,946 - INFO - Row 46 - Ext. Ref. Nbr.: 0
+2025-12-23 13:32:31,958 - INFO - Row 46 - Already matched, skipping
+2025-12-23 13:32:31,984 - INFO - Row 47 - Ext. Ref. Nbr.: H0124386
+2025-12-23 13:32:31,997 - INFO - Row 47 - Already matched, skipping
+2025-12-23 13:32:32,023 - INFO - Row 48 - Ext. Ref. Nbr.: 0
+2025-12-23 13:32:32,035 - INFO - Row 48 - Already matched, skipping
+2025-12-23 13:32:32,126 - INFO - Row 49 - Ext. Ref. Nbr.: H0124392
+2025-12-23 13:32:32,210 - INFO - Row 49 - Already matched, skipping
+2025-12-23 13:32:32,302 - INFO - Row 50 - Ext. Ref. Nbr.: 0
+2025-12-23 13:32:32,317 - INFO - Row 50 - Already matched, skipping
+2025-12-23 13:32:32,344 - INFO - Row 51 - Ext. Ref. Nbr.: H0124394
+2025-12-23 13:32:32,357 - INFO - Row 51 - Already matched, skipping
+2025-12-23 13:32:32,385 - INFO - Row 52 - Ext. Ref. Nbr.: 0
+2025-12-23 13:32:32,395 - INFO - Row 52 - Already matched, skipping
+2025-12-23 13:32:32,422 - INFO - Row 53 - Ext. Ref. Nbr.: H0124395
+2025-12-23 13:32:32,436 - INFO - Row 53 - Already matched, skipping
+2025-12-23 13:32:32,470 - INFO - Row 54 - Ext. Ref. Nbr.: 0
+2025-12-23 13:32:32,484 - INFO - Row 54 - Already matched, skipping
+2025-12-23 13:32:32,518 - INFO - Row 55 - Ext. Ref. Nbr.: H0124396
+2025-12-23 13:32:32,532 - INFO - Row 55 - Already matched, skipping
+2025-12-23 13:32:32,566 - INFO - Row 56 - Ext. Ref. Nbr.: 0
+2025-12-23 13:32:32,582 - INFO - Row 56 - Already matched, skipping
+2025-12-23 13:32:32,608 - INFO - Row 57 - Ext. Ref. Nbr.: H0124401
+2025-12-23 13:32:32,619 - INFO - Row 57 - Already matched, skipping
+2025-12-23 13:32:32,644 - INFO - Row 58 - Ext. Ref. Nbr.: 0
+2025-12-23 13:32:32,659 - INFO - Row 58 - Already matched, skipping
+2025-12-23 13:32:32,694 - INFO - Row 59 - Ext. Ref. Nbr.: H0124404
+2025-12-23 13:32:32,707 - INFO - Row 59 - Already matched, skipping
+2025-12-23 13:32:32,731 - INFO - Row 60 - Ext. Ref. Nbr.: 0
+2025-12-23 13:32:32,747 - INFO - Row 60 - Already matched, skipping
+2025-12-23 13:32:32,783 - INFO - Row 61 - Ext. Ref. Nbr.: H0124414
+2025-12-23 13:32:32,802 - INFO - Row 61 - Already matched, skipping
+2025-12-23 13:32:32,836 - INFO - Row 62 - Ext. Ref. Nbr.: 0
+2025-12-23 13:32:32,853 - INFO - Row 62 - Already matched, skipping
+2025-12-23 13:32:32,884 - INFO - Row 63 - Ext. Ref. Nbr.: H0124416
+2025-12-23 13:32:32,899 - INFO - Row 63 - Already matched, skipping
+2025-12-23 13:32:32,934 - INFO - Row 64 - Ext. Ref. Nbr.: 0
+2025-12-23 13:32:32,950 - INFO - Row 64 - Already matched, skipping
+2025-12-23 13:32:32,981 - INFO - Row 65 - Ext. Ref. Nbr.: H0124417
+2025-12-23 13:32:32,997 - INFO - Row 65 - Already matched, skipping
+2025-12-23 13:32:33,029 - INFO - Row 66 - Ext. Ref. Nbr.: 0
+2025-12-23 13:32:33,048 - INFO - Row 66 - Already matched, skipping
+2025-12-23 13:32:33,096 - INFO - Row 67 - Ext. Ref. Nbr.: H0124420
+2025-12-23 13:32:33,120 - INFO - Row 67 - Already matched, skipping
+2025-12-23 13:32:33,156 - INFO - Row 68 - Ext. Ref. Nbr.: 0
+2025-12-23 13:32:33,170 - INFO - Row 68 - Already matched, skipping
+2025-12-23 13:32:33,202 - INFO - Row 69 - Ext. Ref. Nbr.: H0124421
+2025-12-23 13:32:33,221 - INFO - Row 69 - Already matched, skipping
+2025-12-23 13:32:33,259 - INFO - Row 70 - Ext. Ref. Nbr.: 0
+2025-12-23 13:32:33,274 - INFO - Row 70 - Already matched, skipping
+2025-12-23 13:32:33,301 - INFO - Row 71 - Ext. Ref. Nbr.: H0124422
+2025-12-23 13:32:33,314 - INFO - Row 71 - Already matched, skipping
+2025-12-23 13:32:33,340 - INFO - Row 72 - Ext. Ref. Nbr.: 0
+2025-12-23 13:32:33,354 - INFO - Row 72 - Already matched, skipping
+2025-12-23 13:32:33,379 - INFO - Row 73 - Ext. Ref. Nbr.: L0105020
+2025-12-23 13:32:33,396 - INFO - Row 73 - Already matched, skipping
+2025-12-23 13:32:33,421 - INFO - Row 74 - Ext. Ref. Nbr.: 0
+2025-12-23 13:32:33,434 - INFO - Row 74 - Already matched, skipping
+2025-12-23 13:32:33,468 - INFO - Row 75 - Ext. Ref. Nbr.: H0124429
+2025-12-23 13:32:33,481 - INFO - Row 75 - Already matched, skipping
+2025-12-23 13:32:33,505 - INFO - Row 76 - Ext. Ref. Nbr.: 0
+2025-12-23 13:32:33,515 - INFO - Row 76 - Already matched, skipping
+2025-12-23 13:32:33,537 - INFO - Row 77 - Ext. Ref. Nbr.: H0124432
+2025-12-23 13:32:33,555 - INFO - Row 77 - Already matched, skipping
+2025-12-23 13:32:33,586 - INFO - Row 78 - Ext. Ref. Nbr.: 0
+2025-12-23 13:32:33,599 - INFO - Row 78 - Already matched, skipping
+2025-12-23 13:32:33,628 - INFO - Row 79 - Ext. Ref. Nbr.: H0124433
+2025-12-23 13:32:33,639 - INFO - Row 79 - Already matched, skipping
+2025-12-23 13:32:33,670 - INFO - Row 80 - Ext. Ref. Nbr.: 0
+2025-12-23 13:32:33,694 - INFO - Row 80 - Already matched, skipping
+2025-12-23 13:32:33,721 - INFO - Row 81 - Ext. Ref. Nbr.: H0124435
+2025-12-23 13:32:33,737 - INFO - Row 81 - Already matched, skipping
+2025-12-23 13:32:33,765 - INFO - Row 82 - Ext. Ref. Nbr.: L0105022
+2025-12-23 13:32:33,778 - INFO - Row 82 - Already matched, skipping
+2025-12-23 13:32:33,814 - INFO - Row 83 - Ext. Ref. Nbr.: 0
+2025-12-23 13:32:33,828 - INFO - Row 83 - Already matched, skipping
+2025-12-23 13:32:33,857 - INFO - Row 84 - Ext. Ref. Nbr.: 0
+2025-12-23 13:32:33,872 - INFO - Row 84 - Already matched, skipping
+2025-12-23 13:32:33,906 - INFO - Row 85 - Ext. Ref. Nbr.: H0124438
+2025-12-23 13:32:33,919 - INFO - Row 85 - Already matched, skipping
+2025-12-23 13:32:33,953 - INFO - Row 86 - Ext. Ref. Nbr.: 0
+2025-12-23 13:32:33,966 - INFO - Row 86 - Already matched, skipping
+2025-12-23 13:32:33,991 - INFO - Row 87 - Ext. Ref. Nbr.: H0124439
+2025-12-23 13:32:34,003 - INFO - Row 87 - Already matched, skipping
+2025-12-23 13:32:34,028 - INFO - Row 88 - Ext. Ref. Nbr.: 0
+2025-12-23 13:32:34,044 - INFO - Row 88 - Already matched, skipping
+2025-12-23 13:32:34,072 - INFO - Row 89 - Ext. Ref. Nbr.: H0124440
+2025-12-23 13:32:34,086 - INFO - Row 89 - Already matched, skipping
+2025-12-23 13:32:34,124 - INFO - Row 90 - Ext. Ref. Nbr.: 0
+2025-12-23 13:32:34,145 - INFO - Row 90 - Already matched, skipping
+2025-12-23 13:32:34,181 - INFO - Row 91 - Ext. Ref. Nbr.: H0124441
+2025-12-23 13:32:34,259 - INFO - Row 91 - Already matched, skipping
+2025-12-23 13:32:34,289 - INFO - Row 92 - Ext. Ref. Nbr.: 0
+2025-12-23 13:32:34,305 - INFO - Row 92 - Already matched, skipping
+2025-12-23 13:32:34,332 - INFO - Row 93 - Ext. Ref. Nbr.: H0124442
+2025-12-23 13:32:34,344 - INFO - Row 93 - Already matched, skipping
+2025-12-23 13:32:34,373 - INFO - Row 94 - Ext. Ref. Nbr.: 0
+2025-12-23 13:32:34,387 - INFO - Row 94 - Already matched, skipping
+2025-12-23 13:32:34,412 - INFO - Row 95 - Ext. Ref. Nbr.: L0105026
+2025-12-23 13:32:34,424 - INFO - Row 95 - Already matched, skipping
+2025-12-23 13:32:34,450 - INFO - Row 96 - Ext. Ref. Nbr.: 0
+2025-12-23 13:32:34,462 - INFO - Row 96 - Already matched, skipping
+2025-12-23 13:32:34,483 - INFO - Row 97 - Ext. Ref. Nbr.: H0124445
+2025-12-23 13:32:34,497 - INFO - Row 97 - Already matched, skipping
+2025-12-23 13:32:34,532 - INFO - Row 98 - Ext. Ref. Nbr.: 0
+2025-12-23 13:32:34,543 - INFO - Row 98 - Already matched, skipping
+2025-12-23 13:32:34,572 - INFO - Row 99 - Ext. Ref. Nbr.: L0105027
+2025-12-23 13:32:34,585 - INFO - Row 99 - Already matched, skipping
+2025-12-23 13:32:34,610 - INFO - Row 100 - Ext. Ref. Nbr.: 0
+2025-12-23 13:32:34,622 - INFO - Row 100 - Already matched, skipping
+2025-12-23 13:32:34,647 - INFO - Row 101 - Ext. Ref. Nbr.: H0124447
+2025-12-23 13:32:34,658 - INFO - Row 101 - Already matched, skipping
+2025-12-23 13:32:34,684 - INFO - Row 102 - Ext. Ref. Nbr.: 0
+2025-12-23 13:32:34,697 - INFO - Row 102 - Already matched, skipping
+2025-12-23 13:32:34,723 - INFO - Row 103 - Ext. Ref. Nbr.: H0124446
+2025-12-23 13:32:34,737 - INFO - Row 103 - Already matched, skipping
+2025-12-23 13:32:34,760 - INFO - Row 104 - Ext. Ref. Nbr.: 0
+2025-12-23 13:32:34,772 - INFO - Row 104 - Already matched, skipping
+2025-12-23 13:32:34,798 - INFO - Row 105 - Ext. Ref. Nbr.: H0124451
+2025-12-23 13:32:34,809 - INFO - Row 105 - Already matched, skipping
+2025-12-23 13:32:34,836 - INFO - Row 106 - Ext. Ref. Nbr.: 0
+2025-12-23 13:32:34,851 - INFO - Row 106 - Already matched, skipping
+2025-12-23 13:32:34,877 - INFO - Row 107 - Ext. Ref. Nbr.: L0105029
+2025-12-23 13:32:34,889 - INFO - Row 107 - Already matched, skipping
+2025-12-23 13:32:34,915 - INFO - Row 108 - Ext. Ref. Nbr.: 0
+2025-12-23 13:32:34,928 - INFO - Row 108 - Already matched, skipping
+2025-12-23 13:32:34,956 - INFO - Row 109 - Ext. Ref. Nbr.: L0105030
+2025-12-23 13:32:34,971 - INFO - Row 109 - Already matched, skipping
+2025-12-23 13:32:35,010 - INFO - Row 110 - Ext. Ref. Nbr.: 0
+2025-12-23 13:32:35,027 - INFO - Row 110 - Already matched, skipping
+2025-12-23 13:32:35,163 - INFO - Row 111 - Ext. Ref. Nbr.: H0124453
+2025-12-23 13:32:35,181 - INFO - Row 111 - Already matched, skipping
+2025-12-23 13:32:35,214 - INFO - Row 112 - Ext. Ref. Nbr.: 0
+2025-12-23 13:32:35,233 - INFO - Row 112 - Already matched, skipping
+2025-12-23 13:32:35,262 - INFO - Row 113 - Ext. Ref. Nbr.: H0124456
+2025-12-23 13:32:35,284 - INFO - Row 113 - Already matched, skipping
+2025-12-23 13:32:35,320 - INFO - Row 114 - Ext. Ref. Nbr.: 0
+2025-12-23 13:32:35,339 - INFO - Row 114 - Already matched, skipping
+2025-12-23 13:32:35,374 - INFO - Row 115 - Ext. Ref. Nbr.: L0105031
+2025-12-23 13:32:35,394 - INFO - Row 115 - Already matched, skipping
+2025-12-23 13:32:35,432 - INFO - Row 116 - Ext. Ref. Nbr.: 0
+2025-12-23 13:32:35,448 - INFO - Row 116 - Already matched, skipping
+2025-12-23 13:32:35,472 - INFO - Row 117 - Ext. Ref. Nbr.: H0124458
+2025-12-23 13:32:35,486 - INFO - Row 117 - Already matched, skipping
+2025-12-23 13:32:35,523 - INFO - Row 118 - Ext. Ref. Nbr.: 0
+2025-12-23 13:32:35,542 - INFO - Row 118 - Already matched, skipping
+2025-12-23 13:32:35,572 - INFO - Row 119 - Ext. Ref. Nbr.: L0105032
+2025-12-23 13:32:35,591 - INFO - Row 119 - Already matched, skipping
+2025-12-23 13:32:35,621 - INFO - Row 120 - Ext. Ref. Nbr.: 0
+2025-12-23 13:32:35,634 - INFO - Row 120 - Already matched, skipping
+2025-12-23 13:32:35,667 - INFO - Row 121 - Ext. Ref. Nbr.: H0124462
+2025-12-23 13:32:35,677 - INFO - Row 121 - Already matched, skipping
+2025-12-23 13:32:35,706 - INFO - Row 122 - Ext. Ref. Nbr.: H0124463
+2025-12-23 13:32:35,718 - INFO - Row 122 - Already matched, skipping
+2025-12-23 13:32:35,749 - INFO - Row 123 - Ext. Ref. Nbr.: 0
+2025-12-23 13:32:35,764 - INFO - Row 123 - Already matched, skipping
+2025-12-23 13:32:35,786 - INFO - Row 124 - Ext. Ref. Nbr.: 0
+2025-12-23 13:32:35,798 - INFO - Row 124 - Already matched, skipping
+2025-12-23 13:32:35,825 - INFO - Row 125 - Ext. Ref. Nbr.: H0124464
+2025-12-23 13:32:35,839 - INFO - Row 125 - Already matched, skipping
+2025-12-23 13:32:35,866 - INFO - Row 126 - Ext. Ref. Nbr.: 0
+2025-12-23 13:32:35,887 - INFO - Row 126 - Already matched, skipping
+2025-12-23 13:32:35,909 - INFO - Row 127 - Ext. Ref. Nbr.: H0124466
+2025-12-23 13:32:35,922 - INFO - Row 127 - Already matched, skipping
+2025-12-23 13:32:35,945 - INFO - Row 128 - Ext. Ref. Nbr.: 0
+2025-12-23 13:32:35,958 - INFO - Row 128 - Already matched, skipping
+2025-12-23 13:32:35,995 - INFO - Row 129 - Ext. Ref. Nbr.: H0124471
+2025-12-23 13:32:36,006 - INFO - Row 129 - Already matched, skipping
+2025-12-23 13:32:36,039 - INFO - Row 130 - Ext. Ref. Nbr.: 0
+2025-12-23 13:32:36,049 - INFO - Row 130 - Already matched, skipping
+2025-12-23 13:32:36,074 - INFO - Row 131 - Ext. Ref. Nbr.: H0124470
+2025-12-23 13:32:36,084 - INFO - Row 131 - Already matched, skipping
+2025-12-23 13:32:36,123 - INFO - Row 132 - Ext. Ref. Nbr.: H0124467
+2025-12-23 13:32:36,135 - INFO - Row 132 - Already matched, skipping
+2025-12-23 13:32:36,158 - INFO - Row 133 - Ext. Ref. Nbr.: 0
+2025-12-23 13:32:36,175 - INFO - Row 133 - Already matched, skipping
+2025-12-23 13:32:36,208 - INFO - Row 134 - Ext. Ref. Nbr.: 0
+2025-12-23 13:32:36,223 - INFO - Row 134 - Already matched, skipping
+2025-12-23 13:32:36,251 - INFO - Row 135 - Ext. Ref. Nbr.: L0105041
+2025-12-23 13:32:36,261 - INFO - Row 135 - Already matched, skipping
+2025-12-23 13:32:36,302 - INFO - Row 136 - Ext. Ref. Nbr.: 0
+2025-12-23 13:32:36,314 - INFO - Row 136 - Already matched, skipping
+2025-12-23 13:32:36,344 - INFO - Row 137 - Ext. Ref. Nbr.: H0124472
+2025-12-23 13:32:36,363 - INFO - Row 137 - Already matched, skipping
+2025-12-23 13:32:36,394 - INFO - Row 138 - Ext. Ref. Nbr.: 0
+2025-12-23 13:32:36,411 - INFO - Row 138 - Already matched, skipping
+2025-12-23 13:32:36,463 - INFO - Row 139 - Ext. Ref. Nbr.: H0124474
+2025-12-23 13:32:36,481 - INFO - Row 139 - Already matched, skipping
+2025-12-23 13:32:36,513 - INFO - Row 140 - Ext. Ref. Nbr.: 0
+2025-12-23 13:32:36,531 - INFO - Row 140 - Already matched, skipping
+2025-12-23 13:32:36,563 - INFO - Row 141 - Ext. Ref. Nbr.: H0124475
+2025-12-23 13:32:36,579 - INFO - Row 141 - Already matched, skipping
+2025-12-23 13:32:36,606 - INFO - Row 142 - Ext. Ref. Nbr.: 0
+2025-12-23 13:32:36,619 - INFO - Row 142 - Already matched, skipping
+2025-12-23 13:32:36,654 - INFO - Row 143 - Ext. Ref. Nbr.: L0105042
+2025-12-23 13:32:36,666 - INFO - Row 143 - Already matched, skipping
+2025-12-23 13:32:36,696 - INFO - Row 144 - Ext. Ref. Nbr.: 0
+2025-12-23 13:32:36,708 - INFO - Row 144 - Already matched, skipping
+2025-12-23 13:32:36,731 - INFO - Row 145 - Ext. Ref. Nbr.: L0105043
+2025-12-23 13:32:36,749 - INFO - Row 145 - Already matched, skipping
+2025-12-23 13:32:36,782 - INFO - Row 146 - Ext. Ref. Nbr.: 0
+2025-12-23 13:32:36,793 - INFO - Row 146 - Already matched, skipping
+2025-12-23 13:32:36,818 - INFO - Row 147 - Ext. Ref. Nbr.: H0124478
+2025-12-23 13:32:36,829 - INFO - Row 147 - Already matched, skipping
+2025-12-23 13:32:36,851 - INFO - Row 148 - Ext. Ref. Nbr.: 0
+2025-12-23 13:32:36,862 - INFO - Row 148 - Already matched, skipping
+2025-12-23 13:32:36,891 - INFO - Row 149 - Ext. Ref. Nbr.: H0124479
+2025-12-23 13:32:36,910 - INFO - Row 149 - Already matched, skipping
+2025-12-23 13:32:36,945 - INFO - Row 150 - Ext. Ref. Nbr.: 0
+2025-12-23 13:32:36,956 - INFO - Row 150 - Already matched, skipping
+2025-12-23 13:32:36,991 - INFO - Row 151 - Ext. Ref. Nbr.: L0105045
+2025-12-23 13:32:37,003 - INFO - Row 151 - Already matched, skipping
+2025-12-23 13:32:37,024 - INFO - Row 152 - Ext. Ref. Nbr.: 0
+2025-12-23 13:32:37,041 - INFO - Row 152 - Already matched, skipping
+2025-12-23 13:32:37,064 - INFO - Row 153 - Ext. Ref. Nbr.: 0009765H
+2025-12-23 13:32:37,085 - INFO - Row 153 - Already matched, skipping
+2025-12-23 13:32:37,115 - INFO - Row 154 - Ext. Ref. Nbr.: 0
+2025-12-23 13:32:37,134 - INFO - Row 154 - Already matched, skipping
+2025-12-23 13:32:37,169 - INFO - Row 155 - Ext. Ref. Nbr.: H0124481
+2025-12-23 13:32:37,185 - INFO - Row 155 - Already matched, skipping
+2025-12-23 13:32:37,224 - INFO - Row 156 - Ext. Ref. Nbr.: 0
+2025-12-23 13:32:37,244 - INFO - Row 156 - Already matched, skipping
+2025-12-23 13:32:37,278 - INFO - Row 157 - Ext. Ref. Nbr.: L0105047
+2025-12-23 13:32:37,297 - INFO - Row 157 - Already matched, skipping
+2025-12-23 13:32:37,340 - INFO - Row 158 - Ext. Ref. Nbr.: 0
+2025-12-23 13:32:37,365 - INFO - Row 158 - Already matched, skipping
+2025-12-23 13:32:37,406 - INFO - Row 159 - Ext. Ref. Nbr.: L0105049
+2025-12-23 13:32:37,427 - INFO - Row 159 - Already matched, skipping
+2025-12-23 13:32:37,463 - INFO - Row 160 - Ext. Ref. Nbr.: 0
+2025-12-23 13:32:37,480 - INFO - Row 160 - Already matched, skipping
+2025-12-23 13:32:37,508 - INFO - Row 161 - Ext. Ref. Nbr.: H0124482
+2025-12-23 13:32:37,527 - INFO - Row 161 - Already matched, skipping
+2025-12-23 13:32:37,590 - INFO - Row 162 - Ext. Ref. Nbr.: 0
+2025-12-23 13:32:37,615 - INFO - Row 162 - Already matched, skipping
+2025-12-23 13:32:37,651 - INFO - Row 163 - Ext. Ref. Nbr.: 0009767H
+2025-12-23 13:32:37,670 - INFO - Row 163 - Already matched, skipping
+2025-12-23 13:32:37,707 - INFO - Row 164 - Ext. Ref. Nbr.: 0
+2025-12-23 13:32:37,724 - INFO - Row 164 - Already matched, skipping
+2025-12-23 13:32:37,762 - INFO - Row 165 - Ext. Ref. Nbr.: L0105050
+2025-12-23 13:32:37,774 - INFO - Row 165 - Already matched, skipping
+2025-12-23 13:32:37,819 - INFO - Row 166 - Ext. Ref. Nbr.: 0
+2025-12-23 13:32:37,831 - INFO - Row 166 - Already matched, skipping
+2025-12-23 13:32:37,858 - INFO - Row 167 - Ext. Ref. Nbr.: H0124484
+2025-12-23 13:32:37,876 - INFO - Row 167 - Already matched, skipping
+2025-12-23 13:32:37,901 - INFO - Row 168 - Ext. Ref. Nbr.: 0
+2025-12-23 13:32:37,913 - INFO - Row 168 - Already matched, skipping
+2025-12-23 13:32:37,938 - INFO - Row 169 - Ext. Ref. Nbr.: L0105051
+2025-12-23 13:32:37,949 - INFO - Row 169 - Already matched, skipping
+2025-12-23 13:32:37,981 - INFO - Row 170 - Ext. Ref. Nbr.: L0105052
+2025-12-23 13:32:37,995 - INFO - Row 170 - Already matched, skipping
+2025-12-23 13:32:38,027 - INFO - Row 171 - Ext. Ref. Nbr.: 0
+2025-12-23 13:32:38,050 - INFO - Row 171 - Already matched, skipping
+2025-12-23 13:32:38,078 - INFO - Row 172 - Ext. Ref. Nbr.: 0
+2025-12-23 13:32:38,090 - INFO - Row 172 - Already matched, skipping
+2025-12-23 13:32:38,116 - INFO - Row 173 - Ext. Ref. Nbr.: H0124490
+2025-12-23 13:32:38,133 - INFO - Row 173 - Already matched, skipping
+2025-12-23 13:32:38,160 - INFO - Row 174 - Ext. Ref. Nbr.: 0
+2025-12-23 13:32:38,175 - INFO - Row 174 - Already matched, skipping
+2025-12-23 13:32:38,208 - INFO - Row 175 - Ext. Ref. Nbr.: L0105053
+2025-12-23 13:32:38,221 - INFO - Row 175 - Already matched, skipping
+2025-12-23 13:32:38,250 - INFO - Row 176 - Ext. Ref. Nbr.: 0
+2025-12-23 13:32:38,265 - INFO - Row 176 - Already matched, skipping
+2025-12-23 13:32:38,294 - INFO - Row 177 - Ext. Ref. Nbr.: H0124492
+2025-12-23 13:32:38,311 - INFO - Row 177 - Already matched, skipping
+2025-12-23 13:32:38,340 - INFO - Row 178 - Ext. Ref. Nbr.: 0
+2025-12-23 13:32:38,352 - INFO - Row 178 - Already matched, skipping
+2025-12-23 13:32:38,374 - INFO - Row 179 - Ext. Ref. Nbr.: H0124493
+2025-12-23 13:32:38,387 - INFO - Row 179 - Already matched, skipping
+2025-12-23 13:32:38,412 - INFO - Row 180 - Ext. Ref. Nbr.: 0
+2025-12-23 13:32:38,426 - INFO - Row 180 - Already matched, skipping
+2025-12-23 13:32:38,454 - INFO - Row 181 - Ext. Ref. Nbr.: L0105055
+2025-12-23 13:32:38,470 - INFO - Row 181 - Already matched, skipping
+2025-12-23 13:32:38,492 - INFO - Row 182 - Ext. Ref. Nbr.: 0
+2025-12-23 13:32:38,504 - INFO - Row 182 - Already matched, skipping
+2025-12-23 13:32:38,527 - INFO - Row 183 - Ext. Ref. Nbr.: H0124495
+2025-12-23 13:32:38,543 - INFO - Row 183 - Already matched, skipping
+2025-12-23 13:32:38,569 - INFO - Row 184 - Ext. Ref. Nbr.: 0
+2025-12-23 13:32:38,581 - INFO - Row 184 - Already matched, skipping
+2025-12-23 13:32:38,609 - INFO - Row 185 - Ext. Ref. Nbr.: H0124497
+2025-12-23 13:32:38,622 - INFO - Row 185 - Already matched, skipping
+2025-12-23 13:32:38,645 - INFO - Row 186 - Ext. Ref. Nbr.: 0
+2025-12-23 13:32:38,657 - INFO - Row 186 - Already matched, skipping
+2025-12-23 13:32:38,842 - INFO - Row 187 - Ext. Ref. Nbr.: H0124502
+2025-12-23 13:32:38,855 - INFO - Row 187 - Already matched, skipping
+2025-12-23 13:32:38,880 - INFO - Row 188 - Ext. Ref. Nbr.: 0
+2025-12-23 13:32:38,893 - INFO - Row 188 - Already matched, skipping
+2025-12-23 13:32:38,920 - INFO - Row 189 - Ext. Ref. Nbr.: H0124504
+2025-12-23 13:32:38,932 - INFO - Row 189 - Already matched, skipping
+2025-12-23 13:32:38,961 - INFO - Row 190 - Ext. Ref. Nbr.: 0
+2025-12-23 13:32:38,973 - INFO - Row 190 - Already matched, skipping
+2025-12-23 13:32:39,004 - INFO - Row 191 - Ext. Ref. Nbr.: H0124509
+2025-12-23 13:32:39,017 - INFO - Row 191 - Already matched, skipping
+2025-12-23 13:32:39,040 - INFO - Row 192 - Ext. Ref. Nbr.: 0
+2025-12-23 13:32:39,052 - INFO - Row 192 - Already matched, skipping
+2025-12-23 13:32:39,085 - INFO - Row 193 - Ext. Ref. Nbr.: L0105057
+2025-12-23 13:32:39,101 - INFO - Row 193 - Already matched, skipping
+2025-12-23 13:32:39,123 - INFO - Row 194 - Ext. Ref. Nbr.: 0
+2025-12-23 13:32:39,145 - INFO - Row 194 - Already matched, skipping
+2025-12-23 13:32:39,172 - INFO - Row 195 - Ext. Ref. Nbr.: H0124511
+2025-12-23 13:32:39,184 - INFO - Row 195 - Already matched, skipping
+2025-12-23 13:32:39,211 - INFO - Row 196 - Ext. Ref. Nbr.: H0124512
+2025-12-23 13:32:39,228 - INFO - Row 196 - Already matched, skipping
+2025-12-23 13:32:39,252 - INFO - Row 197 - Ext. Ref. Nbr.: 0
+2025-12-23 13:32:39,270 - INFO - Row 197 - Already matched, skipping
+2025-12-23 13:32:39,311 - INFO - Row 198 - Ext. Ref. Nbr.: 0
+2025-12-23 13:32:39,328 - INFO - Row 198 - Already matched, skipping
+2025-12-23 13:32:39,361 - INFO - Row 199 - Ext. Ref. Nbr.: 0
+2025-12-23 13:32:39,374 - INFO - Row 199 - Already matched, skipping
+2025-12-23 13:32:39,442 - ERROR - Error during pagination on page 1: Locator.is_visible: Error: strict mode violation: locator("li:nth-child(4) > .toolsBtn > .toolBtnNormal .main-icon-img.main-PageNext") resolved to 2 elements:
+    1) <div class="main-icon-img main-PageNext">↵↵⇆⇆⇆⇆⇆⇆⇆⇆⇆⇆⇆</div> aka locator(".main-icon-img.main-PageNext").first
+    2) <div class="main-icon-img main-PageNext">↵↵⇆⇆⇆⇆⇆⇆⇆⇆⇆⇆⇆⇆⇆⇆</div> aka locator("#ctl00_phG_PXSplitContainer_tab2_t0_PXGrid1_ab_tlb_ul > li:nth-child(4) > .toolsBtn > .toolBtnNormal > .sprite-icon > .main-icon-img")
+
+Call log:
+    - checking visibility of locator("li:nth-child(4) > .toolsBtn > .toolBtnNormal .main-icon-img.main-PageNext")
+
+2025-12-23 13:32:39,443 - INFO - Pagination complete - processed 200 total rows across 1 pages
+2025-12-23 13:32:39,443 - INFO - Manual matching complete - 200 rows processed
+2025-12-23 13:32:39,443 - INFO - Processing manually matched items...
+2025-12-23 13:32:39,541 - INFO - Clicked Process button (after manual matching) successfully
+2025-12-23 13:32:44,631 - INFO - Clicked Back to list button successfully
+2025-12-23 13:32:47,644 - INFO - Downloading results...
+2025-12-23 13:32:47,710 - INFO - Clicked account link 'MBB02' successfully
+2025-12-23 13:32:52,818 - INFO - Clicked Export dropdown successfully
+2025-12-23 13:32:52,971 - INFO - Clicked Export to Excel button successfully
+2025-12-23 13:33:22,843 - ERROR - FATAL ERROR: Timeout 30000ms exceeded while waiting for event "download"
+=========================== logs ===========================
+waiting for event "download"
+============================================================
+2025-12-23 13:33:23,149 - INFO - Browser cleanup completed
+2025-12-23 13:33:23,161 - ERROR - ❌ CA Match failed: Timeout 30000ms exceeded while waiting for event "download"
+=========================== logs ===========================
+waiting for event "download"
+============================================================
+Traceback (most recent call last):
+  File "d:\Github\PlayWright-Extractor\playwright_scripts\run_playwright.py", line 142, in run_ca_match
+    records = process_bank_transactions(
+        playwright=playwright,
+    ...<9 lines>...
+        headless=self.headless
+    )
+  File "d:\Github\PlayWright-Extractor\playwright_scripts\CA_Match_Process_Optimized.py", line 643, in process_bank_transactions
+    return processor.run()
+           ~~~~~~~~~~~~~^^
+  File "d:\Github\PlayWright-Extractor\playwright_scripts\CA_Match_Process_Optimized.py", line 540, in run
+    save_path = self.download_results()
+  File "d:\Github\PlayWright-Extractor\playwright_scripts\CA_Match_Process_Optimized.py", line 457, in download_results
+    with self.page.expect_download() as download_info:
+         ~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "D:\Github\PlayWright-Extractor\venv\Lib\site-packages\playwright\_impl\_sync_base.py", line 85, in __exit__
+    self._event.value
+  File "D:\Github\PlayWright-Extractor\venv\Lib\site-packages\playwright\_impl\_sync_base.py", line 59, in value
+    raise exception
+playwright._impl._errors.TimeoutError: Timeout 30000ms exceeded while waiting for event "download"
+=========================== logs ===========================
+waiting for event "download"
+============================================================
+2025-12-23 13:33:23,162 - ERROR - 
+======================================================================
+2025-12-23 13:33:23,162 - ERROR - ❌ AUTOMATION WORKFLOW FAILED
+2025-12-23 13:33:23,163 - ERROR - ======================================================================
+2025-12-23 13:33:23,163 - ERROR - Error: Timeout 30000ms exceeded while waiting for event "download"
+=========================== logs ===========================
+waiting for event "download"
+============================================================
+2025-12-23 13:33:23,163 - ERROR - ======================================================================
+2025-12-23 13:33:30,571 - INFO - ======================================================================
+2025-12-23 13:33:30,571 - INFO - PLAYWRIGHT AUTOMATION RUNNER
+2025-12-23 13:33:30,571 - INFO - ======================================================================
+2025-12-23 13:33:30,572 - INFO - Account: MBB02
+2025-12-23 13:33:30,572 - INFO - Date: 23/11/2025
+2025-12-23 13:33:30,572 - INFO - Amount: 100.0
+2025-12-23 13:33:30,572 - INFO - Headless Mode: False
+2025-12-23 13:33:30,572 - INFO - Downloads Dir: d:\Github\PlayWright-Extractor\Downloads
+2025-12-23 13:33:30,572 - INFO - ======================================================================
+2025-12-23 13:33:30,573 - INFO - 
+🚀 Starting complete automation workflow...
+
+2025-12-23 13:33:30,573 - INFO - 
+======================================================================
+2025-12-23 13:33:30,573 - INFO - STEP 1: CA MATCH PROCESS
+2025-12-23 13:33:30,573 - INFO - ======================================================================
+2025-12-23 13:33:30,997 - INFO - Starting CA Match process...
+2025-12-23 13:33:30,997 - INFO - ============================================================
+2025-12-23 13:33:30,998 - INFO - CA MATCH PROCESS - OPTIMIZED VERSION
+2025-12-23 13:33:30,998 - INFO - ============================================================
+2025-12-23 13:33:30,999 - INFO - Initializing browser...
+2025-12-23 13:33:31,535 - INFO - Browser initialized successfully
+2025-12-23 13:33:31,535 - INFO - Logging in...
+2025-12-23 13:33:33,907 - INFO - Navigating to Process Bank Records...
+2025-12-23 13:33:43,101 - INFO - Starting auto-match process...
+2025-12-23 13:33:43,212 - INFO - Clicked account link 'MBB02' successfully
+2025-12-23 13:33:49,379 - INFO - Clicked Auto-Match button successfully
+2025-12-23 13:33:51,415 - INFO - Waiting for auto-match confirmation...
+2025-12-23 13:34:08,101 - WARNING - No 'Executing' message detected
+2025-12-23 13:37:08,121 - WARNING - No completion message found - continuing anyway
+2025-12-23 13:37:08,123 - INFO - Processing auto-matched items...
+2025-12-23 13:37:08,233 - INFO - Clicked Process button successfully
+2025-12-23 13:37:13,353 - INFO - Clicked Back button successfully
+2025-12-23 13:37:16,372 - INFO - Starting manual matching process...
+2025-12-23 13:37:16,466 - INFO - Clicked account link 'MBB02' successfully
+2025-12-23 13:37:21,480 - INFO - Processing page 1...
+2025-12-23 13:37:21,692 - INFO - Found 201 rows on page 1
+2025-12-23 13:37:21,731 - INFO - Row 0 - Ext. Ref. Nbr.: 0
+2025-12-23 13:37:21,746 - INFO - Row 0 - Already matched, skipping
+2025-12-23 13:37:21,775 - INFO - Row 1 - Ext. Ref. Nbr.: H0124355
+2025-12-23 13:37:21,793 - INFO - Row 1 - Already matched, skipping
+2025-12-23 13:37:21,854 - INFO - Row 2 - Ext. Ref. Nbr.: 0
+2025-12-23 13:37:21,873 - INFO - Row 2 - Already matched, skipping
+2025-12-23 13:37:21,910 - INFO - Row 3 - Ext. Ref. Nbr.: H0124356
+2025-12-23 13:37:21,928 - INFO - Row 3 - Already matched, skipping
+2025-12-23 13:37:21,969 - INFO - Row 4 - Ext. Ref. Nbr.: 0
+2025-12-23 13:37:21,983 - INFO - Row 4 - Already matched, skipping
+2025-12-23 13:37:22,015 - INFO - Row 5 - Ext. Ref. Nbr.: H0124359
+2025-12-23 13:37:22,040 - INFO - Row 5 - Already matched, skipping
+2025-12-23 13:37:22,079 - INFO - Row 6 - Ext. Ref. Nbr.: 0
+2025-12-23 13:37:22,094 - INFO - Row 6 - Already matched, skipping
+2025-12-23 13:37:22,127 - INFO - Row 7 - Ext. Ref. Nbr.: H0124363
+2025-12-23 13:37:22,148 - INFO - Row 7 - Already matched, skipping
+2025-12-23 13:37:22,188 - INFO - Row 8 - Ext. Ref. Nbr.: 0
+2025-12-23 13:37:22,211 - INFO - Row 8 - Already matched, skipping
+2025-12-23 13:37:22,248 - INFO - Row 9 - Ext. Ref. Nbr.: L0105012
+2025-12-23 13:37:22,260 - INFO - Row 9 - Already matched, skipping
+2025-12-23 13:37:22,286 - INFO - Row 10 - Ext. Ref. Nbr.: 0
+2025-12-23 13:37:22,308 - INFO - Row 10 - Already matched, skipping
+2025-12-23 13:37:22,367 - INFO - Row 11 - Ext. Ref. Nbr.: H0124364
+2025-12-23 13:37:22,386 - INFO - Row 11 - Already matched, skipping
+2025-12-23 13:37:22,410 - INFO - Row 12 - Ext. Ref. Nbr.: 0
+2025-12-23 13:37:22,430 - INFO - Row 12 - Already matched, skipping
+2025-12-23 13:37:22,479 - INFO - Row 13 - Ext. Ref. Nbr.: L0105013
+2025-12-23 13:37:22,493 - INFO - Row 13 - Already matched, skipping
+2025-12-23 13:37:22,541 - INFO - Row 14 - Ext. Ref. Nbr.: 0
+2025-12-23 13:37:22,562 - INFO - Row 14 - Already matched, skipping
+2025-12-23 13:37:22,592 - INFO - Row 15 - Ext. Ref. Nbr.: H0124365
+2025-12-23 13:37:22,606 - INFO - Row 15 - Already matched, skipping
+2025-12-23 13:37:22,634 - INFO - Row 16 - Ext. Ref. Nbr.: 0
+2025-12-23 13:37:22,662 - INFO - Row 16 - Already matched, skipping
+2025-12-23 13:37:22,711 - INFO - Row 17 - Ext. Ref. Nbr.: H0124367
+2025-12-23 13:37:22,723 - INFO - Row 17 - Already matched, skipping
+2025-12-23 13:37:22,750 - INFO - Row 18 - Ext. Ref. Nbr.: H0124368
+2025-12-23 13:37:22,767 - INFO - Row 18 - Already matched, skipping
+2025-12-23 13:37:22,808 - INFO - Row 19 - Ext. Ref. Nbr.: 0
+2025-12-23 13:37:22,832 - INFO - Row 19 - Already matched, skipping
+2025-12-23 13:37:22,869 - INFO - Row 20 - Ext. Ref. Nbr.: 0
+2025-12-23 13:37:22,891 - INFO - Row 20 - Already matched, skipping
+2025-12-23 13:37:22,915 - INFO - Row 21 - Ext. Ref. Nbr.: H0124369
+2025-12-23 13:37:22,933 - INFO - Row 21 - Already matched, skipping
+2025-12-23 13:37:22,960 - INFO - Row 22 - Ext. Ref. Nbr.: 0
+2025-12-23 13:37:22,973 - INFO - Row 22 - Already matched, skipping
+2025-12-23 13:37:23,008 - INFO - Row 23 - Ext. Ref. Nbr.: H0124370
+2025-12-23 13:37:23,024 - INFO - Row 23 - Already matched, skipping
+2025-12-23 13:37:23,051 - INFO - Row 24 - Ext. Ref. Nbr.: 2025063035DBKKA
+2025-12-23 13:37:23,063 - INFO - Row 24 - Already matched, skipping
+2025-12-23 13:37:23,106 - INFO - Row 25 - Ext. Ref. Nbr.: 2025063036DBKKA
+2025-12-23 13:37:23,133 - INFO - Row 25 - Already matched, skipping
+2025-12-23 13:37:23,165 - INFO - Row 26 - Ext. Ref. Nbr.: 2025063019DBKKA
+2025-12-23 13:37:23,179 - INFO - Row 26 - Already matched, skipping
+2025-12-23 13:37:23,213 - INFO - Row 27 - Ext. Ref. Nbr.: 0
+2025-12-23 13:37:23,233 - INFO - Row 27 - Already matched, skipping
+2025-12-23 13:37:23,277 - INFO - Row 28 - Ext. Ref. Nbr.: H0124371
+2025-12-23 13:37:23,297 - INFO - Row 28 - Already matched, skipping
+2025-12-23 13:37:23,322 - INFO - Row 29 - Ext. Ref. Nbr.: 0
+2025-12-23 13:37:23,333 - INFO - Row 29 - Already matched, skipping
+2025-12-23 13:37:23,368 - INFO - Row 30 - Ext. Ref. Nbr.: 0
+2025-12-23 13:37:23,390 - INFO - Row 30 - Already matched, skipping
+2025-12-23 13:37:23,426 - INFO - Row 31 - Ext. Ref. Nbr.: H0124375
+2025-12-23 13:37:23,444 - INFO - Row 31 - Already matched, skipping
+2025-12-23 13:37:23,476 - INFO - Row 32 - Ext. Ref. Nbr.: 0
+2025-12-23 13:37:23,488 - INFO - Row 32 - Already matched, skipping
+2025-12-23 13:37:23,524 - INFO - Row 33 - Ext. Ref. Nbr.: L0105016
+2025-12-23 13:37:23,544 - INFO - Row 33 - Already matched, skipping
+2025-12-23 13:37:23,583 - INFO - Row 34 - Ext. Ref. Nbr.: 0
+2025-12-23 13:37:23,608 - INFO - Row 34 - Already matched, skipping
+2025-12-23 13:37:23,649 - INFO - Row 35 - Ext. Ref. Nbr.: H0124380
+2025-12-23 13:37:23,668 - INFO - Row 35 - Already matched, skipping
+2025-12-23 13:37:23,710 - INFO - Row 36 - Ext. Ref. Nbr.: 0
+2025-12-23 13:37:23,734 - INFO - Row 36 - Already matched, skipping
+2025-12-23 13:37:23,775 - INFO - Row 37 - Ext. Ref. Nbr.: H0124381
+2025-12-23 13:37:23,795 - INFO - Row 37 - Already matched, skipping
+2025-12-23 13:37:23,840 - INFO - Row 38 - Ext. Ref. Nbr.: 0
+2025-12-23 13:37:23,861 - INFO - Row 38 - Already matched, skipping
+2025-12-23 13:37:23,908 - INFO - Row 39 - Ext. Ref. Nbr.: H0124382
+2025-12-23 13:37:23,930 - INFO - Row 39 - Already matched, skipping
+2025-12-23 13:37:23,967 - INFO - Row 40 - Ext. Ref. Nbr.: 0
+2025-12-23 13:37:23,993 - INFO - Row 40 - Already matched, skipping
+2025-12-23 13:37:24,037 - INFO - Row 41 - Ext. Ref. Nbr.: 0
+2025-12-23 13:37:24,059 - INFO - Row 41 - Already matched, skipping
+2025-12-23 13:37:24,096 - INFO - Row 42 - Ext. Ref. Nbr.: H0124384
+2025-12-23 13:37:24,117 - INFO - Row 42 - Already matched, skipping
+2025-12-23 13:37:24,161 - INFO - Row 43 - Ext. Ref. Nbr.: 0
+2025-12-23 13:37:24,178 - INFO - Row 43 - Already matched, skipping
+2025-12-23 13:37:24,213 - INFO - Row 44 - Ext. Ref. Nbr.: H0124387
+2025-12-23 13:37:24,231 - INFO - Row 44 - Already matched, skipping
+2025-12-23 13:37:24,278 - INFO - Row 45 - Ext. Ref. Nbr.: 0
+2025-12-23 13:37:24,301 - INFO - Row 45 - Already matched, skipping
+2025-12-23 13:37:24,343 - INFO - Row 46 - Ext. Ref. Nbr.: 0
+2025-12-23 13:37:24,363 - INFO - Row 46 - Already matched, skipping
+2025-12-23 13:37:24,397 - INFO - Row 47 - Ext. Ref. Nbr.: H0124386
+2025-12-23 13:37:24,412 - INFO - Row 47 - Already matched, skipping
+2025-12-23 13:37:24,443 - INFO - Row 48 - Ext. Ref. Nbr.: 0
+2025-12-23 13:37:24,459 - INFO - Row 48 - Already matched, skipping
+2025-12-23 13:37:24,489 - INFO - Row 49 - Ext. Ref. Nbr.: H0124392
+2025-12-23 13:37:24,504 - INFO - Row 49 - Already matched, skipping
+2025-12-23 13:37:24,537 - INFO - Row 50 - Ext. Ref. Nbr.: 0
+2025-12-23 13:37:24,558 - INFO - Row 50 - Already matched, skipping
+2025-12-23 13:37:24,593 - INFO - Row 51 - Ext. Ref. Nbr.: H0124394
+2025-12-23 13:37:24,612 - INFO - Row 51 - Already matched, skipping
+2025-12-23 13:37:24,649 - INFO - Row 52 - Ext. Ref. Nbr.: 0
+2025-12-23 13:37:24,666 - INFO - Row 52 - Already matched, skipping
+2025-12-23 13:37:24,695 - INFO - Row 53 - Ext. Ref. Nbr.: H0124395
+2025-12-23 13:37:24,708 - INFO - Row 53 - Already matched, skipping
+2025-12-23 13:37:24,736 - INFO - Row 54 - Ext. Ref. Nbr.: 0
+2025-12-23 13:37:24,748 - INFO - Row 54 - Already matched, skipping
+2025-12-23 13:37:24,794 - INFO - Row 55 - Ext. Ref. Nbr.: H0124396
+2025-12-23 13:37:24,825 - INFO - Row 55 - Already matched, skipping
+2025-12-23 13:37:24,849 - INFO - Row 56 - Ext. Ref. Nbr.: 0
+2025-12-23 13:37:24,866 - INFO - Row 56 - Already matched, skipping
+2025-12-23 13:37:24,892 - INFO - Row 57 - Ext. Ref. Nbr.: H0124401
+2025-12-23 13:37:24,906 - INFO - Row 57 - Already matched, skipping
+2025-12-23 13:37:24,938 - INFO - Row 58 - Ext. Ref. Nbr.: 0
+2025-12-23 13:37:24,954 - INFO - Row 58 - Already matched, skipping
+2025-12-23 13:37:24,984 - INFO - Row 59 - Ext. Ref. Nbr.: H0124404
+2025-12-23 13:37:24,995 - INFO - Row 59 - Already matched, skipping
+2025-12-23 13:37:25,047 - INFO - Row 60 - Ext. Ref. Nbr.: 0
+2025-12-23 13:37:25,062 - INFO - Row 60 - Already matched, skipping
+2025-12-23 13:37:25,090 - INFO - Row 61 - Ext. Ref. Nbr.: H0124414
+2025-12-23 13:37:25,100 - INFO - Row 61 - Already matched, skipping
+2025-12-23 13:37:25,125 - INFO - Row 62 - Ext. Ref. Nbr.: 0
+2025-12-23 13:37:25,156 - INFO - Row 62 - Already matched, skipping
+2025-12-23 13:37:25,207 - INFO - Row 63 - Ext. Ref. Nbr.: H0124416
+2025-12-23 13:37:25,223 - INFO - Row 63 - Already matched, skipping
+2025-12-23 13:37:25,250 - INFO - Row 64 - Ext. Ref. Nbr.: 0
+2025-12-23 13:37:25,263 - INFO - Row 64 - Already matched, skipping
+2025-12-23 13:37:25,304 - INFO - Row 65 - Ext. Ref. Nbr.: H0124417
+2025-12-23 13:37:25,326 - INFO - Row 65 - Already matched, skipping
+2025-12-23 13:37:25,358 - INFO - Row 66 - Ext. Ref. Nbr.: 0
+2025-12-23 13:37:25,378 - INFO - Row 66 - Already matched, skipping
+2025-12-23 13:37:25,409 - INFO - Row 67 - Ext. Ref. Nbr.: H0124420
+2025-12-23 13:37:25,427 - INFO - Row 67 - Already matched, skipping
+2025-12-23 13:37:25,450 - INFO - Row 68 - Ext. Ref. Nbr.: 0
+2025-12-23 13:37:25,466 - INFO - Row 68 - Already matched, skipping
+2025-12-23 13:37:25,501 - INFO - Row 69 - Ext. Ref. Nbr.: H0124421
+2025-12-23 13:37:25,526 - INFO - Row 69 - Already matched, skipping
+2025-12-23 13:37:25,555 - INFO - Row 70 - Ext. Ref. Nbr.: 0
+2025-12-23 13:37:25,565 - INFO - Row 70 - Already matched, skipping
+2025-12-23 13:37:25,598 - INFO - Row 71 - Ext. Ref. Nbr.: H0124422
+2025-12-23 13:37:25,622 - INFO - Row 71 - Already matched, skipping
+2025-12-23 13:37:25,647 - INFO - Row 72 - Ext. Ref. Nbr.: 0
+2025-12-23 13:37:25,675 - INFO - Row 72 - Already matched, skipping
+2025-12-23 13:37:25,700 - INFO - Row 73 - Ext. Ref. Nbr.: L0105020
+2025-12-23 13:37:25,714 - INFO - Row 73 - Already matched, skipping
+2025-12-23 13:37:25,767 - INFO - Row 74 - Ext. Ref. Nbr.: 0
+2025-12-23 13:37:25,791 - INFO - Row 74 - Already matched, skipping
+2025-12-23 13:37:25,835 - INFO - Row 75 - Ext. Ref. Nbr.: H0124429
+2025-12-23 13:37:25,848 - INFO - Row 75 - Already matched, skipping
+2025-12-23 13:37:25,882 - INFO - Row 76 - Ext. Ref. Nbr.: 0
+2025-12-23 13:37:25,909 - INFO - Row 76 - Already matched, skipping
+2025-12-23 13:37:25,946 - INFO - Row 77 - Ext. Ref. Nbr.: H0124432
+2025-12-23 13:37:25,965 - INFO - Row 77 - Already matched, skipping
+2025-12-23 13:37:26,006 - INFO - Row 78 - Ext. Ref. Nbr.: 0
+2025-12-23 13:37:26,018 - INFO - Row 78 - Already matched, skipping
+2025-12-23 13:37:26,058 - INFO - Row 79 - Ext. Ref. Nbr.: H0124433
+2025-12-23 13:37:26,080 - INFO - Row 79 - Already matched, skipping
+2025-12-23 13:37:26,117 - INFO - Row 80 - Ext. Ref. Nbr.: 0
+2025-12-23 13:37:26,139 - INFO - Row 80 - Already matched, skipping
+2025-12-23 13:37:26,181 - INFO - Row 81 - Ext. Ref. Nbr.: H0124435
+2025-12-23 13:37:26,197 - INFO - Row 81 - Already matched, skipping
+2025-12-23 13:37:26,232 - INFO - Row 82 - Ext. Ref. Nbr.: L0105022
+2025-12-23 13:37:26,247 - INFO - Row 82 - Already matched, skipping
+2025-12-23 13:37:26,280 - INFO - Row 83 - Ext. Ref. Nbr.: 0
+2025-12-23 13:37:26,297 - INFO - Row 83 - Already matched, skipping
+2025-12-23 13:37:26,340 - INFO - Row 84 - Ext. Ref. Nbr.: 0
+2025-12-23 13:37:26,361 - INFO - Row 84 - Already matched, skipping
+2025-12-23 13:37:26,408 - INFO - Row 85 - Ext. Ref. Nbr.: H0124438
+2025-12-23 13:37:26,432 - INFO - Row 85 - Already matched, skipping
+2025-12-23 13:37:26,474 - INFO - Row 86 - Ext. Ref. Nbr.: 0
+2025-12-23 13:37:26,498 - INFO - Row 86 - Already matched, skipping
+2025-12-23 13:37:26,536 - INFO - Row 87 - Ext. Ref. Nbr.: H0124439
+2025-12-23 13:37:26,557 - INFO - Row 87 - Already matched, skipping
+2025-12-23 13:37:26,605 - INFO - Row 88 - Ext. Ref. Nbr.: 0
+2025-12-23 13:37:26,626 - INFO - Row 88 - Already matched, skipping
+2025-12-23 13:37:26,664 - INFO - Row 89 - Ext. Ref. Nbr.: H0124440
+2025-12-23 13:37:26,683 - INFO - Row 89 - Already matched, skipping
+2025-12-23 13:37:26,724 - INFO - Row 90 - Ext. Ref. Nbr.: 0
+2025-12-23 13:37:26,740 - INFO - Row 90 - Already matched, skipping
+2025-12-23 13:37:26,779 - INFO - Row 91 - Ext. Ref. Nbr.: H0124441
+2025-12-23 13:37:26,798 - INFO - Row 91 - Already matched, skipping
+2025-12-23 13:37:26,836 - INFO - Row 92 - Ext. Ref. Nbr.: 0
+2025-12-23 13:37:26,856 - INFO - Row 92 - Already matched, skipping
+2025-12-23 13:37:26,887 - INFO - Row 93 - Ext. Ref. Nbr.: H0124442
+2025-12-23 13:37:26,908 - INFO - Row 93 - Already matched, skipping
+2025-12-23 13:37:26,949 - INFO - Row 94 - Ext. Ref. Nbr.: 0
+2025-12-23 13:37:26,967 - INFO - Row 94 - Already matched, skipping
+2025-12-23 13:37:27,009 - INFO - Row 95 - Ext. Ref. Nbr.: L0105026
+2025-12-23 13:37:27,023 - INFO - Row 95 - Already matched, skipping
+2025-12-23 13:37:27,064 - INFO - Row 96 - Ext. Ref. Nbr.: 0
+2025-12-23 13:37:27,077 - INFO - Row 96 - Already matched, skipping
+2025-12-23 13:37:27,110 - INFO - Row 97 - Ext. Ref. Nbr.: H0124445
+2025-12-23 13:37:27,128 - INFO - Row 97 - Already matched, skipping
+2025-12-23 13:37:27,162 - INFO - Row 98 - Ext. Ref. Nbr.: 0
+2025-12-23 13:37:27,179 - INFO - Row 98 - Already matched, skipping
+2025-12-23 13:37:27,208 - INFO - Row 99 - Ext. Ref. Nbr.: L0105027
+2025-12-23 13:37:27,227 - INFO - Row 99 - Already matched, skipping
+2025-12-23 13:37:27,262 - INFO - Row 100 - Ext. Ref. Nbr.: 0
+2025-12-23 13:37:27,277 - INFO - Row 100 - Already matched, skipping
+2025-12-23 13:37:27,319 - INFO - Row 101 - Ext. Ref. Nbr.: H0124447
+2025-12-23 13:37:27,335 - INFO - Row 101 - Already matched, skipping
+2025-12-23 13:37:27,369 - INFO - Row 102 - Ext. Ref. Nbr.: 0
+2025-12-23 13:37:27,390 - INFO - Row 102 - Already matched, skipping
+2025-12-23 13:37:27,425 - INFO - Row 103 - Ext. Ref. Nbr.: H0124446
+2025-12-23 13:37:27,442 - INFO - Row 103 - Already matched, skipping
+2025-12-23 13:37:27,483 - INFO - Row 104 - Ext. Ref. Nbr.: 0
+2025-12-23 13:37:27,496 - INFO - Row 104 - Already matched, skipping
+2025-12-23 13:37:27,525 - INFO - Row 105 - Ext. Ref. Nbr.: H0124451
+2025-12-23 13:37:27,538 - INFO - Row 105 - Already matched, skipping
+2025-12-23 13:37:27,564 - INFO - Row 106 - Ext. Ref. Nbr.: 0
+2025-12-23 13:37:27,577 - INFO - Row 106 - Already matched, skipping
+2025-12-23 13:37:27,614 - INFO - Row 107 - Ext. Ref. Nbr.: L0105029
+2025-12-23 13:37:27,634 - INFO - Row 107 - Already matched, skipping
+2025-12-23 13:37:27,666 - INFO - Row 108 - Ext. Ref. Nbr.: 0
+2025-12-23 13:37:27,684 - INFO - Row 108 - Already matched, skipping
+2025-12-23 13:37:27,726 - INFO - Row 109 - Ext. Ref. Nbr.: L0105030
+2025-12-23 13:37:27,744 - INFO - Row 109 - Already matched, skipping
+2025-12-23 13:37:27,768 - INFO - Row 110 - Ext. Ref. Nbr.: 0
+2025-12-23 13:37:27,792 - INFO - Row 110 - Already matched, skipping
+2025-12-23 13:37:27,837 - INFO - Row 111 - Ext. Ref. Nbr.: H0124453
+2025-12-23 13:37:27,855 - INFO - Row 111 - Already matched, skipping
+2025-12-23 13:37:27,885 - INFO - Row 112 - Ext. Ref. Nbr.: 0
+2025-12-23 13:37:27,910 - INFO - Row 112 - Already matched, skipping
+2025-12-23 13:37:27,938 - INFO - Row 113 - Ext. Ref. Nbr.: H0124456
+2025-12-23 13:37:27,962 - INFO - Row 113 - Already matched, skipping
+2025-12-23 13:37:27,999 - INFO - Row 114 - Ext. Ref. Nbr.: 0
+2025-12-23 13:37:28,018 - INFO - Row 114 - Already matched, skipping
+2025-12-23 13:37:28,064 - INFO - Row 115 - Ext. Ref. Nbr.: L0105031
+2025-12-23 13:37:28,090 - INFO - Row 115 - Already matched, skipping
+2025-12-23 13:37:28,128 - INFO - Row 116 - Ext. Ref. Nbr.: 0
+2025-12-23 13:37:28,147 - INFO - Row 116 - Already matched, skipping
+2025-12-23 13:37:28,179 - INFO - Row 117 - Ext. Ref. Nbr.: H0124458
+2025-12-23 13:37:28,199 - INFO - Row 117 - Already matched, skipping
+2025-12-23 13:37:28,228 - INFO - Row 118 - Ext. Ref. Nbr.: 0
+2025-12-23 13:37:28,244 - INFO - Row 118 - Already matched, skipping
+2025-12-23 13:37:28,277 - INFO - Row 119 - Ext. Ref. Nbr.: L0105032
+2025-12-23 13:37:28,294 - INFO - Row 119 - Already matched, skipping
+2025-12-23 13:37:28,333 - INFO - Row 120 - Ext. Ref. Nbr.: 0
+2025-12-23 13:37:28,352 - INFO - Row 120 - Already matched, skipping
+2025-12-23 13:37:28,389 - INFO - Row 121 - Ext. Ref. Nbr.: H0124462
+2025-12-23 13:37:28,411 - INFO - Row 121 - Already matched, skipping
+2025-12-23 13:37:28,449 - INFO - Row 122 - Ext. Ref. Nbr.: H0124463
+2025-12-23 13:37:28,463 - INFO - Row 122 - Already matched, skipping
+2025-12-23 13:37:28,499 - INFO - Row 123 - Ext. Ref. Nbr.: 0
+2025-12-23 13:37:28,520 - INFO - Row 123 - Already matched, skipping
+2025-12-23 13:37:28,560 - INFO - Row 124 - Ext. Ref. Nbr.: 0
+2025-12-23 13:37:28,580 - INFO - Row 124 - Already matched, skipping
+2025-12-23 13:37:28,619 - INFO - Row 125 - Ext. Ref. Nbr.: H0124464
+2025-12-23 13:37:28,643 - INFO - Row 125 - Already matched, skipping
+2025-12-23 13:37:28,681 - INFO - Row 126 - Ext. Ref. Nbr.: 0
+2025-12-23 13:37:28,701 - INFO - Row 126 - Already matched, skipping
+2025-12-23 13:37:28,738 - INFO - Row 127 - Ext. Ref. Nbr.: H0124466
+2025-12-23 13:37:28,760 - INFO - Row 127 - Already matched, skipping
+2025-12-23 13:37:28,790 - INFO - Row 128 - Ext. Ref. Nbr.: 0
+2025-12-23 13:37:28,800 - INFO - Row 128 - Already matched, skipping
+2025-12-23 13:37:28,831 - INFO - Row 129 - Ext. Ref. Nbr.: H0124471
+2025-12-23 13:37:28,852 - INFO - Row 129 - Already matched, skipping
+2025-12-23 13:37:28,898 - INFO - Row 130 - Ext. Ref. Nbr.: 0
+2025-12-23 13:37:28,911 - INFO - Row 130 - Already matched, skipping
+2025-12-23 13:37:28,939 - INFO - Row 131 - Ext. Ref. Nbr.: H0124470
+2025-12-23 13:37:28,956 - INFO - Row 131 - Already matched, skipping
+2025-12-23 13:37:28,992 - INFO - Row 132 - Ext. Ref. Nbr.: H0124467
+2025-12-23 13:37:29,007 - INFO - Row 132 - Already matched, skipping
+2025-12-23 13:37:29,045 - INFO - Row 133 - Ext. Ref. Nbr.: 0
+2025-12-23 13:37:29,064 - INFO - Row 133 - Already matched, skipping
+2025-12-23 13:37:29,108 - INFO - Row 134 - Ext. Ref. Nbr.: 0
+2025-12-23 13:37:29,128 - INFO - Row 134 - Already matched, skipping
+2025-12-23 13:37:29,166 - INFO - Row 135 - Ext. Ref. Nbr.: L0105041
+2025-12-23 13:37:29,178 - INFO - Row 135 - Already matched, skipping
+2025-12-23 13:37:29,205 - INFO - Row 136 - Ext. Ref. Nbr.: 0
+2025-12-23 13:37:29,217 - INFO - Row 136 - Already matched, skipping
+2025-12-23 13:37:29,246 - INFO - Row 137 - Ext. Ref. Nbr.: H0124472
+2025-12-23 13:37:29,262 - INFO - Row 137 - Already matched, skipping
+2025-12-23 13:37:29,291 - INFO - Row 138 - Ext. Ref. Nbr.: 0
+2025-12-23 13:37:29,309 - INFO - Row 138 - Already matched, skipping
+2025-12-23 13:37:29,349 - INFO - Row 139 - Ext. Ref. Nbr.: H0124474
+2025-12-23 13:37:29,370 - INFO - Row 139 - Already matched, skipping
+2025-12-23 13:37:29,406 - INFO - Row 140 - Ext. Ref. Nbr.: 0
+2025-12-23 13:37:29,419 - INFO - Row 140 - Already matched, skipping
+2025-12-23 13:37:29,462 - INFO - Row 141 - Ext. Ref. Nbr.: H0124475
+2025-12-23 13:37:29,475 - INFO - Row 141 - Already matched, skipping
+2025-12-23 13:37:29,507 - INFO - Row 142 - Ext. Ref. Nbr.: 0
+2025-12-23 13:37:29,521 - INFO - Row 142 - Already matched, skipping
+2025-12-23 13:37:29,550 - INFO - Row 143 - Ext. Ref. Nbr.: L0105042
+2025-12-23 13:37:29,572 - INFO - Row 143 - Already matched, skipping
+2025-12-23 13:37:29,604 - INFO - Row 144 - Ext. Ref. Nbr.: 0
+2025-12-23 13:37:29,617 - INFO - Row 144 - Already matched, skipping
+2025-12-23 13:37:29,650 - INFO - Row 145 - Ext. Ref. Nbr.: L0105043
+2025-12-23 13:37:29,674 - INFO - Row 145 - Already matched, skipping
+2025-12-23 13:37:29,708 - INFO - Row 146 - Ext. Ref. Nbr.: 0
+2025-12-23 13:37:29,726 - INFO - Row 146 - Already matched, skipping
+2025-12-23 13:37:29,759 - INFO - Row 147 - Ext. Ref. Nbr.: H0124478
+2025-12-23 13:37:29,775 - INFO - Row 147 - Already matched, skipping
+2025-12-23 13:37:29,804 - INFO - Row 148 - Ext. Ref. Nbr.: 0
+2025-12-23 13:37:29,818 - INFO - Row 148 - Already matched, skipping
+2025-12-23 13:37:29,846 - INFO - Row 149 - Ext. Ref. Nbr.: H0124479
+2025-12-23 13:37:29,876 - INFO - Row 149 - Already matched, skipping
+2025-12-23 13:37:29,920 - INFO - Row 150 - Ext. Ref. Nbr.: 0
+2025-12-23 13:37:29,934 - INFO - Row 150 - Already matched, skipping
+2025-12-23 13:37:29,972 - INFO - Row 151 - Ext. Ref. Nbr.: L0105045
+2025-12-23 13:37:29,986 - INFO - Row 151 - Already matched, skipping
+2025-12-23 13:37:30,043 - INFO - Row 152 - Ext. Ref. Nbr.: 0
+2025-12-23 13:37:30,056 - INFO - Row 152 - Already matched, skipping
+2025-12-23 13:37:30,091 - INFO - Row 153 - Ext. Ref. Nbr.: 0009765H
+2025-12-23 13:37:30,103 - INFO - Row 153 - Already matched, skipping
+2025-12-23 13:37:30,132 - INFO - Row 154 - Ext. Ref. Nbr.: 0
+2025-12-23 13:37:30,148 - INFO - Row 154 - Already matched, skipping
+2025-12-23 13:37:30,185 - INFO - Row 155 - Ext. Ref. Nbr.: H0124481
+2025-12-23 13:37:30,205 - INFO - Row 155 - Already matched, skipping
+2025-12-23 13:37:30,243 - INFO - Row 156 - Ext. Ref. Nbr.: 0
+2025-12-23 13:37:30,258 - INFO - Row 156 - Already matched, skipping
+2025-12-23 13:37:30,292 - INFO - Row 157 - Ext. Ref. Nbr.: L0105047
+2025-12-23 13:37:30,307 - INFO - Row 157 - Already matched, skipping
+2025-12-23 13:37:30,340 - INFO - Row 158 - Ext. Ref. Nbr.: 0
+2025-12-23 13:37:30,355 - INFO - Row 158 - Already matched, skipping
+2025-12-23 13:37:30,394 - INFO - Row 159 - Ext. Ref. Nbr.: L0105049
+2025-12-23 13:37:30,420 - INFO - Row 159 - Already matched, skipping
+2025-12-23 13:37:30,456 - INFO - Row 160 - Ext. Ref. Nbr.: 0
+2025-12-23 13:37:30,477 - INFO - Row 160 - Already matched, skipping
+2025-12-23 13:37:30,521 - INFO - Row 161 - Ext. Ref. Nbr.: H0124482
+2025-12-23 13:37:30,538 - INFO - Row 161 - Already matched, skipping
+2025-12-23 13:37:30,573 - INFO - Row 162 - Ext. Ref. Nbr.: 0
+2025-12-23 13:37:30,588 - INFO - Row 162 - Already matched, skipping
+2025-12-23 13:37:30,631 - INFO - Row 163 - Ext. Ref. Nbr.: 0009767H
+2025-12-23 13:37:30,649 - INFO - Row 163 - Already matched, skipping
+2025-12-23 13:37:30,689 - INFO - Row 164 - Ext. Ref. Nbr.: 0
+2025-12-23 13:37:30,707 - INFO - Row 164 - Already matched, skipping
+2025-12-23 13:37:30,745 - INFO - Row 165 - Ext. Ref. Nbr.: L0105050
+2025-12-23 13:37:30,764 - INFO - Row 165 - Already matched, skipping
+2025-12-23 13:37:30,806 - INFO - Row 166 - Ext. Ref. Nbr.: 0
+2025-12-23 13:37:30,825 - INFO - Row 166 - Already matched, skipping
+2025-12-23 13:37:30,859 - INFO - Row 167 - Ext. Ref. Nbr.: H0124484
+2025-12-23 13:37:30,877 - INFO - Row 167 - Already matched, skipping
+2025-12-23 13:37:30,912 - INFO - Row 168 - Ext. Ref. Nbr.: 0
+2025-12-23 13:37:30,928 - INFO - Row 168 - Already matched, skipping
+2025-12-23 13:37:30,965 - INFO - Row 169 - Ext. Ref. Nbr.: L0105051
+2025-12-23 13:37:30,989 - INFO - Row 169 - Already matched, skipping
+2025-12-23 13:37:31,027 - INFO - Row 170 - Ext. Ref. Nbr.: L0105052
+2025-12-23 13:37:31,043 - INFO - Row 170 - Already matched, skipping
+2025-12-23 13:37:31,076 - INFO - Row 171 - Ext. Ref. Nbr.: 0
+2025-12-23 13:37:31,095 - INFO - Row 171 - Already matched, skipping
+2025-12-23 13:37:31,140 - INFO - Row 172 - Ext. Ref. Nbr.: 0
+2025-12-23 13:37:31,160 - INFO - Row 172 - Already matched, skipping
+2025-12-23 13:37:31,210 - INFO - Row 173 - Ext. Ref. Nbr.: H0124490
+2025-12-23 13:37:31,230 - INFO - Row 173 - Already matched, skipping
+2025-12-23 13:37:31,260 - INFO - Row 174 - Ext. Ref. Nbr.: 0
+2025-12-23 13:37:31,277 - INFO - Row 174 - Already matched, skipping
+2025-12-23 13:37:31,311 - INFO - Row 175 - Ext. Ref. Nbr.: L0105053
+2025-12-23 13:37:31,324 - INFO - Row 175 - Already matched, skipping
+2025-12-23 13:37:31,359 - INFO - Row 176 - Ext. Ref. Nbr.: 0
+2025-12-23 13:37:31,374 - INFO - Row 176 - Already matched, skipping
+2025-12-23 13:37:31,409 - INFO - Row 177 - Ext. Ref. Nbr.: H0124492
+2025-12-23 13:37:31,425 - INFO - Row 177 - Already matched, skipping
+2025-12-23 13:37:31,467 - INFO - Row 178 - Ext. Ref. Nbr.: 0
+2025-12-23 13:37:31,481 - INFO - Row 178 - Already matched, skipping
+2025-12-23 13:37:31,522 - INFO - Row 179 - Ext. Ref. Nbr.: H0124493
+2025-12-23 13:37:31,541 - INFO - Row 179 - Already matched, skipping
+2025-12-23 13:37:31,570 - INFO - Row 180 - Ext. Ref. Nbr.: 0
+2025-12-23 13:37:31,589 - INFO - Row 180 - Already matched, skipping
+2025-12-23 13:37:31,622 - INFO - Row 181 - Ext. Ref. Nbr.: L0105055
+2025-12-23 13:37:31,636 - INFO - Row 181 - Already matched, skipping
+2025-12-23 13:37:31,689 - INFO - Row 182 - Ext. Ref. Nbr.: 0
+2025-12-23 13:37:31,722 - INFO - Row 182 - Already matched, skipping
+2025-12-23 13:37:31,755 - INFO - Row 183 - Ext. Ref. Nbr.: H0124495
+2025-12-23 13:37:31,769 - INFO - Row 183 - Already matched, skipping
+2025-12-23 13:37:31,811 - INFO - Row 184 - Ext. Ref. Nbr.: 0
+2025-12-23 13:37:31,833 - INFO - Row 184 - Already matched, skipping
+2025-12-23 13:37:31,866 - INFO - Row 185 - Ext. Ref. Nbr.: H0124497
+2025-12-23 13:37:31,892 - INFO - Row 185 - Already matched, skipping
+2025-12-23 13:37:31,925 - INFO - Row 186 - Ext. Ref. Nbr.: 0
+2025-12-23 13:37:31,944 - INFO - Row 186 - Already matched, skipping
+2025-12-23 13:37:31,970 - INFO - Row 187 - Ext. Ref. Nbr.: H0124502
+2025-12-23 13:37:31,991 - INFO - Row 187 - Already matched, skipping
+2025-12-23 13:37:32,021 - INFO - Row 188 - Ext. Ref. Nbr.: 0
+2025-12-23 13:37:32,046 - INFO - Row 188 - Already matched, skipping
+2025-12-23 13:37:32,102 - INFO - Row 189 - Ext. Ref. Nbr.: H0124504
+2025-12-23 13:37:32,118 - INFO - Row 189 - Already matched, skipping
+2025-12-23 13:37:32,163 - INFO - Row 190 - Ext. Ref. Nbr.: 0
+2025-12-23 13:37:32,179 - INFO - Row 190 - Already matched, skipping
+2025-12-23 13:37:32,203 - INFO - Row 191 - Ext. Ref. Nbr.: H0124509
+2025-12-23 13:37:32,222 - INFO - Row 191 - Already matched, skipping
+2025-12-23 13:37:32,250 - INFO - Row 192 - Ext. Ref. Nbr.: 0
+2025-12-23 13:37:32,268 - INFO - Row 192 - Already matched, skipping
+2025-12-23 13:37:32,300 - INFO - Row 193 - Ext. Ref. Nbr.: L0105057
+2025-12-23 13:37:32,320 - INFO - Row 193 - Already matched, skipping
+2025-12-23 13:37:32,359 - INFO - Row 194 - Ext. Ref. Nbr.: 0
+2025-12-23 13:37:32,372 - INFO - Row 194 - Already matched, skipping
+2025-12-23 13:37:32,422 - INFO - Row 195 - Ext. Ref. Nbr.: H0124511
+2025-12-23 13:37:32,448 - INFO - Row 195 - Already matched, skipping
+2025-12-23 13:37:32,477 - INFO - Row 196 - Ext. Ref. Nbr.: H0124512
+2025-12-23 13:37:32,496 - INFO - Row 196 - Already matched, skipping
+2025-12-23 13:37:32,538 - INFO - Row 197 - Ext. Ref. Nbr.: 0
+2025-12-23 13:37:32,559 - INFO - Row 197 - Already matched, skipping
+2025-12-23 13:37:32,593 - INFO - Row 198 - Ext. Ref. Nbr.: 0
+2025-12-23 13:37:32,612 - INFO - Row 198 - Already matched, skipping
+2025-12-23 13:37:32,649 - INFO - Row 199 - Ext. Ref. Nbr.: 0
+2025-12-23 13:37:32,671 - INFO - Row 199 - Already matched, skipping
+2025-12-23 13:37:32,752 - ERROR - Error during pagination on page 1: Locator.is_visible: Error: strict mode violation: locator("li:nth-child(4) > .toolsBtn > .toolBtnNormal .main-icon-img.main-PageNext") resolved to 2 elements:
+    1) <div class="main-icon-img main-PageNext">↵↵⇆⇆⇆⇆⇆⇆⇆⇆⇆⇆⇆</div> aka locator(".main-icon-img.main-PageNext").first
+    2) <div class="main-icon-img main-PageNext">↵↵⇆⇆⇆⇆⇆⇆⇆⇆⇆⇆⇆⇆⇆⇆</div> aka locator("#ctl00_phG_PXSplitContainer_tab2_t0_PXGrid1_ab_tlb_ul > li:nth-child(4) > .toolsBtn > .toolBtnNormal > .sprite-icon > .main-icon-img")
+
+Call log:
+    - checking visibility of locator("li:nth-child(4) > .toolsBtn > .toolBtnNormal .main-icon-img.main-PageNext")
+
+2025-12-23 13:37:32,753 - INFO - Pagination complete - processed 200 total rows across 1 pages
+2025-12-23 13:37:32,753 - INFO - Manual matching complete - 200 rows processed
+2025-12-23 13:37:32,753 - INFO - Processing manually matched items...
+2025-12-23 13:37:32,937 - INFO - Clicked Process button (after manual matching) successfully
+2025-12-23 13:37:38,080 - INFO - Clicked Back to list button successfully
+2025-12-23 13:37:41,096 - INFO - Downloading results...
+2025-12-23 13:37:41,215 - INFO - Clicked account link 'MBB02' successfully
+2025-12-23 13:37:46,554 - INFO - Clicked Export dropdown successfully
+2025-12-23 13:37:46,742 - INFO - Clicked Export to Excel button successfully
+2025-12-23 13:38:16,560 - ERROR - FATAL ERROR: Timeout 30000ms exceeded while waiting for event "download"
+=========================== logs ===========================
+waiting for event "download"
+============================================================
+2025-12-23 13:38:16,900 - INFO - Browser cleanup completed
+2025-12-23 13:38:16,913 - ERROR - ❌ CA Match failed: Timeout 30000ms exceeded while waiting for event "download"
+=========================== logs ===========================
+waiting for event "download"
+============================================================
+Traceback (most recent call last):
+  File "d:\Github\PlayWright-Extractor\playwright_scripts\run_playwright.py", line 142, in run_ca_match
+    records = process_bank_transactions(
+        playwright=playwright,
+    ...<9 lines>...
+        headless=self.headless
+    )
+  File "d:\Github\PlayWright-Extractor\playwright_scripts\CA_Match_Process_Optimized.py", line 643, in process_bank_transactions
+    return processor.run()
+           ~~~~~~~~~~~~~^^
+  File "d:\Github\PlayWright-Extractor\playwright_scripts\CA_Match_Process_Optimized.py", line 540, in run
+    save_path = self.download_results()
+  File "d:\Github\PlayWright-Extractor\playwright_scripts\CA_Match_Process_Optimized.py", line 457, in download_results
+    with self.page.expect_download() as download_info:
+         ~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "D:\Github\PlayWright-Extractor\venv\Lib\site-packages\playwright\_impl\_sync_base.py", line 85, in __exit__
+    self._event.value
+  File "D:\Github\PlayWright-Extractor\venv\Lib\site-packages\playwright\_impl\_sync_base.py", line 59, in value
+    raise exception
+playwright._impl._errors.TimeoutError: Timeout 30000ms exceeded while waiting for event "download"
+=========================== logs ===========================
+waiting for event "download"
+============================================================
+2025-12-23 13:38:16,914 - ERROR - 
+======================================================================
+2025-12-23 13:38:16,915 - ERROR - ❌ AUTOMATION WORKFLOW FAILED
+2025-12-23 13:38:16,915 - ERROR - ======================================================================
+2025-12-23 13:38:16,915 - ERROR - Error: Timeout 30000ms exceeded while waiting for event "download"
+=========================== logs ===========================
+waiting for event "download"
+============================================================
+2025-12-23 13:38:16,915 - ERROR - ======================================================================

@@ -257,8 +257,14 @@ class MatchStatementProcessor:
                 return
             
             # Fill and apply filter
-            equals_button = self.frame.get_by_text("Equals", exact=True).first
-            self.smart_click(equals_button, "Equals button")
+            # Fill and apply filter - Use Contains instead of Equals for robustness
+            contains_button = self.frame.get_by_text("Contains", exact=True).first
+            if contains_button.count() > 0:
+                self.smart_click(contains_button, "Contains button")
+            else:
+                 # If Contains not found, try default (often default is fine) or fall back to Equals
+                 self.log("'Contains' option not found, trying default or Equals...", "debug")
+                 pass
             self.smart_click(textbox, f"{header_text} textbox")
             textbox.fill(str(value))
             
@@ -454,29 +460,77 @@ class MatchStatementProcessor:
     
     def enable_multiple_matching(self):
         """Enable multiple matching checkbox if available."""
+        self.log("Checking 'Match to Multiple Payments' checkbox...")
+
+        # Strategy 1: Try Type A ID (Original Method)
         try:
-            # Try Type A
             checkbox_a = self.frame.locator(
                 "#ctl00_phG_PXSplitContainer_tab2_t1_frmCreateDocumentInv_edMultipleMatching_text"
             )
-            if checkbox_a.count() > 0 and not checkbox_a.first.is_checked():
-                self.log("Enabling Multiple Matching (Type A)")
-                self.smart_click(checkbox_a.first, "Multiple Matching checkbox (Type A)")
+            if checkbox_a.count() > 0:
+                if not checkbox_a.first.is_checked():
+                    self.log("Enabling Multiple Matching (Type A)")
+                    self.smart_click(checkbox_a.first, "Multiple Matching checkbox (Type A)")
+                else:
+                    self.log("'Match to Multiple Payments' (Type A) is already checked")
                 return
         except:
             pass
         
+        # Strategy 2: Try Type B ID (Original Method)
         try:
-            # Try Type B
             checkbox_b = self.frame.locator(
                 "#ctl00_phG_PXSplitContainer_tab2_t0_frmMatchToPayments_edMultipleMatchingToPayments_text"
             )
-            if checkbox_b.count() > 0 and not checkbox_b.first.is_checked():
-                self.log("Enabling Multiple Matching (Type B)")
-                self.smart_click(checkbox_b.first, "Multiple Matching checkbox (Type B)")
+            if checkbox_b.count() > 0:
+                if not checkbox_b.first.is_checked():
+                     self.log("Enabling Multiple Matching (Type B)")
+                     self.smart_click(checkbox_b.first, "Multiple Matching checkbox (Type B)")
+                else:
+                    self.log("'Match to Multiple Payments' (Type B) is already checked")
                 return
         except:
             pass
+
+        # Strategy 3: Find by text label (Fallback / Robust Method)
+        self.log("Original ID selectors failed, trying robust Label Search...")
+        try:
+            # Acumatica often puts the label next to the checkbox or inside a wrapper
+            label = self.frame.get_by_text("Match to Multiple Payments", exact=True).first
+            
+            if label.count() > 0:
+                self.log("Found 'Match to Multiple Payments' label")
+                
+                # Check if we can find the checkbox input itself
+                # It might be a sibling or inside the same parent
+                # Trying to find a checkbox input near this label
+                checkbox = None
+                
+                # Check parent's input
+                parent = label.locator("xpath=..")
+                if parent.locator("input[type='checkbox']").count() > 0:
+                    checkbox = parent.locator("input[type='checkbox']").first
+                
+                # Check preceding sibling
+                elif self.frame.locator("input[type='checkbox']").filter(has=self.frame.locator("xpath=following-sibling::*[text()='Match to Multiple Payments']")).count() > 0:
+                    checkbox = self.frame.locator("input[type='checkbox']").filter(has=self.frame.locator("xpath=following-sibling::*[text()='Match to Multiple Payments']")).first
+
+                if checkbox and checkbox.count() > 0:
+                    if not checkbox.is_checked():
+                        self.log("Clicking 'Match to Multiple Payments' checkbox (via Label Strategy)")
+                        self.smart_click(checkbox, "Match to Multiple Payments checkbox")
+                        self.page.wait_for_timeout(1000)
+                    else:
+                        self.log("'Match to Multiple Payments' is already checked")
+                    return
+                else:
+                    # If we found label but not input, try simple click on label (often toggles it)
+                    # Use a heuristic: check if there's a checked state we can detect? 
+                    # For now just click if we can't verify state, OR rely on fallback.
+                    self.log("Could not pinpoint input from label, skipping fallback click to be safe.")
+            
+        except Exception as e:
+            self.log(f"Strategy 3 (Label Search) failed: {e}", "debug")
         
         self.log("No Multiple Matching checkbox found", "warning")
     
