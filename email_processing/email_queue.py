@@ -2,6 +2,7 @@ import base64
 import os
 import queue
 import re
+import shutil
 import threading
 import time
 from dataclasses import dataclass
@@ -16,6 +17,7 @@ from helper_playwright import functions
 from helper_playwright.auth_helper import get_token
 from helper_playwright.paths import get_downloads_dir, get_email_attachment_dir
 from playwright_scripts.run_playwright import PlaywrightRunner
+from email_processing.attachment_utils import identify_file_type  # New import
 
 load_dotenv()
 
@@ -193,17 +195,97 @@ class EmailTriggerQueue:
 
     def _worker(self) -> None:
         """Worker loop that processes queued jobs sequentially."""
+        # Store original SAVE_DIRECTORY to restore later
+        original_save_dir = os.environ.get("SAVE_DIRECTORY")
+
         while not self.queue.empty():
             job: BankReconJob = self.queue.get()
             token = get_token()
             _write_trigger_marker(job.message_id)
+
+            # --- PRE RECON STEP: Create Run Folder & Route Attachments ---
+            try:
+                # Create unique timestamped run folder
+                timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+                # Sanitize subject for folder name
+                safe_subject = re.sub(r'[<>:"/\\|?*]', '_', job.subject).strip()
+                run_folder_name = f"{timestamp}_{safe_subject}"
+                
+                # Use get_downloads_dir() base logic but manually constructed to avoid circular dependency loop if we altered it
+                # Default is ProjectRoot/Downloads
+                base_downloads = Path(__file__).resolve().parent.parent / "Downloads"
+                # If SAVE_DIRECTORY was set globally, respect it as the root
+                if original_save_dir:
+                    base_downloads = Path(original_save_dir)
+                
+                # The specific run folder
+                run_folder = base_downloads / "Runs" / run_folder_name
+                
+                # Subfolders
+                attachments_dir = run_folder / "attachments"
+                intermediates_dir = run_folder / "intermediates"
+                outputs_dir = run_folder / "outputs"
+                
+                for d in [attachments_dir, intermediates_dir, outputs_dir]:
+                    d.mkdir(parents=True, exist_ok=True)
+                
+                self.logger.info(f"Created Run Folder: {run_folder}")
+                
+                # Move/Copy attachments
+                # Move/Copy attachments
+                import zipfile # Ensure imported
+
+                for att in job.attachments:
+                    if att.path and att.path.exists():
+                        # ZIP HANDLING
+                        if att.path.suffix.lower() == ".zip":
+                            try:
+                                extract_root = att.path.parent / f"extracted_{att.path.stem}"
+                                extract_root.mkdir(exist_ok=True)
+                                with zipfile.ZipFile(att.path, "r") as zf:
+                                    zf.extractall(extract_root)
+                                
+                                self.logger.info(f"Extracted zip {att.name} to {extract_root}")
+                                
+                                # Recursive scan
+                                for f_path in extract_root.rglob("*"):
+                                    if f_path.is_file() and not f_path.name.startswith(('.', '~')):
+                                        file_type = identify_file_type(f_path)
+                                        if file_type in ["DAILY_REPORT", "CREDIT_CARD"]:
+                                            dest_path = attachments_dir / f_path.name
+                                            shutil.copy2(f_path, dest_path)
+                                            self.logger.info(f"Routed extracted file {f_path.name} -> {dest_path} (Type: {file_type})")
+                            except Exception as zip_err:
+                                self.logger.error(f"Failed to extract zip {att.name}: {zip_err}")
+                            continue
+
+                        # STANDARD FILE HANDLING
+                        # Analyze content type using new utility
+                        file_type = identify_file_type(att.path)
+                        
+                        dest_path = attachments_dir / att.path.name
+                        shutil.copy2(att.path, dest_path)
+                        self.logger.info(f"Copied attachment {att.name} to {dest_path} (Type: {file_type})")
+
+                # SET ENVIRONMENT VARIABLE FOR THIS RUN
+                # The PlaywrightRunner running in this process will pick this up
+                # And downstream RaasPlus logic (via get_downloads_dir) will see this as the root
+                os.environ["SAVE_DIRECTORY"] = str(run_folder)
+                self.logger.info(f"Set SAVE_DIRECTORY env var to: {os.environ['SAVE_DIRECTORY']}")
+                
+            except Exception as e:
+                self.logger.error(f"Failed to setup run folder: {e}")
+                _reply(token, self.mailbox, job.message_id, f"[Error] Failed to setup run environment: {e}")
+                self.queue.task_done()
+                continue
+            # -------------------------------------------------------------
 
             self.logger.info(f"Starting Playwright run for {job.account} on {job.recon_date}")
             _reply(
                 token,
                 self.mailbox,
                 job.message_id,
-                f"[Starting] BANK RECON for {job.account} ({job.recon_date}) - amount {job.amount}",
+                f"[Starting] BANK RECON for {job.account} ({job.recon_date}) - amount {job.amount}. Run ID: {run_folder_name}",
             )
 
             try:
@@ -228,6 +310,12 @@ class EmailTriggerQueue:
                     f"[Error] BANK RECON failed for {job.account} ({job.recon_date}): {exc}",
                 )
             finally:
+                # Cleanup: Restore environment variable
+                if original_save_dir:
+                    os.environ["SAVE_DIRECTORY"] = original_save_dir
+                else:
+                    os.environ.pop("SAVE_DIRECTORY", None)
+                    
                 _mark_as_read(token, self.mailbox, job.message_id)
                 self.queue.task_done()
 

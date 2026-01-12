@@ -3,26 +3,43 @@ Transaction ID Matching
 
 Overview
 --------
-Matches a bank row to a company row when the bank transaction ID appears
-in the company description and amounts/dates align.
+A high-confidence matching strategy that identifies specific transaction IDs (like bank-generated unique IDs) embedded within the descriptions or references of the datasets.
 
 Key file
 --------
-- `Raas_Plus/unified_reconciliation.py` (find_transaction_id_matches)
+- `Raas_Plus/unified_reconciliation.py` (Method: `find_transaction_id_matches`)
 
-Algorithm summary
------------------
-1) For each unmatched bank row:
-   - Extract `Ext. Tran. ID`
-   - Require valid date and net amount
-2) Search company rows where:
-   - Description contains the transaction ID
-   - Date is within tolerance
-   - Net amount within tolerance
-3) Enforce transaction type match
-4) Apply group-reservation guards to avoid breaking better group matches
+Algorithm Logic
+---------------
+1. **ID Extraction**:
+   - Extracts the `BANK_TXN_ID_FIELD` from the bank transaction (e.g., a specific portal ID or reference).
+2. **Search**:
+   - Searches for this exact ID string within the **Company Description** field (case-insensitive).
+3. **Constraints**:
+   - **Amount**: Must match within `AMOUNT_TOLERANCE`.
+   - **Date**: Must fall within the `DATE_TOLERANCE_DAYS` window.
+   - **Type**: Transaction types (Credit/Debit) must match.
+4. **Scoring**: Automatically assigns a high base score of **95%** due to the specificity of the match.
 
-Output
+Inputs
 ------
-- `Match Type`: `transaction_id`
-- 1-to-1 match (bank row -> company row)
+### Bank Dataset
+- `Tran. ID` (Source)
+- `net_amount`, `Date`
+
+### Company Dataset
+- `Description` (Search Target)
+- `net_amount`, `Date`
+
+Outputs
+-------
+- **Match Type**: `transaction_id`
+- **Match Score**: 95.0
+- **Explanation**: "Matched on transaction ID [ID] in description. Net amount: [Bank] vs [Company]".
+
+Example
+-------
+**Bank Record**: ID: `TXN998877` | Amount: 750.00
+**Company Record**: Desc: `Payment for inv - TXN998877` | Amount: 750.00
+
+**Result**: High-confidence match based on the unique ID substring.

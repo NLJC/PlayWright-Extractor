@@ -236,7 +236,7 @@ def send_success_email(user: str, to_addr: str, account: str, recon_date: str, a
         print(f"Warning: exception sending success email: {exc}")
 
 
-def run_playwright_job(account: Optional[str], recon_date: Optional[str], amount: Optional[str]):
+def run_playwright_job(account: Optional[str], recon_date: Optional[str], amount: Optional[str], env_overrides: Optional[Dict] = None):
     cmd = [sys.executable, str(ROOT_DIR / "run_playwright.py")]
     if account:
         cmd.extend(["--account", account])
@@ -249,8 +249,13 @@ def run_playwright_job(account: Optional[str], recon_date: Optional[str], amount
         except ValueError:
             print(f"Warning: amount '{amount}' not numeric; skipping amount param.")
 
+    # Merge current env with overrides
+    run_env = os.environ.copy()
+    if env_overrides:
+        run_env.update(env_overrides)
+
     print(f"Starting Playwright: {' '.join(cmd)}")
-    result = subprocess.run(cmd, cwd=ROOT_DIR)
+    result = subprocess.run(cmd, cwd=ROOT_DIR, env=run_env)
     if result.returncode != 0:
         print(f"Playwright run failed with code {result.returncode}")
     else:
@@ -289,9 +294,11 @@ def process_message(user: str, msg: Dict, subject_match: str, attachment_root: P
         body_text = body_content or ""
 
     parsed = parse_recon_payload(subject, body_text)
+    
+    # 1. Download to Raw Inbox Folder
     msg_dir = attachment_root / msg_id
-    attachments = download_attachments(user, msg_id, msg_dir, extract_zip=True)
-    parsed["attachments"] = [str(p) for p in attachments]
+    raw_attachments = download_attachments(user, msg_id, msg_dir, extract_zip=True)
+    parsed["attachments"] = [str(p) for p in raw_attachments]
     parsed["message_id"] = msg_id
     sender_addr = (
         detail.get("from", {})
@@ -301,13 +308,90 @@ def process_message(user: str, msg: Dict, subject_match: str, attachment_root: P
 
     print(f"Parsed payload: account={parsed.get('account')}, date={parsed.get('date')}, amount={parsed.get('amount')}")
 
+    # --- AUDIT TRAIL SETUP ---
+    # Create unique timestamped run folder
+    from datetime import datetime
+    import shutil
+    from email_processing.attachment_utils import identify_file_type
+
+    timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+    safe_subject = re.sub(r'[<>:"/\\|?*]', '_', subject).strip()
+    run_folder_name = f"{timestamp}_{safe_subject}"
+    
+    # Run Folder Location: ProjectRoot/Downloads/Runs/{RunID}
+    # Or respect SAVE_DIRECTORY if set (but we want to create a subfolder inside it)
+    base_save_dir = os.getenv("SAVE_DIRECTORY")
+    if base_save_dir:
+        base_root = Path(base_save_dir)
+    else:
+        base_root = ROOT_DIR / "Downloads"
+        
+    run_folder = base_root / "Runs" / run_folder_name
+    attachments_dir = run_folder / "attachments"
+    intermediates_dir = run_folder / "intermediates"
+    outputs_dir = run_folder / "outputs"
+    
+    headers_file = run_folder / "email_headers.txt"
+    
+    try:
+        for d in [attachments_dir, intermediates_dir, outputs_dir]:
+            d.mkdir(parents=True, exist_ok=True)
+            
+        print(f"Created Audit Trail Run Folder: {run_folder}")
+        
+        # Save context info
+        headers_file.write_text(f"Subject: {subject}\nFrom: {sender_addr}\nDate: {datetime.now()}\nMessageID: {msg_id}", encoding="utf-8")
+        
+        # Copy and Route Attachments
+        for raw_att in raw_attachments:
+            # If it's a zip file that was extracted, look inside its folder
+            if raw_att.suffix.lower() == ".zip":
+                extract_folder = raw_att.with_suffix("")
+                if extract_folder.exists() and extract_folder.is_dir():
+                    print(f"Scanning extracted zip: {extract_folder}")
+                    for f_path in extract_folder.rglob("*"):
+                        if f_path.is_file() and not f_path.name.startswith(('.', '~')):
+                            f_type = identify_file_type(f_path)
+                            # Only route if it matches a known type to avoid clutter
+                            if f_type in ["DAILY_REPORT", "CREDIT_CARD"]:
+                                dest = attachments_dir / f_path.name
+                                shutil.copy2(f_path, dest)
+                                print(f"Routed {f_path.name} from zip -> {dest} (Type: {f_type})")
+                continue
+
+            # Standard file handling
+            if raw_att.exists():
+                f_type = identify_file_type(raw_att)
+                dest = attachments_dir / raw_att.name
+                shutil.copy2(raw_att, dest)
+                print(f"Routed {raw_att.name} -> {dest} (Type: {f_type})")
+        
+        # Env Overrides for the Run
+        env_overrides = {
+            "SAVE_DIRECTORY": str(run_folder)
+        }
+        
+    except Exception as e:
+        print(f"Error setting up run folder: {e}")
+        # Continue somewhat gracefully? Or fail?
+        # Use a fallback if run folder failed, though unlikely
+        env_overrides = {}
+
+    # -------------------------
+
     run_playwright = env_bool("RUN_PLAYWRIGHT_ENABLED", True)
     max_retries = int(os.getenv("RUN_PLAYWRIGHT_MAX_RETRIES", "3"))
     last_error = None
     success = False
+    
     if run_playwright:
         for attempt in range(1, max_retries + 1):
-            rc = run_playwright_job(parsed.get("account"), parsed.get("date"), parsed.get("amount"))
+            rc = run_playwright_job(
+                parsed.get("account"), 
+                parsed.get("date"), 
+                parsed.get("amount"),
+                env_overrides=env_overrides
+            )
             if rc == 0:
                 success = True
                 break
@@ -366,6 +450,11 @@ def main():
             break
         except Exception as exc:
             print(f"Listener error: {exc}")
+        
+        if env_bool("LISTENER_ONE_SHOT", False):
+            print("One-shot mode enabled; exiting listener.")
+            break
+            
         time.sleep(poll_seconds)
 
 

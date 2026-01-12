@@ -3,62 +3,54 @@ MBB02 Credit Card Matching
 
 Overview
 --------
-This is a custom Stage 1 matcher that groups MBB02 credit card deposits
-by reading supporting credit card files and matching their references
-against company statements.
+A specialized reconciliation logic for MBB02 bank statements involving credit card transaction deposits. It maps consolidated bank deposits back to individual transaction references extracted from supporting credit card transaction files.
 
-Key files
----------
-- `Raas_Plus/unified_reconciliation.py`
-- `scripts/mbb02_cr_dr_matching.py`
+Key file
+--------
+- `Raas_Plus/unified_reconciliation.py` (Method: `find_mbb02_creditcard_group_matches`)
 
-When it runs
-------------
-- `BANK_NAME == "MBB02"`
-- `ENABLE_MBB02_CC_GROUPING == True`
-- `CreditCardTransaction/` folder exists
+Algorithm Logic
+---------------
+1. **Bank Description Parsing**:
+   - The engine identifies bank rows where the description contains credit card deposit metadata (e.g., Terminal ID, Date, Batch Number).
+   - Uses `mbb02_cc.parse_mbb02_tran_desc` to extract these details.
+2. **Metadata Enrichment**:
+   - For each identified deposit, the engine searches the `MBB02_CC_INPUT_FOLDER` (default: `CreditCardTransaction`) for supporting transaction files matching the description.
+   - It extracts every **Reference Number** and the individual transaction amounts from these supporting files.
+3. **Company Validation**:
+   - **Crucial Rule**: Every reference identified in the supporting document **must exist** as an unmatched transaction in the company statement.
+   - If any reference is missing, the match is rejected, and the missing references are recorded in a specialized error log for the analyst.
+4. **Reconciliation**:
+   - Once all references are verified, the engine matches the single bank deposit against the group of company transactions.
 
-Algorithm summary
------------------
-1) Parse bank "Tran. Desc" for:
-   - CR/DR + number + date (ddmmyyyy)
-2) Scan all credit card files under `CreditCardTransaction/`:
-   - Match C14 trailing digits to bank number
-   - Match B4 date to bank date
-   - Extract all "Reference No" values
-3) Ensure every reference exists in company statements
-4) Select company rows in order (no reuse)
-5) Check net amount consistency
-6) Emit a group match:
-   - `Match Type` = `mbb02_creditcard_group`
+Inputs
+------
+### Bank Dataset
+- `Description`: Must contain MBB02 deposit strings.
+- `Receipt`: The deposit amount.
 
-Hypothetical example
---------------------
-Bank row:
-- Tran. Desc: "CR/CARD SALES MN 07700511 DATED 01072025"
-- Receipt: 10,000.00
-- Disbursement: 0.00
+### Supporting Files (`CreditCardTransaction/`)
+- Excel/CSV files containing individual transaction details and references.
 
-Credit card file:
-- C14: "MBB CARD SETTLEMENT 123407700511"
-- B4: "01/07/2025"
-- Reference No: REF1001, REF1002, REF1003
-- Last row O (net): 10000.00
+### Company Dataset
+- `Document Ref.`: Must contain the references listed in the supporting files.
 
-Company statements:
-- Document Ref. REF1001 (Receipt 3,000.00)
-- Document Ref. REF1002 (Receipt 2,000.00)
-- Document Ref. REF1003 (Receipt 5,000.00)
+Outputs
+-------
+- **Match Type**: `mbb02_cc_group`.
+- **Result**: N-to-1 match.
+- **Special**: Detailed error logging if specific references within the deposit are missing from the company records.
 
-Result:
-- Group match with CSGP refs: REF1001, REF1002, REF1003
-- Bank net == company net == 10,000.00
+Example
+-------
+**Bank Statement**:
+- Desc: `CC DEP 12345678 231010` | Amount: 5,000.00
 
-How it reaches Playwright
--------------------------
-The output Excel "Group Match" sheet includes a row with:
-- `Match Type` = `mbb02_creditcard_group`
-- `CSGP Reference` = "REF1001, REF1002, REF1003"
+**Supporting File**:
+- Ref: `TXN-001` | Amount: 2,000.00
+- Ref: `TXN-002` | Amount: 3,000.00
 
-`MatchStatement_Optimized.process_group_matches(...)` applies those
-matches in the UI with multiple-matching enabled.
+**Company Statement**:
+- [MUST contain `TXN-001` and `TXN-002`]
+
+**Result**: Matched (N:1) if both `TXN-001` and `TXN-002` are found in the company records.

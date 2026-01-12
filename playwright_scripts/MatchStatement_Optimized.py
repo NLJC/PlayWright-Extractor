@@ -44,11 +44,13 @@ class MatchStatementProcessor:
         pingback_url: str = None,
         payload: dict = None,
         webhook_url: str = None,
-        headless: bool = False
+        headless: bool = False,
+        target_date: str = None
     ):
         self.playwright = playwright
         self.match_result_path = match_result_path
         self.account_name = account_name
+        self.target_date = target_date
         self.website_url = website_url or os.getenv("WEBSITE_URL")
         self.username = username or os.getenv("WEBSITE_USERNAME")
         self.password = password or os.getenv("PASSWORD")
@@ -58,10 +60,12 @@ class MatchStatementProcessor:
         self.headless = headless
         
         self.browser = None
+        self.context = None  # Add context for video recording
         self.page = None
         self.frame = None
         self.failed_entries: List[Dict[str, Any]] = []
         self.failed_bank_refs: Set[str] = set()  # Track failed BankRefs to prevent duplicates
+        self.processed_bank_refs: Set[str] = set()  # Track successfully processed BankRefs to prevent duplicates
 
         # Load page wait time from environment variable (default: 15000ms = 15 seconds)
         self.page_wait_time = int(os.getenv("PAGE_WAIT_TIME_MS", "15000"))
@@ -76,8 +80,17 @@ class MatchStatementProcessor:
     def _setup_log_file(self):
         """Setup log file in logs/runs/ directory."""
         try:
-            # Create logs/runs directory if it doesn't exist
-            log_dir = Path("logs/runs")
+            # Check for SAVE_DIRECTORY env var (from inbox_listener)
+            save_dir = os.getenv("SAVE_DIRECTORY")
+            
+            if save_dir:
+                # Use the run-specific folder
+                log_dir = Path(save_dir) / "logs"
+                print(f"[INFO] Using run-specific log directory: {log_dir}")
+            else:
+                # Fallback to default logs/runs directory
+                log_dir = Path("logs/runs")
+            
             log_dir.mkdir(parents=True, exist_ok=True)
 
             # Create log file with timestamp and account name
@@ -151,12 +164,57 @@ class MatchStatementProcessor:
         self.log("=" * 60)
         
         self.browser = self.playwright.chromium.launch(headless=self.headless)
-        self.page = self.browser.new_page()
+        
+        # Video Recording Setup
+        record_video = os.getenv("RECORD_VIDEO", "false").lower() == "true"
+        save_dir = os.getenv("SAVE_DIRECTORY")
+        
+        if record_video and save_dir:
+            video_dir = Path(save_dir) / "outputs" / "recording"
+            video_dir.mkdir(parents=True, exist_ok=True)
+            self.log(f"[INFO] Video recording enabled. Saving to: {video_dir}")
+            
+            self.context = self.browser.new_context(
+                record_video_dir=str(video_dir),
+                record_video_size={"width": 1280, "height": 720},
+                viewport={"width": 1280, "height": 720}
+            )
+        else:
+            self.context = self.browser.new_context(
+                 viewport={"width": 1280, "height": 720}
+            )
+            
+        self.page = self.context.new_page()
         self.log("[OK] Browser initialized successfully")
     
     def cleanup(self):
         """Clean up browser resources."""
         try:
+            if self.context:
+                # Capture video path if recording
+                video_source_path = None
+                try:
+                    if self.page:
+                        video = self.page.video
+                        if video:
+                            video_source_path = video.path()
+                except:
+                    pass
+
+                self.context.close()  # Important for saving video
+                self.context = None
+
+                # Rename video if it exists
+                if video_source_path and os.path.exists(video_source_path):
+                    try:
+                        timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+                        folder = os.path.dirname(video_source_path)
+                        new_path = os.path.join(folder, f"match_statement_{timestamp}.webm")
+                        os.rename(video_source_path, new_path)
+                        self.log(f"[INFO] Video saved: {new_path}")
+                    except Exception as e:
+                        self.log(f"[WARNING] Video rename failed: {e}", "warning")
+
             if self.browser:
                 self.browser.close()
             self.log("Browser cleanup completed")
@@ -424,6 +482,11 @@ class MatchStatementProcessor:
             bank_ref = self.clean_ref(bank_ref_raw)
             csgp_ref = self.clean_ref(csgp_ref_raw)
             
+            # Skip if already processed
+            if bank_ref in self.processed_bank_refs:
+                self.log(f"[1to1] Skipping BankRef={bank_ref} (already processed in previous step)")
+                continue
+
             self.log(f"[1to1] Row {index+1}: BankRef={bank_ref}, CSGPRef={csgp_ref}")
             
             # Filter main table by bank reference
@@ -453,8 +516,9 @@ class MatchStatementProcessor:
                         self.failed_bank_refs.add(bank_ref)
                     continue
                 else:
-                    # Proceed with matching
                     self.search_and_match_csgp_ref(csgp_ref)
+                    # Mark as processed
+                    self.processed_bank_refs.add(bank_ref)
         
         self.log(f"[OK] Completed 1-to-1 matches")
     
@@ -558,6 +622,15 @@ class MatchStatementProcessor:
             if not bank_ref_raw or not csgp_ref_raw:
                 continue
 
+            # Skip if already processed (Check THIS first to avoid reverse_ce_gl confusion)
+            if bank_ref_raw:
+                first_bank_ref = bank_ref_raw.split(",")[0].strip()
+                if first_bank_ref in self.processed_bank_refs:
+                    self.log(f"[Group] Skipping BankRef={first_bank_ref} (already processed)")
+                    continue
+
+
+
             # Skip reverse_ce_gl entries - they will be processed separately
             if match_type == "reverse_ce_gl":
                 self.log(f"[Group] Row {index+1}: Skipping reverse_ce_gl entry (will be processed in Step 6.5)")
@@ -584,6 +657,13 @@ class MatchStatementProcessor:
                     self.failed_entries.append(row.to_dict())
                     self.failed_bank_refs.add(bank_ref)
                 continue
+
+            # Skip if already processed
+            if bank_ref in self.processed_bank_refs:
+                self.log(f"[Group] Skipping BankRef={bank_ref} (already processed)")
+                continue
+
+            # Take first bank ref
 
             # Enable multiple matching
             self.enable_multiple_matching()
@@ -659,6 +739,15 @@ class MatchStatementProcessor:
                 continue
 
             self.log(f"[OK] Successfully processed reverse_ce_gl match for {csgp_refs}")
+            
+            # Track the bank reference if available in the row
+            bank_ref_raw = str(row.get("Bank Reference Number", "")).strip()
+            if bank_ref_raw:
+                # Group matches might have comma-separated bank refs, usually it's one for reverse_ce_gl but handle split
+                bank_refs = [self.clean_ref(ref) for ref in bank_ref_raw.split(",") if ref.strip()]
+                for br in bank_refs:
+                    self.processed_bank_refs.add(br)
+                    self.log(f"[reverse_ce_gl] Marked BankRef={br} as processed")
 
         self.log(f"[OK] Completed all reverse_ce_gl matches")
 
@@ -699,22 +788,83 @@ class MatchStatementProcessor:
                 target_row = None
                 self.log(f"Found {row_count} rows in Reconciliation Statements table")
 
-                # Search for the account with "On Hold" status
+                # Strategy 1: Find valid rows with dates
+                valid_rows = []
+
                 for i in range(row_count):
                     row = rows.nth(i)
                     row_text = row.inner_text()
+                    
+                    # Ensure it's the correct account
+                    if self.account_name not in row_text:
+                        continue
+                        
+                    # Extract date from row (ColumnIndex 2 usually, based on typical grid)
+                    # We'll try to find a date pattern in the text
+                    # Example text: "CIM02 ... 08/01/2026 ... On Hold"
+                    date_match = re.search(r"(\d{2}/\d{2}/\d{4})", row_text)
+                    
+                    row_date_str = date_match.group(1) if date_match else None
+                    row_date_obj = None
+                    
+                    if row_date_str:
+                        try:
+                            row_date_obj = datetime.strptime(row_date_str, "%d/%m/%Y")
+                        except:
+                            pass
+                    
+                    valid_rows.append({
+                        "row": row,
+                        "date_str": row_date_str,
+                        "date_obj": row_date_obj,
+                        "text": row_text,
+                        "index": i
+                    })
 
-                    # Check if this row contains the account name and "On Hold" status
-                    if self.account_name in row_text and "On Hold" in row_text:
-                        self.log(f"Found {self.account_name} with 'On Hold' status at row {i}")
-                        # Find the account link in this row
-                        account_link = row.get_by_role("link", name=self.account_name)
+                # Strategy 2: Select based on target_date
+                if self.target_date:
+                    self.log(f"Searching for account '{self.account_name}' with date '{self.target_date}'")
+                    for item in valid_rows:
+                        if item["date_str"] == self.target_date:
+                            self.log(f"Found exact match for date {self.target_date} at row {item['index']}")
+                            # Find the link
+                            account_link = item["row"].get_by_role("link", name=self.account_name)
+                            if account_link.count() > 0:
+                                target_row = account_link.first
+                                break
+                
+                # Strategy 3: Fallback to Latest Date
+                if not target_row and valid_rows:
+                    self.log(f"No exact match found for {self.target_date}, selecting latest available...")
+                    # Sort by date descending
+                    sorted_rows = sorted(
+                        [r for r in valid_rows if r["date_obj"]], 
+                        key=lambda x: x["date_obj"], 
+                        reverse=True
+                    )
+                    
+                    if sorted_rows:
+                        latest = sorted_rows[0]
+                        self.log(f"Selected latest record: {latest['date_str']} at row {latest['index']}")
+                        account_link = latest["row"].get_by_role("link", name=self.account_name)
                         if account_link.count() > 0:
                             target_row = account_link.first
-                            break
+                
+                # Strategy 4: Fallback to "On Hold" (Legacy/Original Logic) if still no target
+                if not target_row:
+                     self.log("Fallback to searching for 'On Hold' status...")
+                     for i in range(row_count):
+                        row = rows.nth(i)
+                        row_text = row.inner_text()
+                        if self.account_name in row_text and "On Hold" in row_text:
+                            self.log(f"Found {self.account_name} with 'On Hold' status at row {i}")
+                            account_link = row.get_by_role("link", name=self.account_name)
+                            if account_link.count() > 0:
+                                target_row = account_link.first
+                                break
 
                 if target_row:
-                    self.smart_click(target_row, f"Account: {self.account_name} (On Hold)")
+                    self.smart_click(target_row, f"Account: {self.account_name}")
                     # Smart wait for account detail page to load
                     self.smart_wait_for_page_load()
                 else:
@@ -962,58 +1112,100 @@ class MatchStatementProcessor:
 
             # Extract record information - look for rows containing the CSGP ref
             matching_records = []
+            
+            # Find column indices for Receipt and Disbursement
+            receipt_col_idx = -1
+            disbursement_col_idx = -1
+            orig_doc_col_idx = -1
+            
+            try:
+                # Try to find headers in the entire frame, not just the data table
+                headers = self.frame.locator(".GridHeader td, .GridHeader th, thead tr th")
+                header_count = headers.count()
+                
+                if header_count > 0:
+                    self.log(f"Found {header_count} headers in frame")
+                    for i in range(header_count):
+                        header_text = headers.nth(i).inner_text().strip()
+                        if "Receipt" in header_text:
+                            receipt_col_idx = i
+                        elif "Disbursement" in header_text:
+                            disbursement_col_idx = i
+                        elif "Orig. Doc. Number" in header_text:
+                            orig_doc_col_idx = i
+                
+                # Fallback to standard indices if not found (based on visual layout)
+                if receipt_col_idx == -1: receipt_col_idx = 4
+                if disbursement_col_idx == -1: disbursement_col_idx = 5
+                if orig_doc_col_idx == -1: orig_doc_col_idx = 9
+                
+                self.log(f"[INFO] Column indices - Receipt: {receipt_col_idx}, Disbursement: {disbursement_col_idx}, OrigDoc: {orig_doc_col_idx}")
+            except Exception as e:
+                self.log(f"Error finding column indices: {e}", "warning")
+                # Fallback
+                receipt_col_idx = 4
+                disbursement_col_idx = 5
+                orig_doc_col_idx = 9
+
             for i in range(row_count):
                 row = rows.nth(i)
                 row_text = row.inner_text().strip()
 
-                # Skip if row contains toolbar/button keywords (but NOT regular headers)
-                skip_keywords = [
-                    "TOGGLE RECONCILED", "TOGGLE CLEARED", "RECONCILE PROCESSED",
-                    "CREATE ADJUSTMENT", "All Records"
-                ]
-
-                should_skip = False
-                for keyword in skip_keywords:
-                    if keyword in row_text:
-                        should_skip = True
-                        self.log(f"DEBUG: Skipping row {i} (toolbar): {row_text[:50]}", "debug")
-                        break
-
-                if should_skip:
+                # Skip if row contains toolbar/button keywords
+                skip_keywords = ["TOGGLE RECONCILED", "TOGGLE CLEARED", "RECONCILE PROCESSED", "CREATE ADJUSTMENT", "All Records"]
+                if any(k in row_text for k in skip_keywords):
                     continue
 
-                # Check if row has minimal structure
                 cells = row.locator("td")
                 cell_count = cells.count()
+                if cell_count < 3: continue
 
-                if cell_count < 3:
-                    self.log(f"DEBUG: Skipping row {i} (too few cells: {cell_count})", "debug")
-                    continue
-
-                # Check if this row contains the CSGP ref we're looking for
-                if str(csgp_ref) in row_text:
-                    self.log(f"DEBUG: Found row {i} containing '{csgp_ref}'", "debug")
-
+                # Check if this row contains the CSGP ref we're looking for (case-insensitive)
+                if str(csgp_ref).lower() in row_text.lower():
+                    
                     # Extract Document Ref from the row to use as description
                     document_ref = ""
+                    receipt_amount = 0.0
+                    disbursement_amount = 0.0
+                    orig_doc_number = ""
+                    
                     try:
-                        # Look for the Document Ref column (usually around column 5-6)
-                        for col_idx in [5, 6, 4, 7]:
-                            if col_idx < cell_count:
-                                text = cells.nth(col_idx).inner_text().strip()
-                                if text and str(csgp_ref) in text:
-                                    document_ref = text
-                                    break
-                    except:
-                        pass
+                        # Document Ref is at index 6
+                        if 6 < cell_count:
+                            text = cells.nth(6).inner_text().strip()
+                            if text: document_ref = text
+                        
+                        # Extract amounts
+                        if receipt_col_idx != -1 and receipt_col_idx < cell_count:
+                            val = cells.nth(receipt_col_idx).inner_text().strip().replace(",", "")
+                            try: receipt_amount = float(val) 
+                            except: pass
+                                
+                        if disbursement_col_idx != -1 and disbursement_col_idx < cell_count:
+                            val = cells.nth(disbursement_col_idx).inner_text().strip().replace(",", "")
+                            try: disbursement_amount = float(val)
+                            except: pass
+
+                        # Extract Original Doc Number
+                        if orig_doc_col_idx != -1 and orig_doc_col_idx < cell_count:
+                            orig_doc_number = cells.nth(orig_doc_col_idx).inner_text().strip()
+
+                    except Exception as e:
+                        self.log(f"Error extracting row data: {e}", "debug")
 
                     matching_records.append({
                         "row_index": i,
                         "description": document_ref or str(csgp_ref),
                         "row_locator": row,
-                        "cell_count": cell_count
+                        "cell_count": cell_count,
+                        "receipt": receipt_amount,
+                        "disbursement": disbursement_amount,
+                        "orig_doc_number": orig_doc_number
                     })
-                    self.log(f"DEBUG: Added row {i} as matching data row - Doc Ref: '{document_ref or csgp_ref}'", "debug")
+                    # Log at INFO level so we can debug user issues
+                    self.log(f"[INFO] Row {i}: Ref='{document_ref}', Rec={receipt_amount}, Disb={disbursement_amount}, OrigDoc='{orig_doc_number}'")
+
+            return matching_records
 
             return matching_records
 
@@ -1022,41 +1214,49 @@ class MatchStatementProcessor:
             return []
 
     def validate_and_reconcile_reverse_ce_gl(self, matching_records: List[Dict], csgp_refs: List[str]) -> bool:
-        """Validate and reconcile reverse CE/GL records based on count and description."""
+        """Validate and reconcile reverse CE/GL records based on exact opposite amounts."""
         try:
             record_count = len(matching_records)
             self.log(f"Validating {record_count} records for reconciliation")
 
-            if record_count == 0:
-                self.log("No matching records found", "warning")
+            if record_count < 2:
+                self.log(f"Insufficient records ({record_count}), need at least 2", "warning")
                 return False
 
-            # Check if there are more than 2 records
-            if record_count > 2:
-                self.log("More than 2 records found, checking descriptions...")
-
-                # Get first record's description
-                first_description = matching_records[0]["description"]
-
-                # Find first matching pair (same description)
-                matching_pair = None
-                for i in range(1, record_count):
-                    if matching_records[i]["description"] == first_description:
-                        matching_pair = [matching_records[0], matching_records[i]]
-                        break
-
-                if not matching_pair:
-                    self.log("No matching descriptions found in first 2 pairs", "warning")
-                    return False
-
-                records_to_reconcile = matching_pair
-
-            elif record_count == 2:
-                self.log("Exactly 2 records found, proceeding to reconcile")
-                records_to_reconcile = matching_records
-
-            else:
-                self.log(f"Insufficient records ({record_count}), need at least 2", "warning")
+            records_to_reconcile = []
+            
+            # Check for exact opposite amounts in the SAME column
+            # Case 1: Disbursement X and Disbursement -X
+            # Case 2: Receipt X and Receipt -X
+            
+            import itertools
+            found_pair = False
+            
+            # Helper to check if two floats are effectively opposite
+            def is_opposite(v1, v2):
+                if abs(v1) < 0.01 and abs(v2) < 0.01: return False # Ignore zero pairs
+                return abs(v1 + v2) < 0.01 and abs(v1) > 0.01
+            
+            for r1, r2 in itertools.combinations(matching_records, 2):
+                # Check Disbursement pair
+                if is_opposite(r1['disbursement'], r2['disbursement']):
+                    self.log(f"Found opposite pair in Disbursement: {r1['disbursement']} and {r2['disbursement']}")
+                    records_to_reconcile = [r1, r2]
+                    found_pair = True
+                    break
+                
+                # Check Receipt pair
+                if is_opposite(r1['receipt'], r2['receipt']):
+                    self.log(f"Found opposite pair in Receipt: {r1['receipt']} and {r2['receipt']}")
+                    records_to_reconcile = [r1, r2]
+                    found_pair = True
+                    break
+            
+            if not found_pair:
+                self.log("No pair with exact opposite amounts found in the same column", "warning")
+                # Optional: Log the values we saw
+                for r in matching_records:
+                    self.log(f"Row {r['row_index']}: R={r['receipt']}, D={r['disbursement']}", "debug")
                 return False
 
             # Reconcile the selected records - Click the first cell (Reconciled column) directly
@@ -1182,7 +1382,18 @@ class MatchStatementProcessor:
                     df[col] = ""
 
             df = df[columns]
-            failed_entries_path = "failed_entries.xlsx"
+            
+            # Determine save path
+            save_dir = os.getenv("SAVE_DIRECTORY")
+            if save_dir:
+                # Save to outputs folder in the run directory
+                output_dir = Path(save_dir) / "outputs"
+                output_dir.mkdir(parents=True, exist_ok=True)
+                failed_entries_path = str(output_dir / "failed_entries.xlsx")
+            else:
+                # Fallback to current directory
+                failed_entries_path = "failed_entries.xlsx"
+                
             df.to_excel(failed_entries_path, index=False)
             self.log(f"[ERROR] Saved {len(self.failed_entries)} failed entries to {failed_entries_path}")
             return failed_entries_path
@@ -1311,7 +1522,8 @@ def run_matching_process(
     pingback_url: str = None,
     payload: dict = None,
     webhook_url: str = None,
-    headless: bool = False
+    headless: bool = False,
+    target_date: str = None 
 ):
     """
     Run the matching process with automation.
@@ -1327,6 +1539,7 @@ def run_matching_process(
         payload: Optional payload for pingback
         webhook_url: Optional URL for logging webhooks
         headless: Run browser in headless mode (default: False)
+        target_date: Target reconciliation date (DD/MM/YYYY)
     """
     processor = MatchStatementProcessor(
         playwright=playwright,
@@ -1338,10 +1551,14 @@ def run_matching_process(
         pingback_url=pingback_url,
         payload=payload,
         webhook_url=webhook_url,
-        headless=headless
+        headless=headless,
+        target_date=target_date
     )
     
-    processor.run()
+    try:
+        processor.run()
+    finally:
+        processor.cleanup()
 
 
 # Main execution

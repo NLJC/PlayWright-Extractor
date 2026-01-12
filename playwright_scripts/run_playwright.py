@@ -227,7 +227,8 @@ class PlaywrightRunner:
                     pingback_url=self.pingback_url,
                     payload={"step": "match_statement"},
                     webhook_url=self.webhook_url,
-                    headless=self.headless
+                    headless=self.headless,
+                    target_date=self.date
                 )
                 
                 logger.info("✅ Match Statement completed")

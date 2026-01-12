@@ -15,6 +15,7 @@ Key Improvements:
 import os
 import re
 from datetime import datetime
+from pathlib import Path
 from typing import Optional
 
 import pandas as pd
@@ -89,26 +90,71 @@ class ReconciliationExtractor:
             if error:
                 data["error"] = error
             try:
-                requests.post(self.pingback_url, json=data, timeout=10)
+                requests.post(self.pingback_url, json=data, timeout=5)
+                self.log(f"Pingback sent: {status}", "debug")
             except Exception as e:
-                self.log(f"Pingback failed: {e}", "warning")
+                self.log(f"Failed to send pingback: {e}", "warning")
     
     def initialize_browser(self):
-        """STEP 1: Initialize browser with download support."""
+        """STEP 1: Initialize browser."""
         self.log("=" * 60)
         self.log("STEP 1: Initializing browser...")
         self.log("=" * 60)
         
         self.browser = self.playwright.chromium.launch(headless=self.headless)
-        self.context = self.browser.new_context(accept_downloads=True)
+        
+        # Video Recording Setup
+        record_video = os.getenv("RECORD_VIDEO", "false").lower() == "true"
+        save_dir = os.getenv("SAVE_DIRECTORY")
+        
+        if record_video and save_dir:
+            video_dir = Path(save_dir) / "outputs" / "recording"
+            video_dir.mkdir(parents=True, exist_ok=True)
+            self.log(f"[INFO] Video recording enabled. Saving to: {video_dir}")
+            
+            self.context = self.browser.new_context(
+                record_video_dir=str(video_dir),
+                record_video_size={"width": 1280, "height": 720},
+                viewport={"width": 1280, "height": 720},
+                accept_downloads=True
+            )
+        else:
+            self.context = self.browser.new_context(
+                viewport={"width": 1280, "height": 720},
+                accept_downloads=True
+            )
+            
         self.page = self.context.new_page()
-        self.log("✅ Browser initialized successfully")
-    
+        self.log("[OK] Browser initialized successfully")
+
     def cleanup(self):
         """Clean up browser resources."""
         try:
             if self.context:
-                self.context.close()
+                # Capture video path if recording
+                video_source_path = None
+                try:
+                    if self.page:
+                        video = self.page.video
+                        if video:
+                            video_source_path = video.path()
+                except:
+                    pass
+
+                self.context.close()  # Important for saving video
+                self.context = None
+
+                # Rename video if it exists
+                if video_source_path and os.path.exists(video_source_path):
+                    try:
+                        timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+                        folder = os.path.dirname(video_source_path)
+                        new_path = os.path.join(folder, f"extract_reconcile_{timestamp}.webm")
+                        os.rename(video_source_path, new_path)
+                        self.log(f"[INFO] Video saved: {new_path}")
+                    except Exception as e:
+                        self.log(f"[WARNING] Video rename failed: {e}", "warning")
+
             if self.browser:
                 self.browser.close()
             self.log("Browser cleanup completed")

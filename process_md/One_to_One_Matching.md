@@ -1,36 +1,32 @@
-1-to-1 Matching
-===============
+One-to-One Matching (Simple)
+===========================
 
 Overview
 --------
-1-to-1 matching applies simple one bank row to one company row matches
-based on the "1to1 Matches" sheet in the RAAS+ output Excel.
+The simplest form of matching that pairs transactions based on exact amounts and high semantic overlap. It serves as a precursor or fallback to the more complex Enhanced/Hungarian methods.
 
-Key files
----------
+Key file
+--------
 - `Raas_Plus/unified_reconciliation.py`
-- `playwright_scripts/MatchStatement_Optimized.py`
 
-How 1-to-1 matches are produced (RAAS+)
----------------------------------------
-- The unified engine emits 1-to-1 matches into the "1to1 Matches" sheet.
-- Each row maps a single bank transaction to a single company reference.
+Algorithm Logic
+---------------
+This documentation covers the general concept of 1-to-1 matching used throughout the pipeline.
+1. **Identity Check**: Checks if a single bank record can be uniquely identified as a company record.
+2. **Core Components**:
+   - **Exactness**: Prioritizes equality in references and amounts.
+   - **Uniqueness**: Ensures the match doesn't prevent a better global optimization.
+3. **Scoring**: Usually ranges from 90% to 100% depending on the specific 1:1 sub-strategy used (Enhanced, ID-based, or Exact).
 
-How 1-to-1 matches are applied (Playwright)
--------------------------------------------
-- `process_1to1_matches(...)` reads the "1to1 Matches" sheet.
-- For each row:
-  1) Ensure "Match to Payments" tab is active
-  2) Search for the CSGP reference in the UI
-  3) Click "Match" on the first matching row
-
-Typical failure cases
----------------------
-- CSGP reference not found in UI
-- UI not on correct tab
-- Match button not available
+Inputs
+------
+- `Amount`, `Date`, `Reference`
 
 Outputs
 -------
-- Successful matches applied in UI
-- Failed rows added to `failed_entries.xlsx`
+- **Match Type**: `1:1`
+- **Match Score**: Variable (90-100%).
+
+Notes
+-----
+For the specific technical implementation of the primary 1:1 strategy, see [Exact_Matching.md](file:///c:/Users/Lenovo/OneDrive - Cognitive Consulting Sdn Bhd (1)/Desktop/SegmentationCompressionWork/PlayWright-Extractor/process_md/Exact_Matching.md).

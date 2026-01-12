@@ -9,14 +9,19 @@ import requests
 
 def login(page, website_url, username, password):
     page.goto(website_url)
-    dropdown = page.locator("#cmbCompany")  
-    dropdown.select_option("DBKK UAT")  # by value or visible text
+    # Check if dropdown selection is enabled in .env (default to True if not set)
+    # The user specifically requested to skip this if set to false
+    if os.getenv("dropdown_selector", "true").lower() == "true":
+        dropdown = page.locator("#cmbCompany")  
+        dropdown.select_option("DBKK UAT")  # by value or visible text
     page.get_by_role("textbox", name="Username").click()
     page.get_by_role("textbox", name="Username").fill(username)
     page.get_by_role("textbox", name="Password").click()
     page.get_by_role("textbox", name="Password").fill(password)
     # page.get_by_role("button", name="Next").click()
-    page.get_by_role("button", name="Sign In").click()
+    # Click "Sign In" or "Next" depending on what is displayed
+    # We use a regex to match either case insensitive
+    page.get_by_role("button", name=re.compile(r"Sign In|Next", re.IGNORECASE)).click()
 
 def navigatePage(page, buttonName):
     # Navigate to Banking -> Process Bank Records
