@@ -23,7 +23,11 @@ import requests
 from dotenv import load_dotenv
 from playwright.sync_api import Playwright, expect, sync_playwright
 
-from helper_playwright import functions
+from helper_playwright.functions import (
+    login, navigatePage, wait_for_iframe, smart_click, 
+    is_table_empty, smart_wait_for_page_load, filter_table,
+    safe_read_excel
+)
 from helper_playwright.email_reply import reply_to_trigger_email, reply_with_attachment
 
 # Load environment variables
@@ -298,7 +302,7 @@ class MatchStatementProcessor:
             textbox = self.frame.locator(textbox_selector)
             
             # Click header
-            self.smart_click(header, f"{header_text} header")
+            smart_click(self.page, header, f"{header_text} header")
             self.page.wait_for_timeout(500)
             
             # Wait for textbox
@@ -306,7 +310,7 @@ class MatchStatementProcessor:
                 textbox.wait_for(state="visible", timeout=int(self.page_wait_time))
             except:
                 self.log(f"Textbox for '{header_text}' not visible, retrying...", "warning")
-                self.smart_click(header, f"{header_text} header (retry)")
+                smart_click(self.page, header, f"{header_text} header (retry)")
                 self.page.wait_for_timeout(1000)
                 textbox.wait_for(state="visible", timeout=int(self.page_wait_time))
             
@@ -318,19 +322,19 @@ class MatchStatementProcessor:
             # Fill and apply filter - Use Contains instead of Equals for robustness
             contains_button = self.frame.get_by_text("Contains", exact=True).first
             if contains_button.count() > 0:
-                self.smart_click(contains_button, "Contains button")
+                smart_click(self.page, contains_button, "Contains button")
             else:
                  # If Contains not found, try default (often default is fine) or fall back to Equals
                  self.log("'Contains' option not found, trying default or Equals...", "debug")
                  pass
-            self.smart_click(textbox, f"{header_text} textbox")
+            smart_click(self.page, textbox, f"{header_text} textbox")
             textbox.fill(str(value))
             
-            ok_button = self.frame.get_by_role("button", name="OK")
-            self.smart_click(ok_button, "OK button")
+            ok_button = self.frame.get_by_role("button", name="OK").first
+            smart_click(self.page, ok_button, "OK button")
 
             # Smart wait for filter to apply
-            self.smart_wait_for_page_load()
+            smart_wait_for_page_load(self.page)
 
             self.log(f"[OK] Filtered '{header_text}' with value '{value}'")
             
@@ -350,7 +354,7 @@ class MatchStatementProcessor:
             if tab.count() > 0:
                 # Check if it looks selected (optional, but clicking it is usually safe)
                 self.log("Ensuring 'Match to Payments' tab is selected")
-                self.smart_click(tab, "Match to Payments tab")
+                smart_click(self.page, tab, "Match to Payments tab")
                 self.page.wait_for_timeout(1000)
                 return True
             else:
@@ -399,7 +403,7 @@ class MatchStatementProcessor:
                 "#ctl00_phG_PXSplitContainer_tab2_t0_PXGrid1_at_tlb_fb > div.buttonsCont > div > div"
             )
             search_button.hover()
-            self.smart_click(search_button, "Search button")
+            smart_click(self.page, search_button, "Search button")
             
             # Detect table type
             table_a = self.frame.locator("#ctl00_phG_PXSplitContainer_tab2_t1_gridDetailMatches4_dataT0")
@@ -450,7 +454,7 @@ class MatchStatementProcessor:
                 return False
             
             self.log(f"[OK] Clicking match for {csgp_ref}")
-            self.smart_click(second_col, f"Match checkbox for {csgp_ref}")
+            smart_click(self.page, second_col, f"Match checkbox for {csgp_ref}")
             self.page.wait_for_timeout(1000)
             
             return True
@@ -534,7 +538,7 @@ class MatchStatementProcessor:
             if checkbox_a.count() > 0:
                 if not checkbox_a.first.is_checked():
                     self.log("Enabling Multiple Matching (Type A)")
-                    self.smart_click(checkbox_a.first, "Multiple Matching checkbox (Type A)")
+                    smart_click(self.page, checkbox_a.first, "Multiple Matching checkbox (Type A)")
                 else:
                     self.log("'Match to Multiple Payments' (Type A) is already checked")
                 return
@@ -549,7 +553,7 @@ class MatchStatementProcessor:
             if checkbox_b.count() > 0:
                 if not checkbox_b.first.is_checked():
                      self.log("Enabling Multiple Matching (Type B)")
-                     self.smart_click(checkbox_b.first, "Multiple Matching checkbox (Type B)")
+                     smart_click(self.page, checkbox_b.first, "Multiple Matching checkbox (Type B)")
                 else:
                     self.log("'Match to Multiple Payments' (Type B) is already checked")
                 return
@@ -582,7 +586,7 @@ class MatchStatementProcessor:
                 if checkbox and checkbox.count() > 0:
                     if not checkbox.is_checked():
                         self.log("Clicking 'Match to Multiple Payments' checkbox (via Label Strategy)")
-                        self.smart_click(checkbox, "Match to Multiple Payments checkbox")
+                        smart_click(self.page, checkbox, "Match to Multiple Payments checkbox")
                         self.page.wait_for_timeout(1000)
                     else:
                         self.log("'Match to Multiple Payments' is already checked")
@@ -758,7 +762,7 @@ class MatchStatementProcessor:
 
             # Click on CashBook in the menu (similar to navigatePage function)
             cashbook_link = self.page.locator("div").filter(has_text=re.compile(r"^Cash Book$")).first
-            self.smart_click(cashbook_link, "CashBook menu")
+            smart_click(self.page, cashbook_link, "CashBook menu")
             self.page.wait_for_timeout(1000)
 
             # Click on "Reconciliation Statements" button
@@ -766,10 +770,10 @@ class MatchStatementProcessor:
             recon_button = self.page.get_by_role("link", name="Reconciliation Statements")
             recon_button.hover()
             self.page.wait_for_timeout(1000)
-            self.smart_click(recon_button, "Reconciliation Statements button")
+            smart_click(self.page, recon_button, "Reconciliation Statements button")
 
             # Smart wait for page to load instead of full timeout
-            self.smart_wait_for_page_load()
+            smart_wait_for_page_load(self.page)
 
             # Wait for iframe
             self.frame = self.wait_for_iframe()
@@ -864,17 +868,17 @@ class MatchStatementProcessor:
                                 break
 
                 if target_row:
-                    self.smart_click(target_row, f"Account: {self.account_name}")
+                    smart_click(self.page, target_row, f"Account: {self.account_name}")
                     # Smart wait for account detail page to load
-                    self.smart_wait_for_page_load()
+                    smart_wait_for_page_load(self.page)
                 else:
                     # Fallback to first account link if no "On Hold" status found
                     self.log(f"No 'On Hold' {self.account_name} found, using first available", "warning")
                     account_link = self.frame.get_by_role("link", name=self.account_name).first
                     if account_link.count() > 0:
-                        self.smart_click(account_link, f"Account: {self.account_name}")
+                        smart_click(self.page, account_link, f"Account: {self.account_name}")
                         # Smart wait for account detail page to load
-                        self.smart_wait_for_page_load()
+                        smart_wait_for_page_load(self.page)
                     else:
                         self.log(f"Could not find account link for {self.account_name}", "warning")
                         return False
@@ -884,9 +888,9 @@ class MatchStatementProcessor:
                 # Fallback to original approach
                 account_link = self.frame.get_by_role("link", name=self.account_name).first
                 if account_link.count() > 0:
-                    self.smart_click(account_link, f"Account: {self.account_name}")
+                    smart_click(self.page, account_link, f"Account: {self.account_name}")
                     # Smart wait for account detail page to load
-                    self.smart_wait_for_page_load()
+                    smart_wait_for_page_load(self.page)
                 else:
                     self.log(f"Could not find account link for {self.account_name}", "warning")
                     return False
@@ -895,7 +899,7 @@ class MatchStatementProcessor:
             # The DETAILS tab should be automatically selected - verify the table is visible
             self.log("Verifying DETAILS tab is accessible...")
             # Smart wait for details tab to load
-            self.smart_wait_for_page_load()
+            smart_wait_for_page_load(self.page)
 
             # Try to find the details grid to confirm we're on the right view
             try:
@@ -908,13 +912,13 @@ class MatchStatementProcessor:
                 try:
                     details_tab = self.frame.get_by_text("DETAILS", exact=True).first
                     if details_tab.count() > 0:
-                        self.smart_click(details_tab, "DETAILS tab")
+                        smart_click(self.page, details_tab, "DETAILS tab")
                         self.page.wait_for_timeout(self.page_wait_time)
                     else:
                         # Try by ID
                         tab_by_id = self.frame.locator("#ctl00_phG_tab_t0")
                         if tab_by_id.count() > 0:
-                            self.smart_click(tab_by_id.first, "DETAILS tab (by ID)")
+                            smart_click(self.page, tab_by_id.first, "DETAILS tab (by ID)")
                             self.page.wait_for_timeout(self.page_wait_time)
                 except Exception as e:
                     self.log(f"Could not explicitly click DETAILS tab: {e}", "warning")
@@ -932,7 +936,7 @@ class MatchStatementProcessor:
             self.log(f"Searching for Document Ref: {csgp_ref}")
 
             # Smart wait for page to fully load
-            self.smart_wait_for_page_load()
+            smart_wait_for_page_load(self.page)
 
             # Use the correct table selector from the DETAILS tab
             table = None
@@ -970,7 +974,7 @@ class MatchStatementProcessor:
                     self.log(f"Found 'Document Ref.' column header")
 
                     # Click the header to open filter dropdown
-                    self.smart_click(header, "Document Ref. header")
+                    smart_click(self.page, header, "Document Ref. header")
                     self.page.wait_for_timeout(1000)
 
                     # Find the filter textbox
@@ -985,9 +989,9 @@ class MatchStatementProcessor:
                         self.page.wait_for_timeout(500)
 
                         # Click OK button
-                        ok_button = self.frame.get_by_role("button", name="OK")
+                        ok_button = self.frame.get_by_role("button", name="OK").first
                         if ok_button.count() > 0:
-                            self.smart_click(ok_button, "OK button")
+                            smart_click(self.page, ok_button, "OK button")
                         else:
                             textbox.press("Enter")
 
@@ -1348,7 +1352,7 @@ class MatchStatementProcessor:
                 self.log("[OK] Pressed Ctrl+S to save")
 
                 # Wait for save operation to complete
-                self.smart_wait_for_page_load()
+                smart_wait_for_page_load(self.page)
                 self.log("[OK] Save operation completed")
 
             except Exception as save_error:
@@ -1418,7 +1422,7 @@ class MatchStatementProcessor:
             self.log("=" * 60)
             self.log("STEP 2: Logging in...")
             self.log("=" * 60)
-            functions.login(self.page, self.website_url, self.username, self.password)
+            login(self.page, self.website_url, self.username, self.password)
             self.log("[OK] Login successful")
             
             # STEP 3: Load match results
@@ -1440,11 +1444,11 @@ class MatchStatementProcessor:
             self.log("=" * 60)
             self.log("STEP 5: Navigating to Process Bank Records")
             self.log("=" * 60)
-            functions.navigatePage(self.page, "Process Bank Records")
+            navigatePage(self.page, "Process Bank Records")
 
             self.frame = self.wait_for_iframe()
             account_link = self.frame.get_by_role("link", name=self.account_name).last
-            self.smart_click(account_link, f"Account link: {self.account_name}")
+            smart_click(self.page, account_link, f"Account link: {self.account_name}")
             self.page.wait_for_timeout(self.page_wait_time)
             self.log("[OK] Navigation successful")
 
@@ -1463,7 +1467,7 @@ class MatchStatementProcessor:
             process_button = self.page.locator("iframe[name=\"main\"]").content_frame.locator(
                 "#ctl00_phDS_ds_ToolBar_ProcessMatched"
             ).get_by_text("Process")
-            self.smart_click(process_button, "Process button")
+            smart_click(self.page, process_button, "Process button")
             self.page.wait_for_timeout(self.page_wait_time)
             self.log("[OK] Matched items processed")
 

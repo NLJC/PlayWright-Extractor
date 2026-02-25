@@ -30,7 +30,11 @@ from playwright.sync_api import (
     sync_playwright,
 )
 
-from helper_playwright import functions
+from helper_playwright.functions import (
+    login, navigatePage, wait_for_iframe, smart_click, 
+    is_table_empty, smart_wait_for_page_load, filter_table,
+    safe_read_excel
+)
 from helper_playwright.email_reply import reply_to_trigger_email
 from helper_playwright.paths import get_downloads_dir
 from . import ExtractReconcileStatement_Optimized as ExtractReconcileStatement
@@ -531,7 +535,7 @@ class CAMatchProcessor:
         self.log(f"Processing downloaded file: {save_path}")
         
         # Load Excel file
-        df = functions.safe_read_excel(save_path)
+        df = safe_read_excel(save_path)
         
         # Clean data
         # Convert datetime columns
@@ -571,11 +575,11 @@ class CAMatchProcessor:
             
             # Login
             self.log("Logging in...")
-            functions.login(self.page, self.website_url, self.username, self.password)
+            login(self.page, self.website_url, self.username, self.password)
             
             # Navigate to Process Bank Records
             self.log("Navigating to Process Bank Records...")
-            functions.navigatePage(self.page, "Process Bank Records")
+            navigatePage(self.page, "Process Bank Records")
             
             # Perform auto-match
             self.perform_auto_match()

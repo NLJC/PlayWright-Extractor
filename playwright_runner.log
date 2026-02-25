@@ -10493,3 +10493,433 @@ Workflow Summary:
 All processes completed successfully!
 2026-01-12 14:22:29,094 - INFO - Check logs for detailed information.
 2026-01-12 14:22:29,094 - INFO - ======================================================================
+2026-02-25 14:56:34,331 - INFO - ======================================================================
+2026-02-25 14:56:34,331 - INFO - PLAYWRIGHT AUTOMATION RUNNER
+2026-02-25 14:56:34,332 - INFO - ======================================================================
+2026-02-25 14:56:34,332 - INFO - Account: CIM02
+2026-02-25 14:56:34,332 - INFO - Date: 25/01/2026
+2026-02-25 14:56:34,332 - INFO - Amount: 100.0
+2026-02-25 14:56:34,332 - INFO - Headless Mode: False
+2026-02-25 14:56:34,332 - INFO - Downloads Dir: C:\Users\Lenovo\OneDrive - Cognitive Consulting Sdn Bhd (1)\Desktop\SegmentationCompressionWork\PlayWright-Extractor\Downloads
+2026-02-25 14:56:34,332 - INFO - ======================================================================
+2026-02-25 14:56:34,332 - INFO - 
+🚀 Starting complete automation workflow...
+
+2026-02-25 14:56:34,333 - INFO - 
+======================================================================
+2026-02-25 14:56:34,333 - INFO - STEP 1: CA MATCH PROCESS
+2026-02-25 14:56:34,333 - INFO - ======================================================================
+2026-02-25 14:56:41,029 - INFO - Starting CA Match process...
+2026-02-25 14:56:41,030 - INFO - ============================================================
+2026-02-25 14:56:41,031 - INFO - CA MATCH PROCESS - OPTIMIZED VERSION
+2026-02-25 14:56:41,031 - INFO - ============================================================
+2026-02-25 14:56:41,032 - INFO - ============================================================
+2026-02-25 14:56:41,032 - INFO - STEP 1: Initializing browser...
+2026-02-25 14:56:41,032 - INFO - ============================================================
+2026-02-25 14:56:41,823 - INFO - [INFO] Video recording enabled. Saving to: C:\Users\Lenovo\OneDrive - Cognitive Consulting Sdn Bhd (1)\Desktop\SegmentationCompressionWork\PlayWright-Extractor\Downloads\outputs\recording
+2026-02-25 14:56:42,362 - INFO - [OK] Browser initialized successfully
+2026-02-25 14:56:42,364 - INFO - Logging in...
+2026-02-25 14:56:43,716 - INFO - Navigating to Process Bank Records...
+2026-02-25 14:56:52,350 - INFO - Starting auto-match process...
+2026-02-25 14:56:52,463 - INFO - Clicked account link 'CIM02' successfully
+2026-02-25 14:56:57,581 - INFO - Clicked Auto-Match button successfully
+2026-02-25 14:56:59,600 - INFO - Waiting for auto-match confirmation...
+2026-02-25 14:57:14,657 - WARNING - No 'Executing' message detected
+2026-02-25 14:57:14,668 - INFO - âœ… Auto-match operation completed successfully!
+2026-02-25 14:57:14,669 - INFO - Processing auto-matched items...
+2026-02-25 14:57:14,769 - INFO - Clicked Process button successfully
+2026-02-25 14:57:19,902 - INFO - Clicked Back button successfully
+2026-02-25 14:57:22,924 - INFO - Starting manual matching process...
+2026-02-25 14:57:23,046 - INFO - Clicked account link 'CIM02' successfully
+2026-02-25 14:57:28,059 - INFO - Processing page 1...
+2026-02-25 14:57:28,135 - INFO - Found 8 rows on page 1
+2026-02-25 14:57:28,173 - INFO - Row 0 - Ext. Ref. Nbr.: 2507312241040258
+2026-02-25 14:57:28,191 - INFO - Row 0 - Already matched, skipping
+2026-02-25 14:57:28,241 - INFO - Row 1 - Ext. Ref. Nbr.: 2507311751140415
+2026-02-25 14:57:28,262 - INFO - Row 1 - Already matched, skipping
+2026-02-25 14:57:28,307 - INFO - Row 2 - Ext. Ref. Nbr.: 30756388
+2026-02-25 14:57:28,328 - INFO - Row 2 - Already matched, skipping
+2026-02-25 14:57:28,360 - INFO - Row 3 - Ext. Ref. Nbr.: 30756388
+2026-02-25 14:57:28,386 - INFO - Row 3 - Already matched, skipping
+2026-02-25 14:57:28,416 - INFO - Row 4 - Ext. Ref. Nbr.: 2507181637590200
+2026-02-25 14:57:28,440 - INFO - Row 4 - Already matched, skipping
+2026-02-25 14:57:28,477 - INFO - Row 5 - Ext. Ref. Nbr.: 2507110714350678
+2026-02-25 14:57:28,488 - INFO - Row 5 - Already matched, skipping
+2026-02-25 14:57:28,517 - INFO - Row 6 - Ext. Ref. Nbr.: 2507051851570603
+2026-02-25 14:57:28,539 - INFO - Row 6 - Already matched, skipping
+2026-02-25 14:57:28,558 - INFO - No more pages - pagination complete
+2026-02-25 14:57:28,559 - INFO - Pagination complete - processed 7 total rows across 1 pages
+2026-02-25 14:57:28,559 - INFO - Manual matching complete - 7 rows processed
+2026-02-25 14:57:28,561 - INFO - Processing manually matched items...
+2026-02-25 14:57:28,685 - INFO - Clicked Process button (after manual matching) successfully
+2026-02-25 14:57:33,879 - INFO - Clicked Back to list button successfully
+2026-02-25 14:57:36,896 - INFO - Downloading results...
+2026-02-25 14:57:37,001 - INFO - Clicked account link 'CIM02' successfully
+2026-02-25 14:57:42,107 - INFO - Clicked Export dropdown successfully
+2026-02-25 14:57:42,250 - INFO - Clicked Export to Excel button successfully
+2026-02-25 14:57:47,818 - INFO - Download started: Process Bank Transactions 20260225.xlsx
+2026-02-25 14:57:48,855 - INFO - âœ… File saved to: C:\Users\Lenovo\OneDrive - Cognitive Consulting Sdn Bhd (1)\Desktop\SegmentationCompressionWork\PlayWright-Extractor\Downloads\Process Bank Transactions 20260225.xlsx
+2026-02-25 14:57:48,857 - INFO - Processing downloaded file: C:\Users\Lenovo\OneDrive - Cognitive Consulting Sdn Bhd (1)\Desktop\SegmentationCompressionWork\PlayWright-Extractor\Downloads\Process Bank Transactions 20260225.xlsx
+2026-02-25 14:57:49,351 - WARNING - Could not determine dtype for column 1, falling back to string
+2026-02-25 14:57:49,351 - WARNING - Could not determine dtype for column 6, falling back to string
+2026-02-25 14:57:49,351 - WARNING - Could not determine dtype for column 8, falling back to string
+2026-02-25 14:57:49,352 - WARNING - Could not determine dtype for column 9, falling back to string
+2026-02-25 14:57:49,352 - WARNING - Could not determine dtype for column 11, falling back to string
+2026-02-25 14:57:49,352 - WARNING - Could not determine dtype for column 13, falling back to string
+2026-02-25 14:57:49,352 - WARNING - Could not determine dtype for column 14, falling back to string
+2026-02-25 14:57:49,353 - WARNING - Could not determine dtype for column 17, falling back to string
+2026-02-25 14:57:49,353 - WARNING - Could not determine dtype for column 18, falling back to string
+2026-02-25 14:57:49,353 - WARNING - Could not determine dtype for column 20, falling back to string
+2026-02-25 14:57:49,522 - INFO - Processed 7 records from downloaded file
+2026-02-25 14:57:50,377 - INFO - [INFO] Video saved: C:\Users\Lenovo\OneDrive - Cognitive Consulting Sdn Bhd (1)\Desktop\SegmentationCompressionWork\PlayWright-Extractor\Downloads\outputs\recording\ca_match_process_20260225_145750.webm
+2026-02-25 14:57:50,684 - INFO - Browser cleanup completed
+2026-02-25 14:57:50,685 - INFO - Chaining to Extract Reconciliation Statement...
+2026-02-25 14:58:36,280 - ERROR - FATAL ERROR: Locator.click: Error: strict mode violation: get_by_role("button", name="OK") resolved to 2 elements:
+    1) <qp-button role="button" class="au-target" au-target-id="1222" config.bind="elements['ctl00_phG_tab_t0_grid1_fd_ok']" value.two-way="values['ctl00_phG_tab_t0_grid1_fd_ok']" faux-screen.bind="{"id":"ctl00_phG_tab_t0_grid1_fd_ok","name":"ctl00$phG$tab$t0$grid1$fd$ok","class":"Button","propsTemplate":"__PXButton","compatibilityMode":true,"text":"OK","dialogResult":1,"images":{"pushed":"","dropDown":"","normal":"","disabled":"","hover":""},"pushedImages":{"pushed":"","dropDown":"","normal":"","disabled":"","…>…</qp-button> aka get_by_role("button", name="OK").first
+    2) <button tabindex="0" type="button" au-target-id="673" ref="buttonElement" id="ctl00_phG_tab_t0_grid1_fd_ok" class="au-target qp-button Button" name="ctl00$phG$tab$t0$grid1$fd$ok" click.capture="processClick($event)" mouseout.delegate="processMouseOut($event)" mouseover.delegate="processMouseOver($event)" pointerup.delegate="processPointerUp($event)" pointerdown.delegate="processPointerDown($event)" pointercancel.delegate="processPointerCancel($event)" disabled.bind="config.enabled == false || config.d…>…</button> aka locator("button[name=\"ctl00$phG$tab$t0$grid1$fd$ok\"]")
+
+Call log:
+  - waiting for get_by_role("button", name="OK")
+
+2026-02-25 14:58:36,283 - INFO - Browser cleanup completed
+2026-02-25 14:58:36,301 - ERROR - ❌ CA Match failed: Locator.click: Error: strict mode violation: get_by_role("button", name="OK") resolved to 2 elements:
+    1) <qp-button role="button" class="au-target" au-target-id="1222" config.bind="elements['ctl00_phG_tab_t0_grid1_fd_ok']" value.two-way="values['ctl00_phG_tab_t0_grid1_fd_ok']" faux-screen.bind="{"id":"ctl00_phG_tab_t0_grid1_fd_ok","name":"ctl00$phG$tab$t0$grid1$fd$ok","class":"Button","propsTemplate":"__PXButton","compatibilityMode":true,"text":"OK","dialogResult":1,"images":{"pushed":"","dropDown":"","normal":"","disabled":"","hover":""},"pushedImages":{"pushed":"","dropDown":"","normal":"","disabled":"","…>…</qp-button> aka get_by_role("button", name="OK").first
+    2) <button tabindex="0" type="button" au-target-id="673" ref="buttonElement" id="ctl00_phG_tab_t0_grid1_fd_ok" class="au-target qp-button Button" name="ctl00$phG$tab$t0$grid1$fd$ok" click.capture="processClick($event)" mouseout.delegate="processMouseOut($event)" mouseover.delegate="processMouseOver($event)" pointerup.delegate="processPointerUp($event)" pointerdown.delegate="processPointerDown($event)" pointercancel.delegate="processPointerCancel($event)" disabled.bind="config.enabled == false || config.d…>…</button> aka locator("button[name=\"ctl00$phG$tab$t0$grid1$fd$ok\"]")
+
+Call log:
+  - waiting for get_by_role("button", name="OK")
+Traceback (most recent call last):
+  File "c:\Users\Lenovo\OneDrive - Cognitive Consulting Sdn Bhd (1)\Desktop\SegmentationCompressionWork\PlayWright-Extractor\playwright_scripts\run_playwright.py", line 142, in run_ca_match
+    records = process_bank_transactions(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Lenovo\OneDrive - Cognitive Consulting Sdn Bhd (1)\Desktop\SegmentationCompressionWork\PlayWright-Extractor\playwright_scripts\CA_Match_Process_Optimized.py", line 690, in process_bank_transactions
+    return processor.run()
+           ^^^^^^^^^^^^^^^
+  File "c:\Users\Lenovo\OneDrive - Cognitive Consulting Sdn Bhd (1)\Desktop\SegmentationCompressionWork\PlayWright-Extractor\playwright_scripts\CA_Match_Process_Optimized.py", line 606, in run
+    ExtractReconcileStatement.extract_reconciliation_statements(
+  File "c:\Users\Lenovo\OneDrive - Cognitive Consulting Sdn Bhd (1)\Desktop\SegmentationCompressionWork\PlayWright-Extractor\playwright_scripts\ExtractReconcileStatement_Optimized.py", line 741, in extract_reconciliation_statements
+    return extractor.run()
+           ^^^^^^^^^^^^^^^
+  File "c:\Users\Lenovo\OneDrive - Cognitive Consulting Sdn Bhd (1)\Desktop\SegmentationCompressionWork\PlayWright-Extractor\playwright_scripts\ExtractReconcileStatement_Optimized.py", line 618, in run
+    self.filter_by_reconciled_false()
+  File "c:\Users\Lenovo\OneDrive - Cognitive Consulting Sdn Bhd (1)\Desktop\SegmentationCompressionWork\PlayWright-Extractor\playwright_scripts\ExtractReconcileStatement_Optimized.py", line 304, in filter_by_reconciled_false
+    self.frame.get_by_role("button", name="OK").click()
+  File "C:\Users\Lenovo\OneDrive - Cognitive Consulting Sdn Bhd (1)\Desktop\SegmentationCompressionWork\PlayWright-Extractor\.venv_clean\Lib\site-packages\playwright\sync_api\_generated.py", line 15573, in click
+    self._sync(
+  File "C:\Users\Lenovo\OneDrive - Cognitive Consulting Sdn Bhd (1)\Desktop\SegmentationCompressionWork\PlayWright-Extractor\.venv_clean\Lib\site-packages\playwright\_impl\_sync_base.py", line 115, in _sync
+    return task.result()
+           ^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\OneDrive - Cognitive Consulting Sdn Bhd (1)\Desktop\SegmentationCompressionWork\PlayWright-Extractor\.venv_clean\Lib\site-packages\playwright\_impl\_locator.py", line 160, in click
+    return await self._frame.click(self._selector, strict=True, **params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\OneDrive - Cognitive Consulting Sdn Bhd (1)\Desktop\SegmentationCompressionWork\PlayWright-Extractor\.venv_clean\Lib\site-packages\playwright\_impl\_frame.py", line 549, in click
+    await self._channel.send("click", self._timeout, locals_to_params(locals()))
+  File "C:\Users\Lenovo\OneDrive - Cognitive Consulting Sdn Bhd (1)\Desktop\SegmentationCompressionWork\PlayWright-Extractor\.venv_clean\Lib\site-packages\playwright\_impl\_connection.py", line 69, in send
+    return await self._connection.wrap_api_call(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\OneDrive - Cognitive Consulting Sdn Bhd (1)\Desktop\SegmentationCompressionWork\PlayWright-Extractor\.venv_clean\Lib\site-packages\playwright\_impl\_connection.py", line 559, in wrap_api_call
+    raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
+playwright._impl._errors.Error: Locator.click: Error: strict mode violation: get_by_role("button", name="OK") resolved to 2 elements:
+    1) <qp-button role="button" class="au-target" au-target-id="1222" config.bind="elements['ctl00_phG_tab_t0_grid1_fd_ok']" value.two-way="values['ctl00_phG_tab_t0_grid1_fd_ok']" faux-screen.bind="{"id":"ctl00_phG_tab_t0_grid1_fd_ok","name":"ctl00$phG$tab$t0$grid1$fd$ok","class":"Button","propsTemplate":"__PXButton","compatibilityMode":true,"text":"OK","dialogResult":1,"images":{"pushed":"","dropDown":"","normal":"","disabled":"","hover":""},"pushedImages":{"pushed":"","dropDown":"","normal":"","disabled":"","…>…</qp-button> aka get_by_role("button", name="OK").first
+    2) <button tabindex="0" type="button" au-target-id="673" ref="buttonElement" id="ctl00_phG_tab_t0_grid1_fd_ok" class="au-target qp-button Button" name="ctl00$phG$tab$t0$grid1$fd$ok" click.capture="processClick($event)" mouseout.delegate="processMouseOut($event)" mouseover.delegate="processMouseOver($event)" pointerup.delegate="processPointerUp($event)" pointerdown.delegate="processPointerDown($event)" pointercancel.delegate="processPointerCancel($event)" disabled.bind="config.enabled == false || config.d…>…</button> aka locator("button[name=\"ctl00$phG$tab$t0$grid1$fd$ok\"]")
+
+Call log:
+  - waiting for get_by_role("button", name="OK")
+
+2026-02-25 14:58:36,304 - ERROR - 
+======================================================================
+2026-02-25 14:58:36,304 - ERROR - ❌ AUTOMATION WORKFLOW FAILED
+2026-02-25 14:58:36,304 - ERROR - ======================================================================
+2026-02-25 14:58:36,304 - ERROR - Error: Locator.click: Error: strict mode violation: get_by_role("button", name="OK") resolved to 2 elements:
+    1) <qp-button role="button" class="au-target" au-target-id="1222" config.bind="elements['ctl00_phG_tab_t0_grid1_fd_ok']" value.two-way="values['ctl00_phG_tab_t0_grid1_fd_ok']" faux-screen.bind="{"id":"ctl00_phG_tab_t0_grid1_fd_ok","name":"ctl00$phG$tab$t0$grid1$fd$ok","class":"Button","propsTemplate":"__PXButton","compatibilityMode":true,"text":"OK","dialogResult":1,"images":{"pushed":"","dropDown":"","normal":"","disabled":"","hover":""},"pushedImages":{"pushed":"","dropDown":"","normal":"","disabled":"","…>…</qp-button> aka get_by_role("button", name="OK").first
+    2) <button tabindex="0" type="button" au-target-id="673" ref="buttonElement" id="ctl00_phG_tab_t0_grid1_fd_ok" class="au-target qp-button Button" name="ctl00$phG$tab$t0$grid1$fd$ok" click.capture="processClick($event)" mouseout.delegate="processMouseOut($event)" mouseover.delegate="processMouseOver($event)" pointerup.delegate="processPointerUp($event)" pointerdown.delegate="processPointerDown($event)" pointercancel.delegate="processPointerCancel($event)" disabled.bind="config.enabled == false || config.d…>…</button> aka locator("button[name=\"ctl00$phG$tab$t0$grid1$fd$ok\"]")
+
+Call log:
+  - waiting for get_by_role("button", name="OK")
+
+2026-02-25 14:58:36,305 - ERROR - ======================================================================
+2026-02-25 15:20:53,527 - INFO - ======================================================================
+2026-02-25 15:20:53,528 - INFO - PLAYWRIGHT AUTOMATION RUNNER
+2026-02-25 15:20:53,528 - INFO - ======================================================================
+2026-02-25 15:20:53,528 - INFO - Account: CIM02
+2026-02-25 15:20:53,528 - INFO - Date: 25/01/2026
+2026-02-25 15:20:53,529 - INFO - Amount: 100.0
+2026-02-25 15:20:53,529 - INFO - Headless Mode: False
+2026-02-25 15:20:53,529 - INFO - Downloads Dir: C:\Users\Lenovo\OneDrive - Cognitive Consulting Sdn Bhd (1)\Desktop\SegmentationCompressionWork\PlayWright-Extractor\Downloads
+2026-02-25 15:20:53,529 - INFO - ======================================================================
+2026-02-25 15:20:53,529 - INFO - 
+🚀 Starting complete automation workflow...
+
+2026-02-25 15:20:53,529 - INFO - 
+======================================================================
+2026-02-25 15:20:53,529 - INFO - STEP 1: CA MATCH PROCESS
+2026-02-25 15:20:53,529 - INFO - ======================================================================
+2026-02-25 15:21:02,375 - INFO - Starting CA Match process...
+2026-02-25 15:21:02,376 - INFO - ============================================================
+2026-02-25 15:21:02,388 - INFO - CA MATCH PROCESS - OPTIMIZED VERSION
+2026-02-25 15:21:02,388 - INFO - ============================================================
+2026-02-25 15:21:02,390 - INFO - ============================================================
+2026-02-25 15:21:02,391 - INFO - STEP 1: Initializing browser...
+2026-02-25 15:21:02,392 - INFO - ============================================================
+2026-02-25 15:21:03,835 - INFO - [INFO] Video recording enabled. Saving to: C:\Users\Lenovo\OneDrive - Cognitive Consulting Sdn Bhd (1)\Desktop\SegmentationCompressionWork\PlayWright-Extractor\Downloads\outputs\recording
+2026-02-25 15:21:05,069 - INFO - [OK] Browser initialized successfully
+2026-02-25 15:21:05,070 - INFO - Logging in...
+2026-02-25 15:21:05,072 - ERROR - FATAL ERROR: name 'functions' is not defined
+2026-02-25 15:21:05,338 - INFO - [INFO] Video saved: C:\Users\Lenovo\OneDrive - Cognitive Consulting Sdn Bhd (1)\Desktop\SegmentationCompressionWork\PlayWright-Extractor\Downloads\outputs\recording\ca_match_process_20260225_152105.webm
+2026-02-25 15:21:05,827 - INFO - Browser cleanup completed
+2026-02-25 15:21:05,864 - ERROR - ❌ CA Match failed: name 'functions' is not defined
+Traceback (most recent call last):
+  File "C:\Users\Lenovo\OneDrive - Cognitive Consulting Sdn Bhd (1)\Desktop\SegmentationCompressionWork\PlayWright-Extractor\playwright_scripts\run_playwright.py", line 142, in run_ca_match
+    records = process_bank_transactions(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\OneDrive - Cognitive Consulting Sdn Bhd (1)\Desktop\SegmentationCompressionWork\PlayWright-Extractor\playwright_scripts\CA_Match_Process_Optimized.py", line 694, in process_bank_transactions
+    return processor.run()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\OneDrive - Cognitive Consulting Sdn Bhd (1)\Desktop\SegmentationCompressionWork\PlayWright-Extractor\playwright_scripts\CA_Match_Process_Optimized.py", line 578, in run
+    functions.login(self.page, self.website_url, self.username, self.password)
+    ^^^^^^^^^
+NameError: name 'functions' is not defined
+2026-02-25 15:21:05,867 - ERROR - 
+======================================================================
+2026-02-25 15:21:05,867 - ERROR - ❌ AUTOMATION WORKFLOW FAILED
+2026-02-25 15:21:05,868 - ERROR - ======================================================================
+2026-02-25 15:21:05,869 - ERROR - Error: name 'functions' is not defined
+2026-02-25 15:21:05,869 - ERROR - ======================================================================
+2026-02-25 15:25:45,875 - INFO - ======================================================================
+2026-02-25 15:25:45,877 - INFO - PLAYWRIGHT AUTOMATION RUNNER
+2026-02-25 15:25:45,877 - INFO - ======================================================================
+2026-02-25 15:25:45,877 - INFO - Account: CIM02
+2026-02-25 15:25:45,877 - INFO - Date: 25/01/2026
+2026-02-25 15:25:45,877 - INFO - Amount: 100.0
+2026-02-25 15:25:45,878 - INFO - Headless Mode: False
+2026-02-25 15:25:45,878 - INFO - Downloads Dir: C:\Users\Lenovo\OneDrive - Cognitive Consulting Sdn Bhd (1)\Desktop\SegmentationCompressionWork\PlayWright-Extractor\Downloads
+2026-02-25 15:25:45,878 - INFO - ======================================================================
+2026-02-25 15:25:45,878 - INFO - 
+🚀 Starting complete automation workflow...
+
+2026-02-25 15:25:45,878 - INFO - 
+======================================================================
+2026-02-25 15:25:45,878 - INFO - STEP 1: CA MATCH PROCESS
+2026-02-25 15:25:45,878 - INFO - ======================================================================
+2026-02-25 15:25:46,330 - INFO - Starting CA Match process...
+2026-02-25 15:25:46,330 - INFO - ============================================================
+2026-02-25 15:25:46,331 - INFO - CA MATCH PROCESS - OPTIMIZED VERSION
+2026-02-25 15:25:46,332 - INFO - ============================================================
+2026-02-25 15:25:46,333 - INFO - ============================================================
+2026-02-25 15:25:46,334 - INFO - STEP 1: Initializing browser...
+2026-02-25 15:25:46,334 - INFO - ============================================================
+2026-02-25 15:25:46,723 - INFO - [INFO] Video recording enabled. Saving to: C:\Users\Lenovo\OneDrive - Cognitive Consulting Sdn Bhd (1)\Desktop\SegmentationCompressionWork\PlayWright-Extractor\Downloads\outputs\recording
+2026-02-25 15:25:46,939 - INFO - [OK] Browser initialized successfully
+2026-02-25 15:25:46,940 - INFO - Logging in...
+2026-02-25 15:25:49,484 - INFO - Navigating to Process Bank Records...
+2026-02-25 15:26:03,430 - INFO - Starting auto-match process...
+2026-02-25 15:26:07,440 - INFO - Clicked account link 'CIM02' successfully
+2026-02-25 15:26:12,972 - INFO - Clicked Auto-Match button successfully
+2026-02-25 15:26:15,011 - INFO - Waiting for auto-match confirmation...
+2026-02-25 15:26:30,106 - WARNING - No 'Executing' message detected
+2026-02-25 15:26:30,117 - INFO - âœ… Auto-match operation completed successfully!
+2026-02-25 15:26:30,118 - INFO - Processing auto-matched items...
+2026-02-25 15:26:30,209 - INFO - Clicked Process button successfully
+2026-02-25 15:26:35,335 - INFO - Clicked Back button successfully
+2026-02-25 15:26:38,350 - INFO - Starting manual matching process...
+2026-02-25 15:26:38,758 - INFO - Clicked account link 'CIM02' successfully
+2026-02-25 15:26:43,774 - INFO - Processing page 1...
+2026-02-25 15:26:43,844 - INFO - Found 8 rows on page 1
+2026-02-25 15:26:43,877 - INFO - Row 0 - Ext. Ref. Nbr.: 2507312241040258
+2026-02-25 15:26:43,893 - INFO - Row 0 - Already matched, skipping
+2026-02-25 15:26:43,922 - INFO - Row 1 - Ext. Ref. Nbr.: 2507311751140415
+2026-02-25 15:26:43,936 - INFO - Row 1 - Already matched, skipping
+2026-02-25 15:26:43,982 - INFO - Row 2 - Ext. Ref. Nbr.: 30756388
+2026-02-25 15:26:43,998 - INFO - Row 2 - Already matched, skipping
+2026-02-25 15:26:44,034 - INFO - Row 3 - Ext. Ref. Nbr.: 30756388
+2026-02-25 15:26:44,047 - INFO - Row 3 - Already matched, skipping
+2026-02-25 15:26:44,074 - INFO - Row 4 - Ext. Ref. Nbr.: 2507181637590200
+2026-02-25 15:26:44,090 - INFO - Row 4 - Already matched, skipping
+2026-02-25 15:26:44,116 - INFO - Row 5 - Ext. Ref. Nbr.: 2507110714350678
+2026-02-25 15:26:44,138 - INFO - Row 5 - Already matched, skipping
+2026-02-25 15:26:44,194 - INFO - Row 6 - Ext. Ref. Nbr.: 2507051851570603
+2026-02-25 15:26:44,209 - INFO - Row 6 - Already matched, skipping
+2026-02-25 15:26:44,233 - INFO - No more pages - pagination complete
+2026-02-25 15:26:44,239 - INFO - Pagination complete - processed 7 total rows across 1 pages
+2026-02-25 15:26:44,241 - INFO - Manual matching complete - 7 rows processed
+2026-02-25 15:26:44,244 - INFO - Processing manually matched items...
+2026-02-25 15:26:44,378 - INFO - Clicked Process button (after manual matching) successfully
+2026-02-25 15:26:49,564 - INFO - Clicked Back to list button successfully
+2026-02-25 15:26:52,577 - INFO - Downloading results...
+2026-02-25 15:26:52,648 - INFO - Clicked account link 'CIM02' successfully
+2026-02-25 15:26:57,857 - INFO - Clicked Export dropdown successfully
+2026-02-25 15:26:58,050 - INFO - Clicked Export to Excel button successfully
+2026-02-25 15:27:03,898 - INFO - Download started: Process Bank Transactions 20260225.xlsx
+2026-02-25 15:27:04,492 - INFO - âœ… File saved to: C:\Users\Lenovo\OneDrive - Cognitive Consulting Sdn Bhd (1)\Desktop\SegmentationCompressionWork\PlayWright-Extractor\Downloads\Process Bank Transactions 20260225.xlsx
+2026-02-25 15:27:04,493 - INFO - Processing downloaded file: C:\Users\Lenovo\OneDrive - Cognitive Consulting Sdn Bhd (1)\Desktop\SegmentationCompressionWork\PlayWright-Extractor\Downloads\Process Bank Transactions 20260225.xlsx
+2026-02-25 15:27:05,214 - WARNING - Could not determine dtype for column 1, falling back to string
+2026-02-25 15:27:05,214 - WARNING - Could not determine dtype for column 6, falling back to string
+2026-02-25 15:27:05,214 - WARNING - Could not determine dtype for column 8, falling back to string
+2026-02-25 15:27:05,214 - WARNING - Could not determine dtype for column 9, falling back to string
+2026-02-25 15:27:05,214 - WARNING - Could not determine dtype for column 11, falling back to string
+2026-02-25 15:27:05,216 - WARNING - Could not determine dtype for column 13, falling back to string
+2026-02-25 15:27:05,216 - WARNING - Could not determine dtype for column 14, falling back to string
+2026-02-25 15:27:05,216 - WARNING - Could not determine dtype for column 17, falling back to string
+2026-02-25 15:27:05,216 - WARNING - Could not determine dtype for column 18, falling back to string
+2026-02-25 15:27:05,216 - WARNING - Could not determine dtype for column 20, falling back to string
+2026-02-25 15:27:05,378 - INFO - Processed 7 records from downloaded file
+2026-02-25 15:27:06,629 - INFO - [INFO] Video saved: C:\Users\Lenovo\OneDrive - Cognitive Consulting Sdn Bhd (1)\Desktop\SegmentationCompressionWork\PlayWright-Extractor\Downloads\outputs\recording\ca_match_process_20260225_152706.webm
+2026-02-25 15:27:07,277 - INFO - Browser cleanup completed
+2026-02-25 15:27:07,280 - INFO - Chaining to Extract Reconciliation Statement...
+2026-02-25 15:28:46,840 - WARNING - Could not determine dtype for column 2, falling back to string
+2026-02-25 15:28:46,840 - WARNING - Could not determine dtype for column 11, falling back to string
+2026-02-25 15:28:46,840 - WARNING - Could not determine dtype for column 12, falling back to string
+2026-02-25 15:34:58,642 - INFO - Loaded 7 bank transactions and 3711 company transactions
+2026-02-25 15:34:58,646 - INFO - Starting Stage 1: Traditional reconciliation pipeline...
+2026-02-25 15:34:58,665 - INFO - Finding transaction ID matches...
+2026-02-25 15:34:59,383 - INFO - Finding bank charges...
+2026-02-25 15:34:59,384 - DEBUG - After bank charges detection: 1 matched (added 1)
+2026-02-25 15:34:59,384 - INFO - Detected 1 bank charges
+2026-02-25 15:34:59,386 - INFO - Finding Reverse CE GL matches...
+2026-02-25 15:34:59,837 - INFO - Found 0 Reverse CE GL matches
+2026-02-25 15:34:59,839 - INFO - Finding name and amount matches...
+2026-02-25 15:35:00,724 - INFO - Found 5 name and amount matches
+2026-02-25 15:35:00,724 - INFO - Finding Hungarian 1:1 matches...
+2026-02-25 15:35:02,987 - INFO - Hungarian 1:1: 0 matches | pairs scored=45, kept=0, time=2.26s
+2026-02-25 15:35:02,989 - INFO - Finding enhanced 1:1 matches...
+2026-02-25 15:35:03,351 - INFO - Found 0 enhanced 1:1 matches
+2026-02-25 15:35:03,353 - INFO - Finding amount and date matches...
+2026-02-25 15:35:03,459 - INFO - Found 0 amount and date matches
+2026-02-25 15:35:03,460 - INFO - Finding fuzzy matches...
+2026-02-25 15:35:55,572 - INFO - ============================================================
+2026-02-25 15:35:55,572 - INFO - CA MATCH PROCESS COMPLETED SUCCESSFULLY
+2026-02-25 15:35:55,573 - INFO - ============================================================
+2026-02-25 15:35:55,573 - INFO - ✅ CA Match completed: 7 records processed
+2026-02-25 15:35:55,601 - INFO - 
+======================================================================
+2026-02-25 15:35:55,602 - INFO - ✅ COMPLETE AUTOMATION WORKFLOW FINISHED SUCCESSFULLY
+2026-02-25 15:35:55,602 - INFO - ======================================================================
+2026-02-25 15:35:55,602 - INFO - 
+Workflow Summary:
+2026-02-25 15:35:55,602 - INFO -   ✅ CA Match Process - Completed
+2026-02-25 15:35:55,603 - INFO -   ✅ Extract Reconciliation Statement - Completed (chained)
+2026-02-25 15:35:55,603 - INFO -   ✅ RaasPlus Reconciliation - Completed (chained)
+2026-02-25 15:35:55,603 - INFO -   ✅ Match Statement - Completed (chained)
+2026-02-25 15:35:55,604 - INFO - 
+All processes completed successfully!
+2026-02-25 15:35:55,604 - INFO - Check logs for detailed information.
+2026-02-25 15:35:55,604 - INFO - ======================================================================
+2026-02-25 15:37:41,456 - INFO - ======================================================================
+2026-02-25 15:37:41,457 - INFO - PLAYWRIGHT AUTOMATION RUNNER
+2026-02-25 15:37:41,457 - INFO - ======================================================================
+2026-02-25 15:37:41,457 - INFO - Account: CIM02
+2026-02-25 15:37:41,457 - INFO - Date: 25/01/2026
+2026-02-25 15:37:41,458 - INFO - Amount: 100.0
+2026-02-25 15:37:41,458 - INFO - Headless Mode: False
+2026-02-25 15:37:41,458 - INFO - Downloads Dir: C:\Users\Lenovo\OneDrive - Cognitive Consulting Sdn Bhd (1)\Desktop\SegmentationCompressionWork\PlayWright-Extractor\Downloads
+2026-02-25 15:37:41,459 - INFO - ======================================================================
+2026-02-25 15:37:41,459 - INFO - 
+🚀 Starting complete automation workflow...
+
+2026-02-25 15:37:41,459 - INFO - 
+======================================================================
+2026-02-25 15:37:41,459 - INFO - STEP 1: CA MATCH PROCESS
+2026-02-25 15:37:41,459 - INFO - ======================================================================
+2026-02-25 15:37:44,943 - INFO - Starting CA Match process...
+2026-02-25 15:37:44,944 - INFO - ============================================================
+2026-02-25 15:37:44,944 - INFO - CA MATCH PROCESS - OPTIMIZED VERSION
+2026-02-25 15:37:44,945 - INFO - ============================================================
+2026-02-25 15:37:44,946 - INFO - ============================================================
+2026-02-25 15:37:44,946 - INFO - STEP 1: Initializing browser...
+2026-02-25 15:37:44,947 - INFO - ============================================================
+2026-02-25 15:37:45,265 - INFO - [INFO] Video recording enabled. Saving to: C:\Users\Lenovo\OneDrive - Cognitive Consulting Sdn Bhd (1)\Desktop\SegmentationCompressionWork\PlayWright-Extractor\Downloads\outputs\recording
+2026-02-25 15:37:45,521 - INFO - [OK] Browser initialized successfully
+2026-02-25 15:37:45,522 - INFO - Logging in...
+2026-02-25 15:37:46,822 - INFO - Navigating to Process Bank Records...
+2026-02-25 15:37:54,992 - INFO - Starting auto-match process...
+2026-02-25 15:37:55,055 - INFO - Clicked account link 'CIM02' successfully
+2026-02-25 15:38:00,149 - INFO - Clicked Auto-Match button successfully
+2026-02-25 15:38:02,163 - INFO - Waiting for auto-match confirmation...
+2026-02-25 15:38:17,207 - WARNING - No 'Executing' message detected
+2026-02-25 15:38:17,214 - INFO - âœ… Auto-match operation completed successfully!
+2026-02-25 15:38:17,215 - INFO - Processing auto-matched items...
+2026-02-25 15:38:17,293 - INFO - Clicked Process button successfully
+2026-02-25 15:38:22,382 - INFO - Clicked Back button successfully
+2026-02-25 15:38:25,400 - INFO - Starting manual matching process...
+2026-02-25 15:38:25,470 - INFO - Clicked account link 'CIM02' successfully
+2026-02-25 15:38:30,474 - INFO - Processing page 1...
+2026-02-25 15:38:30,505 - INFO - Found 8 rows on page 1
+2026-02-25 15:38:30,521 - INFO - Row 0 - Ext. Ref. Nbr.: 2507312241040258
+2026-02-25 15:38:30,530 - INFO - Row 0 - Already matched, skipping
+2026-02-25 15:38:30,545 - INFO - Row 1 - Ext. Ref. Nbr.: 2507311751140415
+2026-02-25 15:38:30,553 - INFO - Row 1 - Already matched, skipping
+2026-02-25 15:38:30,570 - INFO - Row 2 - Ext. Ref. Nbr.: 30756388
+2026-02-25 15:38:30,579 - INFO - Row 2 - Already matched, skipping
+2026-02-25 15:38:30,593 - INFO - Row 3 - Ext. Ref. Nbr.: 30756388
+2026-02-25 15:38:30,601 - INFO - Row 3 - Already matched, skipping
+2026-02-25 15:38:30,617 - INFO - Row 4 - Ext. Ref. Nbr.: 2507181637590200
+2026-02-25 15:38:30,623 - INFO - Row 4 - Already matched, skipping
+2026-02-25 15:38:30,639 - INFO - Row 5 - Ext. Ref. Nbr.: 2507110714350678
+2026-02-25 15:38:30,648 - INFO - Row 5 - Already matched, skipping
+2026-02-25 15:38:30,664 - INFO - Row 6 - Ext. Ref. Nbr.: 2507051851570603
+2026-02-25 15:38:30,672 - INFO - Row 6 - Already matched, skipping
+2026-02-25 15:38:30,680 - INFO - No more pages - pagination complete
+2026-02-25 15:38:30,681 - INFO - Pagination complete - processed 7 total rows across 1 pages
+2026-02-25 15:38:30,681 - INFO - Manual matching complete - 7 rows processed
+2026-02-25 15:38:30,682 - INFO - Processing manually matched items...
+2026-02-25 15:38:30,756 - INFO - Clicked Process button (after manual matching) successfully
+2026-02-25 15:38:35,839 - INFO - Clicked Back to list button successfully
+2026-02-25 15:38:38,850 - INFO - Downloading results...
+2026-02-25 15:38:38,918 - INFO - Clicked account link 'CIM02' successfully
+2026-02-25 15:38:43,968 - INFO - Clicked Export dropdown successfully
+2026-02-25 15:38:44,045 - INFO - Clicked Export to Excel button successfully
+2026-02-25 15:38:49,502 - INFO - Download started: Process Bank Transactions 20260225.xlsx
+2026-02-25 15:38:49,697 - INFO - âœ… File saved to: C:\Users\Lenovo\OneDrive - Cognitive Consulting Sdn Bhd (1)\Desktop\SegmentationCompressionWork\PlayWright-Extractor\Downloads\Process Bank Transactions 20260225.xlsx
+2026-02-25 15:38:49,698 - INFO - Processing downloaded file: C:\Users\Lenovo\OneDrive - Cognitive Consulting Sdn Bhd (1)\Desktop\SegmentationCompressionWork\PlayWright-Extractor\Downloads\Process Bank Transactions 20260225.xlsx
+2026-02-25 15:38:49,926 - WARNING - Could not determine dtype for column 1, falling back to string
+2026-02-25 15:38:49,927 - WARNING - Could not determine dtype for column 6, falling back to string
+2026-02-25 15:38:49,927 - WARNING - Could not determine dtype for column 8, falling back to string
+2026-02-25 15:38:49,928 - WARNING - Could not determine dtype for column 9, falling back to string
+2026-02-25 15:38:49,928 - WARNING - Could not determine dtype for column 11, falling back to string
+2026-02-25 15:38:49,928 - WARNING - Could not determine dtype for column 13, falling back to string
+2026-02-25 15:38:49,928 - WARNING - Could not determine dtype for column 14, falling back to string
+2026-02-25 15:38:49,928 - WARNING - Could not determine dtype for column 17, falling back to string
+2026-02-25 15:38:49,928 - WARNING - Could not determine dtype for column 18, falling back to string
+2026-02-25 15:38:49,928 - WARNING - Could not determine dtype for column 20, falling back to string
+2026-02-25 15:38:50,031 - INFO - Processed 7 records from downloaded file
+2026-02-25 15:38:50,294 - INFO - [INFO] Video saved: C:\Users\Lenovo\OneDrive - Cognitive Consulting Sdn Bhd (1)\Desktop\SegmentationCompressionWork\PlayWright-Extractor\Downloads\outputs\recording\ca_match_process_20260225_153850.webm
+2026-02-25 15:38:50,492 - INFO - Browser cleanup completed
+2026-02-25 15:38:50,492 - INFO - Chaining to Extract Reconciliation Statement...
+2026-02-25 15:40:28,044 - WARNING - Could not determine dtype for column 2, falling back to string
+2026-02-25 15:40:28,045 - WARNING - Could not determine dtype for column 11, falling back to string
+2026-02-25 15:40:28,045 - WARNING - Could not determine dtype for column 12, falling back to string
+2026-02-25 15:45:07,320 - INFO - Loaded 7 bank transactions and 3711 company transactions
+2026-02-25 15:45:07,323 - INFO - Starting Stage 1: Traditional reconciliation pipeline...
+2026-02-25 15:45:07,336 - INFO - Finding transaction ID matches...
+2026-02-25 15:45:08,096 - INFO - Finding bank charges...
+2026-02-25 15:45:08,098 - DEBUG - After bank charges detection: 1 matched (added 1)
+2026-02-25 15:45:08,098 - INFO - Detected 1 bank charges
+2026-02-25 15:45:08,099 - INFO - Finding Reverse CE GL matches...
+2026-02-25 15:45:08,536 - INFO - Found 0 Reverse CE GL matches
+2026-02-25 15:45:08,538 - INFO - Finding name and amount matches...
+2026-02-25 15:45:09,536 - INFO - Found 5 name and amount matches
+2026-02-25 15:45:09,538 - INFO - Finding Hungarian 1:1 matches...
+2026-02-25 15:45:14,069 - INFO - Hungarian 1:1: 0 matches | pairs scored=45, kept=0, time=4.53s
+2026-02-25 15:45:14,071 - INFO - Finding enhanced 1:1 matches...
+2026-02-25 15:45:14,682 - INFO - Found 0 enhanced 1:1 matches
+2026-02-25 15:45:14,683 - INFO - Finding amount and date matches...
+2026-02-25 15:45:14,781 - INFO - Found 0 amount and date matches
+2026-02-25 15:45:14,782 - INFO - Finding fuzzy matches...
+2026-02-25 15:46:04,846 - INFO - ============================================================
+2026-02-25 15:46:04,847 - INFO - CA MATCH PROCESS COMPLETED SUCCESSFULLY
+2026-02-25 15:46:04,847 - INFO - ============================================================
+2026-02-25 15:46:04,848 - INFO - ✅ CA Match completed: 7 records processed
+2026-02-25 15:46:04,864 - INFO - 
+======================================================================
+2026-02-25 15:46:04,864 - INFO - ✅ COMPLETE AUTOMATION WORKFLOW FINISHED SUCCESSFULLY
+2026-02-25 15:46:04,864 - INFO - ======================================================================
+2026-02-25 15:46:04,865 - INFO - 
+Workflow Summary:
+2026-02-25 15:46:04,865 - INFO -   ✅ CA Match Process - Completed
+2026-02-25 15:46:04,865 - INFO -   ✅ Extract Reconciliation Statement - Completed (chained)
+2026-02-25 15:46:04,865 - INFO -   ✅ RaasPlus Reconciliation - Completed (chained)
+2026-02-25 15:46:04,865 - INFO -   ✅ Match Statement - Completed (chained)
+2026-02-25 15:46:04,865 - INFO - 
+All processes completed successfully!
+2026-02-25 15:46:04,865 - INFO - Check logs for detailed information.
+2026-02-25 15:46:04,866 - INFO - ======================================================================

@@ -164,6 +164,95 @@ def click_account_name(page, frame, accountName):
     frame.get_by_role("link", name=accountName).last.click()
     page.wait_for_timeout(1000)  # wait 1 second
 
+def smart_click(page, locator, description: str = "element", timeout: int = 10000, page_wait_time: int = 15000):
+    """Click with multiple fallback strategies."""
+    try:
+        locator.wait_for(state="visible", timeout=timeout)
+        locator.click(timeout=page_wait_time)
+        return True
+    except:
+        try:
+            locator.click(force=True, timeout=page_wait_time)
+            return True
+        except:
+            try:
+                locator.evaluate("el => el.click()")
+                return True
+            except Exception as e:
+                print(f"[ERROR] All click strategies failed for {description}")
+                return False
+
+def is_table_empty(rows) -> bool:
+    """Check if table has any meaningful data."""
+    row_count = rows.count()
+    for i in range(row_count):
+        row_text = rows.nth(i).inner_text().strip()
+        if row_text and row_text not in ["0.00\n0.00", "No records found", ""]:
+            return False
+    return True
+
+def smart_wait_for_page_load(page, page_wait_time: int = 15000, additional_check=None):
+    """
+    Smart wait that proceeds as soon as page is ready instead of waiting full duration.
+    """
+    try:
+        # Wait for network to be idle
+        page.wait_for_load_state("networkidle", timeout=page_wait_time)
+
+        # If additional check provided, wait for it with polling
+        if additional_check:
+            start_time = page.evaluate("Date.now()")
+            while True:
+                if additional_check():
+                    break
+                current_time = page.evaluate("Date.now()")
+                if current_time - start_time > page_wait_time:
+                    break
+                page.wait_for_timeout(200)  # Poll every 200ms
+
+        # Small buffer to ensure stability
+        page.wait_for_timeout(500)
+
+    except Exception as e:
+        # If smart wait fails, fall back to simple timeout
+        page.wait_for_timeout(page_wait_time)
+
+def filter_table(frame, header_text: str, textbox_selector: str, value: str, page_wait_time: int = 15000):
+    """Filter table by clicking header and entering value."""
+    try:
+        header = frame.locator("td.GridHeader.GridRow", has_text=header_text).first
+        textbox = frame.locator(textbox_selector)
+        
+        # Click header
+        smart_click(None, header, f"{header_text} header", page_wait_time=page_wait_time)
+        
+        # Wait for textbox
+        try:
+            textbox.wait_for(state="visible", timeout=page_wait_time)
+        except:
+            smart_click(None, header, f"{header_text} header (retry)", page_wait_time=page_wait_time)
+            textbox.wait_for(state="visible", timeout=page_wait_time)
+        
+        if not textbox.is_visible():
+            return
+        
+        # Fill and apply filter
+        contains_button = frame.get_by_text("Contains", exact=True).first
+        if contains_button.count() > 0:
+            smart_click(None, contains_button, "Contains button", page_wait_time=page_wait_time)
+            
+        smart_click(None, textbox, f"{header_text} textbox", page_wait_time=page_wait_time)
+        textbox.fill(str(value))
+        
+        ok_button = frame.get_by_role("button", name="OK").first
+        smart_click(None, ok_button, "OK button", page_wait_time=page_wait_time)
+
+        # Smart wait for filter to apply
+        smart_wait_for_page_load(frame.page, page_wait_time=page_wait_time)
+        
+    except Exception as e:
+        print(f"[ERROR] Filter failed for '{header_text}': {e}")
+
 def wait_for_iframe(page):
     # Wait until iframe is ready
     page.wait_for_selector("iframe[name='main']")

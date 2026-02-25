@@ -24,7 +24,11 @@ from dateutil.relativedelta import relativedelta
 from dotenv import load_dotenv
 from playwright.sync_api import Playwright, expect, sync_playwright
 
-from helper_playwright import functions
+from helper_playwright.functions import (
+    login, navigatePage, wait_for_iframe, smart_click, 
+    is_table_empty, smart_wait_for_page_load, filter_table,
+    safe_read_excel
+)
 from helper_playwright.email_reply import reply_to_trigger_email
 from helper_playwright.paths import get_downloads_dir
 from . import RaasPlus
@@ -301,7 +305,7 @@ class ReconciliationExtractor:
         except:
             raise Exception("Filter popup did not appear")
         
-        self.frame.get_by_role("button", name="OK").click()
+        self.frame.get_by_role("button", name="OK").first.click()
         self.page.wait_for_timeout(5000)
     
     def filter_by_cleared_false(self):
@@ -315,7 +319,7 @@ class ReconciliationExtractor:
         header.click()
         
         self.frame.get_by_text("False").click()
-        self.frame.get_by_role("button", name="OK").click()
+        self.frame.get_by_role("button", name="OK").first.click()
         self.page.wait_for_timeout(5000)
         
         self.log("✅ Filtered Cleared by False")
@@ -586,7 +590,7 @@ class ReconciliationExtractor:
             self.log("=" * 60)
             self.log("STEP 2: Logging in...")
             self.log("=" * 60)
-            functions.login(self.page, self.website_url, self.username, self.password)
+            login(self.page, self.website_url, self.username, self.password)
             self.page.wait_for_timeout(2000)
             self.log("✅ Login successful")
             
@@ -594,7 +598,7 @@ class ReconciliationExtractor:
             self.log("=" * 60)
             self.log("STEP 3: Navigating to Reconciliation Statements")
             self.log("=" * 60)
-            functions.navigatePage(self.page, "Reconciliation Statements")
+            navigatePage(self.page, "Reconciliation Statements")
             
             # Click insert/new button
             self.page.locator("iframe[name=\"main\"]").content_frame.locator(
@@ -645,7 +649,7 @@ class ReconciliationExtractor:
             self.log("=" * 60)
             self.log("STEP 12: Loading extracted data")
             self.log("=" * 60)
-            df = functions.safe_read_excel(reconciliation_save_path)
+            df = safe_read_excel(reconciliation_save_path)
             self.log(f"✅ Loaded {len(df)} records")
             
             # STEP 13: Chain to RaasPlus
